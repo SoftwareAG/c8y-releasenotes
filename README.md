@@ -1,6 +1,6 @@
-# Cumulocity Guides website
+# Cumulocity IoT release notes website
 
-<https://cumulocity.com/guides>
+<https://cumulocity.com/releasenotes>
 
 **Built with [Hugo](https://gohugo.io/)**
 
@@ -12,46 +12,32 @@
 
 ## Structure
 
-The Cumulocity Guides website architecture has the following structure:
+The Cumulocity IoT release notes website architecture has the following structure:
 
-- Section (e.g. *<http://cumulocity.com/guides/user-guide>*)
-  - Subsection - renders as a single page (e.g. *<http://cumulocity.com/guides/user-guide/overview>*)
-    - Anchor section - anchor tag in the subsection page (e.g. *<http://cumulocity.com/guides/user-guide/overview#user-settings>*)
+- Section (e.g. *<http://cumulocity.com/releasenotes/release-10-10-0>*)
+  - Subsection - renders as a single page (e.g. *<http://cumulocity.com/releasenotes/release-10-10-0/platform-10-10-0>*)
+    - Anchor section - anchor tag in the subsection page (e.g. *<http://cumulocity.com/release-10-10-0/platform-10-10-0/#10-10-0-14>*)
 
-The architecture is built with a mix of front matter and directory structure
+The architecture is built with a mix of front matter and directory structure.
 
 ## Adding content
 
 ### 1. Add a new section
 
-Before adding a new section, check if the content fit in any of the available sections:
-
-- Release notes
-- Concepts guide
-- User guide
-- User guide (german version)
-- Device guides
-- Cumulocity-IoT Edge
-- Microservice SDK guide
-- Device SDK guide
-- Web SDK guide
-- Analytics guide
-- Reference guide
+For each new GA release a new section is added:
 
 A new section is defined by a markdown file with the following front matter:
 
 ```yaml
----
-title: My new section # add the section title
-bundle: new-section # add the directory holding the section pages
-icon: "c8y-icon c8y-icon-tools" # use either fontawesome or c8y-icons
-type: root # don't change
-layout: root # don't change
-weight: 90 # order the section in the section dropdown in ascending order
----
+  ---
+  title: Release 10.10.0
+  bundle: release-10-10-0
+  icon: "c8y-icon c8y-icon-notification"
+  type: root
+  layout: root
+  weight: 90
+  ---
 ```
-
-Grab the icon classes in the [styleguide](http://styleguide.cumulocity.com/icons/)
 
 ### 2. Add the section root directory
 
@@ -59,19 +45,18 @@ All guides are stored in the ```content``` directory. To add a new section, crea
 
 ### 3. Add a subsection
 
-Inside the newly created directory create a markdown file with the name you wish to use as a url — e.g. `introduction.md` with the following front matter:
+Inside the newly created directory create a markdown file with the name you wish to use as a url — e.g. `overview.md` with the following front matter:
 
 ```yaml
 ---
-title: Introduction to Cumulocity # the page title
+title: Overview # the page title
 layout: bundle # don't change
 weight: 10 # set the position of the page within the section in ascending order
 aliases: # if needed, add the redirects here, otherwise remove this
-  - /concepts-guide/introduction-to-cumulocity/
-  - /concepts-guide/introduction-to-cumulocity.html
+  - /applications/overview/
 ---
 # add optional content as markdown
-Cumulocity gives you very fast visibility and control over your remote assets, be these houses, cars, machines or any other assets that you need to manage.
+These release notes for **Cumulocity IoT release 10.10.0, July 2021**, include all relevant changes (migration notes, improvements and fixes) that have been implemented in Cumulocity IoT Core, Cumulocity IoT Streaming Analytics, Cumulocity IoT Machine Learning, and Cumulocity IoT DataHub since the previous GA release.
 ```
 
 If you're looking to have a short page without anchors, you're good to go, but if you want to add multiple subsections with anchors then proceed to the next step.
@@ -82,7 +67,7 @@ When adding multiple subsections, the content provided in this file will be rend
 
 To display multiple blocks of content and provide anchor links to display in the navigator, you'll have to follow these steps:
 
-1. add a directory with the exact same name as the markdown file adding the suffix `-bundle`, e.g. `introduction-bundle`.
+1. Add a directory with the exact same name as the markdown file adding the suffix `-bundle`, e.g. `overview-bundle`.
 
 &nbsp;
 
@@ -90,7 +75,7 @@ To display multiple blocks of content and provide anchor links to display in the
 
 ```yaml
 ---
-title: Introduction # not important as we won't use it, but we need the title
+title: Applications # not important as we won't use it, but we need the title
 headless: true # states that all content inside this directory is just a resource to be used in another page
 ---
 ```
@@ -100,31 +85,41 @@ headless: true # states that all content inside this directory is just a resourc
 
 ```yaml
 ---
-title: Overview # will be used as anchor, i.e. guides/users-guide/introduction/#overview
+title: Release 10.10.0.8 # will be used as anchor, i.e. /releasenotes/release-10-10-0/#10-10-0-8
 weight: 10 # to set the position in the page
 ---
 
 ## Add content as markdown or HTML
 
-* Certified hardware kits and software libraries you can use to bring your remote assets into the cloud.
-* Device management, data visualization and remote control functionality through the web.
-* Rapid customization of the above through [real-time processing](/concepts/realtime) and [Cumulocity applications](/concepts/applications).
-* APIs for extending the existing functionality or interfacing Cumulocity with your other IT services such as ERP or CRM systems. Cumulocity can also host your HTML5 applications.
-[…]
+<tr>
+<td>
+Cockpit</td>
+<td > The visualization of the "Silo" and "Linear gauge" widgets as well as of the data points in the Data Point Library has been improved. </td>
+<td>
+MTM-36264</td>
+</tr>
+
+<tr>
+<td>
+Cockpit</td>
+<td > A map widget placed in a group dashboard will now have the same limit of displayed devices as a map widget placed in an overview dashboard.</td>
+<td>
+MTM-38765</td>
+</tr>
 ```
 
 ### 5. Add media
 
-Media should be added to `/static/images/`. Add a new directory if none of the available suits your needs.
+Media must be added to `/static/images/`. Add a new directory if none of the available suits your needs.
 
-Keep all file names url friendly (lowercase, no special characters, and no empty spaces).
+Keep all file names URL-friendly (lowercase, no special characters, and no empty spaces).
 
 To use the images in your pages, just add the relative path e.g `![image title](/images/<directory name>/<file name>)`.
 
 
 ## Redirects
 
-Redirects must be processed through aliases. Add aliases as an array, and make sure to remove `/guides` out of the url. Check the folowing example:
+Redirects must be processed through aliases. Add aliases as an array, and make sure to remove `/guides` out of the url. Check the following example:
 
 ```yaml
 ---
@@ -139,19 +134,16 @@ aliases:
 ---
 ```
 
-## Deploying to cumulocity.com/guides
+## Deploying to cumulocity.com/releasenotes
 
-Cumulocity provides documentation for multiple releases, for that you'll have to create a release branch for every public release, e.g. `release/r10.5.0-GA`. When creating these branches follow the next steps:
-- Create the branch following the same pattern: `release/r[version number]-GA`
+The `config.toml` file has the following base url:
 
-- Edit the `config.toml` file and append the version number to the base url, e.g.: `baseURL = "https://cumulocity.com/guides/10.5.0"`
-- Still on `config.toml` change the `guidesRedirect` to target the about page on the release, e.g.: `guidesRedirect = "https://cumulocity.com/guides/10.5.0/about-doc/intro-documentation/"`
-- Add the file `properties.json` adding the name and the long name for the release version, e.g.: ```{
-  "name":"10.5.0", 
-  "longname": "Release 10.5.0 (Private Edition)"
-}```
-- Deploy using the jenkins task `Deploy-c8y-docs-manual-release` and provide the release version
-- Deploy the `default` branch using the jenkins task `Deploy-c8y-docs`  to regenerate the version dropdown links
+`baseURL = "https://cumulocity.com/releasenotes"`
+
+There is no versioning required like in case of cumulocity.com/guides and cumulocity.com/api since the release notes for the various versions are hold as sections.
+
+Deploy using the Jenkins task `Deploy-c8y-docs-manual-release` and provide the branch name.
+
 
 ---
 © Cumulocity GmbH  2019 + All rights reserved.

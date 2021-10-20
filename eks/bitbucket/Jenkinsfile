@@ -13,14 +13,14 @@ pipeline {
   environment {
     YUM_SRV = 'yum.cumulocity.com'
     YUM_USR = 'hudson'
-    YUM_DEST_DIR = '/var/www/staticpage-guides/guides/'
+    YUM_DEST_DIR = '/var/www/staticpage-guides/'
     HUGO_PARAMS = ""
   }
   stages {
     stage('Checkout') {
       steps {
       checkout([
-        $class: 'GitSCM', branches: [[name: 'master']],
+        $class: 'GitSCM', branches: [[name: 'main']],
         extensions: [[$class: 'CleanCheckout']],
         userRemoteConfigs: [[url: 'git@bitbucket.org:m2m/c8y-docs.git',credentialsId:'jenkins-master']] ])
       }
@@ -36,10 +36,8 @@ pipeline {
       steps {
         sshagent(['jenkins-master']) {
           sh '''bash --login
-          python /docsRepoScanner.py ./
           pwd
           ls
-          cp output.json ./public/releases.json
           echo "rsync -e 'ssh -o StrictHostKeyChecking=no' -avh ./public/* ${YUM_USR}@${YUM_SRV}:${YUM_DEST_DIR} --delete"
           rsync -e 'ssh -o StrictHostKeyChecking=no' -avh ./public/* ${YUM_USR}@${YUM_SRV}:${YUM_DEST_DIR} --delete
           '''

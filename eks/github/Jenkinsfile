@@ -19,10 +19,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-      checkout([
-        $class: 'GitSCM', branches: [[name: 'main']],
-        extensions: [[$class: 'CleanCheckout']],
-        userRemoteConfigs: [[url: 'git@github.com:SoftwareAG/c8y-releasenotes.git', credentialsId:'jenkins-master']] ])
+        git branch: "main", credentialsId: "jenkins-master", url:'git@github..com/c8y-releasenotes.git'
       }
     }
     stage('Build') {

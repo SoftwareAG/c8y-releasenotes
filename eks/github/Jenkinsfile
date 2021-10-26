@@ -13,7 +13,7 @@ pipeline {
   environment {
     YUM_SRV = 'yum.cumulocity.com'
     YUM_USR = 'hudson'
-    YUM_DEST_DIR = '/var/www/staticpage-guides/releasenotes/'
+    YUM_DEST_DIR = '/var/www/releasenotes/'
     HUGO_PARAMS = ""
   }
   stages {

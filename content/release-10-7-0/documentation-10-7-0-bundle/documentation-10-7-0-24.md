@@ -122,7 +122,7 @@ MTM-32145</td>
 User guide</td>
 <td>
 Enterprise tenant</td>
-<td > The documentation on metering and billing of microservices has been extended to improve transparency. Additional information is provided on the general process, i.e. when and how the metering and the billing starts/suspends/stops. Moreover, some typical scenarios, for example for different time zones, are explained in detail. See <a href="https://cumulocity.com/guides/10.7.0/users-guide/enterprise-edition/#usage-and-billing" class="no-ajaxy">Enterprise Tenant > Usage statistics and billing</a>.</td>
+<td > The documentation on metering and billing of microservices has been extended to improve transparency. Additional information is provided on the general process, that is, when and how the metering and the billing starts/suspends/stops. Moreover, some typical scenarios, for example for different time zones, are explained in detail. See <a href="https://cumulocity.com/guides/10.7.0/users-guide/enterprise-edition/#usage-and-billing" class="no-ajaxy">Enterprise Tenant > Usage statistics and billing</a>.</td>
 <td>
 MTM-33651</td>
 </tr>

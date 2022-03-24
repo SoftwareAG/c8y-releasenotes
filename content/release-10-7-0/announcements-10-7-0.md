@@ -38,7 +38,7 @@ To fix various layout issues around tooltips and scrollbars, the ngx-bootstrap l
 
 This change may affect developers building Cumulocity IoT UI extensions or custom web applications. It may also affect existing extensions and web applications.
 
-An important change is the ngx-bootstrap module's import. Now, when importing a module, e.g. BsModalRef, you need to specify the exact directive to import from:
+An important change is the ngx-bootstrap module's import. Now, when importing a module, such as BsModalRef, you need to specify the exact directive to import from:
 
 	import { BsModalRef } from 'ngx-bootstrap/modal';
 

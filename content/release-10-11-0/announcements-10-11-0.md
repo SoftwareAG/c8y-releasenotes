@@ -60,11 +60,11 @@ As announced with [release 10.7.0](/releasenotes/release-10-7-0/announcements-10
 
 ##### Strong password enforced for tenant admins
 
-Enforcing a strong (green) password for all users in the Management tenant does no longer exclude tenant administrators. Tenant admin users now also have strong password, i.e. green password, enforced. This increases security and protects the tenant admin account.
+Enforcing a strong (green) password for all users in the Management tenant does no longer exclude tenant administrators. Tenant admin users now also have strong password, that is, green password, enforced. This increases security and protects the tenant admin account.
 
 ##### Enforcement of user passwords to meet password complexity
 
-When the use of green passwords is enforced and the minimal strong password length (`system.password.green.min-length` property) is higher than the device password length (`device-user.password.length` property), the system will use the `green.min-length` value, i.e. generate a longer password. Prior to this change, the system rejected auto-generated passwords that were too short blocking device bootstrap.
+When the use of green passwords is enforced and the minimal strong password length (`system.password.green.min-length` property) is higher than the device password length (`device-user.password.length` property), the system will use the `green.min-length` value, that means, generate a longer password. Prior to this change, the system rejected auto-generated passwords that were too short blocking device bootstrap.
 
 
 ### SDK changes

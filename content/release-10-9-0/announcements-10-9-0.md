@@ -35,7 +35,7 @@ For reference, we disable all HTTP-encoded and control characters (like \u0000).
 
 The template for emails, which are sent out when exporting reports, contains a placeholder for {tenant-domain}. In emails, the fully qualified domain name, for example "demo.cumulocity.com", was used without specification of the protocol. Since the prefix "https://" was missing in the email users couldn’t just klick on a link to open the report.
 
-In 10.9 GA release, the prefix has been added, i.e. the email now contains the proper link starting with "https", for example "https://demo.cumulocity.com".
+In 10.9 GA release, the prefix has been added, that means, the email now contains the proper link starting with "https", for example "https://demo.cumulocity.com".
 
 In case users added the prefix as a workaround manually in the template, they now need to revert this workaround.
 
@@ -95,7 +95,7 @@ The following ciphers are the supported ciphers from release 10.10.
 
 ### Enforcement of user passwords to meet password complexity
 
-When the use of green passwords is enforced and the minimal strong password length (`system.password.green.min-length` property) is higher than the device password length (`device-user.password.length` property), the system will use the `green.min-length` value, i.e. generate a longer password. Prior to this change, the system rejected auto-generated passwords that were too short blocking device bootstrap.
+When the use of green passwords is enforced and the minimal strong password length (`system.password.green.min-length` property) is higher than the device password length (`device-user.password.length` property), the system will use the `green.min-length` value, that means, generate a longer password. Prior to this change, the system rejected auto-generated passwords that were too short blocking device bootstrap.
 
 #### Internet Explorer 11 support has ended
 

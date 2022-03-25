@@ -28,7 +28,7 @@ The requirement to use the bootstrap user is documented at [Device integration u
 
 Currently the Tenant Option Collection API returns 400 instead of collection results due to usage of special characters in category and key. After creating a new tenant option when special characters are used in key or category, the generated self link points to a non-existing option. In other cases when special characters are used the self link is broken and the user is unable to get or delete such an option via REST. With the 10.11 release creating tenant options with special characters will be disabled to prevent any issues in this regard in the future.
 
-For reference, we disable all HTTP-encoded and control characters (like \u0000). The full list of HTTP-encoded characters equals the one here: https://secure.n-able.com/webhelp/NC_9-1-0_SO_en/Content/SA_docs/API_Level_Integration/API_Integration_URLEncoding.html).
+For reference, we disable all HTTP-encoded and control characters (like \u0000). The full list of HTTP-encoded characters equals the one here: https://secure.n-able.com/webhelp/NC_9-1-0_SO_en/Content/SA_docs/API_Level_Integration/API_Integration_URLEncoding.html.
 
 
 #### Link in schedule export email

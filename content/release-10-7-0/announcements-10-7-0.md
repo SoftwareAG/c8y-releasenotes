@@ -16,7 +16,7 @@ With the 10.9 GA release in April 2021, the OPC UA legacy integration will be re
 
 #### Smart REST response codes
 
-With the 10.9 GA release in April 2021, the error code "405" will be removed.  
+With the 10.9 GA release in April 2021, the error code "40" will be removed.  
 
 Why are we doing this?  Currently, when connecting to Cumulocity IoT via SmartREST 1.0 you may receive an error "40", often looking like this:
 

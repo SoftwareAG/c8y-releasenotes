@@ -10,7 +10,7 @@ Release 10.9.0 includes the following new features or major feature enhancements
 
 ### Open API specification
 
-A new Open API Specification for the Cumulocity IoT REST API is available at [https://cumulocity.com/api](https://cumulocity.com/api). The new specification describes the entire Cumulocity IoT REST API (i.e. available endpoints, operations on each endpoint, input and output for each operation, authentication methods and more) following the OpenAPI 3.0 standard.
+A new Open API Specification for the Cumulocity IoT REST API is available at [https://cumulocity.com/api](https://cumulocity.com/api). The new specification describes the entire Cumulocity IoT REST API (that is, available endpoints, operations on each endpoint, input and output for each operation, authentication methods and more) following the OpenAPI 3.0 standard.
 
 ![Open API specification](/images/release-notes/open-api-new.png)
 
@@ -60,7 +60,7 @@ The <b>SMS provider</b> page has been updated. New providers have been added to 
 
 ![SMS providers](/images/release-notes/admin-settings-sms-provider.png)
 
-See also <a href="https://cumulocity.com/guides/10.9.0/users-guide/administration/#openIT-credentials" class="no-ajaxy">Administration > Changing settings > Providing SMS provider credentials</a> in the <em>User guide</em>.
+See also <a href="https://cumulocity.com/guides/10.9.0/users-guide/administration/#providing-sms-provider-credentials" class="no-ajaxy">Administration > Changing settings > Providing SMS provider credentials</a> in the <em>User guide</em>.
 
 ### Device Management
 

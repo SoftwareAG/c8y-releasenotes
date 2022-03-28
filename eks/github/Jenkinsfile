@@ -13,13 +13,13 @@ pipeline {
   environment {
     YUM_SRV = 'yum.cumulocity.com'
     YUM_USR = 'hudson'
-    YUM_DEST_DIR = '/var/www/releasenotes/'
+    YUM_DEST_DIR = '/var/www/staticpages-guides/releasenotes/'
     HUGO_PARAMS = ""
   }
   stages {
     stage('Checkout') {
       steps {
-        git branch: "main", credentialsId: "jenkins-master", url:'git@github.com:SoftwareAG/c8y-releasenotes.git'
+        git branch: "master", credentialsId: "jenkins-master", url:'git@github.com:SoftwareAG/c8y-releasenotes.git'
       }
     }
     stage('Build') {

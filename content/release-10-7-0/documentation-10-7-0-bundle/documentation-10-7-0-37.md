@@ -24,7 +24,7 @@ Issue</th>
 Device SDK guide</td>
 <td>
 Various sections</td>
-<td > The Device SDK guide now explains that for device communication the user name but not the user alias should be used for authentication, see <a href="https://cumulocity.com/guides/10.7.0/device-sdk/mqtt/" class="no-ajaxy">Device integration using MQTT</a> and <a href="https://cumulocity.com/guides/10.7.0/device-sdk/rest/" class="no-ajaxy">Device integration using REST</a>.</td>
+<td > The Device SDK guide now explains that for device communication the username but not the user alias should be used for authentication, see <a href="https://cumulocity.com/guides/10.7.0/device-sdk/mqtt/" class="no-ajaxy">Device integration using MQTT</a> and <a href="https://cumulocity.com/guides/10.7.0/device-sdk/rest/" class="no-ajaxy">Device integration using REST</a>.</td>
 <td>
 MTM-37807</td>
 </tr>
@@ -44,7 +44,7 @@ MTM-37105</td>
 User guide</td>
 <td>
 Cockpit/Smart rules</td>
-<td > The description of the behavior of the red and yellow ranges in the smart rule "On measurement threshold create alarm" has been extended, see <a href="https://cumulocity.com/guides/10.7.0/users-guide/cockpit/#smart-rules" class="no-ajaxy">Cockpit > Smart rules collection</a>. </td>
+<td > The description of the behavior of the red and yellow ranges in the smart rule "On measurement threshold create alarm" has been extended, see <a href="https://cumulocity.com/guides/10.7.0/users-guide/cockpit/#smart-rules-collection" class="no-ajaxy">Cockpit > Smart rules collection</a>. </td>
 <td>
 MTM-35724</td>
 </tr>

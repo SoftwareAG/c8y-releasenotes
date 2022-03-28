@@ -100,4 +100,4 @@ The functionality of the OPC UA device gateway has been enhanced including the f
 * The default configuration file packaged in the JAR is now fully commented.
 * UA alarm severity mappings can now be configured in the OPC UA server managed object.
 
-For details, see the <a href="/release-10-7-0/devices-10-7-0" class="no-ajaxy">more detailed release notes for Device management & connectivity</a> or [OPC UA](/protocol-integration/opcua) in the *Protocol integration guide*.
+For details, see the <a href="/release-10-7-0/devices-10-7-0" class="no-ajaxy">more detailed release notes for Device management & connectivity</a> or [OPC UA](https://cumulocity.com/guides/10.7.0/protocol-integration/opcua) in the *Protocol integration guide*.

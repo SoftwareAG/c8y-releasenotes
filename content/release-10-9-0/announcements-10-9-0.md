@@ -15,7 +15,7 @@ The `/devicecontrol/notifications` endpoint is deprecated. We recommend you to u
 
 #### Deprecation of /cep/realtime endpoint
 
-The `/cep/realtime` endpoint is deprecated. We recommend you to use the `/notification/realtime` endpoint instead. 
+The `/cep/realtime` endpoint is deprecated. We recommend you to use the `/notification/realtime` endpoint instead.
 
 
 #### Enforcement of usage of bootstrap credentials
@@ -28,14 +28,14 @@ The requirement to use the bootstrap user is documented at [Device integration u
 
 Currently the Tenant Option Collection API returns 400 instead of collection results due to usage of special characters in category and key. After creating a new tenant option when special characters are used in key or category, the generated self link points to a non-existing option. In other cases when special characters are used the self link is broken and the user is unable to get or delete such an option via REST. With the 10.11 release creating tenant options with special characters will be disabled to prevent any issues in this regard in the future.
 
-For reference, we disable all HTTP-encoded and control characters (like \u0000). The full list of HTTP-encoded characters equals the one here: https://secure.n-able.com/webhelp/NC_9-1-0_SO_en/Content/SA_docs/API_Level_Integration/API_Integration_URLEncoding.html).
+For reference, we disable all HTTP-encoded and control characters (like \u0000). The full list of HTTP-encoded characters equals the one here: https://secure.n-able.com/webhelp/NC_9-1-0_SO_en/Content/SA_docs/API_Level_Integration/API_Integration_URLEncoding.html.
 
 
 #### Link in schedule export email
 
 The template for emails, which are sent out when exporting reports, contains a placeholder for {tenant-domain}. In emails, the fully qualified domain name, for example "demo.cumulocity.com", was used without specification of the protocol. Since the prefix "https://" was missing in the email users couldn’t just klick on a link to open the report.
 
-In 10.9 GA release, the prefix has been added, i.e. the email now contains the proper link starting with "https", for example "https://demo.cumulocity.com".
+In 10.9 GA release, the prefix has been added, that means, the email now contains the proper link starting with "https", for example "https://demo.cumulocity.com".
 
 In case users added the prefix as a workaround manually in the template, they now need to revert this workaround.
 
@@ -93,6 +93,9 @@ The following ciphers are the supported ciphers from release 10.10.
 * rsa&#95;pss&#95;pss&#95;sha384
 * rsa&#95;pss&#95;pss&#95;sha512
 
+### Enforcement of user passwords to meet password complexity
+
+When the use of green passwords is enforced and the minimal strong password length (`system.password.green.min-length` property) is higher than the device password length (`device-user.password.length` property), the system will use the `green.min-length` value, that means, generate a longer password. Prior to this change, the system rejected auto-generated passwords that were too short blocking device bootstrap.
 
 #### Internet Explorer 11 support has ended
 

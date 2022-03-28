@@ -1,7 +1,7 @@
 
 
 # Production
-baseURL = "https://cumulocity.com/releasenotes"
+baseURL = "https://cumulocity.com/releasenotes/about"
 
 languageCode = "en-us"
 defaultContentLanguage = "en-us"

@@ -60,7 +60,7 @@ The <b>SMS provider</b> page has been updated. New providers have been added to 
 
 ![SMS providers](/images/release-notes/admin-settings-sms-provider.png)
 
-See also <a href="https://cumulocity.com/guides/10.9.0/users-guide/administration/#openIT-credentials" class="no-ajaxy">Administration > Changing settings > Providing SMS provider credentials</a> in the <em>User guide</em>.
+See also <a href="https://cumulocity.com/guides/10.9.0/users-guide/administration/#providing-sms-provider-credentials" class="no-ajaxy">Administration > Changing settings > Providing SMS provider credentials</a> in the <em>User guide</em>.
 
 ### Device Management
 

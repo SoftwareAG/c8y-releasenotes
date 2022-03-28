@@ -19,7 +19,7 @@ Moreover, documentation on how to set up and configure a Casa Systems (NetComm) 
 
 ### Installation and operations guides
 
-The Installation and operation guides for Cumulocity IoT Core now include all relevant information for the installation and operation of Apama components. In addition, the following guides are now available through the [Software AG Empower Portal](https://documentation.softwareag.com/):
+The Installation and operation guides for Cumulocity IoT Core now include all relevant information for the installation and operation of Apama components. In addition, the following guides are now available through the [Software AG Empower Portal](https://empower.softwareag.com/):
 
 * **LWM2M** - Installation & operations guide
 * **SSL Management** - Installation & operations guide

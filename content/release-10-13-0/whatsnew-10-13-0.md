@@ -14,7 +14,7 @@ To increase the security level of the Cumulocity IoT platform, OAI-Secure authen
 
  Additionally, various options have been added to the **Authentication** page to configure the token-based session. The new configuration options determine, for example, how often users of a tenant should be re-authenticated and how many simultaneous sessions they may use. All settings related to the default login mode or OAI-Secure configuration can be changed on tenant level or on platform level.
 
- For details, see [Administration > Changing settings > Changing authentication settings](https://cumulocity.com/guides{{< 10-13-0 >}}/users-guide/administration/#authentication) in the *User guide* or the section on *Operational procedures* in the *Cumulocity IoT Core - Operations guide*.
+ For details, see [Administration > Changing settings > Changing authentication settings](https://cumulocity.com/guides/10.13.0/users-guide/administration/#authentication) in the *User guide* or the section on *Operational procedures* in the *Cumulocity IoT Core - Operations guide*.
 
 All custom applications deployed on the Cumulocity IoT platform or integrated with the Cumulocity IoT platform (web application, microservices, etc.) must support authentication with OAI-Secure. In case of lacking backwards compatibility, the previous behaviour of the Cumulocity IoT platform can be restored for a particular tenant.
 
@@ -37,7 +37,7 @@ The option looks like the following in the REST API:
 
 ### Custom codec support for LPWAN agents
 
-Cumulocity IoT can interface with LPWAN devices through LPWAN network providers via Cumulocity IoT LPWAN agents, such as [Actility LoRa](https://cumulocity.com/guides{{< 10-13-0 >}}/protocol-integration/lora-actility/).
+Cumulocity IoT can interface with LPWAN devices through LPWAN network providers via Cumulocity IoT LPWAN agents, such as [Actility LoRa](https://cumulocity.com/guides/10.13.0/protocol-integration/lora-actility/).
 
 The latest LPWAN devices send dynamic payloads which could not be decoded by the binary mapping device protocol capability, similar applied for encoding the commands sent to the devices.
 
@@ -45,7 +45,7 @@ To overcome this, LPWAN agents can now extend the payload decoding and command e
 
 When an LPWAN agent receives an uplink message, it forwards the device data to a REST endpoint (such as `/decode`) exposed by the custom codec microservice for decoding. Similarly, when the user executes a device command through the device shell, the LPWAN agent forwards the command text to a REST endpoint (such as `/encode`) exposed by the custom codec microservice for encoding.
 
-For details, see (https://cumulocity.com/guides{{< 10-13-0 >}}/protocol-integration/lpwan-custom-codec/#overview) in the *Protocol integration guide*.
+For details, see (https://cumulocity.com/guides/10.13.0/protocol-integration/lpwan-custom-codec/#overview) in the *Protocol integration guide*.
 
 
 ### New Ecosystem view
@@ -56,4 +56,4 @@ The **Applications** page shows an **All applications** tab listing the web and 
 
 ![Ecosystem menu](/images/release-notes/admin-ecosystem.png)
 
-For details, refer to [Administration > Managing applications](https://cumulocity.com/guides{{< 10-13-0 >}}/users-guide/administration/#managing-applications) and [Administration > Managing and monitoring microservices](https://cumulocity.com/guides{{< 10-13-0 >}}/users-guide/administration/#managing-microservices) in the *User guide*.
+For details, refer to [Administration > Managing applications](https://cumulocity.com/guides/10.13.0/users-guide/administration/#managing-applications) and [Administration > Managing and monitoring microservices](https://cumulocity.com/guides/10.13.0/users-guide/administration/#managing-microservices) in the *User guide*.

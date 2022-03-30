@@ -29,7 +29,7 @@ With the 10.5.0 release a new token-based mechanism for browser-based authentica
 
 As announced in [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), with the 10.13 release, the OAI-Secure authentication (successor of OAuth Internal) will be enabled by default for all new created tenants as the authentication method for all browser-based applications.
 
-Basic authentication will still be available as a fallback but has to be manually switched on. For details, see [Administration > Changing settings](https://cumulocity.com/guides//10.13.0/users-guide/administration/#changing-settings) in the *User guide*. Note, that basic authentication for devices is not affected by this change.
+Basic authentication will still be available as a fallback but has to be manually switched on. For details, see [Administration > Changing settings](https://cumulocity.com/guides/10.13.0/users-guide/administration/#changing-settings) in the *User guide*. Note, that basic authentication for devices is not affected by this change.
 
 **What comes next?**
 
@@ -141,12 +141,12 @@ With GA release 10.13.0, Cumulocity IoT Machine Learning Workbench introduces "R
 
 The following applies as of Apama 10.11.1:
 
-- The `GeoFenceContainer.createGeoFenceContainer()` action no longer throws an exception when provided with any `lat` or `lng` values that cannot be parsed as a float. 
-  Instead, an empty `optional<GeoFencePoint>` is now created for that coordinate. 
-  See the `com.apama.cumulocity` package in the [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/apama/v10-11/apama10-11/ApamaDoc/index.html) 
+- The `GeoFenceContainer.createGeoFenceContainer()` action no longer throws an exception when provided with any `lat` or `lng` values that cannot be parsed as a float.
+  Instead, an empty `optional<GeoFencePoint>` is now created for that coordinate.
+  See the `com.apama.cumulocity` package in the [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/apama/v10-11/apama10-11/ApamaDoc/index.html)
   for more information on the `GeoFenceContainer` event.
 
-- Warning messages are now logged for Cumulocity IoT queries where `pageSize` is below 50 and `currentPage` is not set (default). 
-  This is because setting a small `pageSize` without setting `currentPage` can result in queries that run very slowly. 
-  For example, to request the first 20 items, you have to set `pageSize` to 20 and `currentPage` to 1. 
+- Warning messages are now logged for Cumulocity IoT queries where `pageSize` is below 50 and `currentPage` is not set (default).
+  This is because setting a small `pageSize` without setting `currentPage` can result in queries that run very slowly.
+  For example, to request the first 20 items, you have to set `pageSize` to 20 and `currentPage` to 1.
   See also [Paging Cumulocity IoT queries](https://documentation.softwareag.com/apama/v10-11/apama10-11/apama-webhelp/index.html#page/apama-webhelp%2Fco-ConApaAppToExtCom_cumulocity_paging_cumulocity_queries.html) in the Apama documentation.

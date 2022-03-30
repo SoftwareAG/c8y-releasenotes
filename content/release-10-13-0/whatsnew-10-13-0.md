@@ -48,7 +48,7 @@ When an LPWAN agent receives an uplink message, it forwards the device data to a
 For details, see (https://cumulocity.com/guides{{< 10-13-0 >}}/protocol-integration/lpwan-custom-codec/#overview) in the *Protocol integration guide*.
 
 
-### New Ecocsystem view
+### New Ecosystem view
 
 The previous **Applications** page in the Administration application has been restructured to provide a clearer organization and navigation. A new **Ecosystem** menu entry is available now, grouped into **Applications** and **Microservices**.
 

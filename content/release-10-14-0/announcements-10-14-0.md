@@ -90,7 +90,18 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 
 #### Implemented
 
+##### Removing PlatformImpl Spring bean from Microservice SDK
 
+With release 10.14 we closed a design gap, which previously existed in Cumulocity IoT and allowed to wrongly use Cumulocity IoT APIs (by mixing Spring injection with raw Java).
+
+PlatformImpl will no longer be exposed as a Spring Bean and it will not be feasible to inject it.
+
+Instead of creating new instances using PlatformImpl, you should always inject Cumulocity IoT API beans, such as InventoryApi, AlarmApi, IndentityApi, for example:
+
+```
+@Autowired //injection
+private InventoryApi inventoryApi;
+```
 
 ### Other changes
 
@@ -113,3 +124,13 @@ The previous default value was 1000.
 The pool of connections to microservices had a limited size (default: 200, separate pool for each microservice on core node).  This change will allow to smoothen the traffic to microservices in case of sudden short spikes. As a result, there should be less HTTP 429 errors in such cases. This also means that HTTP 429 errors will be delivered up to 10s after starting the connection with the proxy (instead of 1s before).
 
 #### Planned
+
+##### Outage during GA updates
+
+With the upcoming upgrades of Hazelcast versions used in Cumulocity IoT, there is an expected outage that is being announced per each version. If there are any changes to the expected upgrades, announcements will consequently follow:
+
+* Upgrade included in 10.14.0.0 - Hazelcast version 3.8.1 ( No outage) - current version
+* Upgrade included in 10.15.0.0 - Hazelcast version 5.0.0 ( Full cluster outage)
+* Upgrade included in 10.15.0.2 - Hazelcast version 5.0.0 ( No outage)
+* Upgrade included in 10.16.0.0 - Hazelcast version 5.0.12 ( No outage - patch version upgrade is allowed)
+* Upgrade included in 10.17.0.0 - Hazelcast version 5.1.0 ( Full cluster outage)

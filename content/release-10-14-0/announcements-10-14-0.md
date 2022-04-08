@@ -10,6 +10,23 @@ layout: bundle
 
 #### Implemented
 
+For the Inventory API as of the 10.14 GA release, Cumulocity IoT now uses a set of properties which are restricted to internal system usage and cannot be set by external users. In case of a request sent with those properties, they are ignored and not set.
+
+The mentioned internal fragments are: `_c8y_Internal`, `_hierarchyCalculated`, `_hierarchy:root` and every fragment which starts with `_parent:`.
+
+For example if a user sends a request in the following format:
+
+```
+{
+	"name": "testDevice",
+    "owner": "device_654321",
+    "c8y_IsDevice": {},
+    "_parent:3":{}
+}
+```
+
+prior to this change the whole payload was saved. Now the `"_parent:3"` fragment will be ignored and not saved.
+
 
 
 ### Security changes
@@ -105,32 +122,8 @@ private InventoryApi inventoryApi;
 
 ### Other changes
 
-#### Increased default values for microservice connection pool
-
-The following platform attributes will be increased:
-
-```
-# defines pool connection acquire operation timeout (millis)
-microservice.proxy.pool.acquire-timeout=10000
-```
-The previous default value was 1000ms.
-
-```
-# max number of pending acquires
-microservice.proxy.pool.max-acquires=2000
-```
-The previous default value was 1000.
-
-The pool of connections to microservices had a limited size (default: 200, separate pool for each microservice on core node).  This change will allow to smoothen the traffic to microservices in case of sudden short spikes. As a result, there should be less HTTP 429 errors in such cases. This also means that HTTP 429 errors will be delivered up to 10s after starting the connection with the proxy (instead of 1s before).
 
 #### Planned
 
-##### Outage during GA updates
-
-With the upcoming upgrades of Hazelcast versions used in Cumulocity IoT, there is an expected outage that is being announced per each version. If there are any changes to the expected upgrades, announcements will consequently follow:
-
-* Upgrade included in 10.14.0.0 - Hazelcast version 3.8.1 ( No outage) - current version
-* Upgrade included in 10.15.0.0 - Hazelcast version 5.0.0 ( Full cluster outage)
-* Upgrade included in 10.15.0.2 - Hazelcast version 5.0.0 ( No outage)
-* Upgrade included in 10.16.0.0 - Hazelcast version 5.0.12 ( No outage - patch version upgrade is allowed)
-* Upgrade included in 10.17.0.0 - Hazelcast version 5.1.0 ( Full cluster outage)
+(MTM-44895)
+Upon tenant creation, its admin's password will be validated according to the selected tenant policy. If no policy is selected, the password will be validated according to the options set in the current tenant (parent tenant). This is a consequence of the standard tenant policies handling.

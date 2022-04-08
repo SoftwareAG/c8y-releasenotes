@@ -15,6 +15,25 @@ How does this impact users? After its removal, this deprecated query parameter w
 
 Contact us if you have any questions on the removal of this deprecated query parameter.
 
+##### Inventory API fragments restricted to internal usage
+
+For the Inventory API, as of the 10.14 GA release, Cumulocity IoT will restrict several properties to internal system usage;  they cannot be set by external users. In case of a request sent with those properties, they will be ignored and not set.
+
+The mentioned internal fragments are: `_c8y_Internal`, `_hierarchyCalculated`, `_hierarchy:root` and every fragment which starts with `_parent:`.
+
+For example if a user sends a request in the following format:
+
+```
+{
+	"name": "testDevice",
+    "owner": "device_654321",
+    "c8y_IsDevice": {},
+    "_parent:3":{}
+}
+```
+
+currently the whole payload is saved. In the future, the `"_parent:3"` fragment will be ignored and not saved.
+
 ### Security changes
 
 #### Implemented

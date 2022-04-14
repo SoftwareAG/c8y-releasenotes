@@ -130,3 +130,13 @@ private InventoryApi inventoryApi;
 
 (MTM-44895)
 Upon tenant creation, its admin's password will be validated according to the selected tenant policy. If no policy is selected, the password will be validated according to the options set in the current tenant (parent tenant). This is a consequence of the standard tenant policies handling.
+
+
+### Streaming Analytics
+
+#### Implemented
+
+##### Cumulocity IoT transport in Apama
+
+As of release 10.14, sending email requests from Apama to Cumulocity IoT requires the user to have the ROLE_EMAIL_CREATE permission. 
+This means that the user name that is used in Software AG Designer projects and any Apama applications connecting externally to the Cumulocity IoT platform must have this permission.

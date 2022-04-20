@@ -136,6 +136,15 @@ Upon tenant creation, its admin's password will be validated according to the se
 
 #### Implemented
 
+##### Analytics Builder - renaming of frgment property name
+
+The **Measurement Input** block sends the property name that is used for a fragment as part of its output value. 
+In previous versions, this property name was `frgment`. This has now been changed to `fragment`. 
+Currently, both property names `frgment` and `fragment` are supported. 
+`frgment`, however, is now deprecated and will be removed in a future release. 
+Therefore it is recommended that you now change `frgment` to `fragment` in all of your blocks 
+(for example, the value of the **Property Path** parameter in the **Extract Property** block).
+
 ##### Cumulocity IoT transport in Apama
 
 As of release 10.14, sending email requests from Apama to Cumulocity IoT requires the user to have the ROLE_EMAIL_CREATE permission. 

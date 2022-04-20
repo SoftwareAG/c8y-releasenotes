@@ -42,7 +42,7 @@ Tenant ID information is now included in the dropdown user menu. [MTM-28565]
 
 ### OPCUA
 
-OPC UA 2.0 is now available. The feature stores data into the Cumulocity IoT database via REST. Additionally, c8y commands are executed to perform various operations on the OPC UA servers. The gateway has to be registered as Cumulocity IoT device in a specific tenant and the opcua-device-gateway must run in the users’ environment. In order to use OPC UA, subscription to the “opcua-mgmt-service” microservice is required.
+OPC UA 2.0 is now available. The feature stores data into the Cumulocity IoT database via REST. Additionally, c8y commands are executed to perform various operations on the OPC UA servers. The gateway must be registered as Cumulocity IoT device in a specific tenant and the opcua-device-gateway must run in the users’ environment. In order to use OPC UA, subscription to the “opcua-mgmt-service” microservice is required.
 
 The following functionalities are now available:
 

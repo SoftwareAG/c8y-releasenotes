@@ -38,7 +38,7 @@ To fix various layout issues around tooltips and scrollbars, the ngx-bootstrap l
 
 This change may affect developers building Cumulocity IoT UI extensions or custom web applications. It may also affect existing extensions and web applications.
 
-An important change is the ngx-bootstrap module's import. Now, when importing a module, such as BsModalRef, you need to specify the exact directive to import from:
+An important change is the ngx-bootstrap module's import. Now, when importing a module, such as BsModalRef, you must specify the exact directive to import from:
 
 	import { BsModalRef } from 'ngx-bootstrap/modal';
 
@@ -54,7 +54,7 @@ With the 10.9 GA release in April 2021, the calculation for the binary file size
 
 #### Enforcing user passwords to meet password complexity
 
-With the 10.9 GA release in April 2021, user passwords will be enforced to meet password complexity by default. The new password validation will not impact the existing users until they need to change or reset the password.
+With the 10.9 GA release in April 2021, user passwords will be enforced to meet password complexity by default. The new password validation will not impact the existing users until they must change or reset the password.
 The password complexity is enforced:
 
 * During user creations

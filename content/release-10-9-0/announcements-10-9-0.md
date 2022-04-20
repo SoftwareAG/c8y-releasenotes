@@ -37,7 +37,7 @@ The template for emails, which are sent out when exporting reports, contains a p
 
 In 10.9 GA release, the prefix has been added, that means, the email now contains the proper link starting with "https", for example "https://demo.cumulocity.com".
 
-In case users added the prefix as a workaround manually in the template, they now need to revert this workaround.
+In case users added the prefix as a workaround manually in the template, they now must revert this workaround.
 
 #### Removal of Basic Auth browser-based authentication
 
@@ -119,7 +119,7 @@ The Streaming Analytics application provides mechanisms to control visibility of
 If the old Apama Analytics Builder or Apama EPL Apps applications had been assigned to specific groups or users, a tenant will need to
 configure role-based access and assign roles to control the visibility of the corresponding pages within the Streaming Analytics application.
 See [Controlling access to the Streaming Analytics application](https://cumulocity.com/guides/10.9.0/apama/advanced/#control-access) for more information.
-This migration is a one-time step that needs to be performed manually.
+This migration is a one-time step that must be performed manually.
 
 #### Backwards incompatibility change to the Cumulocity IoT bundles in Apama
 
@@ -132,7 +132,7 @@ These are the following bundles:
 
 This has the advantage that with future versions, you can seamlessly upgrade to the latest Cumulocity IoT bundles.
 
-If you are using the old, versioned Cumulocity IoT bundles in Apama, you have to replace them. Proceed as follows:
+If you are using the old, versioned Cumulocity IoT bundles in Apama, you must replace them. Proceed as follows:
 1. Go to Software AG Designer.
 2. Add the new Cumulocity IoT bundles to your Apama projects.
 3. Copy any changes you applied to the *CumulocityIoT.yaml* and *CumulocityIoT.properties* files over from the old, versioned bundles into the new bundles.

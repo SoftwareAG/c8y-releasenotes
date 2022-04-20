@@ -23,7 +23,7 @@ With Cumulocity IoT 10.9, the OPC UA legacy integration will be removed from the
 
 #### End of Java 7 support for the Microservice SDK
 
-As announced in the *Migration notes for release 10.5.7*, the Microservice SDK is now based on Spring Boot 2.x. In case you are still developing with Java 7 you will need to migrate your application to Java 8 if you want to take advantage of the latest Microservice SDK version. If you have to stay with Java 7 or cannot migrate to Spring Boot 2.x you can still use the Microservice SDK in version <= 10.5.7.
+As announced in the *Migration notes for release 10.5.7*, the Microservice SDK is now based on Spring Boot 2.x. In case you are still developing with Java 7 you must migrate your application to Java 8 if you want to take advantage of the latest Microservice SDK version. If you must stay with Java 7 or cannot migrate to Spring Boot 2.x you can still use the Microservice SDK in version <= 10.5.7.
 
 For details on the Microservice SDK for Java, see [Microservice SDK for Java](https://cumulocity.com/guides/10.6.6/microservice-sdk/java/) in the *Microservice SDK guide*.
 

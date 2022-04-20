@@ -89,7 +89,7 @@ Refer to [this Linux man page](https://man7.org/linux/man-pages/man7/capabilitie
 
 **What you need to do by XX.YY.ZZZZ**
 
-Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally need to refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https:/cumulocity.com/guides/10.14.0//microservice-sdk/concept/migration) in the <i>Microservice SDK guide </i>.
+Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally must refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https:/cumulocity.com/guides/10.14.0//microservice-sdk/concept/migration) in the <i>Microservice SDK guide </i>.
 
 **How to check whether your microservice is impacted?**
 
@@ -138,14 +138,14 @@ Upon tenant creation, its admin's password will be validated according to the se
 
 ##### Analytics Builder - renaming of frgment property name
 
-The **Measurement Input** block sends the property name that is used for a fragment as part of its output value. 
-In previous versions, this property name was `frgment`. This has now been changed to `fragment`. 
-Currently, both property names `frgment` and `fragment` are supported. 
-`frgment`, however, is now deprecated and will be removed in a future release. 
-Therefore it is recommended that you now change `frgment` to `fragment` in all of your blocks 
+The **Measurement Input** block sends the property name that is used for a fragment as part of its output value.
+In previous versions, this property name was `frgment`. This has now been changed to `fragment`.
+Currently, both property names `frgment` and `fragment` are supported.
+`frgment`, however, is now deprecated and will be removed in a future release.
+Therefore it is recommended that you now change `frgment` to `fragment` in all of your blocks
 (for example, the value of the **Property Path** parameter in the **Extract Property** block).
 
 ##### Cumulocity IoT transport in Apama
 
-As of release 10.14, sending email requests from Apama to Cumulocity IoT requires the user to have the ROLE_EMAIL_CREATE permission. 
+As of release 10.14, sending email requests from Apama to Cumulocity IoT requires the user to have the ROLE_EMAIL_CREATE permission.
 This means that the user name that is used in Software AG Designer projects and any Apama applications connecting externally to the Cumulocity IoT platform must have this permission.

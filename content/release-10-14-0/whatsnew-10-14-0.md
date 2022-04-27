@@ -20,8 +20,8 @@ This contextual information can be accessed via a help icon/button in the action
 
 ### Advanced Software Management
 
+tbd
 
-### LoRa Framework
 
 
 ### Digital Twin Manager

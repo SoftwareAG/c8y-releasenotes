@@ -17,7 +17,17 @@ This contextual information can be accessed via a help icon/button in the action
 
 ### Custom Cockpit configuration
 
-*Need to wait for feature documentation.*
+Cumulocity IoT now offers you to configure custom Cockpit applications according to your individual needs. If you have the relevant permissions you can clone the default Cockpit application and customize certain settings. Among others, you can determine which of the available features like, for example, alarms, data explorer, and so on, should be displayed in the navigator.
+
+![App configuration](/images/release-notes/cockpit-app-configuration.png)
+
+You can also specify, which groups or subgroups should be displayed as top level nodes in the navigator. This way, you can configure your own Cockpit application which might look completely different than the default one:
+
+![Cockpit navigator](/images/release-notes/cockpit-navigator.png)
+
+For details, see [Cockpit > Configuring Cockpit applications](https://cumulocity.com/guides/10.14.0/users-guide/cockpit/#configuration) in the *User guide*.
+
+
 
 ### New device selector
 

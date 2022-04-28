@@ -17,11 +17,16 @@ This contextual information can be accessed via a help icon/button in the action
 
 ### Custom Cockpit configuration
 
+*Need to wait for feature documentation.*
+
+### New device selector
+
 
 ### Advanced Software Management
 
 tbd
 
 
+### Digital Twin Manager Preview
 
-### Digital Twin Manager
+*Need to wait for feature documentation.*

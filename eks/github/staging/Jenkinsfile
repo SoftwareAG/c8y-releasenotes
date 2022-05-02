@@ -1,7 +1,6 @@
 pipeline {
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
-    skipStagesAfterUnstable()
     disableConcurrentBuilds()
   }
   agent {
@@ -10,19 +9,18 @@ pipeline {
       defaultContainer 'default'
     }
   }
+
   environment {
-    YUM_SRV = 'yum.cumulocity.com'
+    YUM_SRV = 'staging-resources.cumulocity.com'
     YUM_USR = 'hudson'
-    YUM_DEST_DIR = '/var/www/staticpage-guides/'
+    YUM_DEST_DIR = '/var/www/staging-resources/staticpage-guides/releasenotes/'
     HUGO_PARAMS = ""
   }
+
   stages {
     stage('Checkout') {
       steps {
-      checkout([
-        $class: 'GitSCM', branches: [[name: 'main']],
-        extensions: [[$class: 'CleanCheckout']],
-        userRemoteConfigs: [[url: 'git@bitbucket.org:m2m/c8y-docs.git',credentialsId:'jenkins-master']] ])
+        git branch: "main", credentialsId: "jenkins-master", url:'git@github.com:SoftwareAG/c8y-releasenotes.git'
       }
     }
     stage('Build') {

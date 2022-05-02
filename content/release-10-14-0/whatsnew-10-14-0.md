@@ -30,10 +30,18 @@ For details, see [Cockpit > Configuring Cockpit applications](https://cumulocity
 
 ### New device selector
 
+Widgets now support the new device and asset selector. The new selector allows navigating quickly through all groups and devices applicable for the currently selected widget.
+
+![Device selector](/images/release-notes/cockpit-device-selector.png)
+
+Additionally, devices and assets can be searched globally (for reports or home dashboards). If a group contains many items, the current level can be filtered.
+
+*For details, see (wait for documentation to add the link)*
+
 
 ### Advanced Software Management
 
-tbd
+*tbd*
 
 
 ### Digital Twin Manager Preview

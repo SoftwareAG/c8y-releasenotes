@@ -6,8 +6,6 @@ layout: bundle
 
 ### REST API changes
 
-#### Planned
-
 #### Implemented
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
@@ -35,6 +33,10 @@ prior to this change the whole payload was saved. Now, the `"_parent:3"` fragmen
 ### Security changes
 
 #### Planned
+
+##### Improved validation of administrator password
+
+To improve the security posture of Cumulocity IoT, in a future release the administrator password will be validated according to the tenant policy. If no policy is selected, the password will be validated according to the options set in the parent tenant.
 
 ##### Cumulocity IoT microservice user privilege deprecation
 
@@ -100,13 +102,7 @@ Set the API version field in the microservice manifest to “2” and deploy thi
 If your microservice is using the deprecated API version 1 and is deployed to a Cumulocity IoT environment in version 10.15 or higher it might, depending on the configuration of this environment, no longer work.
 
 
-#### Implemented
-
-
-
 ### SDK changes
-
-#### Planned
 
 #### Implemented
 
@@ -122,15 +118,6 @@ Instead of creating new instances using PlatformImpl, you should always inject C
 @Autowired //injection
 private InventoryApi inventoryApi;
 ```
-
-### Other changes
-
-
-#### Planned
-
-(MTM-44895)
-Upon tenant creation, its admin's password will be validated according to the selected tenant policy. If no policy is selected, the password will be validated according to the options set in the current tenant (parent tenant). This is a consequence of the standard tenant policies handling.
-
 
 ### Streaming Analytics
 

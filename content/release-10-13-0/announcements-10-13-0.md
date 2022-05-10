@@ -101,13 +101,13 @@ This change will only affect you if you or your development team use the Web SDK
 
 ##### Leaflet library has been updated to the latest version
 
-To improve the navigation in the "Map" widget on mobile devices, it is necessary to update the Leaflet library. As announced with [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), the Leaflet library has been updated to the latest version 1.7.1.
+To improve the navigation in the "Map" widget on mobile devices, it is necessary to update the Leaflet library. As announced with [release 10.11](/release-10-11-0/announcements-10-11-0/), the Leaflet library has been updated to the latest version 1.7.1.
 
 This change only affects you if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications. If you have implemented your own custom map on top of the Cumulocity IoT Web SDK, make sure that your implementation still works properly. In case of any issues, see the [Leaflet changelog](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md) and check if you use any deprecated functionality.
 
 ##### Upgrade to Angular 12
 
-As announced with [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), Angular has been updated from version 11 to version 12. Moreover, the default renderer has been changed to Ivy.
+As announced with [release 10.11](/release-10-11-0/announcements-10-11-0/), Angular has been updated from version 11 to version 12. Moreover, the default renderer has been changed to Ivy.
 
 This change will only affect you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications.
 
@@ -115,8 +115,8 @@ For instructions on the upgrade process refer to [Upgrade > Updating the Web SDK
 
 Additionally, you can use the following resources for more details on the changes in Ivy and Angular 12:
 
-- https://angular.io/guide/ivy
-- https://angular.io/guide/updating-to-version-12
+- https://v12.angular.io/guide/ivy
+- https://v12.angular.io/guide/updating-to-version-12
 
 ### Other
 
@@ -126,7 +126,7 @@ Additionally, you can use the following resources for more details on the change
 
 Software AG terminated support for using CEL (Esper) in Cumulocity IoT on 31 Dec 2020 following its deprecation in 2018.
 
-As announced with [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), the "cep" microservice has been removed from the list of default microservices for new installations.
+As announced with [release 10.11](/release-10-11-0/announcements-10-11-0/), the "cep" microservice has been removed from the list of default microservices for new installations.
 
 With this change, all new Cumulocity IoT subscriptions use the Apama CEP engine. Existing installations are not affected. If you plan a new installation, please check out the *system.property* file for details.
 

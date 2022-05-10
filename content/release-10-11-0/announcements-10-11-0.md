@@ -20,7 +20,7 @@ Contact us if you have any questions on the removal of this deprecated query par
 
 ##### Usage of special characters for category and key for TenantOptionCollection API has been disallowed
 
-As announced with [release 10.9.0](/releasenotes/release-10-9-0/announcements-10-9-0/), creating tenant options with special characters in the category or key has been disabled to prevent the following issues:
+As announced with [release 10.9.0](/release-10-9-0/announcements-10-9-0/), creating tenant options with special characters in the category or key has been disabled to prevent the following issues:
 
 - The TenantOptionCollection API returns 400 instead of collection results due to the usage of special characters in category and key.
 - After creating a new tenant option with special characters in key or category, the generated self link points to a non-existing option.
@@ -56,7 +56,7 @@ To enable customers with self-hosted or dedicated environments to determine whic
 
 ##### User and tenant creation require a valid email address with impact to REST, MQTT and UI
 
-As announced with [release 10.7.0](/releasenotes/release-10-7-0/announcements-10-7-0/), security has been improved when creating new users and tenants. Providing the email address is no longer optional but mandatory. The email address is used in the password resetting process, and will have a validation step as well. There will be no changes in the API.
+As announced with [release 10.7.0](/release-10-7-0/announcements-10-7-0/), security has been improved when creating new users and tenants. Providing the email address is no longer optional but mandatory. The email address is used in the password resetting process, and will have a validation step as well. There will be no changes in the API.
 
 ##### Strong password enforced for tenant admins
 
@@ -102,8 +102,8 @@ For instructions on the upgrade process refer to [Upgrade > Updating the Web SDK
 
 Additionally, you can use the following resources for more details on the changes in Ivy and Angular 12:
 
-- https://angular.io/guide/ivy
-- https://angular.io/guide/updating-to-version-12
+- https://v12.angular.io/guide/ivy
+- https://v12.angular.io/guide/updating-to-version-12
 
 #### Implemented
 

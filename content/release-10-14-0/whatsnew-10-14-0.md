@@ -41,8 +41,33 @@ Additionally, devices and assets can be searched globally (for reports or home d
 
 ### Advanced Software Management
 
-*tbd*
+##### Software
 
+There is a new way to manage software called Advanced Software Management. This feature provides better scaling and extends the software model with the `softwareType` property.
+
+For example, the following static SmartREST template sets 3 software templates:
+
+```csv
+140,nvm,0.39.1,apt,https://github.com/nvm-sh/nvm,containerd.io,1.6.0,apt,https://containerd.io/,nginx,1.21.6,container-image,https://hub.docker.com/_/nginx
+```
+
+This would result in the creation of the software artefacts below:
+
+![Advanced Software](/images/release-notes/advanced-software.png)
+
+In order to migrate to the new Software model devices should remove their `c8y_SoftwareList` fragment and set their software artefacts anew using the SmartREST template above.
+
+##### Services
+
+Devices can now announce their services. Services are modeled as child addition managed objects of type `c8y_Service`. To create/update services the following static SmartREST template can be used:
+
+```
+102,dockerd-systemd-service,systemd,dockerd,up
+```
+
+This will result in the following service being created:
+
+![ASM Service](/images/release-notes/ASM_services.png)
 
 ### Digital Twin Manager Preview
 

@@ -48,7 +48,7 @@ With the 10.5.0 release a new token-based mechanism for browser-based authentica
 
 **What is new with release 10.13?**
 
-As announced in [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), with the 10.13 release, the OAI-Secure authentication (successor of OAuth Internal) will be enabled by default for all new created tenants as the authentication method for all browser-based applications.
+As announced in [release 10.11](/release-10-11-0/announcements-10-11-0/), with the 10.13 release, the OAI-Secure authentication (successor of OAuth Internal) will be enabled by default for all new created tenants as the authentication method for all browser-based applications.
 
 Basic authentication will still be available as a fallback but must be manually switched on. For details, see [Administration > Changing settings](https://cumulocity.com/guides/10.13.0/users-guide/administration/#changing-settings) in the *User guide*. Note, that basic authentication for devices is not affected by this change.
 

@@ -57,6 +57,8 @@ This would result in the creation of the software artefacts below:
 
 In order to migrate to the new Software model devices should remove their `c8y_SoftwareList` fragment and set their software artefacts anew using the SmartREST template above.
 
+**Software repository** and **Software** device tab in the Device Management application have been enhanced to allow for better user interaction with long software lists and typed software. For details, see [Device Management > Managing device data > Managing device software](https://cumulocity.com/guides/10.14.0/users-guide/device-management/#managing-device-software) in the *User guide*.
+
 ##### Services
 
 Devices can now announce their services. Services are modeled as child addition managed objects of type `c8y_Service`. To create/update services the following static SmartREST template can be used:
@@ -68,6 +70,8 @@ Devices can now announce their services. Services are modeled as child addition 
 This will result in the following service being created:
 
 ![ASM Service](/images/release-notes/ASM_services.png)
+
+A new **Services** device tab displaying an overview of the services announced by the device has been added to the Device Management application. For details, see [Device Management > Device details > Services](https://cumulocity.com/guides/10.14.0/users-guide/device-management/#services) in the *User guide*.
 
 ### Digital Twin Manager Preview
 

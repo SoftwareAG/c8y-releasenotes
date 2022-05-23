@@ -36,7 +36,7 @@ prior to this change the whole payload was saved. Now, the `"_parent:3"` fragmen
 
 ##### Improved validation of administrator password
 
-To improve the security posture of Cumulocity IoT, in a future release the administrator password will be validated according to the tenant policy. If no policy is selected, the password will be validated according to the options set in the parent tenant.
+To improve the security of Cumulocity IoT, in a future release 10.15+ the administrator password will be validated according to the tenant policy. If no policy is selected, the password will be validated according to the options set in the parent tenant.
 
 ##### Cumulocity IoT microservice user privilege deprecation
 
@@ -104,6 +104,15 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 
 ### SDK changes
 
+#### Planned
+
+##### Removal of support for Angular Schema Form
+
+As of release 10.15 we will stop the support for [Angular Schema Form](http:/schemaform.io/) in the `filteringConfig` of device grid columns in favor of the more modern [Angular Formly](https://formly.dev/). After this change it will no longer be feasible to build an application until all device grid custom column definitions are migrated to use the new definitions.
+
+In the future, we also plan to stop the support for Angular Schema Form in other parts of the application including AngularJS components. For more information on Angular Formly, see [their official documentation page](https://formly.dev/examples/introduction).
+
+
 #### Implemented
 
 ##### Removing PlatformImpl Spring bean from Microservice SDK
@@ -118,6 +127,10 @@ Instead of creating new instances using PlatformImpl, you should always inject C
 @Autowired //injection
 private InventoryApi inventoryApi;
 ```
+
+
+
+
 
 ### Streaming Analytics
 

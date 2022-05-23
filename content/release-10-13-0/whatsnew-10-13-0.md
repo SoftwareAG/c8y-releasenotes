@@ -43,7 +43,7 @@ The latest LPWAN devices send dynamic payloads which could not be decoded by the
 
 To overcome this, LPWAN agents can now extend the payload decoding and command encoding by allowing you to plugin a custom implementation via a Cumulocity IoT microservice which conforms to a specific contract.
 
-When an LPWAN agent receives an uplink message, it forwards the device data to the REST `/decode` endpoint exposed by the microservice for decoding of LoRa payloads. Similarly, when the user executes a device command through the device shell, the LPWAN agent forwards the command text to the REST  `/encode` endpoint exposed by the custom codec microservice for command encoding.
+When an LPWAN agent receives an uplink message, it forwards the device data to the REST <kbd>/decode</kbd> endpoint exposed by the microservice for decoding of LoRa payloads. Similarly, when the user executes a device command through the device shell, the LPWAN agent forwards the command text to the REST  <kbd>/encode</kbd> endpoint exposed by the custom codec microservice for command encoding.
 
 For details, see (https://cumulocity.com/guides/10.13.0/protocol-integration/lpwan-custom-codec/#overview) in the *Protocol integration guide*.
 

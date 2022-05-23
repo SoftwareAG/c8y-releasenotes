@@ -91,9 +91,7 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 
 ##### Analytics Builder - removal of frgment property
 
-The **Measurement Input** block sends the property name that is used for a fragment as part of its output value.
-With release 10.14, this property name was changed from `frgment` to `fragment`, and `frgment` was deprecated. 
-As of release 10.15, the `frgment` property is no longer available.
+As announced in [release 10.14](/releasenotes/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
 If you have not already done so, you must now change `frgment` to `fragment` in all of your blocks
 (for example, the value of the **Property Path** parameter in the **Extract Property** block).
 

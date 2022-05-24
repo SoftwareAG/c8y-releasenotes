@@ -89,16 +89,9 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 
 #### Implemented
 
-##### Analytics Builder - renaming of frgment property name
+##### Analytics Builder - removal of frgment property
 
-The **Measurement Input** block sends the property name that is used for a fragment as part of its output value.
-In previous versions, this property name was `frgment`. This has now been changed to `fragment`.
-Currently, both property names `frgment` and `fragment` are supported.
-`frgment`, however, is now deprecated and will be removed in a future release.
-Therefore it is recommended that you now change `frgment` to `fragment` in all of your blocks
+As announced in [release 10.14](/releasenotes/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
+If you have not already done so, you must now change `frgment` to `fragment` in all of your blocks
 (for example, the value of the **Property Path** parameter in the **Extract Property** block).
 
-##### Cumulocity IoT transport in Apama
-
-As of release 10.14, sending email requests from Apama to Cumulocity IoT requires the user to have the ROLE_EMAIL_CREATE permission.
-This means that the user name that is used in Software AG Designer projects and any Apama applications connecting externally to the Cumulocity IoT platform must have this permission.

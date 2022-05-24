@@ -41,9 +41,9 @@ Additionally, devices and assets can be searched globally (for reports or home d
 
 ### Advanced Software Management
 
-##### Software
+#### Software
 
-There is a new way to manage software called Advanced Software Management. This feature provides better scaling and extends the software model with the `softwareType` property.
+The new Advanced Software Management feature provides better scaling and extends the software model with the `softwareType` property.
 
 For example, the following static SmartREST template sets 3 software templates:
 
@@ -51,15 +51,15 @@ For example, the following static SmartREST template sets 3 software templates:
 140,nvm,0.39.1,apt,https://github.com/nvm-sh/nvm,containerd.io,1.6.0,apt,https://containerd.io/,nginx,1.21.6,container-image,https://hub.docker.com/_/nginx
 ```
 
-This would result in the creation of the software artefacts below:
+This results in the creation of the following software artefacts:
 
 ![Advanced Software](/images/release-notes/advanced-software.png)
 
-In order to migrate to the new Software model devices should remove their `c8y_SoftwareList` fragment and set their software artefacts anew using the SmartREST template above.
+In order to migrate to the new software model devices must remove their `c8y_SoftwareList` fragment and re-set their software artefacts using the SmartREST template above.
 
-**Software repository** and **Software** device tab in the Device Management application have been enhanced to allow for better user interaction with long software lists and typed software. For details, see [Device Management > Managing device data > Managing device software](https://cumulocity.com/guides/10.14.0/users-guide/device-management/#managing-device-software) in the *User guide*.
+The **Software repository** and the **Software** device tab in the Device Management application have been enhanced to allow for better user interaction with long software lists and typed software. For details, see [Device Management > Managing device data > Managing device software](https://cumulocity.com/guides/10.14.0/users-guide/device-management/#managing-device-software) in the *User guide*.
 
-##### Services
+#### Services
 
 Devices can now announce their services. Services are modeled as child addition managed objects of type `c8y_Service`. To create/update services the following static SmartREST template can be used:
 
@@ -67,7 +67,7 @@ Devices can now announce their services. Services are modeled as child addition 
 102,dockerd-systemd-service,systemd,dockerd,up
 ```
 
-This will result in the following service being created:
+This results in the following service being created:
 
 ![ASM Service](/images/release-notes/ASM_services.png)
 

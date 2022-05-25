@@ -43,9 +43,9 @@ Additionally, devices and assets can be searched globally (for reports or home d
 
 #### Software
 
-The new Advanced Software Management feature provides better scaling and extends the software model with the `softwareType` property.
+The new Advanced Software Management feature provides better scaling and extends the software model with the `softwareType` property. This functionality requires a subscription to the advanced-software-mgmt microservice.
 
-For example, the following static SmartREST template sets 3 software templates:
+For example, the following static SmartREST template creates 3 software objects and appends them to the device:
 
 ```csv
 140,nvm,0.39.1,apt,https://github.com/nvm-sh/nvm,containerd.io,1.6.0,apt,https://containerd.io/,nginx,1.21.6,container-image,https://hub.docker.com/_/nginx

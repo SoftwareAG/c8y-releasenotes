@@ -20,7 +20,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: "develop", credentialsId: "jenkins-master", url:'git@github.com:SoftwareAG/c8y-releasenotes.git'
+        git branch: "preview", credentialsId: "jenkins-master", url:'git@github.com:SoftwareAG/c8y-releasenotes.git'
       }
     }
     stage('Build') {

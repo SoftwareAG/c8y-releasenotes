@@ -6,12 +6,15 @@ layout: bundle
 
 ### REST API changes
 
+#### Planned
 #### Implemented
 
 
 ### Security changes
 
 #### Planned
+#### Implemented
+
 
 
 ##### Cumulocity IoT microservice user privilege deprecation
@@ -81,7 +84,6 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 ### SDK changes
 
 #### Planned
-
 #### Implemented
 
 
@@ -94,4 +96,3 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 As announced in [release 10.14](/releasenotes/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
 If you have not already done so, you must now change `frgment` to `fragment` in all of your blocks
 (for example, the value of the **Property Path** parameter in the **Extract Property** block).
-

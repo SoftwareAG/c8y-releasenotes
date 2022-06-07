@@ -37,7 +37,9 @@ The device management library, which defines the data structures (expressed as f
 
 See [Device management library](https://cumulocity.com/guides{{< 10-11-0 >}}/reference/device-management-library) in the *Reference guide*.
 
->**Info:** Note that the device management library has been moved from the Cumulocity IoT OpenAPI Specification to the product documentation website.
+{{< c8y-admon-info >}}
+Note that the device management library has been moved from the Cumulocity IoT OpenAPI Specification to the product documentation website.
+{{< /c8y-admon-info >}}
 
 ### OpenAPI Specification
 

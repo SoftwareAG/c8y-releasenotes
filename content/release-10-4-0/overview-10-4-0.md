@@ -14,4 +14,6 @@ These release notes for **Cumulocity IoT release 10.4.0**, include all relevant 
 
 Select the [product component](/about/introduction/#component) you are interested in from the index at the left.
 
->**Info:** In most components, you will find separate entries for each published release (initial release and Maintenance releases).
+{{< c8y-admon-info >}}
+In most components, you will find separate entries for each published release (initial release and Maintenance releases).
+{{< /c8y-admon-info >}}

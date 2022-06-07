@@ -20,7 +20,9 @@ Furthermore, with the introduction of a new group view, the information from the
 
 #### Web SDK - Font awesome icons replaced by new icons
 
->**Info:** This change will only affect you if you or your development team use the Web SDK to extend default Cumulocity IoT UI applications (Cockpit, Administration, Device Management) or to build your own web applications.
+{{< c8y-admon-info >}}
+This change will only affect you if you or your development team use the Web SDK to extend default Cumulocity IoT UI applications (Cockpit, Administration, Device Management) or to build your own web applications.
+{{< /c8y-admon-info >}}
 
 With release 10.10, "font awesome" icons are replaced by a larger set of icons aligned with the icons used by the Delite Design System from Software AG. The font awesome library will no longer be used in the Cumulocity IoT Web SDK.
 All CSS classes with the prefix `fa-**` are now updated to use the `dlt-c8y-icon-**` prefix, keeping the icon name unchanged. The c8y-icon directive was also updated to reflect this behavior. `fa-** ` utility classes were also changed and now use a more generic prefix: `icon-**`.

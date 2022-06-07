@@ -28,7 +28,7 @@ You can also specify, which groups or subgroups should be displayed as top level
 For details, see [Cockpit > Configuring Cockpit applications](https://cumulocity.com/guides/10.14.0/users-guide/cockpit/#configuration) in the *User guide*.
 
 
-### New device selector
+### New asset selector
 
 Widgets now support the new device and asset selector. The new selector allows navigating quickly through all groups and devices applicable for the currently selected widget.
 
@@ -36,7 +36,7 @@ Widgets now support the new device and asset selector. The new selector allows n
 
 Additionally, devices and assets can be searched globally (for reports or home dashboards). If a group contains many items, the current level can be filtered.
 
-*For details, see (wait for documentation to add the link)*
+For details, see [Cockpit > Using widgets in dashboards and reports](https://cumulocity.com/guides/10.14.0/users-guide/cockpit/#using-widgets) in the *User guide*.
 
 
 ### Advanced Software Management
@@ -75,4 +75,4 @@ A new **Services** device tab displaying an overview of the services announced b
 
 ### Digital Twin Manager Preview
 
-*Need to wait for feature documentation.*
+*TBA*

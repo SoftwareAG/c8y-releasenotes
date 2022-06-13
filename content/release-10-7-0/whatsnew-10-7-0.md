@@ -6,7 +6,9 @@ layout: bundle
 
 Release 10.7.0 includes the following new features or major feature enhancements.
 
->**Info:** To learn what´s new in Cumulocity IoT or in a particular area of the platform we also offer various eLearning delta trainings on the [Software AG learning portal](https://knowledge.softwareag.com/iot_delta) which present the new and enhanced functionality available in a specific product release.
+{{< c8y-admon-info >}}
+To learn what´s new in Cumulocity IoT or in a particular area of the platform we also offer various eLearning delta trainings on the [Software AG learning portal](https://knowledge.softwareag.com/iot_delta) which present the new and enhanced functionality available in a specific product release.
+{{< /c8y-admon-info >}}
 
 ### Device management & connectivity
 
@@ -100,4 +102,4 @@ The functionality of the OPC UA device gateway has been enhanced including the f
 * The default configuration file packaged in the JAR is now fully commented.
 * UA alarm severity mappings can now be configured in the OPC UA server managed object.
 
-For details, see the <a href="/release-10-7-0/devices-10-7-0" class="no-ajaxy">more detailed release notes for Device management & connectivity</a> or [OPC UA](/protocol-integration/opcua) in the *Protocol integration guide*.
+For details, see the <a href="/release-10-7-0/devices-10-7-0" class="no-ajaxy">more detailed release notes for Device management & connectivity</a> or [OPC UA](https://cumulocity.com/guides/10.7.0/protocol-integration/opcua) in the *Protocol integration guide*.

@@ -15,6 +15,27 @@ How does this impact users? After its removal, this deprecated query parameter w
 
 Contact us if you have any questions on the removal of this deprecated query parameter.
 
+##### Breaking change in the Inventory API - restrictions for a set of properties
+
+For the Inventory API, as of the 10.14 GA release, a set of properties will be restricted for internal system usage and cannot be set by external users. This change is motivated by performance improvements.
+
+In case of a request sent with these properties, they will be ignored by the platform and not set.
+
+The mentioned internal fragments are: `_c8y_Internal`, `_hierarchyCalculated`, `_hierarchy:root` and every fragment which starts with `_parent:`.
+
+For example, if a user sends a request in the following format:
+
+```
+{
+	"name": "testDevice",
+    "owner": "device_654321",
+    "c8y_IsDevice": {},
+    "_parent:3":{}
+}
+```
+
+currently the whole payload is saved. In the future, the `"_parent:3"` fragment will be ignored and not saved.
+
 ### Security changes
 
 #### Implemented
@@ -27,9 +48,9 @@ With the 10.5.0 release a new token-based mechanism for browser-based authentica
 
 **What is new with release 10.13?**
 
-As announced in [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), with the 10.13 release, the OAI-Secure authentication (successor of OAuth Internal) will be enabled by default for all new created tenants as the authentication method for all browser-based applications.
+As announced in [release 10.11](/release-10-11-0/announcements-10-11-0/), with the 10.13 release, the OAI-Secure authentication (successor of OAuth Internal) will be enabled by default for all new created tenants as the authentication method for all browser-based applications.
 
-Basic authentication will still be available as a fallback but has to be manually switched on. For details, see [Administration > Changing settings](https://cumulocity.com/guides/10.13.0/users-guide/administration/#changing-settings) in the *User guide*. Note, that basic authentication for devices is not affected by this change.
+Basic authentication will still be available as a fallback but must be manually switched on. For details, see [Administration > Changing settings](https://cumulocity.com/guides/10.13.0/users-guide/administration/#changing-settings) in the *User guide*. Note, that basic authentication for devices is not affected by this change.
 
 **What comes next?**
 
@@ -80,13 +101,13 @@ This change will only affect you if you or your development team use the Web SDK
 
 ##### Leaflet library has been updated to the latest version
 
-To improve the navigation in the "Map" widget on mobile devices, it is necessary to update the Leaflet library. As announced with [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), the Leaflet library has been updated to the latest version 1.7.1.
+To improve the navigation in the "Map" widget on mobile devices, it is necessary to update the Leaflet library. As announced with [release 10.11](/release-10-11-0/announcements-10-11-0/), the Leaflet library has been updated to the latest version 1.7.1.
 
 This change only affects you if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications. If you have implemented your own custom map on top of the Cumulocity IoT Web SDK, make sure that your implementation still works properly. In case of any issues, see the [Leaflet changelog](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md) and check if you use any deprecated functionality.
 
 ##### Upgrade to Angular 12
 
-As announced with [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), Angular has been updated from version 11 to version 12. Moreover, the default renderer has been changed to Ivy.
+As announced with [release 10.11](/release-10-11-0/announcements-10-11-0/), Angular has been updated from version 11 to version 12. Moreover, the default renderer has been changed to Ivy.
 
 This change will only affect you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications.
 
@@ -94,8 +115,8 @@ For instructions on the upgrade process refer to [Upgrade > Updating the Web SDK
 
 Additionally, you can use the following resources for more details on the changes in Ivy and Angular 12:
 
-- https://angular.io/guide/ivy
-- https://angular.io/guide/updating-to-version-12
+- https://v12.angular.io/guide/ivy
+- https://v12.angular.io/guide/updating-to-version-12
 
 ### Other
 
@@ -105,7 +126,7 @@ Additionally, you can use the following resources for more details on the change
 
 Software AG terminated support for using CEL (Esper) in Cumulocity IoT on 31 Dec 2020 following its deprecation in 2018.
 
-As announced with [release 10.11](/releasenotes/release-10-11-0/announcements-10-11-0/), the "cep" microservice has been removed from the list of default microservices for new installations.
+As announced with [release 10.11](/release-10-11-0/announcements-10-11-0/), the "cep" microservice has been removed from the list of default microservices for new installations.
 
 With this change, all new Cumulocity IoT subscriptions use the Apama CEP engine. Existing installations are not affected. If you plan a new installation, please check out the *system.property* file for details.
 
@@ -148,5 +169,5 @@ The following applies as of Apama 10.11.1:
 
 - Warning messages are now logged for Cumulocity IoT queries where `pageSize` is below 50 and `currentPage` is not set (default).
   This is because setting a small `pageSize` without setting `currentPage` can result in queries that run very slowly.
-  For example, to request the first 20 items, you have to set `pageSize` to 20 and `currentPage` to 1.
+  For example, to request the first 20 items, you must set `pageSize` to 20 and `currentPage` to 1.
   See also [Paging Cumulocity IoT queries](https://documentation.softwareag.com/apama/v10-11/apama10-11/apama-webhelp/index.html#page/apama-webhelp%2Fco-ConApaAppToExtCom_cumulocity_paging_cumulocity_queries.html) in the Apama documentation.

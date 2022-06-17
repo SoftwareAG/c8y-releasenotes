@@ -6,7 +6,9 @@ layout: bundle
 
 Release 10.9.0 includes the following new features or major feature enhancements.
 
->**Info:** To learn what´s new in Cumulocity IoT or in a particular area of the platform we also offer various eLearning delta trainings on the [Software AG learning portal](https://knowledge.softwareag.com/iot_delta) which present the new and enhanced functionality available in a specific product release.
+{{< c8y-admon-info >}}
+To learn what´s new in Cumulocity IoT or in a particular area of the platform we also offer various eLearning delta trainings on the [Software AG learning portal](https://knowledge.softwareag.com/iot_delta) which present the new and enhanced functionality available in a specific product release.
+{{< /c8y-admon-info >}}
 
 ### Open API specification
 
@@ -60,7 +62,7 @@ The <b>SMS provider</b> page has been updated. New providers have been added to 
 
 ![SMS providers](/images/release-notes/admin-settings-sms-provider.png)
 
-See also <a href="https://cumulocity.com/guides/10.9.0/users-guide/administration/#openIT-credentials" class="no-ajaxy">Administration > Changing settings > Providing SMS provider credentials</a> in the <em>User guide</em>.
+See also <a href="https://cumulocity.com/guides/10.9.0/users-guide/administration/#providing-sms-provider-credentials" class="no-ajaxy">Administration > Changing settings > Providing SMS provider credentials</a> in the <em>User guide</em>.
 
 ### Device Management
 

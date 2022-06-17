@@ -36,8 +36,6 @@ prior to this change the whole payload was saved. Now, the `"_parent:3"` fragmen
 
 ##### Improved validation of administrator password
 
-To improve the security of Cumulocity IoT, in a future release 10.15+ the administrator password will be validated according to the tenant policy. If no policy is selected, the password will be validated according to the options set in the parent tenant.
-
 To improve the security of Cumulocity IoT, in a future release 10.15+ the administrator password when creating a new tenant will be validated according to the tenant policy selected. If no policy is selected, the password will be validated according to the options set in the parent tenant.
 
 

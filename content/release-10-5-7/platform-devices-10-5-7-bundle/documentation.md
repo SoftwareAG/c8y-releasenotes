@@ -25,4 +25,4 @@ The *Device SDK for C++* documentation has been updated and improved, see [Devic
 
 ### Cumulocity IoT Edge
 
-The [*Cumulocity IoT Edge guide*](https://cumulocity.com/guides/10.5.7/edge/overview) has been updated to include all new features and functionalities related to the Cumulocity IoT Edge 10.5 release from November 2019.
+The [Cumulocity IoT Edge guide](https://cumulocity.com/guides/10.5.7/edge/overview) has been updated to include all new features and functionalities related to the Cumulocity IoT Edge 10.5 release from November 2019.

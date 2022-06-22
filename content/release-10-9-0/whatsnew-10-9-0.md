@@ -95,7 +95,7 @@ The functionality of the OPC UA device gateway has been enhanced including the f
   - Configurable mapping of alarm status using regular expressions.
   - Configurable mapping of alarm severities.
 - Support for partial scanning of address space.
-- Support for boolean value node mapping to measurements.
+- Support for Boolean value node mapping to measurements.
 
  For details see the <a href="/release-10-9-0/devices-10-9-0" class="no-ajaxy">10.9 release notes for Device management & connectivity</a> or <a href="https://cumulocity.com/guides/10.9.0/protocol-integration/opcua" class="no-ajaxy">OPC UA</a> in the *Protocol integration guide*.
 

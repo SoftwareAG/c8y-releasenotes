@@ -45,7 +45,7 @@ For details, see [Optional services > OPC UA](https://cumulocity.com/guides/10.6
 
 * "queueSize" - number, queueSize > 0, no max value
 * "dataChangeTrigger" - string, radio-button with possible values: Status, StatusValue, StatusValueTimestamp
-* "discardOldest" - boolean, radio-buttons with possible labels: Discard oldest, Discard newest - where discard newest will just turn discard oldest into false. Discard oldest is the default.
+* "discardOldest" - Boolean, radio-buttons with possible labels: Discard oldest, Discard newest - where discard newest will just turn discard oldest into false. Discard oldest is the default.
 
 #### Easier analysis of issues during the auto-apply procedure
 

@@ -6,6 +6,15 @@ layout: bundle
 
 ### REST API changes
 
+#### Planned
+
+##### Breaking change in the Application API - blocking ability to change application key and contextPath
+
+As of release 10.16+, it will no longer be possible to change the contextPath and the key of an application.
+This is a breaking change and API requests trying to update the values of these application properties will fail.
+
+The reason for this change is that changing the values of these properties would break previous application binaries.
+
 #### Implemented
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties

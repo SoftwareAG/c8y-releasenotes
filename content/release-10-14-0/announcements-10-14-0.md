@@ -8,7 +8,7 @@ layout: bundle
 
 #### Planned
 
-##### Breaking change in the Application API - blocking the ability to change application key and contextPath
+##### Breaking change in the Application API - the ability to change the application key and contextPath will be blocked
 
 As of release 10.16+, it will no longer be possible to change the contextPath and the key of an application.
 This is a breaking change and API requests trying to update the values of these application properties will fail.

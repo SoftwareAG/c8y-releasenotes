@@ -16,7 +16,9 @@ Select a GA release version from the dropdown on the top left:
 
 ![Versions](/images/release-notes/releasenotes-version-dropdown.png)
 
->**Info:** The release notes reach back to GA release 10.4.0. For release notes on older GA releases, please [contact support](/about/contacting-support/).
+{{< c8y-admon-info >}}
+The release notes reach back to GA release 10.4.0. For release notes on older GA releases, please [contact support](/about/contacting-support/).
+{{< /c8y-admon-info >}}
 
 ### <a name="component"></a> Product components
 
@@ -36,4 +38,6 @@ The following product components are generally included (if relevant for this pa
 * Cumulocity IoT DataHub
 * Documentation
 
->**Info:** In most components, you will find separate entries for each published release. As you can see in the image above, for the Device Management component in 10.7.0 for example, you will find release notes for 10.7.0.24 (the initially published 10.7.0 release), and for the Maintenance releases 10.7.0.31, 10.7.0.32, 10.7.0.36.
+{{< c8y-admon-info >}}
+In most components, you will find separate entries for each published release. As you can see in the image above, for the Device Management component in 10.7.0 for example, you will find release notes for 10.7.0.24 (the initially published 10.7.0 release), and for the Maintenance releases 10.7.0.31, 10.7.0.32, 10.7.0.36.
+{{< /c8y-admon-info >}}

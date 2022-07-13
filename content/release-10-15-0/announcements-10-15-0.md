@@ -14,6 +14,15 @@ layout: bundle
 
 #### Planned
 
+#### Improved security for OAI-Secure users
+
+With the 10.16+ release, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
+
+The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information.
+
+Basic authentication users will not be affected by this change.
+
+
 #### Implemented
 
 ##### Cumulocity IoT microservice user privilege deprecation

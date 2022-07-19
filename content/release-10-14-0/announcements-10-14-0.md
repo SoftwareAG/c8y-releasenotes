@@ -99,3 +99,11 @@ Therefore it is recommended that you now change `frgment` to `fragment` in all o
 
 As of release 10.14, sending email requests from Apama to Cumulocity IoT requires the user to have the ROLE_EMAIL_CREATE permission.
 This means that the user name that is used in Software AG Designer projects and any Apama applications connecting externally to the Cumulocity IoT platform must have this permission.
+
+#### Planned
+
+##### Removal of Esper
+
+Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from 10.15 the CEL (Esper) functionality will be removed completely and cannot be used anymore.
+
+If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).

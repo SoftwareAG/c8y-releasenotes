@@ -63,3 +63,9 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 As announced in [release 10.14](/releasenotes/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
 If you have not already done so, you must now change `frgment` to `fragment` in all of your blocks
 (for example, the value of the **Property Path** parameter in the **Extract Property** block).
+
+##### Removal of Esper
+
+Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from release 10.15 the CEL (Esper) functionality has been removed completely and cannot be used anymore.
+
+If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).

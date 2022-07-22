@@ -59,6 +59,7 @@ Basic authentication users will not be affected by this change.
 ### SDK changes
 
 #### Planned
+As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade guide](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity cli tool.
 
 ##### Removal of support for Angular Schema Form
 

@@ -19,7 +19,7 @@ Cumulocity IoT Digital Twin Manager (DTM) is a layered product hosted on the Cum
 The DTM consists of several components, which allow you to create your assets and asset hierarchies:
 
     •	**Property library** - Create your own custom properties (simple or complex) to define how data should be stored on an asset
-    •	Asset types - Define asset types to describe the blueprint of your assets
+    •	**Asset types** - Define the asset types to describe the blueprint of your assets
     •	Localization - Dynamically translate asset type and custom property descriptions to multiple languages
     •	Assets navigator - Manage your asset hierarchies
 

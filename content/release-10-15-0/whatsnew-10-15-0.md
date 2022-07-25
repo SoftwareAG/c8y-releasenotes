@@ -23,7 +23,7 @@ The DTM consists of several components, which allow you to create your assets an
     •	**Localization** - Dynamically translate the asset type and custom property descriptions to multiple languages
     •	**Assets navigator** - Manage your asset hierarchies
 
-You can access Digital Twin Manager from the Cumulocity IoT app switcher:
+You can access the DTM from the Cumulocity IoT Application Switcher:
 
 ![App switcher](/images/dtm/app-switcher-dtm.png)
 

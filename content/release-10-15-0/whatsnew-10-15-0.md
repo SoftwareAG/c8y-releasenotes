@@ -43,7 +43,7 @@ The **Assets Navigator** is the starting point to create your asset hierarchies 
 
 **Localization**
 
-You can use the Localization component to define translations for your asset types and custom properties. These translations can be provided for all supported languages in Cumulocity IoT. This component requires to have the feature-branding feature subscribed for your Cumulocity tenant.
+You can use the **Localization** component to define translations for your asset types and custom properties. These translations can be provided for all languages supported in Cumulocity IoT. This component requires you to have the feature-branding feature subscribed for your Cumulocity IoT tenant.
 
 ### Installation
 

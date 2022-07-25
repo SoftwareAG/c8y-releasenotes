@@ -31,7 +31,7 @@ See the [Cumulocity Iot DTM Guide](/guides/dtm/#overview) for the complete docum
 
 **Property Library**
 
-The Property Library can be used to create your own custom properties to define how data should be stored on an asset. These custom properties can be either complex (nested object) or simple (key-value pair). Furthermore, you can choose a specific data type for each property you define. As of now, the Property Library supports following data types: Text, Number, Date Picker, Enumeration, Boolean.
+The **Property Library** can be used to create your own custom properties in order to define how data should be stored on an asset. These custom properties can be either complex (nested object) or simple (key-value pair). Furthermore, you can select a specific data type for each property you define. As of now, the **Property Library** supports the following data types: Text, Number, Date Picker, Enumeration, Boolean.
 
 **Asset Types**
 

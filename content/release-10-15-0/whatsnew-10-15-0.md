@@ -35,7 +35,7 @@ The **Property Library** can be used to create your own custom properties in ord
 
 **Asset Types**
 
-Asset Types serve as a blueprint for your assets and define how they are structured. An Asset Type defines what custom properties an asset should have. Additionally, you can specify relationships between multiple Asset Types, which will be respected when you create your actual asset hierarchies. Once the Asset Type is created, it can be used to create various assets.
+**Asset Types** serve as a blueprint for your assets and define how they are structured. An asset type defines what custom properties an asset should have. Additionally, you can specify relationships between multiple asset types, which will be respected when you create your actual asset hierarchies. Once the asset type is created, it can be used to create various assets.
 
 **Assets Navigator**
 

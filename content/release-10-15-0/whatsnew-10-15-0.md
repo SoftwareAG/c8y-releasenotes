@@ -47,4 +47,4 @@ You can use the **Localization** component to define translations for your asset
 
 ### Installation
 
-See [DTM Ops Guide](<<TBD>>) for the complete documentation.
+See the [Cumulocity IoT DTM Installation & operations guide](<<TBD>>) for the complete documentation.

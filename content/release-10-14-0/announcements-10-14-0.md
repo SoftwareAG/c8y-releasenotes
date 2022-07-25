@@ -105,8 +105,6 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 ### SDK changes
 
 #### Planned
-#### Planned
-nged in your custom applications. Refer to our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity IoT CLI tool.
 
 ##### Removal of support for Angular Schema Form
 

@@ -39,7 +39,7 @@ The **Property Library** can be used to create your own custom properties in ord
 
 **Assets Navigator**
 
-The Assets Navigator is the starting point to create your asset hierarchies based on the asset types and custom properties, you have defined previously. Once you have created your asset hierarchies you can use the Assets Navigator to view and manage them.
+The **Assets Navigator** is the starting point to create your asset hierarchies based on the asset types and custom properties, you have defined previously. Once you have created your asset hierarchies you can use the **Assets Navigator** to view and manage them.
 
 **Localization**
 

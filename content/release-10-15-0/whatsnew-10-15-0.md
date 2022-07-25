@@ -20,7 +20,7 @@ The DTM consists of several components, which allow you to create your assets an
 
     •	**Property library** - Create your own custom properties (simple or complex) to define how data should be stored on an asset
     •	**Asset types** - Define the asset types to describe the blueprint of your assets
-    •	Localization - Dynamically translate asset type and custom property descriptions to multiple languages
+    •	**Localization** - Dynamically translate the asset type and custom property descriptions to multiple languages
     •	Assets navigator - Manage your asset hierarchies
 
 You can access Digital Twin Manager from the Cumulocity IoT app switcher:

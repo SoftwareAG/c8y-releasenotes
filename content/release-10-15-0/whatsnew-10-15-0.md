@@ -12,8 +12,8 @@ In an effort to provide you a more consistent experience across the platform the
 
 ![All devices](/images/release-notes/devmgmt-devices-alldevices.png)
 
-### Multiple LNS Connection for Sigfox and Actility
+### Multiple LNS connection for Sigfox and Actility
 
-The Sigfox and Actility agent now supports configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
+The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
 
 ![All devices](/images/release-notes/multiple_lns_connection.png)

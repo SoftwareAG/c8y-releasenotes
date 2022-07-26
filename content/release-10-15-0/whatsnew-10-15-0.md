@@ -23,11 +23,11 @@ The DTM consists of several components, which allow you to create your assets an
     •	**Localization** - Dynamically translate the asset type and custom property descriptions to multiple languages
     •	**Assets navigator** - Manage your asset hierarchies
 
-You can access the DTM from the Cumulocity IoT Application Switcher:
+You can access the DTM from the Cumulocity IoT application switcher:
 
-![Application Switcher](/images/dtm/app-switcher-dtm.png)
+![Application switcher](/images/dtm/app-switcher-dtm.png)
 
-See the [Cumulocity IoT DTM Guide](/guides/dtm/#overview) for the complete documentation.
+See the [Cumulocity IoT DTM guide](/guides/dtm/#overview) for the complete documentation.
 
 **Property Library**
 

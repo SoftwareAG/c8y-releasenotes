@@ -25,7 +25,7 @@ The DTM consists of several components, which allow you to create your assets an
 
 You can access the DTM from the Cumulocity IoT application switcher:
 
-![Application switcher](/images/dtm/app-switcher-dtm.png)
+![DTM Landing screen](/images/dtm/landing-screen-dtm.png)
 
 For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overview).
 

@@ -27,7 +27,7 @@ You can access the DTM from the Cumulocity IoT application switcher:
 
 ![Application switcher](/images/dtm/app-switcher-dtm.png)
 
-See the [Cumulocity IoT DTM guide](/guides/dtm/#overview) for the complete documentation.
+For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overview).
 
 **Property Library**
 

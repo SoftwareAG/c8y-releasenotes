@@ -27,7 +27,7 @@ You can access the DTM from the Cumulocity IoT Application Switcher:
 
 ![Application Switcher](/images/dtm/app-switcher-dtm.png)
 
-See the [Cumulocity Iot DTM Guide](/guides/dtm/#overview) for the complete documentation.
+See the [Cumulocity IoT DTM Guide](/guides/dtm/#overview) for the complete documentation.
 
 **Property Library**
 
@@ -45,6 +45,6 @@ The **Assets Navigator** is the starting point to create your asset hierarchies 
 
 You can use the **Localization** component to define translations for your asset types and custom properties. These translations can be provided for all languages supported in Cumulocity IoT. This component requires you to have the feature-branding feature subscribed for your Cumulocity IoT tenant.
 
-### Installation
+#### Installation
 
 See the [Cumulocity IoT DTM Installation & operations guide](<<TBD>>) for the complete documentation.

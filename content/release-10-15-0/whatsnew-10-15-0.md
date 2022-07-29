@@ -16,8 +16,6 @@ In an effort to provide you a more consistent experience across the platform the
 
 The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
 <br>
-For details, refer to
-<br> Sigfox : https://cumulocity.com/guides/protocol-integration/sigfox
-<br> Actility : https://cumulocity.com/guides/protocol-integration/lora-actility
+For details, refer to [Sigfox](https://cumulocity.com/guides/protocol-integration/sigfox) or [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility) in the *Protocol integration guide*.
 
 ![All devices](/images/release-notes/multiple_lns_connection.png)

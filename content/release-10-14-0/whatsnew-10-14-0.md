@@ -27,7 +27,6 @@ You can also specify, which groups or subgroups should be displayed as top level
 
 For details, see [Cockpit > Configuring Cockpit applications](https://cumulocity.com/guides/10.14.0/users-guide/cockpit/#configuration) in the *User guide*.
 
-
 ### New asset selector
 
 Widgets now support the new device and asset selector. The new selector allows navigating quickly through all groups and devices applicable for the currently selected widget.

@@ -48,3 +48,11 @@ You can use the **Localization** component to define translations for your asset
 #### Installation
 
 For information on installation and operations, see the *Digital Twin Manager -  Installation & operations guide*.
+
+### Multiple LNS connection for Sigfox and Actility
+
+The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
+<br>
+For details, refer to [Sigfox](https://cumulocity.com/guides/protocol-integration/sigfox) or [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility) in the *Protocol integration guide*.
+
+![All devices](/images/release-notes/multiple_lns_connection.png)

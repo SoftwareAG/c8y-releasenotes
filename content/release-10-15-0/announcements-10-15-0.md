@@ -7,14 +7,19 @@ layout: bundle
 ### REST API changes
 
 #### Planned
-#### Implemented
+
+##### Breaking change in the Application API - the ability to change the application key and contextPath will be blocked
+
+As of release 10.16+, it will no longer be possible to change the contextPath and the key of an application. This is a breaking change and API requests trying to update the values of these application properties will fail.
+
+The reason for this change is that changing the values of these properties would break previous application binaries.
 
 
 ### Security changes
 
 #### Planned
 
-#### Improved security for OAI-Secure users
+##### Improved security for OAI-Secure users
 
 With the 10.16+ release, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
 
@@ -51,9 +56,18 @@ If your microservice is using the deprecated API version 1 and is deployed to a 
 ### SDK changes
 
 #### Planned
-As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade guide](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity cli tool.
+
+##### Updating the Web SDK to Angular 14
+
+As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
 
 #### Implemented
+
+##### Removal of support for Angular Schema Form
+
+As of release 10.15 the support for [Angular Schema Form](http:/schemaform.io/) in the `filteringConfig` of device grid columns has stopped in favor of the more modern [Angular Formly](https://formly.dev/). It is now no longer feasible to build an application until all device grid custom column definitions are migrated to use the new definitions.
+
+In the future, we also plan to stop the support for Angular Schema Form in other parts of the application including AngularJS components. For more information on Angular Formly, see [their official documentation page](https://formly.dev/examples/introduction).
 
 
 ### Streaming Analytics

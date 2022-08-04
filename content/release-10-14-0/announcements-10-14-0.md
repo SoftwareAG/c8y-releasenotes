@@ -59,6 +59,9 @@ Basic authentication users will not be affected by this change.
 ### SDK changes
 
 #### Planned
+
+##### Updating the Web SDK to Angular 14
+
 As of release 10.16 we will update the Cumulocity IoT Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom applications. Refer to our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity IoT CLI tool.
 
 ##### Removal of support for Angular Schema Form

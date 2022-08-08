@@ -10,7 +10,7 @@ layout: bundle
 
 ##### Breaking change in the Application API - the ability to change the application key and contextPath will be blocked
 
-As announced with [release 10.14](/releasenotes/release-10-15-0/#announcements-10-14-0), as of release 10.16+ it will no longer be possible to change the contextPath and the key of an application. This is a breaking change and API requests trying to update the values of these application properties will fail.
+As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.16+ it will no longer be possible to change the contextPath and the key of an application. This is a breaking change and API requests trying to update the values of these application properties will fail.
 
 The reason for this change is that changing the values of these properties would break previous application binaries.
 
@@ -21,7 +21,7 @@ The reason for this change is that changing the values of these properties would
 
 ##### Improved security for OAI-Secure users
 
-As announced with [release 10.14](/releasenotes/release-10-15-0/#announcements-10-14-0), as of release 10.16+, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
+As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.16+, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
 
 The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information.
 
@@ -65,7 +65,7 @@ As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angula
 
 ##### Removal of support for Angular Schema Form
 
-As announced with [release 10.14](/releasenotes/release-10-15-0/#announcements-10-14-0), as of release 10.15 the support for [Angular Schema Form](http:/schemaform.io/) in the `filteringConfig` of device grid columns has stopped in favor of the more modern [Angular Formly](https://formly.dev/). It is now no longer feasible to build an application until all device grid custom column definitions are migrated to use the new definitions.
+As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.15 the support for [Angular Schema Form](http:/schemaform.io/) in the `filteringConfig` of device grid columns has stopped in favor of the more modern [Angular Formly](https://formly.dev/). It is now no longer feasible to build an application until all device grid custom column definitions are migrated to use the new definitions.
 
 In the future, we also plan to stop the support for Angular Schema Form in other parts of the application including AngularJS components. For more information on Angular Formly, see [their official documentation page](https://formly.dev/examples/introduction).
 
@@ -76,7 +76,7 @@ In the future, we also plan to stop the support for Angular Schema Form in other
 
 ##### Analytics Builder - removal of frgment property
 
-As announced in [release 10.14](/releasenotes/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
+As announced in [release 10.14](/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
 If you have not already done so, you must now change `frgment` to `fragment` in all of your blocks
 (for example, the value of the **Property Path** parameter in the **Extract Property** block).
 

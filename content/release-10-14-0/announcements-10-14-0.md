@@ -19,7 +19,7 @@ The reason for this change is that changing the values of these properties would
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 
-For the Inventory API, as of the 10.14 GA release, a set of properties has been restricted for internal system usage and cannot be set by external users. This change is motivated by performance improvements.
+As announced with [release 10.13](/release-10-13-0/announcements-10-13-0) as of release 10.14, for the Inventory API, a set of properties has been restricted for internal system usage and cannot be set by external users. This change is motivated by performance improvements.
 
 In case of a request sent with these properties, they will be ignored by the platform and not set.
 

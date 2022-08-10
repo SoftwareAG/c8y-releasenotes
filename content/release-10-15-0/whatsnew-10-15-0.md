@@ -6,6 +6,18 @@ layout: bundle
 
 Release 10.15.0 includes the following new features or major feature enhancements.
 
+### Extensible device registration
+
+Text goes here...
+
+### LwM2M single device registration
+
+Text goes here...
+
+### LwM2M 1.1 support
+
+Text goes here...
+
 ### Improved All devices page
 
 In an effort to provide you a more consistent experience across the platform the **All devices** page has been re-shaped. It is now implemented in the data grid fashion you already are familiar with from **Subassets** and **Search** pages. This offers improved appearence in various viewport sizes for many devices, easier filtering and sorting, pagination option (only for users with global inventory access), and sets solid ground for further improvements.

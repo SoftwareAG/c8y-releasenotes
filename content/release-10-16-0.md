@@ -1,6 +1,6 @@
 ---
-title: Release 10.15.0 DRAFT
-bundle: release-10-15-0
+title: Release 10.16.0 DRAFT
+bundle: release-10-16-0
 icon: "c8y-icon c8y-icon-notification"
 type: root
 layout: root

@@ -59,3 +59,5 @@ The video snippets below demonstrate the
 <video width="99%" controls>
   <source src="/images/release-notes/lwm2m-bulk-reg.mp4" type="video/mp4" />
 </video>
+
+For details, also refer to [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.

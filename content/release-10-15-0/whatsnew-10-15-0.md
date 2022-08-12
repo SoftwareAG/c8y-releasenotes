@@ -48,7 +48,7 @@ For details, refer to [Sigfox](https://cumulocity.com/guides/protocol-integratio
 
 The LWM2M agent now provides revised single- and device bulk registration wizards. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
 
-The video snippets below demonstrate the
+The video snippets below demonstrate these new wizards.
 
 ##### Single LWM2M device registration
 <video width="99%" controls>

@@ -63,10 +63,6 @@ We are now supporting the following LWM2M 1.1 features:
 
 For more information on our 1.1 support, see our [LwM2M protocol integration guide](/guides/protocol-integration/lwm2m/).
 
-#### LWM2M resource timestamp conversion
-
-If a timestamp (resources 5518 and 6050, resource 5 for object 6) is received together with resources of the same object, this timestamp can be used as creation timestamp for measurements, events and alarms. See [Advanced settings](/guides/protocol-integration/lwm2m/#advanced-settings) on how to enable this functionality.
-
 ### Multiple LNS connection for Sigfox and Actility
 
 The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.

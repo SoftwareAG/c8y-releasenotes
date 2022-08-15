@@ -34,7 +34,7 @@ For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overvi
 
 For information on installation and operations, see the *Digital Twin Manager -  Installation & operations guide*.
 
-### Multiple LNS connection for Sigfox and Actility
+### Multiple LNS connections for Sigfox and Actility
 
 The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
 
@@ -42,11 +42,10 @@ The Sigfox and Actility agents now support the configuration of multiple connect
 
 For details, refer to [Sigfox](https://cumulocity.com/guides/protocol-integration/sigfox) or [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility) in the *Protocol integration guide*.
 
-### Device Management
 
-#### Revised LWM2M device registration
+### Revised LWM2M device registration
 
-The LWM2M agent now provides revised single and device bulk registration wizards. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
+The LWM2M agent now provides revised single and bulk device registration wizards. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
 
 The video snippets below demonstrate these new wizards.
 

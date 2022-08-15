@@ -34,34 +34,11 @@ For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overvi
 
 For information on installation and operations, see the *Digital Twin Manager -  Installation & operations guide*.
 
-### LWM2M 1.1 support
-
-We are now supporting the following LWM2M 1.1 features:
-
-- LWM2M Send
-- Composite Operations (read, write, observe, cancel observation)
-- New LWM2M serialization formats: CBOR, SenML JSON, SenML CBOR
-- New LWM2M data formats: Core Link, Unsigned Integers
-
-For more information on our 1.1 support, see our [LwM2M protocol integration guide](http://localhost:58835/guides/protocol-integration/lwm2m/).
-
-### LWM2M time timestamp conversion
-
-If a timestamp (resources 5518 and 6050, resource 5 for object 6) is received together with resources of the same object, this timestamp can be used as creation timestamp for measurements, events and alarms. See [Advanced settings](http://localhost:58835/guides/protocol-integration/lwm2m/#advanced-settings) for details.
-
-### Multiple LNS connection for Sigfox and Actility
-
-The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
-
-![All devices](/images/release-notes/multiple_lns_connection.png)
-
-For details, refer to [Sigfox](https://cumulocity.com/guides/protocol-integration/sigfox) or [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility) in the *Protocol integration guide*.
-
 ### Device Management
 
 #### Revised LWM2M device registration
 
-The LWM2M agent now provides revised single and device bulk registration wizards. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
+The LWM2M agent now provides now registration wizards for both single and bulk LWM2M device registration. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
 
 The video snippets below demonstrate these new wizards.
 
@@ -74,3 +51,26 @@ The video snippets below demonstrate these new wizards.
 <video width="99%" controls>
   <source src="/images/release-notes/lwm2m-bulk-reg.mp4" type="video/mp4" />
 </video>
+
+#### LWM2M 1.1 support
+
+We are now supporting the following LWM2M 1.1 features:
+
+- LWM2M Send
+- Composite Operations (read, write, observe, cancel observation)
+- New LWM2M serialization formats: CBOR, SenML JSON, SenML CBOR
+- New LWM2M data formats: Core Link, Unsigned Integers
+
+For more information on our 1.1 support, see our [LwM2M protocol integration guide](/guides/protocol-integration/lwm2m/).
+
+#### LWM2M time timestamp conversion
+
+If a timestamp (resources 5518 and 6050, resource 5 for object 6) is received together with resources of the same object, this timestamp can be used as creation timestamp for measurements, events and alarms. See [Advanced settings](/guides/protocol-integration/lwm2m/#advanced-settings) for details.
+
+### Multiple LNS connection for Sigfox and Actility
+
+The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
+
+![All devices](/images/release-notes/multiple_lns_connection.png)
+
+For details, refer to [Sigfox](https://cumulocity.com/guides/protocol-integration/sigfox) or [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility) in the *Protocol integration guide*.

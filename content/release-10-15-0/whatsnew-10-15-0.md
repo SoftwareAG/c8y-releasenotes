@@ -60,7 +60,7 @@ We now support the following LWM2M 1.1 features:
 - New LWM2M serialization formats: CBOR, SenML JSON, SenML CBOR
 - New LWM2M data formats: Core Link, Unsigned Integers
 
-For more information on our 1.1 support, see our [LwM2M protocol integration guide](https://cumulocity.com/guides/protocol-integration/lwm2m/).
+For more information on our 1.1 support, refer to [LWM2M](https://cumulocity.com/guides/10.15.0/protocol-integration/lwm2m/) in the *Protocol integration guide*.
 
 ### Multiple LNS connections for Sigfox and Actility
 

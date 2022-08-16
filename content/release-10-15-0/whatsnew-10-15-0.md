@@ -6,12 +6,6 @@ layout: bundle
 
 Release 10.15.0 includes the following new features or major feature enhancements.
 
-### Improved All devices page
-
-In an effort to provide you a more consistent experience across the platform the **All devices** page has been re-shaped. It is now implemented in the data grid fashion you already are familiar with from **Subassets** and **Search** pages. This offers improved appearence in various viewport sizes for many devices, easier filtering and sorting, pagination option (only for users with global inventory access), and sets solid ground for further improvements.
-
-![All devices](/images/release-notes/devmgmt-devices-alldevices.png)
-
 ### Digital Twin Manager
 
 Cumulocity IoT Digital Twin Manager (DTM) is a layered product hosted on the Cumulocity IoT platform. DTM enables you to create and manage assets mirroring your physical connected devices in Cumulocity IoT. These assets are then used to structure and describe devices in logical hierarchies as encountered in the real world environment.
@@ -34,7 +28,13 @@ For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overvi
 
 For information on installation and operations, see the *Digital Twin Manager -  Installation & operations guide*.
 
-### Device Management
+## Device Management
+
+### Improved All devices page
+
+In an effort to provide you a more consistent experience across the platform the **All devices** page has been re-shaped. It is now implemented in the data grid fashion you already are familiar with from **Subassets** and **Search** pages. This offers improved appearence in various viewport sizes for many devices, easier filtering and sorting, pagination option (only for users with global inventory access), and sets solid ground for further improvements.
+
+![All devices](/images/release-notes/devmgmt-devices-alldevices.png)
 
 ### Extensible device registration
 

@@ -35,8 +35,7 @@ For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overvi
 For information on installation and operations, see the *Digital Twin Manager -  Installation & operations guide*.
 
 ### Device Management
-
-#### Revised LWM2M device registration
+### Revised LWM2M device registration
 
 The LWM2M agent now provides now registration wizards for both single and bulk LWM2M device registration. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
 
@@ -61,9 +60,9 @@ We are now supporting the following LWM2M 1.1 features:
 - New LWM2M serialization formats: CBOR, SenML JSON, SenML CBOR
 - New LWM2M data formats: Core Link, Unsigned Integers
 
-For more information on our 1.1 support, see our [LwM2M protocol integration guide](/guides/protocol-integration/lwm2m/).
+For more information on our 1.1 support, see our [LwM2M protocol integration guide](https://cumulocity.com/guides/protocol-integration/lwm2m/).
 
-### Multiple LNS connection for Sigfox and Actility
+### Multiple LNS connections for Sigfox and Actility
 
 The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
 

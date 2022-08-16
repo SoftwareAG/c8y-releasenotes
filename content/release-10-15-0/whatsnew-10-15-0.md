@@ -53,7 +53,7 @@ The video snippets below demonstrate these new wizards.
 
 #### LWM2M 1.1 support
 
-We are now supporting the following LWM2M 1.1 features:
+We now support the following LWM2M 1.1 features:
 
 - LWM2M Send
 - Composite Operations (read, write, observe, cancel observation)

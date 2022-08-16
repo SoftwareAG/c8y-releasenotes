@@ -37,7 +37,7 @@ For information on installation and operations, see the *Digital Twin Manager - 
 ### Device Management
 ### Revised LWM2M device registration
 
-The LWM2M agent now provides now registration wizards for both single and bulk LWM2M device registration. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
+The LWM2M agent now provides registration wizards for both single and bulk LWM2M device registration. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/10.15.0/protocol-integration/lwm2m/#register-device) in the *Protocol integration guide*.
 
 The video snippets below demonstrate these new wizards.
 

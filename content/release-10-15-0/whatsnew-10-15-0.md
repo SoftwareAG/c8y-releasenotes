@@ -51,7 +51,7 @@ The video snippets below demonstrate these new wizards.
   <source src="/images/release-notes/lwm2m-bulk-reg.mp4" type="video/mp4" />
 </video>
 
-#### LWM2M 1.1 support
+### LWM2M 1.1 support
 
 We now support the following LWM2M 1.1 features:
 

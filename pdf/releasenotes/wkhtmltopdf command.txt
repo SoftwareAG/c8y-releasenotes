@@ -20,4 +20,4 @@ wkhtmltopdf \
  http://localhost:1313/releasenotes/release-10-15-0/devices-10-15-0/ \
  http://localhost:1313/releasenotes/release-10-15-0/edge-10-15-0/ \
  http://localhost:1313/releasenotes/release-10-15-0/streaming-analytics-10-15-0/ \
- "Cumulocity IoT release notes PREVIEW-v10.14.0.pdf"
+ "Cumulocity IoT release notes PREVIEW-v10.15.0.pdf"

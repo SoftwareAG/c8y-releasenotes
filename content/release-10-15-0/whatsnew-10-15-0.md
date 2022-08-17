@@ -28,25 +28,25 @@ For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overvi
 
 For information on installation and operations, see the *Digital Twin Manager -  Installation & operations guide*.
 
-## Device Management
+### Device Management
 
-### Improved All devices page
+#### Improved All devices page
 
 In an effort to provide you a more consistent experience across the platform the **All devices** page has been re-shaped. It is now implemented in the data grid fashion you already are familiar with from **Subassets** and **Search** pages. This offers improved appearence in various viewport sizes for many devices, easier filtering and sorting, pagination option (only for users with global inventory access), and sets solid ground for further improvements.
 
 ![All devices](/images/release-notes/devmgmt-devices-alldevices.png)
 
-### Extensible device registration
+#### Extensible device registration
 
 Extensible device registration is a new feature that allows microservice developers to implement their own device registration process without explicitly extending a single line of UI source code.
 
-A custom input mask can be created using JSON schema and some specific endpoints that the microservice needs to provide. This is then finally displayed in a dropdown on the device registration page as soon as the microservice is subscribed to the tenant.
+A custom device registration form can be created using JSON schema and some specific endpoints that the microservice needs to provide. This form is then displayed when the user clicks on the corresponding button in a dropdown on the **device registration** page as soon as the microservice is subscribed to the tenant.
 
 Our revised device registration for LWM2M also uses this feature.
 
 For detailed information, see the [Cumulocity IoT EDR guide](/guides/dtm/#overview).
 
-### Revised LWM2M device registration
+#### Revised LWM2M device registration
 
 The LWM2M agent now provides now registration wizards for both single and bulk LWM2M device registration. These dialogs allows the user to conveniently perform single and bulk registrations of LWM2M devices. They also perform input validation and detect common errors before the device is created. See also [LWM2M > Registering LWM2M devices](https://cumulocity.com/guides/protocol-integration/lwm2m/##register-device) in the *Protocol integration guide*.
 
@@ -73,7 +73,7 @@ We are now supporting the following LWM2M 1.1 features:
 
 For more information on our 1.1 support, see our [LwM2M protocol integration guide](https://cumulocity.com/guides/protocol-integration/lwm2m/).
 
-### Multiple LNS connections for Sigfox and Actility
+#### Multiple LNS connections for Sigfox and Actility
 
 The Sigfox and Actility agents now support the configuration of multiple connections per tenant. One connection can be associated with multiple devices. Each connection can be updated and deleted.
 

@@ -6,11 +6,20 @@ layout: bundle
 
 ### REST API changes
 
+#### Planned
+
+##### Breaking change in the Application API - the ability to change the application key and contextPath will be blocked
+
+As of release 10.16+, it will no longer be possible to change the contextPath and the key of an application.
+This is a breaking change and API requests trying to update the values of these application properties will fail.
+
+The reason for this change is that changing the values of these properties would break previous application binaries.
+
 #### Implemented
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 
-For the Inventory API, as of the 10.14 GA release, a set of properties has been restricted for internal system usage and cannot be set by external users. This change is motivated by performance improvements.
+As announced with [release 10.13](/release-10-13-0/announcements-10-13-0) as of release 10.14, for the Inventory API, a set of properties has been restricted for internal system usage and cannot be set by external users. This change is motivated by performance improvements.
 
 In case of a request sent with these properties, they will be ignored by the platform and not set.
 
@@ -36,75 +45,24 @@ prior to this change the whole payload was saved. Now, the `"_parent:3"` fragmen
 
 ##### Improved validation of administrator password
 
-To improve the security of Cumulocity IoT, in a future release 10.15+ the administrator password will be validated according to the tenant policy. If no policy is selected, the password will be validated according to the options set in the parent tenant.
+To improve the security of Cumulocity IoT, in a future release 10.15+ the administrator password when creating a new tenant will be validated according to the tenant policy selected. If no policy is selected, the password will be validated according to the options set in the parent tenant.
 
-##### Cumulocity IoT microservice user privilege deprecation
+##### Improved security for OAI-Secure users
 
-**What will happen**
+With the 10.16+ release, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
 
-With release 10.14, Software AG announces the availability of the Microservice API version 2 and the deprecation of Microservice API version 1 to comply with new security requirements.
+The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information.
 
-Microservice API version 2 provides an improved microservice container security context restricting the invocation of privileged Linux Kernel APIs.  In details this means that the Microservice API version 2 does not grant the microservice container user the following privileges:
-
-•	CAP_AUDIT_CONTROL
-•	CAP_AUDIT_READ
-•	CAP_AUDIT_WRITE
-•	CAP_BLOCK_SUSPEND
-•	CAP_BPF
-•	CAP_CHECKPOINT_RESTORE
-•	CAP_CHOWN
-•	CAP_DAC_OVERRIDE
-•	CAP_DAC_READ_SEARCH
-•	CAP_FOWNER
-•	CAP_FSETID
-•	CAP_IPC_LOCK
-•	CAP_IPC_OWNER
-•	CAP_KILL
-•	CAP_LEASE
-•	CAP_LINUX_IMMUTABLE
-•	CAP_MAC_ADMIN
-•	CAP_MAC_OVERRIDE
-•	CAP_MKNOD
-•	CAP_NET_ADMIN
-•	CAP_NET_BROADCAST
-•	CAP_NET_RAW
-•	CAP_PERFMON
-•	CAP_SETGID
-•	CAP_SETFCAP
-•	CAP_SETPCAP
-•	CAP_SETUID
-•	CAP_SYS_ADMIN
-•	CAP_SYS_BOOT
-•	CAP_SYS_CHROOT
-•	CAP_SYS_MODULE
-•	CAP_SYS_NICE
-•	CAP_SYS_PACCT
-•	CAP_SYS_PTRACE
-•	CAP_SYS_RAWIO
-•	CAP_SYS_RESOURCE
-•	CAP_SYS_TIME
-•	CAP_SYS_TTY_CONFIG
-•	CAP_SYSLOG
-•	CAP_WAKE_ALARM
-
-Refer to [this Linux man page](https://man7.org/linux/man-pages/man7/capabilities.7.html) for more information.
-
-**What you need to do by XX.YY.ZZZZ**
-
-Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally must refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https:/cumulocity.com/guides/10.14.0//microservice-sdk/concept/migration) in the <i>Microservice SDK guide </i>.
-
-**How to check whether your microservice is impacted?**
-
-Set the API version field in the microservice manifest to “2” and deploy this service to your Cumulocity IoT test environment. This environment must be in version 10.14. Verify that the functionality provided by the microservice still works as expected.
-
-**What happens if your Cumulocity IoT microservice is still using one of these user privileges after the upgrade of the environment to the 10.15 release**
-
-If your microservice is using the deprecated API version 1 and is deployed to a Cumulocity IoT environment in version 10.15 or higher it might, depending on the configuration of this environment, no longer work.
+Basic authentication users will not be affected by this change.
 
 
 ### SDK changes
 
 #### Planned
+
+##### Updating the Web SDK to Angular 14
+
+As of release 10.16 we will update the Cumulocity IoT Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom applications. Refer to our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity IoT CLI tool.
 
 ##### Removal of support for Angular Schema Form
 
@@ -128,11 +86,15 @@ Instead of creating new instances using PlatformImpl, you should always inject C
 private InventoryApi inventoryApi;
 ```
 
-
-
-
-
 ### Streaming Analytics
+
+#### Planned
+
+##### Removal of Esper
+
+Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from release 10.15 the CEL (Esper) functionality will be removed completely and cannot be used anymore.
+
+If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
 
 #### Implemented
 

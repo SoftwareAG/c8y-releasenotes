@@ -20,10 +20,12 @@ Furthermore, with the introduction of a new group view, the information from the
 
 #### Web SDK - Font awesome icons replaced by new icons
 
->**Info:** This change will only affect you if you or your development team use the Web SDK to extend default Cumulocity IoT UI applications (Cockpit, Administration, Device Management) or to build your own web applications.
+{{< c8y-admon-info >}}
+This change will only affect you if you or your development team use the Web SDK to extend default Cumulocity IoT UI applications (Cockpit, Administration, Device Management) or to build your own web applications.
+{{< /c8y-admon-info >}}
 
 With release 10.10, "font awesome" icons are replaced by a larger set of icons aligned with the icons used by the Delite Design System from Software AG. The font awesome library will no longer be used in the Cumulocity IoT Web SDK.
-All CSS classes with the prefix `fa-**` are now updated to use the `dlt-icon-**` prefix, keeping the icon name unchanged. The c8y-icon directive was also updated to reflect this behavior. `fa-** ` utility classes were also changed and now use a more generic prefix: `icon-**`.
+All CSS classes with the prefix `fa-**` are now updated to use the `dlt-c8y-icon-**` prefix, keeping the icon name unchanged. The c8y-icon directive was also updated to reflect this behavior. `fa-** ` utility classes were also changed and now use a more generic prefix: `icon-**`.
 
 To use these icons, developers are asked to follow the c8y-icon directive.
 
@@ -62,4 +64,4 @@ for more information on the `GenericResponse` event.
 * Role-based access control will be introduced in the next release which will mandate assigning users to the Machine Learning Global Roles or User groups to enable them to use Cumulocity IoT Machine Learning.
 * The old versions of [Generate time series model](https://cumulocity.com/guides{{< 10-10-0 >}}/machine-learning/api-reference/#post--generate-time-series-model-using-time-series-data) `{{url}}/service/zementis/timeseries` API and [Get time series model generation status](https://cumulocity.com/guides{{< 10-10-0 >}}/machine-learning/api-reference/#get--get-status-of-generation-of-the-time-series-model) `{{url}}/service/zementis/timeseries/{{model_name}}/status` API which were deprecated in 10.7 release will be removed in the next release. However, the new versions `{{url}}/service/zementis/train/timeseries` and `{{url}}/service/zementis/train/timeseries/{{model_name}}/status` will still be in production.
 * The `applyToAllModels` query parameter used in [Apply model group](https://cumulocity.com/guides{{< 10-10-0 >}}/machine-learning/api-reference/#post---apply-pmml-model-group-to-multiple-records) and  [Apply model group and show details](https://cumulocity.com/guides{{< 10-10-0 >}}/machine-learning/api-reference/#post---apply-pmml-model-group-to-multiple-records-and-show-details) API was deprecated as part of 10.9 release and will be removed in the next release. This parameter is replaced by `applyAllModels`.
-* The `applyToAllModels` field of the [Job Configuration](https://cumulocity.com/guides{{< 10-10-0 >}}/machine-learning/api-reference/#domain-model) type was deprecated as part of 10.9 release and will be removed in the next release. This parameter is replaced by `applyAllModels`.
+* The `applyToAllModels` field of the [Job Configuration](https://cumulocity.com/guides{{< 10-10-0 >}}/machine-learning/api-reference/#jobconfiguration) type was deprecated as part of 10.9 release and will be removed in the next release. This parameter is replaced by `applyAllModels`.

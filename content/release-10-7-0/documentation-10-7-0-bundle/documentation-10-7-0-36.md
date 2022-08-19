@@ -34,7 +34,7 @@ MTM-37105</td>
 User guide</td>
 <td>
 Cockpit/Smart rules</td>
-<td > The description of the behavior of the red and yellow ranges in the smart rule "On measurement threshold create alarm" has been extended, see <a href="https://cumulocity.com/guides/10.7.0/users-guide/cockpit/#smart-rules" class="no-ajaxy">Cockpit > Smart rules collection</a>. </td>
+<td > The description of the behavior of the red and yellow ranges in the smart rule "On measurement threshold create alarm" has been extended, see <a href="https://cumulocity.com/guides/10.7.0/users-guide/cockpit/#smart-rules-collection" class="no-ajaxy">Cockpit > Smart rules collection</a>. </td>
 <td>
 MTM-35724</td>
 </tr>

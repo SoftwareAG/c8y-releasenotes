@@ -44,7 +44,7 @@ A custom device registration form can be created using JSON schema and some spec
 
 Our revised device registration for LWM2M also uses this feature.
 
-For detailed information, see the [Cumulocity IoT EDR guide](/guides/dtm/#overview).
+For detailed information, see the [Extensible device registration](https://cumulocity.com/guides/concepts/applications/#extensible-device-registration).
 
 #### Revised LWM2M device registration
 

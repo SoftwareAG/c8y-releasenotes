@@ -14,6 +14,8 @@ As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of
 
 The reason for this change is that changing the values of these properties would break previous application binaries.
 
+How will users be affected? If the user is hosting an application with a key and a binary with a manifest matching the respective key, and if the key in the application is changed, the binary will no longer work.
+
 
 ### Security changes
 
@@ -23,7 +25,7 @@ The reason for this change is that changing the values of these properties would
 
 As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.16+, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
 
-The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information.
+The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information. We recommend that administrators announce this change and notify about the change, because the logged-in users will immediately be logged out, and all their changes will get lost. Therefore this action requires scheduling.
 
 Basic authentication users will not be affected by this change.
 
@@ -48,9 +50,13 @@ Migrate your microservice to the new API version 2. In the simplest case it is s
 
 Set the API version field in the microservice manifest to “2” and deploy this service to your Cumulocity IoT test environment. This environment must be in version 10.15. Verify that the functionality provided by the microservice still works as expected.
 
+**How to identify deprecated microservices?**
+
+An administrator can use the query language of the Inventory REST API to identify deprecated microservices. The microservice manifest of all owned microservices is saved in the inventory of the tenant. The respective microservice manifest objects are marked with a dedicated field, namely `com_cumulocity_model_application_MicroserviceManifest`.
+
 **What happens if your Cumulocity IoT microservice is still using one of these user privileges after the upgrade of the environment to the 10.16 release**
 
-If your microservice is using the deprecated API version 1 and is deployed to a Cumulocity IoT environment in version 10.16 or higher it might, depending on the configuration of this environment, no longer work.
+By default, microservices using the deprecated API version 1 still work in version 10.15. But the behavior is configurable per Cumulocity IoT environment (see *Operational procedures* in the *Cumulocity IoT Core - Operations guide*), and it might happen, depending on the configuration of this environment, that your microservice using the deprecated API version 1 will no longer work.
 
 
 ### SDK changes

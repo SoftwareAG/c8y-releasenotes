@@ -10,10 +10,11 @@ layout: bundle
 
 ##### Breaking change in the Application API - the ability to change the application key and contextPath will be blocked
 
-As of release 10.16+, it will no longer be possible to change the contextPath and the key of an application.
-This is a breaking change and API requests trying to update the values of these application properties will fail.
+As of release 10.16+, it will no longer be possible to change the contextPath and the key of an application. This is a breaking change and API requests trying to update the values of these application properties will fail.
 
 The reason for this change is that changing the values of these properties would break previous application binaries.
+
+How will users be affected? If the user is hosting an application with a key and a binary with a manifest matching the respective key, and if the key in the application is changed, the binary will no longer work.
 
 #### Implemented
 
@@ -51,7 +52,7 @@ To improve the security of Cumulocity IoT, in a future release 10.15+ the admini
 
 With the 10.16+ release, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
 
-The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information.
+The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information. We recommend that administrators announce this change and notify about the change, because the logged-in users will immediately be logged out, and all their changes will get lost. Therefore this action requires scheduling.
 
 Basic authentication users will not be affected by this change.
 

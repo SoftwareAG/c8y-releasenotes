@@ -71,6 +71,9 @@ As of release 10.15 we will stop the support for [Angular Schema Form](http:/sch
 
 In the future, we also plan to stop the support for Angular Schema Form in other parts of the application including AngularJS components. For more information on Angular Formly, see [their official documentation page](https://formly.dev/examples/introduction).
 
+##### Removal of the "Quick link" widget
+
+As of release 10.16, the "Quick link" widget will be removed from our code base. Instead, we recommend you to use the "Help and service" widget.
 
 #### Implemented
 
@@ -87,16 +90,9 @@ Instead of creating new instances using PlatformImpl, you should always inject C
 private InventoryApi inventoryApi;
 ```
 
-### Quick Link Widget
+##### Quick link widget removed from the list of available widgets
 
-#### Planned
-##### Removal of Quick Link Widget
-
-As of 10.16, the Quick Link Widget will be removed from our code base.
-
-#### Implemented
-##### Quick Link Widget will not appear in the list of available widgets
-As of release 10.14, the Quick Link Widget can no longer be found in the list of all available widgets and should no longer be used in the dashboard. Instead, we refer to the Help And Service Widget.
+As of release 10.14, the "Quick link" widget can no longer be found in the list of all available widgets and should no longer be used in the dashboard. Instead, we recommend you to use the "Help and service" widget.
 
 ### Streaming Analytics
 

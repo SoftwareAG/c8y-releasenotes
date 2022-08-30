@@ -87,6 +87,23 @@ Instead of creating new instances using PlatformImpl, you should always inject C
 private InventoryApi inventoryApi;
 ```
 
+### Others 
+
+#### Planned
+
+##### Removal of the "Quick link" widget
+
+As of release 10.16, the "Quick link" widget will no longer be supported and will be removed from our code base. 
+
+If you currently have this widget in a dashboard you can still see and use it. But we recommend you to replace it with the "Help and service" widget before using release 10.16. From release 10.16 onwards, the "Quick link" widget will no longer work. If you still have this widget in a dashboard in release 10.16 you will see the following message: "This widget cannot be rendered because the current application does not support the following component: Quick links."
+
+
+#### Implemented
+
+##### Quick link widget removed from the list of available widgets
+
+As of release 10.14, the "Quick link" widget is deprecated and can no longer be found in the list of all available widgets, thus it can no longer be added to a dashboard. Instead, we recommend you to use the "Help and service" widget.
+
 ### Streaming Analytics
 
 #### Planned

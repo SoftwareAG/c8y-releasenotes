@@ -95,7 +95,7 @@ private InventoryApi inventoryApi;
 
 As of release 10.16, the "Quick link" widget will no longer be supported and will be removed from our code base. 
 
-If you currently have this widget in a dashboard you can still see and use it. But we recommend you to replace it with the "Help and service" widget before using release 10.16. From release 10.16 onwards, the "Quick link" widget will no longer work. If you still have this widget in a dashboard you will see the following message: "This widget cannot be rendered because the current application does not support the following component: Quick links."
+If you currently have this widget in a dashboard you can still see and use it. But we recommend you to replace it with the "Help and service" widget before using release 10.16. From release 10.16 onwards, the "Quick link" widget will no longer work. If you still have this widget in a dashboard in release 10.16 you will see the following message: "This widget cannot be rendered because the current application does not support the following component: Quick links."
 
 
 #### Implemented

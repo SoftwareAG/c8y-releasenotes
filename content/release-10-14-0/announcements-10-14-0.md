@@ -50,7 +50,7 @@ To improve the security of Cumulocity IoT, in a future release 10.15+ the admini
 
 ##### Improved security for OAI-Secure users
 
-With the 10.16+ release, when an administrator changes permissions inside a role, the change impacts users who have the specific role assigned, and use OAI-Secure.
+With the 10.16+ release, when an administrator changes permissions inside a role, the change impacts users who have the specific role assigned and use OAI-Secure.
 
 The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information. We recommend that administrators announce this change and notify about the change, because the logged-in users will be affected and if they try to perform an operation that is affected by the changed role, they will receive access denied, and will not be able to perform the operation. Therefore this action is recommended to be followed up with notification to the users, and scheduling.
 

@@ -16,6 +16,21 @@ The reason for this change is that changing the values of these properties would
 
 How will users be affected? If the user is hosting an application with a key and a binary with a manifest matching the respective key, and if the key in the application is changed, the binary will no longer work.
 
+##### Breaking change in the Measurements API - several APIs will no longer be supported when *enhanced time-series support* is enabled
+
+As of release 10.16+, new tenants can utilize a new enhanced time-series support for the Cumulocity IoT Operational Store. As a result, several APIs will no longer be supported when the feature is enabled.
+
+The following APIs will be removed without any replacement:
+
+* `GET /measurement/measurements/{id}`
+* `DEL /measurements/measurement/getById`
+
+The following API will no longer be supported:
+
+* `DEL /measurements/measurement/`
+
+Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
+
 #### Implemented
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties

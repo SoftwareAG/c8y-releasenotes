@@ -16,6 +16,21 @@ The reason for this change is that changing the values of these properties would
 
 How will users be affected? If the user is hosting an application with a key and a binary with a manifest matching the respective key, and if the key in the application is changed, the binary will no longer work.
 
+##### Breaking change in the Measurements API - several APIs will no longer be supported when *enhanced time-series support* is enabled
+
+As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.16+ new tenants can utilize a new enhanced time-series support for the Cumulocity IoT Operational Store. As a result, several APIs will no longer be supported when the feature is enabled.
+
+The following APIs will be removed without any replacement:
+
+* `GET /measurement/measurements/{id}`
+* `DEL /measurements/measurement/getById`
+
+The following API will no longer be supported:
+
+* `DEL /measurements/measurement/`
+
+Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
+
 
 ### Security changes
 
@@ -94,30 +109,30 @@ If you have not already done so, you must now change `frgment` to `fragment` in 
 
 ##### Changed events in com.apama.cumulocity
 
-The `GenericRequest` event in the `com.apama.cumulocity` package has been changed to improve consistency in error handling. 
-In all cases of a response from the server, a `GenericResponseComplete` event is now sent to the correct response channel. 
+The `GenericRequest` event in the `com.apama.cumulocity` package has been changed to improve consistency in error handling.
+In all cases of a response from the server, a `GenericResponseComplete` event is now sent to the correct response channel.
 In addition, the `GenericResponseComplete` event now has the following additional members:
 
 - `boolean error` - Set to `true` if the `GenericRequest` received either an error content type or a non-2xx HTTP return code.
 - `integer status` - The HTTP return code.
 - `string details` - Details of the response which were not sent as a `GenericResponse`.
 
-It is recommended that you now use the updated `GenericResponseComplete` event instead of the `Error` event 
+It is recommended that you now use the updated `GenericResponseComplete` event instead of the `Error` event
 since the `GenericResponseComplete` event is sent to the same channel as the `GenericResponse` event.
 
-In addition, there is a change in behavior where previously some `GenericRequest` events which received non-2xx response codes were still sending `GenericResponse` events. 
-As of this version, only requests where `error` is `false` and the payload is JSON will send `GenericResponse` events. 
+In addition, there is a change in behavior where previously some `GenericRequest` events which received non-2xx response codes were still sending `GenericResponse` events.
+As of this version, only requests where `error` is `false` and the payload is JSON will send `GenericResponse` events.
 For more details, see the `com.apama.cumulocity` package in the [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/related/ApamaDoc/index.html).
 
-In previous versions, no response events were sent at all in some cases. 
+In previous versions, no response events were sent at all in some cases.
 As of this version, the `GenericResponseComplete` event is always sent for all `GenericRequest` events in any error case.
 
 ##### Cumulocity IoT transport in Apama
 
-To improve performance, the Cumulocity IoT transport now sends requests to the Cumulocity IoT platform concurrently using multiple clients. 
-New API and configuration options have been added to control this behavior. 
-For a complete description of the new concurrency behavior and options to control it, 
-see [Optimizing requests to Cumulocity IoT with concurrent connections](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-ConApaAppToExtCom_cumulocity_optimizing_requests_to_cumulocity_iot_with_concurrent_connections.html) 
+To improve performance, the Cumulocity IoT transport now sends requests to the Cumulocity IoT platform concurrently using multiple clients.
+New API and configuration options have been added to control this behavior.
+For a complete description of the new concurrency behavior and options to control it,
+see [Optimizing requests to Cumulocity IoT with concurrent connections](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-ConApaAppToExtCom_cumulocity_optimizing_requests_to_cumulocity_iot_with_concurrent_connections.html)
 in the Apama documentation.
 
 The Cumulocity IoT transport now supports multi-tenant deployment. For this purpose, the following new configuration options are now available:
@@ -125,7 +140,7 @@ The Cumulocity IoT transport now supports multi-tenant deployment. For this purp
 - `CUMULOCITY_MULTI_TENANT_APPLICATION`
 - `CUMULOCITY_MULTI_TENANT_MICROSERVICE_NAME`
 
-See also [Configuring the Cumulocity IoT transport](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-ConApaAppToExtCom_cumulocity_configuring_the_cumulocity_transport.html) 
+See also [Configuring the Cumulocity IoT transport](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-ConApaAppToExtCom_cumulocity_configuring_the_cumulocity_transport.html)
 and [Working with multi-tenant deployments](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-ConApaAppToExtCom_cumulocity_working_with_multi_tenant_deployments.html)
 in the Apama documentation.
 
@@ -136,8 +151,8 @@ The following new configuration properties, which correspond to existing configu
 - `CUMULOCITY_SUBSCRIBE_DEVICES` (corresponds to `subscribeToDevices`)
 - `CUMULOCITY_SUBSCRIBE_OPERATIONS` (corresponds to `subscribeToOperations`)
 
-It is recommended to use the new configuration properties instead of editing the YAML configuration file. 
-See also [Configuring the Cumulocity IoT transport](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-ConApaAppToExtCom_cumulocity_configuring_the_cumulocity_transport.html) 
+It is recommended to use the new configuration properties instead of editing the YAML configuration file.
+See also [Configuring the Cumulocity IoT transport](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-ConApaAppToExtCom_cumulocity_configuring_the_cumulocity_transport.html)
 in the Apama documentation.
 
 ##### Docker images
@@ -146,19 +161,19 @@ Apama 10.15.0 introduces several new container images provided via Docker Hub an
 See also [Published Apama container images](https://documentation.softwareag.com/pam/10.15.0/en/webhelp/pam-webhelp/index.html#page/pam-webhelp%2Fco-DepAndManApaApp_published_apama_container_images.html)
 in the Apama documentation.
 
-When building images for use as a Cumulocity IoT microservice, then you must use the 
+When building images for use as a Cumulocity IoT microservice, then you must use the
 [softwareag/apama-cumulocity-jre](https://hub.docker.com/r/softwareag/apama-cumulocity-jre) image with the new
-[softwareag/apama-cumulocity-builder](https://hub.docker.com/r/softwareag/apama-cumulocity-builder) image as a builder image. 
+[softwareag/apama-cumulocity-builder](https://hub.docker.com/r/softwareag/apama-cumulocity-builder) image as a builder image.
 To do this with the default project Dockerfile created by Software AG Designer, either change the `FROM` lines in the Dockerfile appropriately or build using the following flags:
 
 ```
 --build-arg APAMA_BUILDER=softwareag/apama-cumulocity-builder:10.15 --build-arg APAMA_IMAGE=softwareag/apama-cumulocity-jre:10.15
-``` 
+```
 
 ##### Support lifetimes for connectivity components
 
-With Apama 10.15.0, the support lifetimes for the components for connectivity to Cumulocity IoT, and the Apama Docker images with that connectivity, 
-have been aligned with the Cumulocity IoT support schedule. For more details, refer to the *Release Availability* document for version 10.15. 
+With Apama 10.15.0, the support lifetimes for the components for connectivity to Cumulocity IoT, and the Apama Docker images with that connectivity,
+have been aligned with the Cumulocity IoT support schedule. For more details, refer to the *Release Availability* document for version 10.15.
 This is available from the following web page: https://documentation.softwareag.com/apama/index.htm.
 
 ##### Removal of Esper

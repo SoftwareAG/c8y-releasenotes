@@ -25,7 +25,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''bash --login
-        python /stageScannerReleaseNotes.py
+        python /previewScannerReleaseNotes.py
         echo \"Starting hugo with params ${HUGO_PARAMS}\"
         ls
         hugo ${HUGO_PARAMS}

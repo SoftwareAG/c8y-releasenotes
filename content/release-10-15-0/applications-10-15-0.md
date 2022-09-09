@@ -1,5 +1,5 @@
 ---
 weight: 45
-title: Applications
+title: Applications enablement
 layout: bundle
 ---

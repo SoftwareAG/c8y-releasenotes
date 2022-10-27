@@ -20,9 +20,9 @@ Using the Loriot LNS connections created in the **Connectivity** page in **Setti
 
 ![Device Registration](/images/release-notes/loriot-registration.png)
 
-For details refer to [Loriot LoRa > Device registration via Cumulocity IoT](https://cumulocity.com/guides/protocol-integration/lora-loriot/#configure-loriot-credentials-cumulocity) in the *Protocols integration guide*.
+For details refer to [Loriot LoRa > Device registration via Cumulocity IoT](https://cumulocity.com/guides/protocol-integration/lora-loriot/#configure-loriot-credentials-cumulocity) in the *Protocol integration guide*.
 
 For the devices registered with the Loriot agent, downlink operations can be sent from the **Shell** tab.
 
-For details refer to [Loriot LoRa > Sending operations](https://cumulocity.com/guides/protocol-integration/lora-loriot/#operations-loriot) in the *Protocols integration guide*.
+For details refer to [Loriot LoRa > Sending operations](https://cumulocity.com/guides/protocol-integration/lora-loriot/#operations-loriot) in the *Protocol integration guide*.
 

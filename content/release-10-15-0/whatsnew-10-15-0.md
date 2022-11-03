@@ -22,7 +22,7 @@ The **Assets Navigator** is the starting point to create your asset hierarchies 
 
 You can use the **Localization** component to define translations for your asset types and custom properties. These translations can be provided for all languages supported in Cumulocity IoT. This component requires you to have the feature-branding feature subscribed for your Cumulocity IoT tenant.
 
-For detailed information, see the [Cumulocity IoT DTM guide](/guides/dtm/#overview).
+For detailed information, see the [Cumulocity IoT DTM guide](https://cumulocity.com/guides/10.15.0/dtm/#overview).
 
 #### Installation
 
@@ -44,7 +44,7 @@ A custom device registration form can be created using JSON schema and some spec
 
 Our revised device registration for LWM2M also uses this feature.
 
-For detailed information, see the [Extensible device registration](https://cumulocity.com/guides/concepts/applications/#extensible-device-registration).
+For detailed information, see the [Extensible device registration](https://cumulocity.com/guides/10.15.0/concepts/applications/#extensible-device-registration).
 
 #### Revised LWM2M device registration
 
@@ -83,4 +83,4 @@ The Sigfox and Actility agents now support the configuration of multiple connect
 
 ![All devices](/images/release-notes/multiple_lns_connection.png)
 
-For details, refer to [Sigfox](https://cumulocity.com/guides/protocol-integration/sigfox) or [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility) in the *Protocol integration guide*.
+For details, refer to [Sigfox](https://cumulocity.com/guides/10.15.0/protocol-integration/sigfox) or [Actility LoRa](https://cumulocity.com/guides/10.15.0/protocol-integration/lora-actility) in the *Protocol integration guide*.

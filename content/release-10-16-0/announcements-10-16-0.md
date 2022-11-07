@@ -14,7 +14,7 @@ layout: bundle
 
 ##### Deprecation of SMS TFA feature
 
-The SMS TFA (Two-Factor Authentication) feature is deprecated. With release 10.17+, it will be removed and not be functional any longer, and we will no longer support SMS TFA.
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), the SMS TFA (Two-Factor Authentication) feature is deprecated. With release 10.17+, it will be removed and not be functional any longer, and we will no longer support SMS TFA.
 
 What does this mean for users?
 

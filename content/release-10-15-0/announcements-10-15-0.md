@@ -93,7 +93,7 @@ As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angula
 
 ##### New default branding
 
-As of release 10.17 we will update the default branding for all Cumulocity default applications. Branded applications will stay branded. However as the navigator color changes from a dark color to a light color, the default navigator font color might not work with your branding. You can open the branding editor and apply a font color to the navigator already in this version. Otherwise, you could end up with a dark font color on a dark background, which might not be readable to your user.
+As of Release 10.17, we will update the default branding for all Cumulocity IoT default applications. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
 
 #### Implemented
 

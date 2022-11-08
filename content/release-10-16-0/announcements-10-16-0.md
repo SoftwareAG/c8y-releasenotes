@@ -44,6 +44,10 @@ If you don´t know what is required to switch off SMS TFA, please contact our cu
 
 ### SDK changes
 
+##### New default branding
+
+As of release 10.17 we will update the default branding for all Cumulocity default applications. Branded applications will stay branded. However as the navigator color changes from a dark color to a light color, the default navigator font color might not work with your branding. You can open the branding editor and apply a font color to the navigator already in this version. Otherwise, you could end up with a dark font color on a dark background, which might not be readable to your user.
+
 #### Planned
 
 #### Implemented

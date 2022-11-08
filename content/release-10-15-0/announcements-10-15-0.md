@@ -91,6 +91,10 @@ By default, microservices using the deprecated API version 1 still work in versi
 
 As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
 
+##### New default branding
+
+As of release 10.17 we will update the default branding for all Cumulocity default applications. Branded applications will stay branded. However as the navigator color changes from a dark color to a light color, the default navigator font color might not work with your branding. You can open the branding editor and apply a font color to the navigator already in this version. Otherwise, you could end up with a dark font color on a dark background, which might not be readable to your user.
+
 #### Implemented
 
 ##### Removal of support for Angular Schema Form

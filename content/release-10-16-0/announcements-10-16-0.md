@@ -46,6 +46,9 @@ If you don´t know what is required to switch off SMS TFA, please contact our cu
 
 #### Planned
 
+##### HOOK_SEARCH will be refactored
+Developers can use the HOOK_SEARCH to extend the search of Cumulocity. Starting with 10.18 release we will refactor the HOOK_SEARCH interface. If you are using this interface, you need to migrate to the new interface. There will be more details how to use the new interface on the particular release documentation of the Web SDK.
+
 #### Implemented
 
 ##### Updating the Web SDK to Angular 14

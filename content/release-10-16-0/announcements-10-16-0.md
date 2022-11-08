@@ -47,7 +47,7 @@ If you don´t know what is required to switch off SMS TFA, please contact our cu
 #### Planned
 
 ##### HOOK_SEARCH will be refactored
-Developers can use the HOOK_SEARCH to extend the search of Cumulocity. Starting with 10.18 release we will refactor the HOOK_SEARCH interface. If you are using this interface, you need to migrate to the new interface. There will be more details how to use the new interface on the particular release documentation of the Web SDK.
+The HOOK_SEARCH can be used by developers to extend the search of Cumulocity IoT. As of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
 
 #### Implemented
 

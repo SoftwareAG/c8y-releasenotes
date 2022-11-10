@@ -50,6 +50,9 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of
 
 #### Planned
 
+##### HOOK_SEARCH will be refactored
+The HOOK_SEARCH can be used by developers to extend the search of Cumulocity IoT. As of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
+
 #### Implemented
 
 ##### Updating the Web SDK to Angular 14

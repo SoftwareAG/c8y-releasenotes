@@ -31,13 +31,16 @@ The following API will no longer be supported:
 
 Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
 
-##### Breaking change in the Alarms/Events/Measurements API - unsupported query parameters will be rejected and required parameters will be introduced
+##### Breaking change in the Alarms, Events, Measurements APIs - unsupported query parameters will be rejected and required parameters will be introduced
 
 As of release 10.17+, it will no longer be possible to pass unsupported HTTP query parameters. This means that also all requests with wrongly typed parameters will be rejected.
-This change affects the alarms, events, and measurements APIs.
+This change affects the Alarms, Events and Measurements APIs.
 
-Some query parameters will be required to prevent accidental deletion of too many objects when deleting, and to prevent transferring too much unrequited data when calling GET collections APIs.
-At least one parameter limiting the affected data, for example `dateFrom`, `dateTo`,  or `type`, should be provided.
+At least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+
+* `DELETE /alarm/alarms` will required at least one of the following parameter: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /event/events` will required at least one of the following parameter: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /measurements/measurement` will required at least one of the following parameter: `source`, `dateFrom`, `dateTo`
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
 

@@ -31,6 +31,59 @@ The following API will no longer be supported:
 
 Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
 
+##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
+As of release 10.17+, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
+This affects the REST response format.
+
+Example of previous response format (note `aCustomDateField` field):
+
+```json
+{
+   "source":{
+      "id":"91123"
+   },
+   "type":"TYPE-911",
+   "aCustomDateField":{
+      "date":{
+         "date":14,
+         "seconds":15,
+         "hours":12,
+         "month":10,
+         "year":122,
+         "timezoneOffset":-60,
+         "minutes":41,
+         "time":1668426075840,
+         "day":1
+      },
+      "offset":120
+   },
+   "c8y_TemperatureMeasurement":{
+      "T":{
+         "unit":"C",
+         "value":10
+      }
+   }
+}
+```
+
+New format:
+
+```json
+{
+   "source":{
+      "id":"91123"
+   },
+   "type":"TYPE-911",
+   "aCustomDateField":"2022-11-14T12:44:11.481+01:00",
+   "c8y_TemperatureMeasurement":{
+      "T":{
+         "unit":"C",
+         "value":10
+      }
+   }
+}
+```
+The change will be introduced to improve the consistency between different Cumulocity IoT protocols.
 
 ### Security changes
 

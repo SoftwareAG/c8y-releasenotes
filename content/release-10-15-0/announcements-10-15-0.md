@@ -38,9 +38,9 @@ This change affects the Alarms, Events and Measurements APIs.
 
 At least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
 
-* `DELETE /alarm/alarms` will required at least one of the following parameter: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
-* `DELETE /event/events` will required at least one of the following parameter: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
-* `DELETE /measurements/measurement` will required at least one of the following parameter: `source`, `dateFrom`, `dateTo`
+* `DELETE /alarm/alarms` will require at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /event/events` will require at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /measurements/measurement` will require at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
 

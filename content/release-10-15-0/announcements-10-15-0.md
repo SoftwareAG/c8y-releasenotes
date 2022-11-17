@@ -31,6 +31,17 @@ The following API will no longer be supported:
 
 Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
 
+##### Breaking change in the Alarms, Events, Measurements APIs - unsupported query parameters will be rejected and required parameters will be introduced
+
+As of release 10.17+, it will no longer be possible to pass unsupported HTTP query parameters. This means that also all requests with wrongly typed parameters will be rejected.
+This change affects the Alarms, Events and Measurements APIs.
+
+At least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+
+* `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
+
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
 
 As of release 10.17+, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.

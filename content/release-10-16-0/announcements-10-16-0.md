@@ -121,7 +121,7 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) the We
 
 The reset behavior of the **Discrete Statistics** block has been corrected.
 Every new value is now sampled *after* the block has been reset. For more details,
-see the release notes for [Streaming Analytics release 10.16.0](/release-10-16-0/streaming-analytics-10-16-0).
+see the Streaming Analytics release notes for [release 10.16.0](/release-10-16-0/streaming-analytics-10-16-0).
 
 ##### Analytics Builder - Removal of keys for configuring model timeouts
 

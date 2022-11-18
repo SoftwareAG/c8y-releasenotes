@@ -112,3 +112,19 @@ The HOOK_SEARCH can be used by developers to extend the search of Cumulocity IoT
 ##### Updating the Web SDK to Angular 14
 
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) the Web SDK has been updated to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
+
+### Streaming Analytics
+
+#### Implemented
+
+##### Analytics Builder - Reset behavior of the Discrete Statistics block
+
+The reset behavior of the **Discrete Statistics** block has been corrected.
+Every new value is now sampled *after* the block has been reset. For more details,
+see the release notes for [Streaming Analytics release 10.16.0](/release-10-16-0/streaming-analytics-10-16-0).
+
+##### Analytics Builder - Removal of keys for configuring model timeouts
+
+The following keys for configuring model timeouts have been removed and will be ignored when set:
+`default_timeout_secs` and `block_promise_timeout_secs`.
+Instead, warnings are now logged when request responses or returned promise values take too long to complete.

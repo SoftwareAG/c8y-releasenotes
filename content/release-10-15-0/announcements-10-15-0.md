@@ -162,7 +162,7 @@ As of Release 10.17, we will update the default branding for all Cumulocity IoT 
 
 ##### Removal of Cumulocity IoT Device SDKs in favor of thin-edge.io
 
-As of release 10.16 we will remove the Cumulocity IoT Device SDKs. This includes the removal of the [C++ Device SDK instructions](https://cumulocity.com/guides/10.15.0/device-sdk/cpp/), and the [Linux Agent guides](https://cumulocity.com/guides/10.15.0/device-sdk/linux-agent-user-guide/) from our public documentation. While they are not supported and further maintained, the code can be found in our [open-source repositories](https://github.com/SoftwareAG) in case you still have them in use.
+As of release 10.16 we will remove the Cumulocity IoT Device SDKs. This includes the removal of the [C++ Device SDK instructions](https://cumulocity.com/guides/10.15.0/device-sdk/cpp/), and the [Linux Agent guides](https://cumulocity.com/guides/10.15.0/device-sdk/linux-agent-user-guide/) from our public documentation. While they are not supported or further maintained, the code can be found in our [open-source repositories](https://github.com/SoftwareAG) in case you still have them in use.
 
 As a recommended mechanism to integrate Linux-based devices into Cumulocity IoT we advise you to use [thin-edge.io](https://thin-edge.io/), which is actively developed by Software AG and open-source community partners. For customers with enterprise-grade support & maintenance needs, a commercial variant (Cumulocity IoT Thin Edge) can be purchased.
 

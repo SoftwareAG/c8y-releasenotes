@@ -160,6 +160,12 @@ As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angula
 
 As of Release 10.17, we will update the default branding for all Cumulocity IoT default applications. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
 
+##### Removal of Cumulocity IoT Device SDKs in favor of thin-edge.io
+
+As of release 10.16 we will remove the Cumulocity IoT Device SDKs. This includes the removal of the [C++ Device SDK instructions](https://cumulocity.com/guides/10.15.0/device-sdk/cpp/), and the [Linux Agent guides](https://cumulocity.com/guides/10.15.0/device-sdk/linux-agent-user-guide/) from our public documentation. While they are not supported or further maintained, the code can be found in our [open-source repositories](https://github.com/SoftwareAG) in case you still have them in use.
+
+As a recommended mechanism to integrate Linux-based devices into Cumulocity IoT we advise you to use [thin-edge.io](https://thin-edge.io/), which is actively developed by Software AG and open-source community partners. For customers with enterprise-grade support & maintenance needs, a commercial variant (Cumulocity IoT Thin Edge) can be purchased.
+
 #### Implemented
 
 ##### Removal of support for Angular Schema Form

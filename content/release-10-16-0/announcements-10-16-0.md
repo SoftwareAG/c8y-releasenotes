@@ -98,11 +98,11 @@ If you don´t know what is required to switch off SMS TFA, please contact our cu
 
 ### SDK changes
 
+#### Planned
+
 ##### New default branding
 
-As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of Release 10.17, we will update the default branding for all Cumulocity IoT default applications. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
-
-#### Planned
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.17, we will update the default branding for all Cumulocity IoT default applications. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
 
 ##### HOOK_SEARCH will be refactored
 The HOOK_SEARCH can be used by developers to extend the search of Cumulocity IoT. As of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
@@ -112,6 +112,12 @@ The HOOK_SEARCH can be used by developers to extend the search of Cumulocity IoT
 ##### Updating the Web SDK to Angular 14
 
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) the Web SDK has been updated to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
+
+##### Removal of Cumulocity IoT Device SDKs in favor of thin-edge.io
+
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.16, we have removed the Cumulocity IoT Device SDKs. This includes the removal of the [C++ Device SDK instructions](https://cumulocity.com/guides/10.15.0/device-sdk/cpp/), and the [Linux Agent guides](https://cumulocity.com/guides/10.15.0/device-sdk/linux-agent-user-guide/) from our public documentation. While they are not supported or further maintained, the code can be found in our [open-source repositories](https://github.com/SoftwareAG) in case you still have them in use.
+
+As a recommended mechanism to integrate Linux-based devices into Cumulocity IoT we advise you to use [thin-edge.io](https://thin-edge.io/), which is actively developed by Software AG and open-source community partners. For customers with enterprise-grade support & maintenance needs, a commercial variant (Cumulocity IoT Thin Edge) can be purchased.
 
 ### Streaming Analytics
 

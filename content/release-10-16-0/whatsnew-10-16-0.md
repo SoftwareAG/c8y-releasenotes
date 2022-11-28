@@ -34,33 +34,35 @@ Users can now register devices on Thingpark Enterprise and Wireless using the Cu
 
 For details, refer to [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility/) in the *Protocol integration guide*.
 
-### Plugins for Web Application: Extending web applications at run-time
+### Extending web applications at runtime with plugins
 
-In Cumulocity you currently have two options to extend the UI of the Platform: You can either develop your own application and host it or use a existing one and align it to your needs. This however always needs experiences in web development. Therefore we introduced a new run-time extension possibility with the so called micro frontend architecture. This allows solution builders to compose together the application they need.
+We have introduced a new option to extend the UI of the Cumulocity IoT platform at runtime, based on the micro frontend architecture. In addition to the two prior options, that is, either develop your own application and host it or use a existing one and align it to your needs, solution builders can now compose applications based on plugins without web development experience. 
 
-You can add any Plugin to an application that is owned by the tenant. Go to Administration --> Ecosystem --> Applications, clone the application you want to extend and check the detail view. The new **plugins tab** let you choose whatever extension is available to your tenant.
+To do so, you can now add plugins to applications owned by the tenant. Navigate to **Administration** > **Ecosystem** > **Applications**, duplicate the application you want to extend, and open the detail view of the application. From the new **Plugins** tab you can select any extension available to your tenant.
 
 ![Plugin installation](/images/release-notes/plugin-install.png)
 
-#### Introducing packages: Manage versions and hosting of Web Applications
-We introduced a new type of application called **package** to solve two major problems:
- - The ability to have multiple separate functionalities delivered with one micro frontend. E.g. you can use one plugin that allows you to configure a map widget and another plugin actually containing the map widget. Maybe those plugins will even be added to different applications, but they belong logically together.
+#### Introducing packages - Manage versions and hosting of web applications
+
+A new type of application called **package** has been introduced providing the following advantages:
+ - You can deliver multiple separate functionalities with one micro frontend. For example, you can use one plugin that allows you to configure a "Map" widget and another plugin actually containing the "Map" widget. These plugins could even be added to different applications, but logically they belong together.
  - Updating plugins isn't easy and you could easily get into version conflicts. Packages can be versioned and therefore allow you to specify exactly the version you want to use.
 
 ![Packages](/images/release-notes/packages-detail-view.png)
 
-Additionally, the versioning API allows you to update a Plugin without breaking any existing integration.
+Additionally, the versioning API allows you to update a plugin without breaking any existing integration.
 
 ![Versioning of Packages](/images/release-notes/versions.png)
 
-All packages act like hosted applications and can therefore be accesses via the `/apps/{{context-path}}` URL. The versioning can be used, which allows you to have different versions running at the same time. Let's imagine you uploaded 3 different versions of a package called *plugin-example*, 1.0, 1.1 and 1.2. These different apps can be resolved via the context path:
+All packages act like hosted applications and can therefore be accessed via the `/apps/{{context-path}}` URL. With versioning you can have different versions running at the same time. For example, you can uploaded 3 different versions of a package called *plugin-example*, 1.0, 1.1 and 1.2. These different applications can be resolved via the context path:
 
 ```
 /apps/plugin-example@1.0/cumulocity.json  --> shows the manifest file of version 1.0
 /apps/plugin-example@1.1/cumulocity.json  --> shows the manifest file of version 1.1
 /apps/plugin-example@1.2/cumulocity.json  --> shows the manifest file of version 1.2
 ```
-Additionally, you can use tags for versions. That allows you to define tags like `beta` or `stable` which always resolve to the version that was tagged with it. There is one special tag called `latest` that allows to resolve the URL without any version. Again an example: Let's imagine we tagged version 1.1 with "latest" and version 1.2 with "beta":
+
+Additionally, you can use tags for versions. That allows you to define tags like `beta` or `stable` which always resolve to the version that was tagged with it. With the special tag `latest` you can resolve the URL without any version. For example, if we tag version 1.1 with "latest" and version 1.2 with "beta" we will get the following:
 
 ```
 /apps/plugin-example@1.0/cumulocity.json  --> shows the manifest file of version 1.0
@@ -70,7 +72,7 @@ Additionally, you can use tags for versions. That allows you to define tags like
 ```
 #### Introducing shared availability
 
-A new availability option can now be configured for packages. This availability lets apps be visible to any subtenant without subscribing. You can consider it as a marketplace approach. Any subtenannt can browse the shared packages and decide on it's own if it wants to install it. See the following tree to understand better, how apps are shared between tenants. Imagine each tenant uploads one shared package with the mentioned name:
+A new availability option can now be configured for packages to make applications visible to all subtenants without subscription. You can consider it as a marketplace approach. Any subtenant can browse the shared packages and decide to install it. The following tree shows how applications are shared between tenants. In this tree, each tenant uploads one shared package with the mentioned name:
 
 ``` 
                            Management Tenant: ManagementPackage
@@ -92,18 +94,21 @@ SubTenant2                             | ManagementPackage, PackageTenant2, Pack
 ```
 
 
-#### Introducing blueprints: Full applications distributed as packages
-Think of a ready made solution, e.g. for water management or smart city management. This ready build solution are not just plugins to cockpit or any other app. They are complete solutions. But mostly this ready made solutions are not needed by all tenants. So uploading them as application and sharing them with all tenants is mostly not wanted. When you define your package as blueprint you can archive this. The package does not only provide plugins then, it also is able to get installed:
+#### Introducing blueprints - Full applications distributed as packages
+
+Ready-built solutions, for example, for water management or smart city management, are not just plugins to the Cockpit or any other application, but complete solutions. Often, these complete solutions are not needed by all tenants, that is, you do not want to upload them as application and share them with all tenants. If you define your package as blueprint you can archive it. Moreover, the package does not only provide plugins, but can also be installed:
 
 ![Blueprint](/images/release-notes/blueprint.png)
 
-Additionally to the ability to deploy and share those packages, also versioning is active. As soon as package and deployed application versioning getting out of sync, the user is informed that an update is available and can simply update the application by clicking a button.
+In addition to the ability to deploy and share these packages, versioning is active. As soon as the versioning for packages and deployed applications gets out of sync, the user is informed that an update is available and can simply update the application by a click.
 
 #### Installation 
-Additional plugins and blueprints can use an installation wizard which is shown on each plugin or blueprint installation. You can see an example of the Cockpit installation wizard by using the query parameter `?forceSetup=true`
+
+Additional plugins and blueprints can use an installation wizard which is shown on each plugin or blueprint installation. You can see an example of the Cockpit installation wizard by using the query parameter `?forceSetup=true`.
 
 ![Installation wizard](/images/release-notes/installation-wizard.png)
 
 
 #### @c8y/cli additions
-To support the developers two new scaffolding applications where added to the `c8ycli new` command. One to scaffold a plugin example and one to scaffold a blueprint. To support the development a new `--shell` command was added, which let developers test their implementation directly in a shell app (e.g. Cockpit).
+
+To support the development, two new scaffolding applications have been added to the `c8ycli new` command, one to scaffold a plugin example and one to scaffold a blueprint. Moreover, a new `--shell` command has been added, which let´s you test your implementation directly in a shell application (for example, Cockpit).

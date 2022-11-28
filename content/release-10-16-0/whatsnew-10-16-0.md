@@ -54,9 +54,7 @@ Moreover, packages can be versioned, that is, you can specify exactly the versio
 
 ![Versioning of Packages](/images/release-notes/versions.png)
 
-Additionally, the versioning API allows you to update a plugin without breaking any existing integration.
-
-All packages act like hosted applications and can therefore be accessed via the `/apps/{{context-path}}` URL.
+Additionally, the versioning API allows you to update a plugin without breaking any existing integration. All versioned packages act like hosted applications and can therefore be accessed via the `/apps/{{context-path}}@{{version}}` URL.
 
 #### Introducing shared availability
 

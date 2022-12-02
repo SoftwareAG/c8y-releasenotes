@@ -89,7 +89,7 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), the S
 
 What does this mean for users?
 
-We recommend you to gradually start switching off SMS TFA in earlier versions (10.15 or 10.16) in order to be able to detect any issues, and be prepared when it is unavailable as of release 10.17. Instead of TFA SMS you can use TFA TOTP. For details, see [Administration > Two-factor authentication > TOTP](https://cumulocity.com/guides/10.16.0/users-guide/administration/#totp) in the *User guide*.
+We recommend you to gradually start switching off SMS TFA in earlier versions (10.15 or 10.16) in order to be able to detect any issues, and be prepared when it is unavailable as of release 10.17. Instead of TFA SMS you can use TFA TOTP. For details, see [Administration > Two-factor authentication > TOTP](https://cumulocity.com/guides/10.16.0/users-guide/administration/#totp-google-authenticator) in the *User guide*.
 
 If you don´t know what is required to switch off SMS TFA, please contact our customer service at Software AG.
 

@@ -18,6 +18,6 @@ wkhtmltopdf \
  http://localhost:1313/releasenotes/release-10-16-0/platform-10-16-0/ \
  http://localhost:1313/releasenotes/release-10-16-0/applications-10-16-0/ \
  http://localhost:1313/releasenotes/release-10-16-0/devices-10-16-0/ \
- http://localhost:1313/releasenotes/release-10-16-0/edge-10-16-0/ \
  http://localhost:1313/releasenotes/release-10-16-0/streaming-analytics-10-16-0/ \
+ http://localhost:1313/releasenotes/release-10-16-0/digital-twin-manager-10-16-0/ \
  "Cumulocity IoT release notes PREVIEW-v10.16.0.pdf"

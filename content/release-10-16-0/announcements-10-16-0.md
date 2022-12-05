@@ -103,7 +103,7 @@ If you don´t know what is required to switch off SMS TFA, please contact our cu
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.17, we will update the default branding for all Cumulocity IoT default applications. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
 
 ##### The Web SDK extension HOOK_SEARCH will be refactored
-The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
+The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
 
 #### Implemented
 

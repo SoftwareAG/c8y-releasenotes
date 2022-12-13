@@ -17,6 +17,16 @@ layout: bundle
 
 #### Implemented
 
+##### Support for new token type "at+jwt" in SSO
+
+Cumulocity supports new standard OAUTH2 tokens with "at+jwt" type Header Parameter. For more information, see https://datatracker.ietf.org/doc/html/rfc9068#name-header.
+Single-sign-on users managed by new authorization servers (i.e, generating JWT token with type "at+jwt") can thus login successfully into Cumulocity.
+To process this new token type, Cumulocity uses the [Nimbus JOSE + JWT](https://connect2id.com/products/nimbus-jose-jwt), which can be enabled by the tenants with the
+tenant option `nimbus-jwt-enabled` set to `true`.
+
+The option is represented as the following:
+
+`{ "category": "sso", "key": "nimbus-jwt-enabled", "value": "true"}`
 
 ### SDK changes
 

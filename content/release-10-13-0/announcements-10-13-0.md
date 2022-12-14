@@ -171,3 +171,16 @@ The following applies as of Apama 10.11.1:
   This is because setting a small `pageSize` without setting `currentPage` can result in queries that run very slowly.
   For example, to request the first 20 items, you must set `pageSize` to 20 and `currentPage` to 1.
   See also [Paging Cumulocity IoT queries](https://documentation.softwareag.com/apama/v10-11/apama10-11/apama-webhelp/index.html#page/apama-webhelp%2Fco-ConApaAppToExtCom_cumulocity_paging_cumulocity_queries.html) in the Apama documentation.
+
+### Machine learning Workbench
+
+#### Planned
+This following changes will be implemented as a fix release:
+
+- Currently Machine Learning Manager & Machine Learning Admin user groups has access to execute the python scripts, run python commands using jupyter notebook, create autoML models, train workflows & train neural network models.
+To further enhance the security the above code execution access will be limited only to Machine Learning Admin user group.
+
+- Machine Learning Admin user group should be treated as privileged user group.
+
+- This access limitation will be a breaking change for existing Machine Learning Manager user group.
+

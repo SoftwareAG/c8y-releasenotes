@@ -265,3 +265,15 @@ This is available from the following web page: https://documentation.softwareag.
 Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from release 10.15 the CEL (Esper) functionality has been removed completely and cannot be used anymore.
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
+
+### Machine learning Workbench
+
+#### Planned
+This following changes will be implemented as a fix release:
+
+- Currently Machine Learning Manager & Machine Learning Admin user groups has access to execute the python scripts, run python commands using jupyter notebook, create autoML models, train workflows & train neural network models.
+To further enhance the security the above code execution access will be limited only to Machine Learning Admin user group.
+
+- Machine Learning Admin user group should be treated as privileged user group.
+
+- This access limitation will be a breaking change for existing Machine Learning Manager user group.

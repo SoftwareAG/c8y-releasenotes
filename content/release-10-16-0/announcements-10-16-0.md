@@ -62,11 +62,6 @@ New format:
 ```
 The change will be introduced to improve the consistency between different Cumulocity IoT protocols.
 
-##### Breaking change in the Inventory API - unsupported query parameters will be rejected
-
-As of release 10.17+, it will no longer be possible to pass unsupported HTTP query parameters. This means that also all requests with wrongly typed parameters will be rejected.
-This change affects the Inventory API (the same change affects Alarms, Events and Measurements APIs as announced in [release 10.15](/release-10-15-0/announcements-10-15-0)).
-
 #### Implemented
 
 ##### Breaking change in the Measurements API - several APIs will no longer be supported when "enhanced time-series support" is enabled

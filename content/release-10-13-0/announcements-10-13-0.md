@@ -174,13 +174,30 @@ The following applies as of Apama 10.11.1:
 
 ### Machine learning Workbench
 
-#### Planned
-This following changes will be implemented as a fix release:
+#### Implemented
 
-- Currently Machine Learning Manager & Machine Learning Admin user groups has access to execute the python scripts, run python commands using jupyter notebook, create autoML models, train workflows & train neural network models.
-To further enhance the security the above code execution access will be limited only to Machine Learning Admin user group.
+- Currently both "Machine Learning Manager" & "Machine Learning Admin" user groups have access to execute the python scripts, run python commands using jupyter notebook, train workflows & train neural network models.
+To further enhance the security, the above functionalities will be limited only to "Machine Learning Admin" user group.
 
-- Machine Learning Admin user group should be treated as privileged user group.
+- "Machine Learning Admin" user group should be treated as privileged user group.
 
-- This access limitation will be a breaking change for existing Machine Learning Manager user group.
+- This access limitation will be a breaking change for existing "Machine Learning Manager" user group.
 
+- "Machine Learning Manager" user group has been restricted from accessing below post apis:
+
+    ##### In Training Workflow:
+    ```
+    {{url}}/service/mlw/projects/<project_id>/resources/<resource_id>/workflow
+    ```
+    ##### In Code Execution:
+    ```
+    {{url}}/service/mlw/projects/<project_id>/resources/<resource_id>/execute
+    ```
+    ##### In NeuralNetwork:
+    ```
+    {{url}}/service/mlw/projects/<project_id>/resources/<resource_id>/trainNN
+    ```
+    
+- "Machine Learning Manager" user group has been restricted from executing jupyter notebooks & accessing assets section.
+
+- "Machine Learning User" user group has been restricted from accessing assets section.

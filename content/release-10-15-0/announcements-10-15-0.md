@@ -281,15 +281,15 @@ To further enhance the security, the above functionalities will be limited only 
 
     ##### In Training Workflow:
     ```
-    {{url}}/service/mlw/projects/<project_id>/resources/<resource_id>/workflow
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
     ```
     ##### In Code Execution:
     ```
-    {{url}}/service/mlw/projects/<project_id>/resources/<resource_id>/execute
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
     ```
     ##### In NeuralNetwork:
     ```
-    {{url}}/service/mlw/projects/<project_id>/resources/<resource_id>/trainNN
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
     ```
     
 - "Machine Learning Manager" user group has been restricted from executing jupyter notebooks & accessing assets section.

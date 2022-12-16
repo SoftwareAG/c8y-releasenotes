@@ -291,7 +291,21 @@ To further enhance the security, the above functionalities will be limited only 
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
     ```
-    
+- Below apis are only accessible to  "Machine Learning Admin" user group:
+
+    ##### GET - jnb-sessions:
+    ```
+    {{url}}/service/mlw/jnb-sessions
+    ```
+    ##### GET - jnb-content:
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+    ##### PUT - jnb-content:
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+
 - "Machine Learning Manager" user group has been restricted from executing jupyter notebooks & accessing assets section.
 
 - "Machine Learning User" user group has been restricted from accessing assets section.

@@ -64,7 +64,7 @@ The change will be introduced to improve the consistency between different Cumul
 
 ##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
 
-As announced with release 10.15, as of release 10.17, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.17, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
 The change affects given APIs:
 
 * `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`

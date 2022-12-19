@@ -33,7 +33,7 @@ Instead, a time-to-live configuration or retention rules can be used to remove e
 
 ##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
 
-As of release 10.17+, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+As of release 10.17, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
 The change affects given APIs:
 
 * `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`

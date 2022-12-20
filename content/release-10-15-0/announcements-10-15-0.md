@@ -114,7 +114,7 @@ The `SMSResponse` and `SMSResourceReference` events in the `com.apama.cumulocity
 
 #### Implemented
 
-##### Analytics Builder - removal of fragment property
+##### Analytics Builder - removal of frgment property
 
 As announced in [release 10.14](/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
 If you have not already done so, you must now change `frgment` to `fragment` in all of your blocks
@@ -205,4 +205,4 @@ In a future release of Cumulocity IoT DataHub a newer version of Dremio will be 
 
 ##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
 
-In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail, for example due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided nearer the release.
+In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail, for example due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.

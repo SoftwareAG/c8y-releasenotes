@@ -114,7 +114,7 @@ The `SMSResponse` and `SMSResourceReference` events in the `com.apama.cumulocity
 
 #### Implemented
 
-##### Analytics Builder - removal of frgment property
+##### Analytics Builder - removal of fragment property
 
 As announced in [release 10.14](/release-10-14-0/announcements-10-14-0/), the `frgment` property has been removed in 10.15.
 If you have not already done so, you must now change `frgment` to `fragment` in all of your blocks
@@ -194,3 +194,15 @@ This is available from the following web page: https://documentation.softwareag.
 Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from release 10.15 the CEL (Esper) functionality has been removed completely and cannot be used anymore.
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
+
+### Cumulocity IoT DataHub
+
+#### Planned
+
+##### Breaking change in the offloading mechanism - support for mixed types will be deprecated
+
+In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data needs to be converted.
+
+##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
+
+In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail, for example due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided nearer the release.

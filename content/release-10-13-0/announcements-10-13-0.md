@@ -189,7 +189,7 @@ In training workflows:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
     ```
-    ##### In Code Execution:
+In code execution:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
     ```

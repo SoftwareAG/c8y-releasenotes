@@ -181,7 +181,7 @@ To further enhance the security, the above functionalities will be limited to th
 
 - The "Machine Learning Admin" user group should be treated as a privileged user group.
 
-- This access limitation will be a breaking change for existing "Machine Learning Manager" user group.
+- This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
 
 - "Machine Learning Manager" user group has been restricted from accessing below post apis:
 

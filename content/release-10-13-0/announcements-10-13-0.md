@@ -215,4 +215,4 @@ PUT - jnb-content:
 
 - The "Machine Learning Manager" user group has been restricted from executing Jupyter notebooks and accessing the assets section.
 
-- "Machine Learning User" user group has been restricted from accessing assets section.
+- The "Machine Learning User" user group has been restricted from accessing the assets section.

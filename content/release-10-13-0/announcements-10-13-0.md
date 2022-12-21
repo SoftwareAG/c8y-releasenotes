@@ -176,7 +176,7 @@ The following applies as of Apama 10.11.1:
 
 #### Implemented
 
-- Currently both "Machine Learning Manager" & "Machine Learning Admin" user groups have access to execute the python scripts, run python commands using jupyter notebook, train workflows & train neural network models.
+- Currently, both "Machine Learning Manager" & "Machine Learning Admin" user groups can execute Python scripts, run Python commands using Jupyter notebook, train workflows, and train neural network models.
 To further enhance the security, the above functionalities will be limited only to "Machine Learning Admin" user group.
 
 - "Machine Learning Admin" user group should be treated as privileged user group.

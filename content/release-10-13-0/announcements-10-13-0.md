@@ -198,7 +198,7 @@ In neural networks:
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
     ```
     
-- Below apis are only accessible to  "Machine Learning Admin" user group:
+- The following APIs are only accessible to  the "Machine Learning Admin" user group:
 
 GET - jnb-sessions:
     ```

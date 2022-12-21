@@ -185,7 +185,7 @@ To further enhance the security, the above functionalities will be limited to th
 
 - The "Machine Learning Manager" user group has been restricted from accessing the following post APIs:
 
-    ##### In Training Workflow:
+In training workflows:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
     ```

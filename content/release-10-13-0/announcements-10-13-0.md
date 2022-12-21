@@ -183,7 +183,7 @@ To further enhance the security, the above functionalities will be limited to th
 
 - This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
 
-- "Machine Learning Manager" user group has been restricted from accessing below post apis:
+- The "Machine Learning Manager" user group has been restricted from accessing the following post APIs:
 
     ##### In Training Workflow:
     ```

@@ -208,7 +208,7 @@ GET - jnb-content:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```
-    ##### PUT - jnb-content:
+PUT - jnb-content:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```

@@ -213,6 +213,6 @@ PUT - jnb-content:
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```
 
-- "Machine Learning Manager" user group has been restricted from executing jupyter notebooks & accessing assets section.
+- The "Machine Learning Manager" user group has been restricted from executing Jupyter notebooks and accessing the assets section.
 
 - "Machine Learning User" user group has been restricted from accessing assets section.

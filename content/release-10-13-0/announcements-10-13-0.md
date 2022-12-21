@@ -193,7 +193,7 @@ In code execution:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
     ```
-    ##### In NeuralNetwork:
+In neural networks:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
     ```

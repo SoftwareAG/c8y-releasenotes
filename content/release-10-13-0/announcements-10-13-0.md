@@ -204,7 +204,7 @@ GET - jnb-sessions:
     ```
     {{url}}/service/mlw/jnb-sessions
     ```
-    ##### GET - jnb-content:
+GET - jnb-content:
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```

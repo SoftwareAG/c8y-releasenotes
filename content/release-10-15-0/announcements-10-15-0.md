@@ -270,42 +270,49 @@ If you need assistance to migrate your streaming analytics logic from Esper to A
 
 #### Implemented
 
-- Currently both "Machine Learning Manager" & "Machine Learning Admin" user groups have access to execute the python scripts, run python commands using jupyter notebook, train workflows & train neural network models.
-To further enhance the security, the above functionalities will be limited only to "Machine Learning Admin" user group.
+- Currently, both "Machine Learning Manager" and "Machine Learning Admin" user groups can execute Python scripts, run Python commands using Jupyter notebook, train workflows, and train neural network models.
+To further enhance the security, the above functionalities will be limited to the "Machine Learning Admin" user group only.
 
-- "Machine Learning Admin" user group should be treated as privileged user group.
+- The "Machine Learning Admin" user group should be treated as a privileged user group.
 
-- This access limitation will be a breaking change for existing "Machine Learning Manager" user group.
+- The following APIs are only accessible to  the "Machine Learning Admin" user group now:
 
-- "Machine Learning Manager" user group has been restricted from accessing below post apis:
-
-    ##### In Training Workflow:
-    ```
-    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
-    ```
-    ##### In Code Execution:
-    ```
-    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
-    ```
-    ##### In NeuralNetwork:
-    ```
-    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
-    ```
-- Below apis are only accessible to  "Machine Learning Admin" user group:
-
-    ##### GET - jnb-sessions:
+   GET - jnb-sessions:
+    
     ```
     {{url}}/service/mlw/jnb-sessions
     ```
-    ##### GET - jnb-content:
+   GET - jnb-content:
+    
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```
-    ##### PUT - jnb-content:
+   PUT - jnb-content:
+    
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```
+   
+   POST - training workflows:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
+    ```
+   POST - code execution:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
+    ```
+   POST - neural networks:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
+    ```
 
-- "Machine Learning Manager" user group has been restricted from executing jupyter notebooks & accessing assets section.
+- The "Machine Learning Manager" user group has been restricted from executing Jupyter notebooks and accessing the assets section as well.
 
-- "Machine Learning User" user group has been restricted from accessing assets section.
+- The "Machine Learning User" user group has been restricted from accessing the assets section.
+
+- This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
+
+- Those users who are currently part of "Machine Learning Manager" group and needs code execution access will need to be a part of higher privileged group, i.e. "Machine Learning Admin".

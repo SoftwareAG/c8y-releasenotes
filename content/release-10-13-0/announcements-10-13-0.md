@@ -200,7 +200,7 @@ In code execution:
     
 - Below apis are only accessible to  "Machine Learning Admin" user group:
 
-    ##### GET - jnb-sessions:
+GET - jnb-sessions:
     ```
     {{url}}/service/mlw/jnb-sessions
     ```

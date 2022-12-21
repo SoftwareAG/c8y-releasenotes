@@ -315,4 +315,4 @@ To further enhance the security, the above functionalities will be limited to th
 
 - This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
 
-- Those users who are currently part of "Machine Learning Manager" group and needs code execution access will need to be a part of higher privileged group, i.e. "Machine Learning Admin".
+- Those users who are currently in the "Machine Learning Manager" group and need code execution access must be accordingly added to a higher privileged group, for example, "Machine Learning Admin".

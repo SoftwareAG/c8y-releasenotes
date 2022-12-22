@@ -42,7 +42,7 @@ The change affects given APIs:
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
 
-As of release 10.17+, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
+As of release 10.17, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
 This affects the REST response format.
 
 Example of previous response format (note `aCustomDateField` field):
@@ -97,16 +97,6 @@ The change will be introduced to improve the consistency between different Cumul
 
 ### Security changes
 
-#### Planned
-
-##### Improved security for OAI-Secure users
-
-As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.16+, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
-
-The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information. We recommend that administrators announce this change and notify about the change, because the logged-in users will immediately be logged out, and all their changes will get lost. Therefore this action requires scheduling.
-
-Basic authentication users will not be affected by this change.
-
 ##### Deprecation of SMS TFA feature
 
 The SMS TFA (Two-Factor Authentication) feature is deprecated. With release 10.17+, it will be removed and not be functional any longer, and we will no longer support SMS TFA.
@@ -145,6 +135,13 @@ An administrator can use the query language of the Inventory REST API to identif
 
 By default, microservices using the deprecated API version 1 still work in version 10.15. But the behavior is configurable per Cumulocity IoT environment (see *Operational procedures* in the *Cumulocity IoT Core - Operations guide*), and it might happen, depending on the configuration of this environment, that your microservice using the deprecated API version 1 will no longer work.
 
+#### Not implemented
+
+##### Improved security for OAI-Secure users
+
+In [release 10.14](/release-10-14-0/announcements-10-14-0) we announced a planned change, that when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
+
+Such a forced log out is no longer needed and will not be implemented, as permission changes are immediately reflected on the active user sessions. Session invalidation on permission changes is not required any more.
 
 ### SDK changes
 

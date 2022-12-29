@@ -70,7 +70,8 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>In the data explorer, the <b>Create smart rule</b> option has been re-added to the context menu for datapoint selection list items.</td>
+<td>In the data explorer, the <b>Create smart rule</b> option has been added back to the context menu for datapoint selection list items.</td>
+
 <td>MTM-49612</td>
 <td>10.16.68.0</td>
 </tr>
@@ -98,7 +99,8 @@ Fix Version</th>
 
 <tr>
 <td>Java SDK</td>
-<td>Fixed an issue with the <code>AlarmRepresentation</code> comparison in the <code>equals</code> and <code>hashcode</code> methods. Now, instead of comparing the full <code>ManagedObjectRepresentation</code> as the source of alarms, we only compare the managed objects ID. There is no change in <code>ManagedObjectRepresentation</code>.</td>
+<td>Fixed an issue with the <code>AlarmRepresentation</code> comparison in the <code>equals</code> and <code>hashcode</code> methods. Now, instead of comparing the full <code>ManagedObjectRepresentation</code> as the source of alarms, Cumulocity IoT only compares the managed objects ID. There is no change in <code>ManagedObjectRepresentation</code>.</td>
+
 <td>MTM-49181</td>
 <td>10.16.31.0</td>
 </tr>
@@ -133,7 +135,8 @@ Fix Version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>The US date format was used by default instead of the GB date format. This fix switches the default back to GB date format.</td>
+<td>With this fix, the GB date format is again set as the default instead of the US date format. </td>
+
 <td>MTM-49462</td>
 <td>10.16.53.0</td>
 </tr>

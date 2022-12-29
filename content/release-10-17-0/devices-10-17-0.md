@@ -145,7 +145,7 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>LWM2M</td>
-<td>The LWM2M agent now fetches a limited number of pending operations if a LWM2M device sends a registration or a registration update.</td>
+<td>The LWM2M agent now fetches a limited number of pending operations if an LWM2M device sends a registration or a registration update.</td>
 <td>DM-1474</td>
 <td>10.16.119.0</td>
 </tr>

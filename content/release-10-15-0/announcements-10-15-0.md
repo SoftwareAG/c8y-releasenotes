@@ -31,12 +31,10 @@ The following API will no longer be supported:
 
 Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
 
-##### Breaking change in the Alarms, Events, Measurements APIs - unsupported query parameters will be rejected and required parameters will be introduced
+##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
 
-As of release 10.17+, it will no longer be possible to pass unsupported HTTP query parameters. This means that also all requests with wrongly typed parameters will be rejected.
-This change affects the Alarms, Events and Measurements APIs.
-
-At least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+As of release 10.17, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+The change affects given APIs:
 
 * `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
@@ -44,7 +42,7 @@ At least one query parameter limiting the affected data will be required to prev
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
 
-As of release 10.17+, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
+As of release 10.17, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
 This affects the REST response format.
 
 Example of previous response format (note `aCustomDateField` field):
@@ -99,16 +97,6 @@ The change will be introduced to improve the consistency between different Cumul
 
 ### Security changes
 
-#### Planned
-
-##### Improved security for OAI-Secure users
-
-As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.16+, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
-
-The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information. We recommend that administrators announce this change and notify about the change, because the logged-in users will immediately be logged out, and all their changes will get lost. Therefore this action requires scheduling.
-
-Basic authentication users will not be affected by this change.
-
 ##### Deprecation of SMS TFA feature
 
 The SMS TFA (Two-Factor Authentication) feature is deprecated. With release 10.17+, it will be removed and not be functional any longer, and we will no longer support SMS TFA.
@@ -147,6 +135,13 @@ An administrator can use the query language of the Inventory REST API to identif
 
 By default, microservices using the deprecated API version 1 still work in version 10.15. But the behavior is configurable per Cumulocity IoT environment (see *Operational procedures* in the *Cumulocity IoT Core - Operations guide*), and it might happen, depending on the configuration of this environment, that your microservice using the deprecated API version 1 will no longer work.
 
+#### Not implemented
+
+##### Improved security for OAI-Secure users
+
+In [release 10.14](/release-10-14-0/announcements-10-14-0) we announced a planned change, that when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
+
+Such a forced log out is no longer needed and will not be implemented, as permission changes are immediately reflected on the active user sessions. Session invalidation on permission changes is not required any more.
 
 ### SDK changes
 
@@ -265,3 +260,15 @@ This is available from the following web page: https://documentation.softwareag.
 Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from release 10.15 the CEL (Esper) functionality has been removed completely and cannot be used anymore.
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
+
+### Cumulocity IoT DataHub
+
+#### Planned
+
+##### Breaking change in the offloading mechanism - support for mixed types will be deprecated
+
+In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data needs to be converted.
+
+##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
+
+In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.

@@ -137,7 +137,7 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>LWM2M</td>
-<td>- The LWM2M FOTA process now raises an alarm if the observation to the update stare resource of object 5 cannot be established.
+<td>- The LWM2M FOTA process now raises an alarm if the observation to the update state resource of object 5 cannot be established.
 <br>-All CoAP requests sent to devices and corresponding responses are now consistently logged.</td>
 <td>DM-1711</td>
 <td>10.16.161.0</td>

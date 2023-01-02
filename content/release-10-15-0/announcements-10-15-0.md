@@ -112,7 +112,7 @@ Refer to [this Linux man page](https://man7.org/linux/man-pages/man7/capabilitie
 
 **What you need to do by the 10.15 release**
 
-Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally must refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https:/cumulocity.com/guides/10.15.0/microservice-sdk/concept/#migration) in the <i>Microservice SDK guide</i>.
+Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally must refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https://cumulocity.com/guides/10.15.0/microservice-sdk/concept/#migration) in the <i>Microservice SDK guide</i>.
 
 **How to check whether your microservice is impacted?**
 

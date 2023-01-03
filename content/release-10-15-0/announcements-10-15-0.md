@@ -266,7 +266,7 @@ Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
 
-### Machine learning Workbench
+### Machine Learning Workbench
 
 #### Implemented
 

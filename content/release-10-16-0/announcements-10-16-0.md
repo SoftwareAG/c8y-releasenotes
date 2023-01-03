@@ -62,6 +62,15 @@ New format:
 ```
 The change will be introduced to improve the consistency between different Cumulocity IoT protocols.
 
+##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
+
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.17, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+This change affects the following APIs:
+
+* `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
+
 #### Implemented
 
 ##### Breaking change in the Measurements API - several APIs will no longer be supported when "enhanced time-series support" is enabled

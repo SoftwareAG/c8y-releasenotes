@@ -261,6 +261,56 @@ Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
 
+### Machine Learning Workbench
+
+#### Implemented
+
+- Currently, both "Machine Learning Manager" and "Machine Learning Admin" user groups can execute Python scripts, run Python commands using Jupyter notebook, train workflows, and train neural network models.
+To further enhance the security, the above functionalities will be limited to the "Machine Learning Admin" user group only.
+
+- The "Machine Learning Admin" user group should be treated as a privileged user group.
+
+- The following APIs are only accessible to  the "Machine Learning Admin" user group now:
+
+   GET - jnb-sessions:
+    
+    ```
+    {{url}}/service/mlw/jnb-sessions
+    ```
+   GET - jnb-content:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+   PUT - jnb-content:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+   
+   POST - training workflows:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
+    ```
+   POST - code execution:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
+    ```
+   POST - neural networks:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
+    ```
+
+- The "Machine Learning Manager" user group has been restricted from executing Jupyter notebooks and accessing the assets section as well.
+
+- The "Machine Learning User" user group has been restricted from accessing the assets section.
+
+- This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
+
+- Those users who are currently in the "Machine Learning Manager" group and need code execution access must be accordingly added to a higher privileged group, for example, "Machine Learning Admin".
 ### Cumulocity IoT DataHub
 
 #### Planned

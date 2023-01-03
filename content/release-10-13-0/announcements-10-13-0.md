@@ -173,7 +173,7 @@ The following applies as of Apama 10.11.1:
   See also [Paging Cumulocity IoT queries](https://documentation.softwareag.com/apama/v10-11/apama10-11/apama-webhelp/index.html#page/apama-webhelp%2Fco-ConApaAppToExtCom_cumulocity_paging_cumulocity_queries.html) in the Apama documentation.
 
 
-### Machine learning Workbench
+### Machine Learning Workbench
 
 #### Implemented
 

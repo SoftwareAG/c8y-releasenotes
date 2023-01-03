@@ -171,3 +171,55 @@ The following applies as of Apama 10.11.1:
   This is because setting a small `pageSize` without setting `currentPage` can result in queries that run very slowly.
   For example, to request the first 20 items, you must set `pageSize` to 20 and `currentPage` to 1.
   See also [Paging Cumulocity IoT queries](https://documentation.softwareag.com/apama/v10-11/apama10-11/apama-webhelp/index.html#page/apama-webhelp%2Fco-ConApaAppToExtCom_cumulocity_paging_cumulocity_queries.html) in the Apama documentation.
+
+
+### Machine Learning Workbench
+
+#### Implemented
+
+- Currently, both "Machine Learning Manager" and "Machine Learning Admin" user groups can execute Python scripts, run Python commands using Jupyter notebook, train workflows, and train neural network models.
+To further enhance the security, the above functionalities will be limited to the "Machine Learning Admin" user group only.
+
+- The "Machine Learning Admin" user group should be treated as a privileged user group.
+
+- The following APIs are only accessible to  the "Machine Learning Admin" user group now:
+
+   GET - jnb-sessions:
+
+    ```
+    {{url}}/service/mlw/jnb-sessions
+    ```
+   GET - jnb-content:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+   PUT - jnb-content:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+
+   POST - training workflows:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
+    ```
+   POST - code execution:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
+    ```
+   POST - neural networks:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
+    ```
+
+- The "Machine Learning Manager" user group has been restricted from executing Jupyter notebooks and accessing the assets section as well.
+
+- The "Machine Learning User" user group has been restricted from accessing the assets section.
+
+- This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
+
+- Those users who are currently in the "Machine Learning Manager" group and need code execution access must be accordingly added to a higher privileged group, for example, "Machine Learning Admin".

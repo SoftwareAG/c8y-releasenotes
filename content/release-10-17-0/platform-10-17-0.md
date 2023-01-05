@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.179.0-->
+<!--10.16.1.0 - 10.16.223.0-->
 
 ### Improvements
 
@@ -102,6 +102,20 @@ Fix Version</th>
 
 <tr>
 <td>Authentication</td>
+<td>Issues with removing trusted or forbidden user agents in the <b>Authentication</b> page have been fixed. The delete icon now only deletes the agent it applies to.</td>
+<td>MTM-48062</td>
+<td>10.16.190.0</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>During the reset password process the tenant ID setup dialog was presented instead of the reset password dialog. Now the reset password dialog appears correctly if the reset link is used.</td>
+<td>MTM-50205</td>
+<td>10.16.181.0</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
 <td>The two-factor authentication verification dialog does no longer show two <b>Cancel</b> buttons.</td>
 <td>MTM-49935</td>
 <td>10.16.148.0</td>
@@ -155,6 +169,13 @@ MTM-49760</td>
 <td>Fixed an issue with inventory roles when a user had assigned different inventory roles for different groups in the same inventory hierarchy. Now, if a user has inventory access to a parent group for one API and inventory access to a child group for a different API, queries made by this user return properly filtered documents for both APIs.</td>
 <td>MTM-45018</td>
 <td>10.16.8.0</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>The performance of the Alarm API has been improved for requests in which the resolved query parameter is used.</td>
+<td>MTM-49450</td>
+<td>10.16.198.0</td>
 </tr>
 
 <tr>

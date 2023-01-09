@@ -63,7 +63,8 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>Mappings for the Scada widget are stored in English and only translated only in the display.</td>
+<td>Mappings for the Scada widget are stored in English and only translated in the display.</td>
+
 <td>MTM-45278</td>
 <td>10.16.185.0</td>
 </tr>

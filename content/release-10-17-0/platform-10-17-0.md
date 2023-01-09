@@ -173,7 +173,7 @@ MTM-49760</td>
 
 <tr>
 <td>REST API</td>
-<td>The performance of the Alarm API has been improved for requests in which the resolved query parameter is used.</td>
+<td>The performance of the Alarm API has been improved for requests which use the resolved query parameter.</td>
 <td>MTM-49450</td>
 <td>10.16.198.0</td>
 </tr>

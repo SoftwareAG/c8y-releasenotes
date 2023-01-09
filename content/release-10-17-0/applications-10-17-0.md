@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.179.0-->
+<!--10.16.1.0 - 10.16.223.0-->
 
 ### Improvements
 
@@ -63,6 +63,14 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>Mappings for the Scada widget are stored in English and only translated in the display.</td>
+
+<td>MTM-45278</td>
+<td>10.16.185.0</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>On editing a widget configuration, device attributes are now resolved properly.</td>
 <td>MTM-50011</td>
 <td>10.16.157.0</td>
@@ -104,6 +112,14 @@ Fix Version</th>
 <td>MTM-49181</td>
 <td>10.16.31.0</td>
 </tr>
+
+<tr>
+<td>UI</td>
+<td>If the backend returns a 401 error, the UI (the AngularJS part) checks if the user must be logged out by requesting the current user endpoint. If more than one request returns a 401 error, the UI will logout the user only once. Prior to this fix, the logout was called several times.</td>
+<td>MTM-45204</td>
+<td>10.16.188.0</td>
+</tr>
+
 
 <tr>
 <td>UI</td>

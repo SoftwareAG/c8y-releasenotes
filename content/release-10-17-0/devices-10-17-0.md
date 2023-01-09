@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.179.0-->
+<!--10.16.1.0 - 10.16.223.0-->
 
 ### Improvements
 
@@ -79,6 +79,13 @@ Issue</th>
 
 <tr>
 <td>Device Management</td>
+<td>The option to copy the home page dashboard has been removed since it didn't provide useful functionality.</td>
+<td>DM-1869</td>
+<td>10.16.191.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
 <td>On the <b>Measurements</b> tab in the device details, a tooltip has been added which shows the whole values in case of truncated values in the Y-axis. Moreover, the information is provided that you can see the whole values by hovering over the axis.</td>
 <td>MTM-48603</td>
 <td>10.16.142.0</td>
@@ -133,6 +140,27 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>The device registration wizard had several layout and functionality issues which were fixed by aligning it to the default platform user experience.</td>
 <td>DM-1335</td>
 <td>10.16.8.0</td>
+</tr>
+
+<tr>
+<td>Digital Twin Manager</td>
+<td>For assets created with the Digital Twin Manager, custom properties of the type "number" with the value "0" are now displayed properly as "0", not as "Undefined".</td>
+<td>MTM-49870</td>
+<td>10.16.185.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>By default, the LWM2M object-resource mappings of the Management tenant that are configured using the LWM2M device protocols were not inherited by the subtenants. With this change, the LWM2M object-resource mappings defined in the Management tenant are applied to all its subtenants by default. The default mappings from the Management tenant can also be overwritten by uploading the LWM2M device protocol for the LWM2M object on the subtenant level as described in <a href="https://cumulocity.com/guides/protocol-integration/lwm2m/#device-protocols" class="no-ajaxy">LWM2M > LWM2M device protocols</a> in the <i>Protocol integration guide</i>. </td>
+<td>DM-1778</td>
+<td>10.16.206.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>While updating the security info for PSK devices in the database, the LWM2M agent was internally deleting the old security managed object and creating a new one. Due to the asynchronous deletion of managed objects in the Cumulocity IoT platform, the agent intermittently failed to update the security info. With the current changes, the LWM2M agent updates the required security details in the same managed object instead of removing it first.</td>
+<td>DM-1671</td>
+<td>10.16.206.0</td>
 </tr>
 
 <tr>

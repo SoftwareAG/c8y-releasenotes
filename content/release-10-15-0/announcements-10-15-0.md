@@ -199,7 +199,7 @@ If you need assistance to migrate your streaming analytics logic from Esper to A
 
 #### Planned
 
-##### Breaking change in the offloading mechanism - support for mixed types will be deprecated
+##### Breaking change in the offloading mechanism - deprecation of support for mixed types
 
 In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data needs to be converted.
 

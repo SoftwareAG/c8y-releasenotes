@@ -40,7 +40,8 @@ Prior to this change, the existence of the measurement was only validated for pe
 
 <tr>
 <td>Core platform</td>
-<td>Inventory binaries now support chunk download (by setting specific range headers) and resume of the file download.</td>
+<td>Inventory binaries now support chunk download (by setting specific Range headers) and resuming a file download.</td>
+
 <td>MTM-49998</td>
 <td>10.16.248.0</td>
 </tr>

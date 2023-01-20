@@ -82,11 +82,11 @@ The following APIs have been removed without any replacement:
 * `GET /measurement/measurements/{id}`
 * `DEL /measurements/measurement/{id}`
 
-The following API is no longer supported:
+The following API will be supported starting with 10.17:
 
 * `DEL /measurements/measurement/`
 
-Instead, retention rules can be used to remove expired measurements data from the Operational Store.
+Instead, in 10.16 retention rules can be used to remove expired measurements data from the Operational Store.
 
 ### Security changes
 

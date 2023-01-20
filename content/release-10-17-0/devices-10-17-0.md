@@ -93,7 +93,7 @@ Issue</th>
 
 <tr>
 <td>Device Management</td>
-<td>The "Groups" column in the device list used to display all groups higher in the hierarchy to which the device belonged directly or transitively. This has been fixed and now only the direct parent groups are displayed.</td>
+<td>The "Groups" column in the device list formerly displayed all groups higher in the hierarchy to which the device belonged directly or transitively. This has been fixed and now only the direct parent groups are displayed.</td>
 <td>DM-1870</td>
 <td>10.16.246.0</td>
 </tr>

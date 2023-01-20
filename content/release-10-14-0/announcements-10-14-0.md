@@ -23,13 +23,13 @@ As of release 10.16+, new tenants can utilize a new enhanced time-series support
 The following APIs will be removed without any replacement:
 
 * `GET /measurement/measurements/{id}`
-* `DEL /measurements/measurement/getById`
+* `DEL /measurements/measurement/{id}`
 
 The following API will no longer be supported:
 
 * `DEL /measurements/measurement/`
 
-Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
+Instead, retention rules can be used to remove expired measurements data from the Operational Store.
 
 #### Implemented
 

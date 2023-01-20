@@ -23,13 +23,13 @@ As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of
 The following APIs will be removed without any replacement:
 
 * `GET /measurement/measurements/{id}`
-* `DEL /measurements/measurement/getById`
+* `DEL /measurements/measurement/{id}`
 
 The following API will no longer be supported:
 
 * `DEL /measurements/measurement/`
 
-Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
+Instead, retention rules can be used to remove expired measurements data from the Operational Store.
 
 ##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
 

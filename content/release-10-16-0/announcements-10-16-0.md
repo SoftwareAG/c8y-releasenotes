@@ -141,3 +141,15 @@ see the Streaming Analytics release notes for [release 10.16.0](/release-10-16-0
 The following keys for configuring model timeouts have been removed and will be ignored when set:
 `default_timeout_secs` and `block_promise_timeout_secs`.
 Instead, warnings are now logged when request responses or returned promise values take too long to complete.
+
+### Cumulocity IoT DataHub
+
+#### Planned
+
+##### Breaking change in the offloading mechanism - deprecation of support for mixed types
+
+In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data needs to be converted.
+
+##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
+
+In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.

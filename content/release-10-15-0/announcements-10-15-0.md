@@ -261,6 +261,7 @@ Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
 
+
 ### Machine Learning Workbench
 
 #### Implemented
@@ -311,11 +312,13 @@ To further enhance the security, the above functionalities will be limited to th
 - This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
 
 - Those users who are currently in the "Machine Learning Manager" group and need code execution access must be accordingly added to a higher privileged group, for example, "Machine Learning Admin".
+
+
 ### Cumulocity IoT DataHub
 
 #### Planned
 
-##### Breaking change in the offloading mechanism - support for mixed types will be deprecated
+##### Breaking change in the offloading mechanism - deprecation of support for mixed types
 
 In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data needs to be converted.
 

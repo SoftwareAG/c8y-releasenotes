@@ -86,7 +86,7 @@ The following API will be supported starting with 10.17:
 
 * `DEL /measurements/measurement/`
 
-Instead, in 10.16 retention rules can be used to remove expired measurements data from the Operational Store.
+The following API is not supported in 10.16 will be supported starting with 10.17:
 
 ### Security changes
 

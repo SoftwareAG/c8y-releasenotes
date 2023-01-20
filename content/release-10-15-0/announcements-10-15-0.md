@@ -25,7 +25,7 @@ The following APIs will be removed without any replacement:
 * `GET /measurement/measurements/{id}`
 * `DEL /measurements/measurement/{id}`
 
-The following API will be supported starting with 10.17:
+The following API is not supported in 10.16 will be supported starting with 10.17:
 
 * `DEL /measurements/measurement/`
 

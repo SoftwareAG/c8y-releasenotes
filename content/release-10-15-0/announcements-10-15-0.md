@@ -31,12 +31,10 @@ The following API will no longer be supported:
 
 Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
 
-##### Breaking change in the Alarms, Events, Measurements APIs - unsupported query parameters will be rejected and required parameters will be introduced
+##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
 
-As of release 10.17+, it will no longer be possible to pass unsupported HTTP query parameters. This means that also all requests with wrongly typed parameters will be rejected.
-This change affects the Alarms, Events and Measurements APIs.
-
-At least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+As of release 10.17, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+The change affects given APIs:
 
 * `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
@@ -44,7 +42,7 @@ At least one query parameter limiting the affected data will be required to prev
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
 
-As of release 10.17+, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
+As of release 10.17, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
 This affects the REST response format.
 
 Example of previous response format (note `aCustomDateField` field):
@@ -99,16 +97,6 @@ The change will be introduced to improve the consistency between different Cumul
 
 ### Security changes
 
-#### Planned
-
-##### Improved security for OAI-Secure users
-
-As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.16+, when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
-
-The purpose of this measure is to enhance security and to make sure that all OAI-Secure users have access to the relevant information in Cumulocity IoT, without compromising secure access to the information. We recommend that administrators announce this change and notify about the change, because the logged-in users will immediately be logged out, and all their changes will get lost. Therefore this action requires scheduling.
-
-Basic authentication users will not be affected by this change.
-
 ##### Deprecation of SMS TFA feature
 
 The SMS TFA (Two-Factor Authentication) feature is deprecated. With release 10.17+, it will be removed and not be functional any longer, and we will no longer support SMS TFA.
@@ -133,7 +121,7 @@ Refer to [this Linux man page](https://man7.org/linux/man-pages/man7/capabilitie
 
 **What you need to do by the 10.15 release**
 
-Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally must refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https:/cumulocity.com/guides/10.15.0/microservice-sdk/concept/#migration) in the <i>Microservice SDK guide</i>.
+Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally must refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https://cumulocity.com/guides/10.15.0/microservice-sdk/concept/#migration) in the <i>Microservice SDK guide</i>.
 
 **How to check whether your microservice is impacted?**
 
@@ -147,6 +135,13 @@ An administrator can use the query language of the Inventory REST API to identif
 
 By default, microservices using the deprecated API version 1 still work in version 10.15. But the behavior is configurable per Cumulocity IoT environment (see *Operational procedures* in the *Cumulocity IoT Core - Operations guide*), and it might happen, depending on the configuration of this environment, that your microservice using the deprecated API version 1 will no longer work.
 
+#### Not implemented
+
+##### Improved security for OAI-Secure users
+
+In [release 10.14](/release-10-14-0/announcements-10-14-0) we announced a planned change, that when an administrator changes permissions inside a role, users who have this specific role assigned and use OAI-Secure will be logged out.
+
+Such a forced log out is no longer needed and will not be implemented, as permission changes are immediately reflected on the active user sessions. Session invalidation on permission changes is not required any more.
 
 ### SDK changes
 
@@ -265,6 +260,58 @@ This is available from the following web page: https://documentation.softwareag.
 Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from release 10.15 the CEL (Esper) functionality has been removed completely and cannot be used anymore.
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
+
+
+### Machine Learning Workbench
+
+#### Implemented
+
+- Currently, both "Machine Learning Manager" and "Machine Learning Admin" user groups can execute Python scripts, run Python commands using Jupyter notebook, train workflows, and train neural network models.
+To further enhance the security, the above functionalities will be limited to the "Machine Learning Admin" user group only.
+
+- The "Machine Learning Admin" user group should be treated as a privileged user group.
+
+- The following APIs are only accessible to  the "Machine Learning Admin" user group now:
+
+   GET - jnb-sessions:
+    
+    ```
+    {{url}}/service/mlw/jnb-sessions
+    ```
+   GET - jnb-content:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+   PUT - jnb-content:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+   
+   POST - training workflows:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
+    ```
+   POST - code execution:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
+    ```
+   POST - neural networks:
+    
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
+    ```
+
+- The "Machine Learning Manager" user group has been restricted from executing Jupyter notebooks and accessing the assets section as well.
+
+- The "Machine Learning User" user group has been restricted from accessing the assets section.
+
+- This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
+
+- Those users who are currently in the "Machine Learning Manager" group and need code execution access must be accordingly added to a higher privileged group, for example, "Machine Learning Admin".
 
 
 ### Cumulocity IoT DataHub

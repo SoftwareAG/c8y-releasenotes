@@ -107,6 +107,15 @@ If you don´t know what is required to switch off SMS TFA, please contact our cu
 
 #### Planned
 
+##### Breaking change in microservice security configuration
+
+A Spring Boot library will be upgraded to 2.7.6, hence upgrading Microservice SDK to 10.17+ may require some additional development.
+
+Following the deprecation of `WebSecurityConfigurerAdapter` by Spring Security, the Microservice SDK will use a direct declaration of the `SecurityFilterChain` bean in its internal configuration instead. At the same time, Spring Security
+only allows one of these configuration approaches in a single application. This means that if the old,
+adapter-based method has been used in your code before, you will have to migrate to the new, direct filters
+declaration for applications to start. Refer to the [Spring Security documentation](https://docs.spring.io/spring-security/reference/5.8/migration/servlet/config.html#_stop_using_websecurityconfigureradapter) for more details.
+
 ##### New default branding
 
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.17, we will update the default branding for all Cumulocity IoT default applications. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.

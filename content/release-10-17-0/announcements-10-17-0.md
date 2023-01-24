@@ -57,3 +57,7 @@ See also the announcement in the Streaming Analytics release notes for
 Existing blocks that use the version 1 API must be migrated to use the version 2 API.
 See [Migrating input and output blocks to the version 2 API](https://github.com/SoftwareAG/apama-analytics-builder-block-sdk/blob/rel/10.17.0.x/doc/150-MigrateInputOutputBlocks.md)
 in the Analytics Builder Block SDK documentation on GitHub for more details.
+
+##### Changes to microservice health endpoint
+
+For reasons of security and performance, the REST endpoint `/service/cep/health` no longer returns a comprehensive list of status values. All of the same information is still available from REST endpoints under `/service/cep/diagnostics/...`.

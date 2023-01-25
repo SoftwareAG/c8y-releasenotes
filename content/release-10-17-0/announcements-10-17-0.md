@@ -29,6 +29,14 @@ To process this new token type, Cumulocity IoT uses the [Nimbus JOSE + JWT](http
 
 #### Implemented
 
+##### Breaking change in microservice security configuration
+
+A Spring Boot library was upgraded to 2.7.6, hence upgrading Microservice SDK to 10.17+ may require some additional development.
+
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), following the deprecation of `WebSecurityConfigurerAdapter` by Spring Security, the Microservice SDK now uses a direct declaration of the `SecurityFilterChain` bean in its internal configuration instead. At the same time, Spring Security
+only allows one of these configuration approaches in a single application. This means that if the old,
+adapter-based method has been used in your code before, you will have to migrate to the new, direct filters
+declaration for applications to start. Refer to the [Spring Security documentation](https://docs.spring.io/spring-security/reference/5.8/migration/servlet/config.html#_stop_using_websecurityconfigureradapter) for more details.
 
 ### Streaming Analytics
 
@@ -49,3 +57,7 @@ See also the announcement in the Streaming Analytics release notes for
 Existing blocks that use the version 1 API must be migrated to use the version 2 API.
 See [Migrating input and output blocks to the version 2 API](https://github.com/SoftwareAG/apama-analytics-builder-block-sdk/blob/rel/10.17.0.x/doc/150-MigrateInputOutputBlocks.md)
 in the Analytics Builder Block SDK documentation on GitHub for more details.
+
+##### Changes to microservice health endpoint
+
+For reasons of security and performance, the REST endpoint `/service/cep/health` no longer returns a comprehensive list of status values. All of the same information is still available from REST endpoints under `/service/cep/diagnostics/...`.

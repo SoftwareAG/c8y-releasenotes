@@ -23,13 +23,15 @@ As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of
 The following APIs will be removed without any replacement:
 
 * `GET /measurement/measurements/{id}`
-* `DEL /measurements/measurement/getById`
+* `DEL /measurements/measurement/{id}`
 
-The following API will no longer be supported:
+The following API is partially supported:
 
 * `DEL /measurements/measurement/`
 
-Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
+In release 10.16, the parameters `dateFrom` and `dateTo` are not supported. Instead, retention rules can be used to remove expired measurements data from the Operational Store.
+
+In 10.17+ the parameters `dateFrom` and `dateTo` must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
 

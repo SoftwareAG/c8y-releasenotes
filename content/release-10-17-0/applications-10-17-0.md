@@ -64,7 +64,6 @@ Fix Version</th>
 <tr>
 <td>Cockpit</td>
 <td>Mappings for the Scada widget are stored in English and only translated in the display.</td>
-
 <td>MTM-45278</td>
 <td>10.16.185.0</td>
 </tr>
@@ -79,7 +78,6 @@ Fix Version</th>
 <tr>
 <td>Cockpit</td>
 <td>In the data explorer, the <b>Create smart rule</b> option has been added back to the context menu for datapoint selection list items.</td>
-
 <td>MTM-49612</td>
 <td>10.16.68.0</td>
 </tr>
@@ -108,9 +106,22 @@ Fix Version</th>
 <tr>
 <td>Java SDK</td>
 <td>Fixed an issue with the <code>AlarmRepresentation</code> comparison in the <code>equals</code> and <code>hashcode</code> methods. Now, instead of comparing the full <code>ManagedObjectRepresentation</code> as the source of alarms, Cumulocity IoT only compares the managed objects ID. There is no change in <code>ManagedObjectRepresentation</code>.</td>
-
 <td>MTM-49181</td>
 <td>10.16.31.0</td>
+</tr>
+
+<tr>
+<td>Microservice SDK</td>
+<td>The Microservice SDK is now based on Spring Boot 2.7.6, using Spring Security 5.7.5.</td>
+<td>MTM-49761</td>
+<td>10.16.248.0</td>
+</tr>
+
+<tr>
+<td>Microservice SDK</td>
+<td>The Microservice SDK is now based on Spring Boot 2.7.6, using Spring Framework 5.3.24.</td>
+<td>MTM-48361</td>
+<td>10.16.232.0</td>
 </tr>
 
 <tr>
@@ -120,12 +131,18 @@ Fix Version</th>
 <td>10.16.188.0</td>
 </tr>
 
-
 <tr>
 <td>UI</td>
 <td>Resizing widgets on smartphones now depends on the size and orientation of the screen.</td>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The "Pie chart" widget now works properly again when the provided values are negative numbers.</td>
+<td>MTM-49071</td>
+<td>10.16.229.0</td>
 </tr>
 
 <tr>
@@ -152,7 +169,6 @@ Fix Version</th>
 <tr>
 <td>Web SDK</td>
 <td>With this fix, the GB date format is again set as the default instead of the US date format. </td>
-
 <td>MTM-49462</td>
 <td>10.16.53.0</td>
 </tr>

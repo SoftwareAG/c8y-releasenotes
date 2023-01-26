@@ -31,6 +31,23 @@ Fix Version</th>
 
 <tr>
 <td>Core platform</td>
+<td>On creating a measurement, it is now validated for all processing modes if the measurement exists, that is for PERSISTENT, QUIESCENT, TRANSIENT and CEP.
+Prior to this change, the existence of the measurement was only validated for persistence processing modes (PERSISTENT and QUIESCENT).</td>
+
+<td>MTM-50498</td>
+<td>10.16.248.0</td>
+</tr>
+
+<tr>
+<td>Core platform</td>
+<td>Inventory binaries now support chunk download (by setting specific Range headers) and resuming a file download.</td>
+
+<td>MTM-49998</td>
+<td>10.16.248.0</td>
+</tr>
+
+<tr>
+<td>Core platform</td>
 <td>Delete by <code>dateFrom</code> and <code>dateTo</code> query parameters is now supported for timeseries measurements.
 Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.</td>
 <td>MTM-49441</td>

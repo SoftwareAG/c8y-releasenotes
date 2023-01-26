@@ -80,13 +80,14 @@ As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of
 The following APIs have been removed without any replacement:
 
 * `GET /measurement/measurements/{id}`
-* `DEL /measurements/measurement/getById`
+* `DEL /measurements/measurement/{id}`
 
-The following API is no longer supported:
+The following API is partially supported:
 
 * `DEL /measurements/measurement/`
 
-Instead, a time-to-live configuration or retention rules can be used to remove expired measurements data from the Operational Store.
+In 10.16 The parameters `dateFrom` and `dateTo` are not supported. In 10.17+ the parameters `dateFrom` and `dateTo` must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.
+Instead, in 10.16 retention rules can be used to remove expired measurements data from the Operational Store.
 
 ### Security changes
 

@@ -151,7 +151,7 @@ see the Streaming Analytics release notes for [release 10.16.0](/release-10-16-0
 
 The following keys for configuring model timeouts have been removed and will be ignored when set:
 `default_timeout_secs` and `block_promise_timeout_secs`.
-Instead, warnings are now logged when request responses or returned promise values take too long to complete.
+Instead, warnings are now logged when request responses or returned promise values take too long to complete, as determined by the Apama-ctrl microservice.
 
 ### Cumulocity IoT DataHub
 

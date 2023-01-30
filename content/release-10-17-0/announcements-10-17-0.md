@@ -27,6 +27,10 @@ To process this new token type, Cumulocity IoT uses the [Nimbus JOSE + JWT](http
 
 #### Planned
 
+##### The Web SDK extension HOOK_SEARCH will be refactored
+
+The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), as of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
+
 #### Implemented
 
 ##### Breaking change in microservice security configuration
@@ -37,6 +41,10 @@ As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), follo
 only allows one of these configuration approaches in a single application. This means that if the old,
 adapter-based method has been used in your code before, you will have to migrate to the new, direct filters
 declaration for applications to start. Refer to the [Spring Security documentation](https://docs.spring.io/spring-security/reference/5.8/migration/servlet/config.html#_stop_using_websecurityconfigureradapter) for more details.
+
+##### New default branding
+
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) and [release 10.16](/release-10-16-0/announcements-10-16-0), as of release 10.17, the default branding for all Cumulocity IoT default applications has been updated. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
 
 ### Streaming Analytics
 

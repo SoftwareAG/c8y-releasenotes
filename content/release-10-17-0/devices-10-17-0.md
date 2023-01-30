@@ -100,7 +100,7 @@ Issue</th>
 
 <tr>
 <td>Device Management</td>
-<td>On bulk device registration views the <b>Upload</b> button now is disabled if there is no file selected or if the selected file is invalid.</td>
+<td>On bulk device registration views the <b>Upload</b> button is now disabled if there is no file selected or if the selected file is invalid.</td>
 <td>DM-1641</td>
 <td>10.16.260.0</td>
 </tr>

@@ -29,6 +29,7 @@ Fix Version</th>
 <td>10.16.248.0</td>
 </tr>
 
+
 <tr>
 <td>Device Management</td>
 <td>In the <b>Groups</b> page for smart groups, the columns in the <b>Subassets</b> list will now be configured in the same way as the <b>All devices<b> list at the time when the respective smart group is created, including sorting, visibility, order and custom columns.</td>
@@ -51,6 +52,12 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 <td>10.16.66.0</td>
 </tr>
 
+<tr>
+<td>LWM2M</td>
+<td>The accessibility of the LWM2M UI has been improved, for example, in the <b>LWM2M bootstrap parameters</b> tab and in the <b>LWM2M post-operations</b> page.</td>
+<td>DM-1689</td>
+<td>10.16.248.0</td>
+</tr>
 
 <tr>
 <td>LWM2M</td>

@@ -9,7 +9,7 @@ These release notes for **Cumulocity IoT release 10.15.0** include information o
 
 Moreover it includes [announcements](/release-10-15-0/announcements-10-15-0/) for planned and implemented deprecations that might require action on your side at some time.
 
-You can find the corresponding product documentation for release 10.15.0 at [cumulocity.com/guides/10.15.0/welcome/intro-documentation](https://cumulocity.com/guides/10.15.0/welcome/intro-documentation/).
+You can find the corresponding product documentation for release 10.15.0 at [https://cumulocity.com/guides/10.15.0/welcome/intro-documentation](https://cumulocity.com/guides/10.15.0/welcome/intro-documentation/).
 
 
 {{< c8y-admon-info >}}

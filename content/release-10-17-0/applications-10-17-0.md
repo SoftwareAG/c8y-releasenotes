@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.223.0-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.0-->
 
 ### Improvements
 
@@ -23,9 +23,24 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>In order to improve the Welcome page by providing more meaningful information, a markdown widget is now available on dashboards. The widget can be used to display markdown content either from a URL or from a file.</td>
+<td>MTM-49220</td>
+<td>10.16.254.0</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>Instead of subscribing to updates of all devices a user has access to, the HTML widget now only subscribes to devices referenced in the widget.</td>
 <td>MTM-45890</td>
 <td>10.16.159.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>A new hook named "HOOK_VERSION" and the "hookVersion()" function have been introduced, which let you add your own versions. The user menu and the platform information have been moved to the right drawer.
+A JSON file can be downloaded with more platform details, such as information on the current user and tenant, which might, for example, be relevant for support and debugging purposes.</td>
+<td>MTM-45483</td>
+<td>10.16.260.0</td>
 </tr>
 
 <tr>

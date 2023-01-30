@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.223.0-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.0-->
 
 ### Improvements
 
@@ -96,6 +96,20 @@ Issue</th>
 <td>The <b>Offset property</b> field in the register configuration now accepts all values.</td>
 <td>MTM-48256</td>
 <td>10.16.119.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>On bulk device registration views the <b>Upload</b> button is now disabled if there is no file selected or if the selected file is invalid.</td>
+<td>DM-1641</td>
+<td>10.16.260.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>By adding or removing an external identifier of type <code>c8y_Serial</code> to/from the monitored device, the device connection monitoring is notified accordingly to start or stop with the specified external identifier.</td>
+<td>MTM-50025</td>
+<td>10.16.260.0</td>
 </tr>
 
 <tr>

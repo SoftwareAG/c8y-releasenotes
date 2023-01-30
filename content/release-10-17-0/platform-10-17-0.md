@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.223.0-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.0-->
 
 ### Improvements
 
@@ -67,6 +67,12 @@ Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000
 <td>10.16.79.0</td>
 </tr>
 
+<tr>
+<td>Security</td>
+<td>An attribute has been added to all external application links, that prevents tab nabbing (a security vulnerability that could be used to gain the user's browser session).</td>
+<td>MTM-48156</td>
+<td>10.16.249.0</td>
+</tr>
 
 </tbody></table></div>
 

@@ -194,7 +194,7 @@ mandatory <b>Software type</b> field is filled.</td>
 <tr>
 <td>LWM2M</td>
 <td>A new LWM2M device configuration option has been added to control if the persisted values in the <b>Objects</b> tab get removed in case a read, write or observe observation fails. The option is configurable in the new single device registration in the advanced settings or by having the "c8y_GenericUI_retainOldValuesIfError" fragment in the LWM2M device managed object. By default the persisted values are kept even when the device operation fails. When this is disabled the read, write or observe operations failing with 401 (Unauthorized),403 (Forbidden), 404 (Not found), 500 (Internal Server Error), or 501 (not implemented) will lead to removal of the corresponding LWM2M path from the <b>Objects</b> tab.
-For details refer to <a href="https://cumulocity.com/guides/10.17.0/protocol-integration/lwm2m/#advanced-settings" class="no-ajaxy">LWM2M > Registering LWM2M devices > Advanced settings</a> in the <i>Protocol integration guide</i>.</td>
+For details refer to <a href="https://cumulocity.com/guides/protocol-integration/lwm2m/#advanced-settings" class="no-ajaxy">LWM2M > Registering LWM2M devices > Advanced settings</a> in the <i>Protocol integration guide</i>.</td>
 <td>DM-1560</td>
 <td>10.16.246.0</td>
 </tr>

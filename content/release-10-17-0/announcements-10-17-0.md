@@ -50,6 +50,26 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) and [r
 
 #### Implemented
 
+##### Analytics Builder - Change of type for Clear Alarm input port
+
+In the [Alarm Output](https://documentation.softwareag.com/pab/10.17.0/en/webhelp/pab-webhelp/index.html#page/pab-webhelp%2Fre_AnaBui_block_reference_Output_CreateAlarm.html) block,
+the type of the **Clear Alarm** input port has changed from `boolean` to `pulse`.
+Thus any existing model which has a Boolean input to the port will now only trigger a clear alarm on the transition
+from `false` to `true`, instead of the entire time that the input remains `true`.
+If you wish to retain the old behavior, connect a
+[Pulse](https://documentation.softwareag.com/pab/10.17.0/en/webhelp/pab-webhelp/index.html#page/pab-webhelp%2Fre_AnaBui_block_reference_Flow_Manipulation_Pulse.html)
+block to the **Clear Alarm** input port to send a sequence of pulse signals into the **Alarm Output** block.
+However, it is unlikely that a model should be attempting to clear the same alarm multiple times,
+and the previous behavior had the effect of sending numerous unnecessary HTTP requests, potentially causing a drop in performance.
+For more information on the `pulse` type and how inputs are converted, see
+[The pulse type](https://documentation.softwareag.com/pab/10.17.0/en/webhelp/pab-webhelp/index.html#page/pab-webhelp%2Fco-AnaBui_pulse_type.html) and
+[Type conversions](https://documentation.softwareag.com/pab/10.17.0/en/webhelp/pab-webhelp/index.html#page/pab-webhelp%2Fco-AnaBui_type_conversions.html),
+both in the Analytics Builder documentation.
+
+##### Changes to microservice health endpoint
+
+For reasons of security and performance, the REST endpoint `/service/cep/health` no longer returns a comprehensive list of status values. All of the same information is still available from REST endpoints under `/service/cep/diagnostics/...`.
+
 ##### Removal of application_queue_full alarm type
 
 The `application_queue_full` alarm type has been removed. It has been replaced by three new types of
@@ -65,7 +85,3 @@ See also the announcement in the Streaming Analytics release notes for
 Existing blocks that use the version 1 API must be migrated to use the version 2 API.
 See [Migrating input and output blocks to the version 2 API](https://github.com/SoftwareAG/apama-analytics-builder-block-sdk/blob/rel/10.17.0.x/doc/150-MigrateInputOutputBlocks.md)
 in the Analytics Builder Block SDK documentation on GitHub for more details.
-
-##### Changes to microservice health endpoint
-
-For reasons of security and performance, the REST endpoint `/service/cep/health` no longer returns a comprehensive list of status values. All of the same information is still available from REST endpoints under `/service/cep/diagnostics/...`.

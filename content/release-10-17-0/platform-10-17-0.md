@@ -39,7 +39,7 @@ Prior to this change, the existence of the measurement was only validated for pe
 
 <tr>
 <td>Core platform</td>
-<td>Inventory binaries now support chunk download (by setting specific Range headers) and resuming a file download.</td>
+<td>Inventory binaries now support chunk download (by setting specific Range headers) and resuming a file download. See also the <a href="https://cumulocity.com/api/core/#operation/getBinariesResource" class="no-ajaxy">Cumulocity IoT OpenAPI Specification<a/>.</td>
 
 <td>MTM-49998</td>
 <td>10.16.248.0</td>

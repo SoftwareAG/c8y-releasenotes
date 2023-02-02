@@ -142,7 +142,7 @@ Such a forced log out is no longer needed and will not be implemented, as permis
 
 ##### Updating the Web SDK to Angular 14
 
-As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
+As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/10.15.0/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
 
 ##### New default branding
 
@@ -253,6 +253,59 @@ This is available from the following web page: https://documentation.softwareag.
 Further to the CEL (Esper) deprecation notice in [release 10.5](/release-10-5-0/migration-10-5-0/) and the subsequent announcement of end of support in [release 10.7](/release-10-7-0/announcements-10-7-0/) it has been possible to continue using Esper in an unsupported mode. With effect from release 10.15 the CEL (Esper) functionality has been removed completely and cannot be used anymore.
 
 If you need assistance to migrate your streaming analytics logic from Esper to Apama, please contact [Software AG Global Support](/about/contacting-support/).
+
+
+### Machine Learning Workbench
+
+#### Implemented
+
+- Currently, both "Machine Learning Manager" and "Machine Learning Admin" user groups can execute Python scripts, run Python commands using Jupyter notebook, train workflows, and train neural network models.
+To further enhance the security, the above functionalities will be limited to the "Machine Learning Admin" user group only.
+
+- The "Machine Learning Admin" user group should be treated as a privileged user group.
+
+- The following APIs are only accessible to  the "Machine Learning Admin" user group now:
+
+   GET - jnb-sessions:
+
+    ```
+    {{url}}/service/mlw/jnb-sessions
+    ```
+   GET - jnb-content:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+   PUT - jnb-content:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
+    ```
+
+   POST - training workflows:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
+    ```
+   POST - code execution:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
+    ```
+   POST - neural networks:
+
+    ```
+    {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
+    ```
+
+- The "Machine Learning Manager" user group has been restricted from executing Jupyter notebooks and accessing the assets section as well.
+
+- The "Machine Learning User" user group has been restricted from accessing the assets section.
+
+- This access limitation will be a breaking change for the existing "Machine Learning Manager" user group.
+
+- Those users who are currently in the "Machine Learning Manager" group and need code execution access must be accordingly added to a higher privileged group, for example, "Machine Learning Admin".
+
 
 ### Cumulocity IoT DataHub
 

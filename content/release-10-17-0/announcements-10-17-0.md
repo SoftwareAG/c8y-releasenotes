@@ -8,12 +8,86 @@ layout: bundle
 
 #### Planned
 
+##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
+
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), in a future release, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+This change affects the following APIs:
+
+* `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
+
+
 #### Implemented
 
+##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
+
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), as of release 10.17+, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
+This affects the REST response format.
+
+Example of previous response format (note `aCustomDateField` field):
+
+```json
+{
+   "source":{
+      "id":"91123"
+   },
+   "type":"TYPE-911",
+   "aCustomDateField":{
+      "date":{
+         "date":14,
+         "seconds":15,
+         "hours":12,
+         "month":10,
+         "year":122,
+         "timezoneOffset":-60,
+         "minutes":41,
+         "time":1668426075840,
+         "day":1
+      },
+      "offset":120
+   },
+   "c8y_TemperatureMeasurement":{
+      "T":{
+         "unit":"C",
+         "value":10
+      }
+   }
+}
+```
+
+New format:
+
+```json
+{
+   "source":{
+      "id":"91123"
+   },
+   "type":"TYPE-911",
+   "aCustomDateField":"2022-11-14T12:44:11.481+01:00",
+   "c8y_TemperatureMeasurement":{
+      "T":{
+         "unit":"C",
+         "value":10
+      }
+   }
+}
+```
+The change has been introduced to improve the consistency between different Cumulocity IoT protocols.
 
 ### Security changes
 
 #### Planned
+
+##### Deprecation of SMS TFA feature
+
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the SMS TFA (Two-Factor Authentication) feature is deprecated. With a future release, it will be removed and not be functional any longer, and we will no longer support SMS TFA.
+
+What does this mean for users?
+
+We recommend you to gradually start switching off SMS TFA in earlier versions (10.15, 10.16, or 10.17) in order to be able to detect any issues, and be prepared when it is unavailable in a future release. Instead of TFA SMS you can use TFA TOTP. For details, see [Administration > Two-factor authentication > TOTP](https://cumulocity.com/guides/10.17.0/users-guide/administration/#totp-google-authenticator) in the *User guide*.
+
+If you don´t know what is required to switch off SMS TFA, please contact our customer service at Software AG.
 
 #### Implemented
 

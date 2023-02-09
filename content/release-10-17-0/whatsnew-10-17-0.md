@@ -14,7 +14,7 @@ Release 10.17.0 includes the following new features or major feature enhancement
 
 #### User interface redesign
 
-The entire user interface has undergone a complete overhaul, resulting in an improved, more modern and visually appealing design. Our goal was to enhance the user experience and make navigation easier and more intuitive. The redesign features a clean and sleek layout, with clearer typography and more intuitive navigation. Get ready to experience a whole new level of user-friendly design.
+Delite 2.0 is Software AG's in-house design system aimed at establishing a common design language for the company's products, enhancing usability and accessibility. It features updated color palettes for UI, data visualization, and product illustrations to align with the Software AG brand. The design system also includes accessibility improvements for screen readers, keyboards, and components.
 
 ![Application redesign](/images/release-notes/ux-redesign.png)
 
@@ -22,19 +22,24 @@ The entire user interface has undergone a complete overhaul, resulting in an imp
 #### Widgets
 
 ##### Markdown widget
-We are proud to announce the release of Markdown, a new widget designed for displaying files written in markup language. With Markdown, you can now easily present your content in a clear and organized manner. Enhance your display capabilities by incorporating Markdown into your workflow.
+The "Markdown" widget has been added, a new widget designed for displaying files written in markup language. By incorporating the "Markdown" widget you can enhance your display capabilities to inform users, for example, on new features.
 
 ![Markdown widget](/images/release-notes/markdown-widget.png)
 
 ##### Image widget
 
-We are pleased to announce that our Image widget has been improved with the addition of configuration options for image position and size. Now you have even more control over the display of your images.
+The "Image" widget has been improved with the addition of configuration options for image position and size. Now you have even more control over the display of your images.
 
 ![Image widget](/images/release-notes/image-widget.png)
 
 #### Right drawer
 
-The Right Drawer has undergone a complete redesign with the aim of improving its functionality and usability in daily use. We are confident that these updates will provide a better user experience.
+The right drawer has been redesigned to enhance its functionality and usability and thus to improve the user experience. The changes made to the right drawer include:
+
+relocation of all user-related settings from the user menu to the right drawer,
+improved platform versions section for quicker access to more detailed information about the application versions being used,
+information about the global roles assigned to the user,
+updated layout for improved usability.
 
 ![Right drawer](/images/release-notes/right-drawer.png)
 

@@ -20,9 +20,9 @@ This change affects the following APIs:
 
 ##### Breaking change in the Inventory API -- change of the default value for the `withChildren` parameter
 
-As of the release 10.20+ a default value of the `withChildren` parameter for `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
-It means that when a request should still return child assets, devices and additions, a parameter `?withChildren=true` will have to be provided in the query.
-A change is required to improve the Inventory API performance.
+As of release 10.20+, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
+As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
+This change is necessary to improve the Inventory API performance.
 
 #### Implemented
 

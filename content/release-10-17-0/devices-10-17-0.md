@@ -45,7 +45,7 @@ Fix Version</th>
 
 <tr>
 <td>Device Management</td>
-<td>In the <b>Groups</b> page for smart groups, the columns in the <b>Subassets</b> list will now be configured in the same way as the <b>All devices<b> list at the time when the respective smart group is created, including sorting, visibility, order and custom columns. Filters that are part of the smart group definition are not displayed. Further filters can be applied to search among group devices.</td>
+<td>In the <b>Groups</b> page for smart groups, the columns in the <b>Subassets</b> list are now configured in the same way as the <b>All devices<b> list at the time when the respective smart group is created, including sorting, visibility, order and custom columns. Filters that are part of the smart group definition are not displayed. Further filters can be applied to search among group devices.</td>
 <td>DM-1545</td>
 <td>10.16.208.0</td>
 </tr>

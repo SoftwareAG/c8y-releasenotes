@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.0-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.25-->
 
 ### Improvements
 
@@ -24,17 +24,30 @@ Fix Version</th>
 
 <tr>
 <td>Device Management</td>
+<td>The Home page has been improved by replacing the "Map" widget with quick links and recent alarms. Moreover, a button is now displayed instead of a menu if the context menu only consists of one item.</td>
+<td>DM-1889</td>
+<td>10.16.260.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In the device list view and groups list view, a <b>Search</b> field has been implemented that allows searching for devices/assets where any of their properties match the search term. In the <b>All devices</b> page the search term is not reflected in the query filter of smart groups.</td>
+<td>DM-1591</td>
+<td>10.16.253.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
 <td>Several accessibility issues have been fixed in the Device Management application.</td>
 <td>DM-1689</td>
 <td>10.16.248.0</td>
 </tr>
 
-
 <tr>
 <td>Device Management</td>
-<td>In the <b>Groups</b> page for smart groups, the columns in the <b>Subassets</b> list will now be configured in the same way as the <b>All devices<b> list at the time when the respective smart group is created, including sorting, visibility, order and custom columns.</td>
-<td>DM-1689</td>
-<td>10.16.248.0</td>
+<td>In the <b>Groups</b> page for smart groups, the columns in the <b>Subassets</b> list will now be configured in the same way as the <b>All devices<b> list at the time when the respective smart group is created, including sorting, visibility, order and custom columns. Filters that are part of the smart group definition are not displayed. Further filters can be applied to search among group devices.</td>
+<td>DM-1545</td>
+<td>10.16.208.0</td>
 </tr>
 
 <tr>
@@ -55,7 +68,7 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 <tr>
 <td>LWM2M</td>
 <td>The accessibility of the LWM2M UI has been improved, for example, in the <b>LWM2M bootstrap parameters</b> tab and in the <b>LWM2M post-operations</b> page.</td>
-<td>DM-1689</td>
+<td>DM-1692</td>
 <td>10.16.248.0</td>
 </tr>
 
@@ -190,6 +203,14 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>MTM-49870</td>
 <td>10.16.185.0</td>
 </tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M agent now provides a better processing rate of the external decoder events by parallelizing their execution.</td>
+<td>DM-1840</td>
+<td>10.16.260.0</td>
+</tr>
+
 
 <tr>
 <td>LWM2M</td>

@@ -67,7 +67,8 @@ A JSON file can be downloaded with more platform details, such as information on
 
 <tr>
 <td>Web SDK</td>
-<td>Plugins installed to an application can now be upgraded/downgraded if another version than the installed one is available. In addition a view that allows to install/update/downgrade plugins has been added to the blueprint setup steps.</td>
+<td>Plugins installed on an application can now be upgraded/downgraded if another version than the installed one is available. In addition a view that allows to install/update/downgrade plugins has been added to the blueprint setup steps.</td>
+
 <td>MTM-48932</td>
 <td>10.16.248.0</td>
 </tr>

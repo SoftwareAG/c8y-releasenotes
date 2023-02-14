@@ -191,7 +191,8 @@ Fix Version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>A toggle has been added to the plugin installation dialog, which allows to filter the plugin versions for only the latest versions or all versions.</td>
+<td>A toggle has been added to the plugin installation dialog, which allows to filter the plugin versions for only the latest version or all versions.</td>
+
 <td>MTM-50901</td>
 <td>10.17.0.2</td>
 </tr>

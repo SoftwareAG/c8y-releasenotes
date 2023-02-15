@@ -29,7 +29,7 @@ The following API is partially supported:
 
 * `DEL /measurements/measurement/`
 
-In release 10.16, the parameters `dateFrom` and `dateTo` are not supported. Instead, retention rules can be used to remove expired measurements data from the Operational Store. 
+In release 10.16, the parameters `dateFrom` and `dateTo` are not supported. Instead, retention rules can be used to remove expired measurements data from the Operational Store.
 
 In 10.17+ the parameters `dateFrom` and `dateTo` must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.
 
@@ -80,7 +80,7 @@ Basic authentication users will not be affected by this change.
 
 ##### Updating the Web SDK to Angular 14
 
-As of release 10.16 we will update the Cumulocity IoT Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom applications. Refer to our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity IoT CLI tool.
+As of release 10.16 we will update the Cumulocity IoT Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom applications. Refer to our [default upgrade instructions](https://cumulocity.com/guides/10.14.0/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity IoT CLI tool.
 
 ##### Removal of support for Angular Schema Form
 

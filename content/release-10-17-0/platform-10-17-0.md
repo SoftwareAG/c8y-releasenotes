@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.0-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.25-->
 
 ### Improvements
 
@@ -31,6 +31,16 @@ Fix Version</th>
 
 <tr>
 <td>Core platform</td>
+<td>The switch <code>acl.measurement.only-accessible-fragments</code> has been added to allow administrators to define inventory roles which let users retrieve a subset of the available fragments from all measurements. The property can be set globally or per tenant. If switched on, the measurement series is filtered according to the ACL (access control list) role owned by the user and assigned to the device group. Returned measurements only contain the available fragments listed in assigned ACL roles.</td>
+
+</td>
+<td>MTM-49607</td>
+<td>10.16.260.0</td>
+</tr>
+
+
+<tr>
+<td>Core platform</td>
 <td>On creating a measurement, it is now validated for all processing modes if the measurement exists, that is for PERSISTENT, QUIESCENT, TRANSIENT and CEP.
 Prior to this change, the existence of the measurement was only validated for persistence processing modes (PERSISTENT and QUIESCENT).</td>
 <td>MTM-50498</td>
@@ -39,8 +49,7 @@ Prior to this change, the existence of the measurement was only validated for pe
 
 <tr>
 <td>Core platform</td>
-<td>Inventory binaries now support chunk download (by setting specific Range headers) and resuming a file download. See also the <a href="https://cumulocity.com/api/core/#operation/getBinariesResource" class="no-ajaxy">Cumulocity IoT OpenAPI Specification<a/>.</td>
-
+<td>Inventory binaries now support chunk download (by setting specific Range headers) and resuming a file download. See also the <a href="https://cumulocity.com/api/core/10.17.0/#operation/getBinariesResource" class="no-ajaxy">Cumulocity IoT OpenAPI Specification<a/>.</td>
 <td>MTM-49998</td>
 <td>10.16.248.0</td>
 </tr>

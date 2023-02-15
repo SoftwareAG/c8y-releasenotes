@@ -151,7 +151,7 @@ Such a forced log out is no longer needed and will not be implemented, as permis
 
 ##### Updating the Web SDK to Angular 14
 
-As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
+As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/10.15.0/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
 
 ##### New default branding
 
@@ -276,33 +276,33 @@ To further enhance the security, the above functionalities will be limited to th
 - The following APIs are only accessible to  the "Machine Learning Admin" user group now:
 
    GET - jnb-sessions:
-    
+
     ```
     {{url}}/service/mlw/jnb-sessions
     ```
    GET - jnb-content:
-    
+
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```
    PUT - jnb-content:
-    
+
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourceID}}/jnb-content
     ```
-   
+
    POST - training workflows:
-    
+
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/workflow
     ```
    POST - code execution:
-    
+
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/execute
     ```
    POST - neural networks:
-    
+
     ```
     {{url}}/service/mlw/projects/{{projectID}}/resources/{{resourcesID}}/trainNN
     ```

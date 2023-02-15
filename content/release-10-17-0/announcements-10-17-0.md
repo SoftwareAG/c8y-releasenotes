@@ -13,7 +13,7 @@ layout: bundle
 
 ### Security changes
 
-##### User administrator can not set other users password
+##### User administrator can no longer set password for other users
 
 To improve security in version 10.20,
 user admins will no longer be able to explicitly set passwords for other users in the tenant,

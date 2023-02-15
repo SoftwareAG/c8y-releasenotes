@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.0-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.25-->
 
 ### Improvements
 
@@ -24,17 +24,30 @@ Fix Version</th>
 
 <tr>
 <td>Device Management</td>
+<td>The Home page has been improved by replacing the "Map" widget with quick links and recent alarms. Moreover, a button is now displayed instead of a menu if the context menu only consists of one item.</td>
+<td>DM-1889</td>
+<td>10.16.260.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In the device list view and groups list view, a <b>Search</b> field has been implemented that allows searching for devices/assets where any of their properties match the search term. In the <b>All devices</b> page the search term is not reflected in the query filter of smart groups.</td>
+<td>DM-1591</td>
+<td>10.16.253.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
 <td>Several accessibility issues have been fixed in the Device Management application.</td>
 <td>DM-1689</td>
 <td>10.16.248.0</td>
 </tr>
 
-
 <tr>
 <td>Device Management</td>
-<td>In the <b>Groups</b> page for smart groups, the columns in the <b>Subassets</b> list will now be configured in the same way as the <b>All devices<b> list at the time when the respective smart group is created, including sorting, visibility, order and custom columns.</td>
-<td>DM-1689</td>
-<td>10.16.248.0</td>
+<td>In the <b>Groups</b> page for smart groups, the columns in the <b>Subassets</b> list are now configured in the same way as the <b>All devices<b> list at the time when the respective smart group is created, including sorting, visibility, order and custom columns. Filters that are part of the smart group definition are not displayed. Further filters can be applied to search among group devices.</td>
+<td>DM-1545</td>
+<td>10.16.208.0</td>
 </tr>
 
 <tr>
@@ -55,7 +68,7 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 <tr>
 <td>LWM2M</td>
 <td>The accessibility of the LWM2M UI has been improved, for example, in the <b>LWM2M bootstrap parameters</b> tab and in the <b>LWM2M post-operations</b> page.</td>
-<td>DM-1689</td>
+<td>DM-1692</td>
 <td>10.16.248.0</td>
 </tr>
 
@@ -193,7 +206,15 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>LWM2M</td>
-<td>A new LWM2M device configuration option has been added to control if the persisted values in the <b>Objects</b> tab get removed in case a read, write or observe observation fails. The option is configurable in the new single device registration in the advanced settings or by having the "c8y_GenericUI_retainOldValuesIfError" fragment in the LWM2M device managed object. By default the persisted values are kept even when the device operation fails. When this is disabled the read, write or observe operations failing with 401 (Unauthorized),403 (Forbidden), 404 (Not found), 500 (Internal Server Error), or 501 (not implemented) will lead to removal of the corresponding LWM2M path from the <b>Objects</b> tab.
+<td>The LWM2M agent now provides a better processing rate of the external decoder events by parallelizing their execution.</td>
+<td>DM-1840</td>
+<td>10.16.260.0</td>
+</tr>
+
+
+<tr>
+<td>LWM2M</td>
+<td>A new LWM2M device configuration option has been added to control if the persisted values in the <b>Objects</b> tab get removed in case a read, write or observe observation fails. The option is configurable in the new single device registration in the advanced settings or by having the "c8y_GenericUI_retainOldValuesIfError" fragment in the LWM2M device managed object. By default the persisted values are kept even when the device operation fails. When this is disabled the read, write or observe operations failing with 401 (Unauthorized),403 (Forbidden), 404 (Not found), 500 (Internal Server Error), or 501 (not implemented) lead to removal of the corresponding LWM2M path from the <b>Objects</b> tab.
 For details refer to <a href="https://cumulocity.com/guides/10.17.0/protocol-integration/lwm2m/#advanced-settings" class="no-ajaxy">LWM2M > Registering LWM2M devices > Advanced settings</a> in the <i>Protocol integration guide</i>.</td>
 <td>DM-1560</td>
 <td>10.16.246.0</td>

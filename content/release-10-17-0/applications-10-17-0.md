@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.0-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.25-->
 
 ### Improvements
 
@@ -23,7 +23,15 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>In order to improve the Welcome page by providing more meaningful information, a markdown widget is now available on dashboards. The widget can be used to display markdown content either from a URL or from a file.</td>
+<td>A new "accessibility" option has been added to the dashboard configuration. The accessibility option allows the dashboard administrator/owner to specify which users have access to the dashboard based on global roles.</td>
+</td>
+<td>MTM-48953</td>
+<td>10.16.248.0</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>In order to improve the Welcome page by providing more meaningful information, a "Markdown" widget is now available on dashboards. The widget can be used to display markdown content either from a URL or from a file.</td>
 <td>MTM-49220</td>
 <td>10.16.254.0</td>
 </tr>
@@ -33,6 +41,13 @@ Fix Version</th>
 <td>Instead of subscribing to updates of all devices a user has access to, the HTML widget now only subscribes to devices referenced in the widget.</td>
 <td>MTM-45890</td>
 <td>10.16.159.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The <code>HOOK_COMPONENTS</code> now allows to lazily load the components used, for example, within widgets by utilizing the <code>loadComponent</code> and <code>loadConfigComponent</code> attributes of the <code>DynamicComponentDefinition</code> type (see <a href="https://resources.cumulocity.com/documentation/websdk/1016.0.110/ngx-components/interfaces/LazyDynamicComponents.html" class="no-ajaxy">https://resources.cumulocity.com/documentation/websdk/1016.0.110/ngx-components/interfaces/LazyDynamicComponents.html</a>).</td>
+<td>MTM-51161</td>
+<td>10.17.0.10</td>
 </tr>
 
 <tr>
@@ -48,6 +63,14 @@ A JSON file can be downloaded with more platform details, such as information on
 <td>Instead of the "HOOK_" prefixed <code>InjectionTokens</code> that were used to extend the UI, we now offer a set of functions that can be used. These functions have the benefit of being typed, so a developer knows exactly what options are available for that specific hook. The same <code>InjectionTokens</code> are still used in the background, so they are not deprecated as of now. However, we recommend developers to start using the hook functions instead. The new functions are prefixed with "hook", so instead of the "HOOK_NAVIGATOR_NODES", the "hookNavigator" function can now be used. Details on how to use these functions can be found in the documentation or the Tutorial application.</td>
 <td>MTM-49540</td>
 <td>10.16.131.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Plugins installed on an application can now be upgraded/downgraded if another version than the installed one is available. In addition a view that allows to install/update/downgrade plugins has been added to the blueprint setup steps.</td>
+
+<td>MTM-48932</td>
+<td>10.16.248.0</td>
 </tr>
 
 <tr>
@@ -151,6 +174,28 @@ Fix Version</th>
 <td>Resizing widgets on smartphones now depends on the size and orientation of the screen.</td>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Opening the widget configuration for a microfrontend plugin multiple times does no longer cause performance issues in the UI.</td>
+<td>MTM-50306</td>
+<td>10.17.0.24</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The <code>DynamicComponentService</code> now waits for all plugins to be loaded before emitting the first value via its <code>items$</code> observable.</td>
+<td>MTM-50985</td>
+<td>10.17.0.5</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>A toggle has been added to the plugin installation dialog, which allows to filter the plugin versions for only the latest version or all versions.</td>
+
+<td>MTM-50901</td>
+<td>10.17.0.2</td>
 </tr>
 
 <tr>

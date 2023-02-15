@@ -13,14 +13,13 @@ layout: bundle
 
 ### Security changes
 
+#### Planned
+
 ##### User administrator can no longer set password for other users
 
-To improve security, from release 10.20,
-user administrators will no longer be able to explicitly set passwords for other users in the tenant.
+To improve security, from release 10.20, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
 This change prevents that an attacker could have access to all users, in case the administrator account was compromised.
 Note that the administrator will still have the option to force the user to reset the password on the next login or disable the user.
-
-#### Planned
 
 #### Implemented
 

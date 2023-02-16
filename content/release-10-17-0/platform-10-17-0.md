@@ -124,12 +124,6 @@ Fix Version</th>
 <td>10.16.13.0</td>
 </tr>
 
-<tr>
-<td>Application API</td>
-<td>Fixed an issue with duplicating hosted applications. The application has now PUBLIC availability on the parent tenant and PRIVATE availability on the other tenants instead of preserving the availability from the source application.</td>
-<td>MTM-48474</td>
-<td>10.16.60.0</td>
-</tr>
 
 <tr>
 <td>Authentication</td>
@@ -157,6 +151,13 @@ Fix Version</th>
 <td>The default email templates sent when resetting passwords or confirming password changes have been extended with a username.</td>
 <td>
 MTM-49760</td>
+<td>10.16.129.0</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>An issue with the QR code in the two-factor authentication setup window has been fixed.</td>
+<td>MTM-49536</td>
 <td>10.16.129.0</td>
 </tr>
 
@@ -210,10 +211,13 @@ MTM-49760</td>
 </tr>
 
 <tr>
-<td>Two-factor authentication</td>
-<td>An issue with the QR code in the two-factor authentication setup window has been fixed.</td>
-<td>MTM-49536</td>
-<td>10.16.129.0</td>
+<td>REST API</td>
+<td>Fixed an issue in the Application API with duplicating hosted applications. The application has now PUBLIC availability on the parent tenant and PRIVATE availability on the other tenants instead of preserving the availability from the source application.</td>
+<td>MTM-48474</td>
+<td>10.16.60.0</td>
 </tr>
+
+
+
 
 </tbody></table></div>

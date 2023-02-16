@@ -137,6 +137,13 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of
 
 As a recommended mechanism to integrate Linux-based devices into Cumulocity IoT we advise you to use [thin-edge.io](https://thin-edge.io/), which is actively developed by Software AG and open-source community partners. For customers with enterprise-grade support & maintenance needs, a commercial variant (Cumulocity IoT Thin Edge) can be purchased.
 
+### Documentation
+
+#### Planned
+
+The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future release we plan to remove the German *User guide* from the documentation website and focus on providing a high-quality, up-to-date English user documentation. 
+
+
 ### Streaming Analytics
 
 #### Implemented

@@ -198,6 +198,13 @@ mandatory <b>Software type</b> field is filled.</td>
 </tr>
 
 <tr>
+<td>Device Management</td>
+<td>Improved the DM Homepage by replacing the map widget with Quicklinks and Recent Alarms. Also improved More Action Menu auto detects the number of items in it and display it as a button if it has only one menu item.</td>
+<td>DM-1573</td>
+<td>10.16.260.0</td>
+</tr>
+
+<tr>
 <td>Digital Twin Manager</td>
 <td>For assets created with the Digital Twin Manager, custom properties of the type "number" with the value "0" are now displayed properly as "0", not as "Undefined".</td>
 <td>MTM-49870</td>

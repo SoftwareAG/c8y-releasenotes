@@ -53,8 +53,17 @@ A new option for dashboard configuration has been added that allows users to res
 
 For details, see [Cockpit > Working with dashboards](https://cumulocity.com/guides/10.17.0/users-guide/cockpit/#dashboards) in the *User guide*.
 
+### Device Management
+
 #### Improved Home page in the Device Management application
 
 The Home page has been improved by replacing the "Map" widget with quick links and recent alarms. Moreover, a button is now displayed instead of a menu if the context menu only consists of one item.
 
 ![Home Page Revision](/images/release-notes/home-page-revision.png)
+
+### Platform services
+
+#### Support for new OAuth2 access token type in single sign-on authentication
+
+Cumulocity IoT supports new standard OAuth2 access tokens with the "at+jwt" type header parameter. For more information on this parameter, see [OAuth2 Access Tokens](https://datatracker.ietf.org/doc/html/rfc9068#name-header).
+Single-sign-on users managed by new authorization servers (that is, generating OAuth2 access tokens with type "at+jwt") can thus login successfully into Cumulocity IoT.

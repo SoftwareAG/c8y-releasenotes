@@ -24,13 +24,6 @@ Fix Version</th>
 
 <tr>
 <td>Device Management</td>
-<td>The Home page has been improved by replacing the "Map" widget with quick links and recent alarms. Moreover, a button is now displayed instead of a menu if the context menu only consists of one item.</td>
-<td>DM-1573</td>
-<td>10.16.260.0</td>
-</tr>
-
-<tr>
-<td>Device Management</td>
 <td>In the device list view and groups list view, a <b>Search</b> field has been implemented that allows searching for devices/assets where any of their properties match the search term. In the <b>All devices</b> page the search term is not reflected in the query filter of smart groups.</td>
 <td>DM-1591</td>
 <td>10.16.253.0</td>
@@ -195,13 +188,6 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>The device registration wizard had several layout and functionality issues which were fixed by aligning it to the default platform user experience.</td>
 <td>DM-1335</td>
 <td>10.16.8.0</td>
-</tr>
-
-<tr>
-<td>Device Management</td>
-<td>Improved the user experience by notifying the user with a confirmation popup while changing the owner of the device.</td>
-<td>DM-1709</td>
-<td>10.16.142.0</td>
 </tr>
 
 <tr>

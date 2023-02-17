@@ -53,7 +53,7 @@ A new option for dashboard configuration has been added that allows users to res
 
 For details, see [Cockpit > Working with dashboards](https://cumulocity.com/guides/10.17.0/users-guide/cockpit/#dashboards) in the *User guide*.
 
-#### Home Page Revision
+#### Improved Home page in the Device Management application
 
 Improved the DM Homepage by replacing the map widget with Quicklinks and Recent Alarms. Also improved More Action Menu auto detects the number of items in it and display it as a button if it has only one menu item. 
 

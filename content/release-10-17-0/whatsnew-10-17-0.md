@@ -52,3 +52,9 @@ A new option for dashboard configuration has been added that allows users to res
 ![Dashboard availability](/images/release-notes/dashboard-availability.png)
 
 For details, see [Cockpit > Working with dashboards](https://cumulocity.com/guides/10.17.0/users-guide/cockpit/#dashboards) in the *User guide*.
+
+
+### Support for new OAuth2 access token type in single sign-on authentication
+
+Cumulocity IoT supports new standard OAuth2 access tokens with the "at+jwt" type header parameter. For more information on this parameter, see [OAuth2 Access Tokens](https://datatracker.ietf.org/doc/html/rfc9068#name-header).
+Single-sign-on users managed by new authorization servers (that is, generating OAuth2 access tokens with type "at+jwt") can thus login successfully into Cumulocity IoT.

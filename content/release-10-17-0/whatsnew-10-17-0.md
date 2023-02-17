@@ -58,3 +58,9 @@ For details, see [Cockpit > Working with dashboards](https://cumulocity.com/guid
 Improved the DM Homepage by replacing the map widget with Quicklinks and Recent Alarms. Also improved More Action Menu auto detects the number of items in it and display it as a button if it has only one menu item. 
 
 ![Home Page Revision](/images/release-notes/home-page-revision.png)
+
+#### Confirmation pop-up
+
+Improved the user experience by notifying the user with a confirmation popup while changing the owner of the device. 
+
+![Confirmation pop-up](/images/release-notes/confirmation-popup-disabling-user.png)

@@ -205,6 +205,13 @@ mandatory <b>Software type</b> field is filled.</td>
 </tr>
 
 <tr>
+<td>Device Management</td>
+<td>Improved the user experience by notifying the user with a confirmation popup while changing the owner of the device.</td>
+<td>DM-1709</td>
+<td>10.16.142.0</td>
+</tr>
+
+<tr>
 <td>Digital Twin Manager</td>
 <td>For assets created with the Digital Twin Manager, custom properties of the type "number" with the value "0" are now displayed properly as "0", not as "Undefined".</td>
 <td>MTM-49870</td>

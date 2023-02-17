@@ -25,7 +25,7 @@ Fix Version</th>
 <tr>
 <td>Device Management</td>
 <td>The Home page has been improved by replacing the "Map" widget with quick links and recent alarms. Moreover, a button is now displayed instead of a menu if the context menu only consists of one item.</td>
-<td>DM-1889</td>
+<td>DM-1573</td>
 <td>10.16.260.0</td>
 </tr>
 
@@ -195,13 +195,6 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>The device registration wizard had several layout and functionality issues which were fixed by aligning it to the default platform user experience.</td>
 <td>DM-1335</td>
 <td>10.16.8.0</td>
-</tr>
-
-<tr>
-<td>Device Management</td>
-<td>Improved the DM Homepage by replacing the map widget with Quicklinks and Recent Alarms. Also improved More Action Menu auto detects the number of items in it and display it as a button if it has only one menu item.</td>
-<td>DM-1573</td>
-<td>10.16.260.0</td>
 </tr>
 
 <tr>

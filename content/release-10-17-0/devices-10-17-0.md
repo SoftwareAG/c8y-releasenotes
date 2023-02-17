@@ -199,13 +199,6 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>Device Management</td>
-<td>Improved the DM Homepage by replacing the map widget with Quicklinks and Recent Alarms. Also improved More Action Menu auto detects the number of items in it and display it as a button if it has only one menu item.</td>
-<td>DM-1573</td>
-<td>10.16.260.0</td>
-</tr>
-
-<tr>
-<td>Device Management</td>
 <td>Improved the user experience by notifying the user with a confirmation popup while changing the owner of the device.</td>
 <td>DM-1709</td>
 <td>10.16.142.0</td>

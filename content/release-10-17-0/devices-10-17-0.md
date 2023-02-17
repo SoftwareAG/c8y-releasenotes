@@ -25,7 +25,7 @@ Fix Version</th>
 <tr>
 <td>Device Management</td>
 <td>The Home page has been improved by replacing the "Map" widget with quick links and recent alarms. Moreover, a button is now displayed instead of a menu if the context menu only consists of one item.</td>
-<td>DM-1889</td>
+<td>DM-1573</td>
 <td>10.16.260.0</td>
 </tr>
 

@@ -141,7 +141,7 @@ As a recommended mechanism to integrate Linux-based devices into Cumulocity IoT 
 
 #### Planned
 
-The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future release we plan to remove the German *User guide* from the documentation website and focus on providing a high-quality, up-to-date English user documentation. 
+The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future release we are going to remove the German *User guide* from the documentation website and focus on our high-quality, up-to-date English user documentation. 
 
 
 ### Streaming Analytics

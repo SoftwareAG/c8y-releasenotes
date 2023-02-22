@@ -93,13 +93,7 @@ Note that the administrator will still have the option to force the user to rese
 
 ##### Deprecation of SMS TFA feature
 
-As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the SMS TFA (Two-Factor Authentication) feature is deprecated. With a future release, it will be removed and not be functional any longer, and we will no longer support SMS TFA.
-
-What does this mean for users?
-
-We recommend you to gradually start switching off SMS TFA in earlier versions (10.15, 10.16, or 10.17) in order to be able to detect any issues, and be prepared when it is unavailable in a future release. Instead of TFA SMS you can use TFA TOTP. For details, see [Administration > Two-factor authentication > TOTP](https://cumulocity.com/guides/10.17.0/users-guide/administration/#totp-google-authenticator) in the *User guide*.
-
-If you don´t know what is required to switch off SMS TFA, please contact our customer service at Software AG.
+Unlike the former announcement with [release 10.16](/release-10-16-0/announcements-10-16-0), the SMS TFA (Two-Factor Authentication) feature will not be removed, and we will continue to support SMS TFA.
 
 
 #### Implemented

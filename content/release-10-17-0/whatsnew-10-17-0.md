@@ -68,7 +68,7 @@ The Home page has been improved by replacing the "Map" widget with quick links a
 Cumulocity IoT supports new standard OAuth2 access tokens with the "at+jwt" type header parameter. For more information on this parameter, see [OAuth2 Access Tokens](https://datatracker.ietf.org/doc/html/rfc9068#name-header).
 Single-sign-on users managed by new authorization servers (that is, generating OAuth2 access tokens with type "at+jwt") can thus login successfully into Cumulocity IoT.
 
-### User menu
+### Authentication
 
 #### Access token revocation for all tenant users
 

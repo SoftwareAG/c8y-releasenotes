@@ -34,4 +34,4 @@ layout: bundle
 For security reasons, ROLE_APPLICATION_MANAGEMENT_ADMIN and ROLE_OPTION_MANAGEMENT_ADMIN have been
 removed from the required roles which are defined in the manifest file of the Apama-ctrl microservice.
 Any applications deployed with the Streaming Analytics application (for example, EPL apps) can no longer
-perform requests that require these roles (for example, create new apps or change options).
+perform security-sensitive operations such as application creation or modification of tenant options.

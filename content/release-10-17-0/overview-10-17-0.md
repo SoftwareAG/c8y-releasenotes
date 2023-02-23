@@ -5,7 +5,7 @@ title: Overview
 layout: bundle
 ---
 
-These release notes for **Cumulocity IoT release 10.17.0** include information on all relevant changes (new features, improvements, and fixes) that have been implemented in Cumulocity IoT Core, Cumulocity IoT Edge, Cumulocity IoT Streaming Analytics, Cumulocity IoT DataHub, and Cumulocity IoT Machine Learning since the previous GA release.
+These release notes for **Cumulocity IoT release 10.17.0** include information on all relevant changes, such as new features, improvements, and fixes, that have been implemented in Cumulocity IoT Core (here divided into the components Application enablement, Device management & connectivity, and Platform services), in its layered products and in integrated applications (if released) since the previous GA release.
 
 Moreover it includes [announcements](/release-10-17-0/announcements-10-17-0/) for planned and implemented deprecations that might require action on your side at some time.
 

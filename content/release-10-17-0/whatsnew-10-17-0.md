@@ -75,5 +75,5 @@ Single-sign-on users managed by new authorization servers (that is, generating O
 The user menu of admin users contains a new button for mass token revocation. The new button can be used to revoke all user tokens, used by OAI-Secure or Single-Sign-On to access the platform.
 This tool can be used should there be a security issue with the tokens currently in use to remove the tokens. This causes an immediately necessary re-login of all users.
 
-![Home Page Revision](/images/release-notes/admin-token-revocation.png)
+![User token revocation](/images/release-notes/admin-token-revocation.png)
 

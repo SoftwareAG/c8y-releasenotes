@@ -67,3 +67,13 @@ The Home page has been improved by replacing the "Map" widget with quick links a
 
 Cumulocity IoT supports new standard OAuth2 access tokens with the "at+jwt" type header parameter. For more information on this parameter, see [OAuth2 Access Tokens](https://datatracker.ietf.org/doc/html/rfc9068#name-header).
 Single-sign-on users managed by new authorization servers (that is, generating OAuth2 access tokens with type "at+jwt") can thus login successfully into Cumulocity IoT.
+
+### User menu
+
+#### Access token revocation for all tenant users
+
+The user menu of admin users contains a new button for mass token revocation. The new button can be used to revoke all user tokens, used by OAI-Secure or Single-Sign-On to access the platform.
+This tool can be used should there be a security issue with the tokens currently in use to remove the tokens. This causes an immediately necessary re-login of all users.
+
+![Home Page Revision](/images/release-notes/admin-token-revocation.png)
+

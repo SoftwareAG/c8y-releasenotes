@@ -166,3 +166,24 @@ See also the announcement in the Streaming Analytics release notes for
 Existing blocks that use the version 1 API must be migrated to use the version 2 API.
 See [Migrating input and output blocks to the version 2 API](https://github.com/SoftwareAG/apama-analytics-builder-block-sdk/blob/rel/10.17.0.x/doc/150-MigrateInputOutputBlocks.md)
 in the Analytics Builder Block SDK documentation on GitHub for more details.
+
+##### Cumulocity IoT transport in Apama
+
+The following applies as of Apama 10.15.2:
+
+User status metrics with names containing labels in the form `{keyA=valueA,keyB=valueB}` are now converted
+to Prometheus metrics with those labels in the Prometheus labels.
+The HTTP server transport now uses this syntax for chains that it creates dynamically.
+For example, if you have `somename{key=value}` as part of the user status name,
+this is now converted to a Prometheus label on the metric `somename`.
+Previously, a user status with a name like this did not appear in Prometheus at all.
+
+As a result, the HTTP server transport, which used to prefix all metrics on its chains for example
+with `httpServer_instance_5_`, now prefixes them with `httpServer{chain=5}` instead.
+This means, that the resulting metrics now look like this:
+
+`sag_apama_correlator_user_httpServer_metricname{chain=5}`
+
+instead of
+
+`sag_apama_correlator_user_httpServer_instance_5_metricname`

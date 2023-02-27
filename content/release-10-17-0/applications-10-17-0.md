@@ -52,7 +52,7 @@ A JSON file can be downloaded with more platform details, such as information on
 
 <tr>
 <td>Web SDK</td>
-<td>Instead of the "HOOK_" prefixed <code>InjectionTokens</code> that were used to extend the UI, we now offer a set of functions that can be used. These functions have the benefit of being typed, so a developer knows exactly what options are available for that specific hook. The same <code>InjectionTokens</code> are still used in the background, so they are not deprecated as of now. However, we recommend developers to start using the hook functions instead. The new functions are prefixed with "hook", so instead of the "HOOK_NAVIGATOR_NODES", the "hookNavigator" function can now be used. Details on how to use these functions can be found in the documentation or the Tutorial application.</td>
+<td>Instead of the "HOOK_" prefixed <code>InjectionTokens</code> that were used to extend the UI, we now offer a set of functions that can be used. These functions have the benefit of being typed, so a developer knows exactly what options are available for that specific hook. The same <code>InjectionTokens</code> are still used in the background, so they are not deprecated as of now. However, we recommend developers to start using the hook functions instead. The new functions are prefixed with "hook", so instead of the "HOOK_NAVIGATOR_NODES", the "hookNavigator()" function can now be used. Details on how to use these functions can be found in the documentation or the Tutorial application.</td>
 <td>MTM-49540</td>
 <td>10.16.131.0</td>
 </tr>

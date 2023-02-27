@@ -72,13 +72,6 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 <td>10.16.110.0</td>
 </tr>
 
-<tr>
-<td>OPC UA</td>
-<td>The OPC UA Management microservice now uses the Microservice SDK API version 2.</td>
-<td>DM-1583</td>
-<td>10.16.166.0</td>
-</tr>
-
 </tbody></table></div>
 
 
@@ -207,8 +200,7 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>LWM2M</td>
-<td>A new LWM2M device configuration option has been added to control if the persisted values in the <b>Objects</b> tab get removed in case a read, write or observe observation fails. The option is configurable in the new single device registration in the advanced settings or by having the "c8y_GenericUI_retainOldValuesIfError" fragment in the LWM2M device managed object. By default the persisted values are kept even when the device operation fails. When this is disabled the read, write or observe operations failing with 401 (Unauthorized),403 (Forbidden), 404 (Not found), 500 (Internal Server Error), or 501 (not implemented) lead to removal of the corresponding LWM2M path from the <b>Objects</b> tab.
-For details refer to <a href="https://cumulocity.com/guides/10.17.0/protocol-integration/lwm2m/#advanced-settings" class="no-ajaxy">LWM2M > Registering LWM2M devices > Advanced settings</a> in the <i>Protocol integration guide</i>.</td>
+<td>A new LWM2M device configuration option has been added to control if the persisted values in the <b>Objects</b> tab get removed in case a read, write or observe observation fails. The option is configurable in the new single device registration in the advanced settings or by having the "c8y_GenericUI_retainOldValuesIfError" fragment in the LWM2M device managed object. For details refer to <a href="https://cumulocity.com/guides/10.17.0/protocol-integration/lwm2m/#advanced-settings" class="no-ajaxy">LWM2M > Registering LWM2M devices > Advanced settings</a> in the <i>Protocol integration guide</i>.</td>
 <td>DM-1560</td>
 <td>10.16.246.0</td>
 </tr>
@@ -244,7 +236,7 @@ For details refer to <a href="https://cumulocity.com/guides/10.17.0/protocol-int
 
 <tr>
 <td>LWM2M</td>
-<td>The LWM2M agent now fetches a limited number of pending operations if an LWM2M device sends a registration or a registration update.</td>
+<td>The LWM2M agent now fetches a limited number of pending operations if a LWM2M device sends a registration or a registration update. This prevents the LWM2M agent to do a high number of requests to the platform if devices have accumulated lots of pending operations. The limit is defined with a property in the LWM2M agent.</td>
 <td>DM-1474</td>
 <td>10.16.119.0</td>
 </tr>
@@ -275,7 +267,7 @@ For details refer to <a href="https://cumulocity.com/guides/10.17.0/protocol-int
 
 <tr>
 <td>OPC UA</td>
-<td>On editing the OPC UA device details, it could happen under certain circumstances that the data reporting value was not saved properly. This issue is now fixed.</td>
+<td>On editing the OPC UA device details, the data reporting value is now always saved properly.</td>
 <td>DM-1668</td>
 <td>10.16.102.0</td>
 </tr>

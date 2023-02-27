@@ -32,7 +32,6 @@ Fix Version</th>
 <tr>
 <td>Core platform</td>
 <td>The switch <code>acl.measurement.only-accessible-fragments</code> has been added to allow administrators to define inventory roles which let users retrieve a subset of the available fragments from all measurements. The property can be set globally or per tenant. If switched on, the measurement series is filtered according to the ACL (access control list) role owned by the user and assigned to the device group. Returned measurements only contain the available fragments listed in assigned ACL roles.</td>
-
 </td>
 <td>MTM-49607</td>
 <td>10.16.260.0</td>
@@ -56,7 +55,7 @@ Prior to this change, the existence of the measurement was only validated for pe
 
 <tr>
 <td>Core platform</td>
-<td>Delete by <code>dateFrom</code> and <code>dateTo</code> query parameters is now supported for timeseries measurements.
+<td>Delete by <code>dateFrom</code> and <code>dateTo</code> query parameters is now supported for time series measurements.
 Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.</td>
 <td>MTM-49441</td>
 <td>10.16.74.0</td>
@@ -170,13 +169,6 @@ MTM-49760</td>
 
 <tr>
 <td>Core platform</td>
-<td>To address security vulnerabilities, the third-party software SnakeYAML has been updated from version 1.30 to version 1.31.</td>
-<td>MTM-49704</td>
-<td>10.16.136.0</td>
-</tr>
-
-<tr>
-<td>Core platform</td>
 <td>Fixed an issue in which some queries containing single apostrophes resulted in an incorrect query being sent.</td>
 <td>MTM-49123</td>
 <td>10.16.60.0</td>
@@ -205,7 +197,7 @@ MTM-49760</td>
 
 <tr>
 <td>REST API</td>
-<td>The performance of the Alarm API has been improved for requests which use the resolved query parameter.</td>
+<td>The performance of the Alarm API has been improved for requests which use the <code>resolved</code> query parameter.</td>
 <td>MTM-49450</td>
 <td>10.16.198.0</td>
 </tr>

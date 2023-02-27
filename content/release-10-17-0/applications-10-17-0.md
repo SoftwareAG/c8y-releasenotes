@@ -23,14 +23,6 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>A new "accessibility" option has been added to the dashboard configuration. The accessibility option allows the dashboard administrator/owner to specify which users have access to the dashboard based on global roles.</td>
-</td>
-<td>MTM-48953</td>
-<td>10.16.248.0</td>
-</tr>
-
-<tr>
-<td>Cockpit</td>
 <td>In order to improve the Welcome page by providing more meaningful information, a "Markdown" widget is now available on dashboards. The widget can be used to display markdown content either from a URL or from a file.</td>
 <td>MTM-49220</td>
 <td>10.16.254.0</td>

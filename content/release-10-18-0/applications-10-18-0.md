@@ -99,7 +99,8 @@ Fix Version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Opening the widget configuration for a microfrontend plugin multiple times does no longer cause performance issues in the UI.</td>
+<td>Opening the widget configuration for a micro frontend plugin multiple times does no longer cause performance issues in the UI.</td>
+
 <td>MTM-50306</td>
 <td>10.17.53.0</td>
 </tr>

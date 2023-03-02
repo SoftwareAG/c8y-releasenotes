@@ -91,7 +91,8 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>An issue has been fixed that caused angularJS widgets to not show up in the "Add widget" dialog.</td>
+<td>An issue has been fixed that caused AngularJS widgets to not show up in the "Add widget" dialog.</td>
+
 <td>MTM-51482</td>
 <td>10.17.67.0</td>
 </tr>

@@ -58,7 +58,8 @@ Fix Version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>It is now possible to open a blueprint directly after the installation has been finished.</td>
+<td>It is now possible to open a blueprint directly after the installation has finished.</td>
+
 <td>MTM-50637</td>
 <td>10.17.47.0</td>
 </tr>

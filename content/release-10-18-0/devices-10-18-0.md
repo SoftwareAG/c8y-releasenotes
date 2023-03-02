@@ -68,7 +68,7 @@ Fix Version</th>
 
 <tr>
 <td>Device Management</td>
-<td>In device list views, when a device was deleted, any related child devices were deleted as well. This functionality has now been enhanced. On device deletion, any existing child hierarchy types, that is, not not only devices but devices, additions and assets, will be deleted accordingly.</td>
+<td>In device list views, when a device was deleted, any related child devices were deleted as well. This functionality has now been enhanced. On device deletion, any existing child hierarchy types, that is, not only devices but also additions and assets are deleted accordingly.</td>
 <td>DM-2003</td>
 <td>10.17.73.0</td>
 </tr>

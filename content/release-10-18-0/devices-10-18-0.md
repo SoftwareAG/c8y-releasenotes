@@ -89,7 +89,7 @@ Fix Version</th>
 
 <tr>
 <td>OPC UA</td>
-<td>If the namespace is not defined for a specific node, a missing error handler in the past prevented the scan operation to complete. This is now fixed by skipping nodes that cannot be read. The opcua-device-gateway logs further detail in such cases. The log level INFO contains the failure message and DEBUG contains the stacktrace.</td>
+<td>If the namespace is not defined for a specific node, a missing error handler in the past prevented the scan operation to complete. This is now fixed by skipping nodes that cannot be read. The opcua-device-gateway logs further detail in such cases. The log level INFO contains the failure message and DEBUG contains the stack trace.</td>
 <td>DM-1920</td>
 <td>10.17.48.0</td>
 </tr>

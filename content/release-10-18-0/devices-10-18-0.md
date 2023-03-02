@@ -23,7 +23,7 @@ Fix Version</th>
 
 <tr>
 <td>Device Management</td>
-<td>Added support for rendering dropdown fields in Formly from JSON Schema in the extensible device registration.</td>
+<td>Added support for rendering dropdown fields in JSON Schema Formly in the extensible device registration.</td>
 <td>DM-1921</td>
 <td>10.17.67.0</td>
 </tr>

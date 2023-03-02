@@ -106,7 +106,8 @@ Fix Version</th>
 
 <tr>
 <td>DTM</td>
-<td>If the DTM asset custom property is declared as required and complex, all of it's subproperties are required too.</td>
+<td>If the DTM asset custom property is declared as required and complex, all of its subproperties are required too.</td>
+
 <td>MTM-50101</td>
 <td>10.17.12.0</td>
 </tr>

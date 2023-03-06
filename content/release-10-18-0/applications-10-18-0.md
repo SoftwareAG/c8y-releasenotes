@@ -37,21 +37,21 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>It is now possible to use the global time range in "Data point table" widgets.</td>
+<td>It is now possible to use a global time range in "Data point table" widgets so that you can align all data point graphs on a dashboard to the same time range without setting each time range individually.</td>
 <td>MTM-50924</td>
 <td>10.17.68.0</td>
 </tr>
 
 <tr>
 <td>Cockpit</td>
-<td>It is now possible to use the global time range in "Event list" widgets.</td>
+<td>It is now possible to a the global time range in "Event list" widgets so that you can align all data point graphs on a dashboard to the same time range without setting each time range individually.</td>
 <td>MTM-50925</td>
 <td>10.17.67.0</td>
 </tr>
 
 <tr>
 <td>Cockpit</td>
-<td>It is now possible to use the global time range in "Data point graph" widgets.</td>
+<td>It is now possible to use a global time range in "Data point graph" widgets so that you can align all data point graphs on a dashboard to the same time range without setting each time range individually.</td>
 <td>MTM-48198</td>
 <td>10.17.11.0</td>
 </tr>

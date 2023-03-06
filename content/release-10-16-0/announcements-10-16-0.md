@@ -141,7 +141,7 @@ As a recommended mechanism to integrate Linux-based devices into Cumulocity IoT 
 
 #### Planned
 
-The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future release we are going to remove the German *User guide* from the documentation website and focus on our high-quality, up-to-date English user documentation. 
+The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future release we are going to remove the German *User guide* from the documentation website and focus on our high-quality, up-to-date English user documentation.
 
 
 ### Streaming Analytics
@@ -171,3 +171,17 @@ In a future release of Cumulocity IoT DataHub a newer version of Dremio will be 
 ##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
 
 In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.
+
+### Cumulocity IoT Machine Learning
+
+#### Planned
+
+##### Deprecation of Machine Learning Engine and Machine Learning Workbench
+
+Machine Learning is of great importance to many IoT solutions as it helps deliver insights otherwise hidden in data for rapid, automated responses and improved decision making. That’s why we built Machine Learning Engine (MLE) for realtime and batch inferencing and Machine Learning Workbench (MLW) as a multi-modal application for model training.
+
+After experimentation and honest customer feedback, we have decided to adjust our current generic approach to IoT Machine Learning and bring it in line with the strengths of our Cumulocity IoT platform, which is in the lifecycle management of Machine Learning models (including their execution) in distributed architectures from (thin) edge to cloud, rather than building and engineering them.  
+
+This decision means that, as of Cumulocity IoT 10.16, Machine Learning Engine and Machine Learning Workbench are deprecated, and we will end further development of these components. After Cumulocity IoT 10.17, both will be removed from the platform. If you have existing (production) projects which rely on MLE and/or MLW applications, then Software AG is committed to work together with you to find an appropriate transition path. If we have not yet been in contact for this matter, feel free to contact us at [c8y_mlw_mle_sunsetting@softwareag.com](mailto:c8y_mlw_mle_sunsetting@softwareag.com).
+
+Going forward, we will focus on building out Machine Learning operations capabilities in Cumulocity IoT, as well as teaming up with leading ML partners for model creation (for example, hyperscalers, OSS, and specialized domain-specific partners) to provide end-to-end solutions to you.

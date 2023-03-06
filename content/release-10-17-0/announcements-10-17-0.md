@@ -187,3 +187,13 @@ This means, that the resulting metrics now look like this:
 instead of
 
 `sag_apama_correlator_user_httpServer_instance_5_metricname`
+
+### Cumulocity IoT Machine Learning
+
+#### Planned
+
+##### Deprecation of Machine Learning Engine and Machine Learning Workbench
+
+As of Cumulocity IoT 10.16, Machine Learning Engine and Machine Learning Workbench are deprecated, and we will end further development of these components. After Cumulocity IoT 10.17, both will be removed from the platform. If you have existing (production) projects which rely on MLE and/or MLW applications, then Software AG is committed to work together with you to find an appropriate transition path. If we have not yet been in contact for this matter, feel free to contact us at [c8y_mlw_mle_sunsetting@softwareag.com](mailto:c8y_mlw_mle_sunsetting@softwareag.com). 
+
+For details, see the announcement in the release notes for [release 10.16](/release-10-16-0/announcements-10-16-0).

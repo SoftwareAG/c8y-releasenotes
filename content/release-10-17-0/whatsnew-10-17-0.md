@@ -36,15 +36,6 @@ The "Markdown" widget has been added, a new widget designed for displaying files
 
 For details, see [Cockpit > Widgets collection](https://cumulocity.com/guides/10.17.0/users-guide/cockpit/#widgets-collection) in the *User guide*.
 
-#### Cockpit - Improved Image widget
-
-The "Image" widget has been improved with the addition of configuration options for image position and size. Now you have even more control over the display of your images.
-
-![Image widget](/images/release-notes/image-widget.png)
-
-For details, see [Cockpit > Widgets collection](https://cumulocity.com/guides/10.17.0/users-guide/cockpit/#widgets-collection) in the *User guide*.
-
-
 #### Cockpit - Dashboard availability
 
 A new option for dashboard configuration has been added that allows users to restrict the visibility of dashboards for other users based on their global roles. This new feature provides greater control over the sharing and accessibility of your dashboards.

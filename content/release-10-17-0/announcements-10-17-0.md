@@ -129,6 +129,12 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) and [r
 
 ### Streaming Analytics
 
+#### Planned
+
+##### Analytics Builder - Deprecation of Machine Learning
+
+The Machine Learning block for Analytics Builder is deprecated and will be removed in a future release. This is in line with the deprecation of [Machine Learning Engine](#machine-learning-deprecation).
+
 #### Implemented
 
 ##### Analytics Builder - Change of type for Clear Alarm input port
@@ -192,8 +198,9 @@ instead of
 
 #### Planned
 
+<a name="machine-learning-deprecation"></a>
 ##### Deprecation of Machine Learning Engine and Machine Learning Workbench
 
-As of Cumulocity IoT 10.16, Machine Learning Engine and Machine Learning Workbench are deprecated, and we will end further development of these components. After Cumulocity IoT 10.17, both will be removed from the platform. If you have existing (production) projects which rely on MLE and/or MLW applications, then Software AG is committed to work together with you to find an appropriate transition path. If we have not yet been in contact for this matter, feel free to contact us at [c8y_mlw_mle_sunsetting@softwareag.com](mailto:c8y_mlw_mle_sunsetting@softwareag.com). 
+As of Cumulocity IoT 10.16, Machine Learning Engine and Machine Learning Workbench are deprecated, and we will end further development of these components. After Cumulocity IoT 10.17, both will be removed from the platform. If you have existing (production) projects which rely on MLE and/or MLW applications, then Software AG is committed to work together with you to find an appropriate transition path. If we have not yet been in contact for this matter, feel free to contact us at [c8y_mlw_mle_sunsetting@softwareag.com](mailto:c8y_mlw_mle_sunsetting@softwareag.com).
 
 For details, see the announcement in the release notes for [release 10.16](/release-10-16-0/announcements-10-16-0).

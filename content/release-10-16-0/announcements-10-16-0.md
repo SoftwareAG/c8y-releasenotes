@@ -146,6 +146,12 @@ The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a 
 
 ### Streaming Analytics
 
+#### Planned
+
+##### Analytics Builder - Deprecation of Machine Learning
+
+The Machine Learning block for Analytics Builder is deprecated and will be removed in a future release. This is in line with the deprecation of [Machine Learning Engine](#machine-learning-deprecation).
+
 #### Implemented
 
 ##### Analytics Builder - Reset behavior of the Discrete Statistics block
@@ -176,6 +182,7 @@ In future releases of Cumulocity IoT DataHub the offloading mechanism may levera
 
 #### Planned
 
+<a name="machine-learning-deprecation"></a>
 ##### Deprecation of Machine Learning Engine and Machine Learning Workbench
 
 Machine Learning is of great importance to many IoT solutions as it helps deliver insights otherwise hidden in data for rapid, automated responses and improved decision making. That’s why we built Machine Learning Engine (MLE) for realtime and batch inferencing and Machine Learning Workbench (MLW) as a multi-modal application for model training.

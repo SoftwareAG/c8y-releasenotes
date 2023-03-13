@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.25-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.66-->
 
 ### Improvements
 
@@ -76,6 +76,13 @@ Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000
 </tr>
 
 <tr>
+<td>REST API</td>
+<td>The performance of the Identity API <code>GET /externalIds/{type}/{externalId}</code> method has been improved.</td>
+<td>MTM-50837</td>
+<td>10.17.0.52</td>
+</tr>
+
+<tr>
 <td>Security</td>
 <td>An attribute has been added to all external application links, that prevents tab nabbing (a security vulnerability that could be used to gain the user's browser session).</td>
 <td>MTM-48156</td>
@@ -101,6 +108,13 @@ Issue</th>
 Fix Version</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>UTF-8 characters are now supported in names of files downloaded from the files repository with the export functionality.</td>
+<td>MTM-46346</td>
+<td>10.17.0.51</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -179,6 +193,13 @@ MTM-49760</td>
 <td>The data broker no longer passes on the <code>c8y_ActiveAlarmsStatus</code> fragment from devices in the source tenant to the destination tenant. This is an internal setting which cannot be updated by the user and which is not required on the destination tenant. The propagation of alarms to the destination tenant is not affected by this change.</td>
 <td>MTM-49670</td>
 <td>10.16.103.0</td>
+</tr>
+
+<tr>
+<td>Enterprise tenant</td>
+<td>Fixed a branding issue where the background color and the primary label were not using the brand color.</td>
+<td>MTM-50807</td>
+<td>10.17.0.38</td>
 </tr>
 
 <tr>

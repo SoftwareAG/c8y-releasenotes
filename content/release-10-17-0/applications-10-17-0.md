@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.25-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.66-->
 
 ### Improvements
 
@@ -93,6 +93,20 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>The datapoint library now correctly parses older datapoint library entries, which stored numeric values as strings instead of numbers in the JSON object.</td>
+<td>MTM-51785</td>
+<td>10.17.0.48</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>An issue has been fixed that caused AngularJS widgets to not show up in the <b>Add widget</b> dialog.</td>
+<td>MTM-51482</td>
+<td>10.17.0.30</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>Mappings for the Scada widget are stored in English and only translated in the display.</td>
 <td>MTM-45278</td>
 <td>10.16.185.0</td>
@@ -166,6 +180,13 @@ Fix Version</th>
 <td>Resizing widgets on smartphones now depends on the size and orientation of the screen.</td>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The HOOK_WIZARD can now be used in a module federation plugin.</td>
+<td>MTM-51776</td>
+<td>10.17.0.63</td>
 </tr>
 
 <tr>

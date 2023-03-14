@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.100.0-->
+<!--10.17.1.0 - 10.17.159.0-->
 
 ### Improvements
 

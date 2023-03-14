@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.25-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.66-->
 
 ### Improvements
 
@@ -95,6 +95,13 @@ Issue</th>
 <td>The <b>Offset property</b> field in the register configuration now accepts all values.</td>
 <td>MTM-48256</td>
 <td>10.16.119.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>On the <b>Shell</b> tab in the device details, when a shell command operation is created, its name now corresponds to the command text if available. If no command text is available then it displays the operation description.</td>
+<td>DM-2069</td>
+<td>10.17.0.33</td>
 </tr>
 
 <tr>

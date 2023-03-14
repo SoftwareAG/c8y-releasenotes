@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.100.0-->
+<!--10.17.1.0 - 10.17.159.0-->
 
 ### Improvements
 
@@ -57,9 +57,22 @@ Fix Version</th>
 </tr>
 
 <tr>
+<td>Microservices</td>
+<td>The Java SDK and the Microservice SDK are now compatible with Java 17.</td>
+<td>MTM-44319</td>
+<td>10.17.114.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The Web SDK is now versioned independently from the backend.</td>
+<td>MTM-50809</td>
+<td>10.17.106.0</td>
+</tr>
+
+<tr>
 <td>Web SDK</td>
 <td>It is now possible to open a blueprint directly after the installation has finished.</td>
-
 <td>MTM-50637</td>
 <td>10.17.47.0</td>
 </tr>
@@ -91,8 +104,14 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>An issue has been fixed that caused AngularJS widgets to not show up in the "Add widget" dialog.</td>
+<td>The datapoint library now correctly parses older datapoint library entries, which stored numeric values as strings instead of numbers in the JSON object.</td>
+<td>MTM-51785</td>
+<td>10.17.121.0</td>
+</tr>
 
+<tr>
+<td>Cockpit</td>
+<td>An issue has been fixed that caused AngularJS widgets to not show up in the "Add widget" dialog.</td>
 <td>MTM-51482</td>
 <td>10.17.67.0</td>
 </tr>
@@ -108,9 +127,15 @@ Fix Version</th>
 <tr>
 <td>DTM</td>
 <td>If the DTM asset custom property is declared as required and complex, all of its subproperties are required too.</td>
-
 <td>MTM-50101</td>
 <td>10.17.12.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The HOOK_WIZARD can now be used in a module federation plugin.</td>
+<td>MTM-51776</td>
+<td>10.17.154.0</td>
 </tr>
 
 <tr>

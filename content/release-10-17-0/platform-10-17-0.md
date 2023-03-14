@@ -123,6 +123,12 @@ Fix Version</th>
 <td>10.16.13.0</td>
 </tr>
 
+<tr>
+<td>Authentication</td>
+<td>On the <b>Basic settings</b> tab in the <b>Authentication</b> page, TFA (two-factor authentication) is now correctly shown as enabled if enforced by the platform.</td>
+<td>MTM-49942</td>
+<td>10.16.259.0</td>
+</tr>
 
 <tr>
 <td>Authentication</td>

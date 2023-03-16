@@ -204,3 +204,11 @@ instead of
 As of Cumulocity IoT 10.16, Machine Learning Engine and Machine Learning Workbench are deprecated, and we will end further development of these components. After Cumulocity IoT 10.17, both will be removed from the platform. If you have existing (production) projects which rely on MLE and/or MLW applications, then Software AG is committed to work together with you to find an appropriate transition path. If we have not yet been in contact for this matter, feel free to contact us at [c8y_mlw_mle_sunsetting@softwareag.com](mailto:c8y_mlw_mle_sunsetting@softwareag.com).
 
 For details, see the announcement in the release notes for [release 10.16](/release-10-16-0/announcements-10-16-0).
+
+### Digital Twin Manager
+
+#### Planned
+
+##### Deprecation of Assets move feature
+
+Asset navigator feature is deprecated where in user can view the hierarchical representation of the asset, navigate to different asset and can move the assets to supporting asset hierarchy. As part of 10.17 DTM release Asset tree feature is introduced so user can view the hierarchical representation of an asset in a more precise way also user can navigate to differnt hierarchies of an asset. Asset movement will be supported in 10.18 release of DTM.

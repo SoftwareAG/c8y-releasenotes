@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.66-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.65-->
 
 ### Improvements
 
@@ -95,6 +95,27 @@ Issue</th>
 <td>The <b>Offset property</b> field in the register configuration now accepts all values.</td>
 <td>MTM-48256</td>
 <td>10.16.119.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>On the <b>Software</b> tab in the device details, the <b>Reload</b> button now correctly updates the <b>Installed software</b> list.</td>
+<td>DM-2005</td>
+<td>10.17.0.64</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In events and alarms views, custom properties with numeric values were incorrectly parsed and displayed as dates in the Chrome browser. This is now fixed.</td>
+<td>DM-1999</td>
+<td>10.17.0.46</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In device list views, when a device was deleted, any related child devices were deleted as well. This functionality has now been enhanced. On device deletion, any existing child hierarchy types, that is, not only devices but also additions and assets are deleted accordingly.</td>
+<td>DM-2003</td>
+<td>10.17.0.34</td>
 </tr>
 
 <tr>
@@ -195,6 +216,20 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>For assets created with the Digital Twin Manager, custom properties of the type "number" with the value "0" are now displayed properly as "0", not as "Undefined".</td>
 <td>MTM-49870</td>
 <td>10.16.185.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>In certain cases the migration of LWM2M devices registered on versions before 10.15 reported "Unable to process device" for certain devices. This happened due to adjustments to the device configuration, for example when editing the registration lifetime. With this fix, the migration logic robustness has been improved.</td>
+<td>10.17.0.47</td>
+<td>DM-2022</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>In the older Leshan demo client, the device registration requests for the Cumulocity IoT LWM2M demo device and probably also some other devices could contain spaces between the core link separators. This was successfully handled by the LWM2M agent 10.14 and below but caused the LWM2M agent 10.15 and above to refuse these device requests. Now, the LWM2M server is more liberal and accepts these requests again. The older device registration requests can be processed again.</td>
+<td>10.17.0.41</td>
+<td>DM-2070</td>
 </tr>
 
 <tr>

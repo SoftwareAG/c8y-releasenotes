@@ -211,4 +211,4 @@ For details, see the announcement in the release notes for [release 10.16](/rele
 
 ##### Deprecation of Assets move feature
 
-In the 10.17 version release, we have introduced an improved way of viewing the hierarchical representation of an asset with our new Asset Tree feature. This will replace the deprecated Asset Navigator feature which allowed users to navigate to different assets and move them to another asset hierarchy. With the new Asset Tree feature, users can easily view the hierarchical representation of an asset and navigate to different hierarchies. Asset movement will be supported in the next version release, 10.18.
+In the 10.17 version release, we have introduced an improved way of viewing the hierarchical representation of an asset with our new Asset Tree feature. This will replace the deprecated Asset Navigator feature which allowed users to navigate to different assets and move them to another asset hierarchy. With the new Asset Tree feature, users can easily view the hierarchical representation of an asset and navigate to different hierarchies.

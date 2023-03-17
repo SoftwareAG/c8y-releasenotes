@@ -207,7 +207,7 @@ For details, see the announcement in the release notes for [release 10.16](/rele
 
 ### Digital Twin Manager
 
-#### Planned
+#### Implemented
 
 ##### Deprecation of Assets move feature
 

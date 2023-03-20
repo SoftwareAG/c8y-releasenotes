@@ -211,4 +211,4 @@ For details, see the announcement in the release notes for [release 10.16](/rele
 
 ##### Deprecation of former asset navigation
 
-Deprecation of asset navigation using left navigation, which allowed users to navigate to different assets and move them to another asset hierarchy. With release 10.17, we introduce an improved way of viewing the hierarchical representation of an asset with our new asset tree feature which allows users to easily view the hierarchical representation of an asset and navigate to different hierarchies.
+The former asset navigation using left navigation, which allowed users to navigate to different assets and move them to another asset hierarchy, is deprecated. With release 10.17, we introduce an improved way of viewing the hierarchical representation of an asset with our new asset tree feature which allows users to easily view the hierarchical representation of an asset and navigate to different hierarchies.

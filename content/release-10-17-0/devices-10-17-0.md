@@ -227,7 +227,7 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>LWM2M</td>
-<td>In the older Leshan demo client, the device registration requests for the Cumulocity IoT LWM2M demo device and probably also some other devices could contain spaces between the core link separators. This was successfully handled by the LWM2M agent 10.14 and below but caused the LWM2M agent 10.15 and above to refuse these device requests. Now, the LWM2M server is more liberal and accepts these requests again. The older device registration requests can be processed again.</td>
+<td>In the older Leshan demo client, the device registration requests for the Cumulocity IoT LWM2M demo device and possibly also some other devices could contain spaces between the core link separators. This was successfully handled by the LWM2M agent 10.14 and below but caused the LWM2M agent 10.15 and above to reject these device requests. Now, the LWM2M server accepts these requests again. The older device registration requests can be processed again.</td>
 <td>10.17.0.41</td>
 <td>DM-2070</td>
 </tr>

@@ -17,12 +17,15 @@ This change affects the following APIs:
 * `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
-
 ##### Breaking change in the Inventory API -- change of the default value for the `withChildren` parameter
 
 As of release 10.20+, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
 As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
 This change is necessary to improve the Inventory API performance.
+
+##### Breaking change in REST APIs
+
+As of release 10.18+, wrong value of `pageSize` or `currentPage` will result in response code of 422 instead of 500.
 
 #### Implemented
 

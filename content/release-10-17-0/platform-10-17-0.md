@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.66-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.65-->
 
 ### Improvements
 
@@ -220,6 +220,13 @@ MTM-49760</td>
 <td>Fixed an issue with inventory roles when a user had assigned different inventory roles for different groups in the same inventory hierarchy. Now, if a user has inventory access to a parent group for one API and inventory access to a child group for a different API, queries made by this user return properly filtered documents for both APIs.</td>
 <td>MTM-45018</td>
 <td>10.16.8.0</td>
+</tr>
+
+<tr>
+<td>Performance</td>
+<td>The performance of widgets like the "Data point list", "Data point graph" and "Data point table", has been improved for users with inventory roles access. Moreover, the performance of the <b>Measurements</b> tab in the Device Management application and the <b>Data explorer</b> in the Cockpit application have been improved.</td>
+<td>MTM-50693</td>
+<td>10.17.0.48</td>
 </tr>
 
 <tr>

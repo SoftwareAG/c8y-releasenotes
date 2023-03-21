@@ -61,6 +61,20 @@ Fix Version</th>
 
 <tr>
 <td>Device Management</td>
+<td>On the <b>Software</b> tab in the device details, the <b>Reload</b> button now correctly updates the <b>Installed software</b> list.</td>
+<td>DM-2005</td>
+<td>10.17.141.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In events and alarms views, custom properties with numeric values were incorrectly parsed and displayed as dates in the Chrome browser. This is now fixed.</td>
+<td>DM-1999</td>
+<td>10.17.118.0</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
 <td>On the <b>Shell</b> tab in the device details, when a shell command operation is created, its name now corresponds to the command text if available. If no command text is available then it displays the operation description.</td>
 <td>DM-2069</td>
 <td>10.17.74.0</td>
@@ -78,6 +92,20 @@ Fix Version</th>
 <td>The <b>Assign devices<b> button is now disabled for users without the required permissions.</td>
 <td>MTM-50928</td>
 <td>10.17.16.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>In certain cases the migration of LWM2M devices registered on versions before 10.15 reported "Unable to process device" for certain devices. This happened due to adjustments to the device configuration, for example when editing the registration lifetime. With this fix, the migration logic robustness has been improved.</td>
+<td>10.17.107.0</td>
+<td>DM-2022</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>In the older Leshan demo client, the device registration requests for the Cumulocity IoT LWM2M demo device and possibly also some other devices could contain spaces between the core link separators. This was successfully handled by the LWM2M agent 10.14 and below but caused the LWM2M agent 10.15 and above to reject these device requests. Now, the LWM2M server accepts these requests again. The older device registration requests can be processed again.</td>
+<td>10.17.105.0</td>
+<td>DM-2070</td>
 </tr>
 
 <tr>

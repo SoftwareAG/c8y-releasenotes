@@ -206,6 +206,10 @@ In a future release of Cumulocity IoT DataHub a newer version of Dremio will be 
 
 In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.
 
+##### Breaking change in the offloading mechanism - removal of history column in alarms collection
+
+In a future release of Cumulocity IoT core the history column will be removed from the alarms collection. Therefore, Cumulocity IoT DataHub will not include this column in newly defined offloadings anymore. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake folder will still include the history column as part of its schema. With new offloading runs the values of this column will be null.
+
 ### Cumulocity IoT Machine Learning
 
 #### Planned

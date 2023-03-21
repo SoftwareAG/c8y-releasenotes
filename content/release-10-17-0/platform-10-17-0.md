@@ -55,8 +55,8 @@ Prior to this change, the existence of the measurement was only validated for pe
 
 <tr>
 <td>Core platform</td>
-<td>Delete by <code>dateFrom</code> and <code>dateTo</code> query parameters is now supported for time series measurements.
-Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.</td>
+<td>Deleting measurements by the <code>dateFrom</code> and <code>dateTo</code> query parameters is now supported on tenants with enabled enhanced time series support. Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.
+</td>
 <td>MTM-49441</td>
 <td>10.16.74.0</td>
 </tr>

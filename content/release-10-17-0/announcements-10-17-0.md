@@ -24,6 +24,12 @@ As of release 10.20+, the default value for the `withChildren` parameter of the 
 As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
 This change is necessary to improve the Inventory API performance.
 
+##### Breaking change in the Inventory API -- change of the return code for delete of managed object
+
+As of release 10.19+, when delete of managed object and its dependencies doesn't finish right away, the platform will return 202 (Accepted) http status code instead of 204 (No content).
+A return code will be still 204 if the control can be returned immediately.
+The change is required to make API consistent with HTTP protocol semantics (asynchronous request).
+
 #### Implemented
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string

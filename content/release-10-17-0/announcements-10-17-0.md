@@ -24,7 +24,7 @@ As of release 10.20+, the default value for the `withChildren` parameter of the 
 As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
 This change is necessary to improve the Inventory API performance.
 
-##### Breaking change in the Inventory API -- change of the return code for delete of managed object
+##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
 
 As of release 10.19+, when delete of managed object and its dependencies doesn't finish right away, the platform will return 202 (Accepted) http status code instead of 204 (No content).
 A return code will be still 204 if the control can be returned immediately.

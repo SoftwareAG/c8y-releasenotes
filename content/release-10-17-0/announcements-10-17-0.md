@@ -208,7 +208,7 @@ In future releases of Cumulocity IoT DataHub the offloading mechanism may levera
 
 ##### Breaking change in the offloading mechanism - removal of history column in alarms collection
 
-In a future release of Cumulocity IoT core the history column will be removed from the alarms collection. Therefore, Cumulocity IoT DataHub will not include this column in newly defined offloadings anymore. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake folder will still include the history column as part of its schema. With new offloading runs the values of this column will be null.
+In a future release of Cumulocity IoT core the history column will be removed from the alarms collection. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake folder still includes the history column as part of its schema. With new offloading runs the values of this column will be null.
 
 ### Cumulocity IoT Machine Learning
 

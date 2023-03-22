@@ -35,8 +35,7 @@ For example, if a user sends a request in the following format:
     }
 }
 ```
-
-currently the whole payload is saved. In the future, the `c8y_LatestMeasurements` fragment will be ignored and not saved.
+Since this release, the `c8y_LatestMeasurements` fragment will be ignored and not saved.
 
 ### Security changes
 

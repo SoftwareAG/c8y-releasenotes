@@ -25,7 +25,7 @@ This change is necessary to improve the Inventory API performance.
 
 ##### Breaking change in REST APIs
 
-As of release 10.18+, wrong value of `pageSize` or `currentPage` will result in response code of 422 instead of 500.
+As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a response code 422 instead of 500.
 
 #### Implemented
 

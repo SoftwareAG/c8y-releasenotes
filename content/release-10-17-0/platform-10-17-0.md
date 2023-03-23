@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.65-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.80-->
 
 ### Improvements
 
@@ -139,6 +139,13 @@ Fix Version</th>
 
 <tr>
 <td>Authentication</td>
+<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was an issue in rare cases where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+<td>MTM-52049</td>
+<td>10.17.0.72</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
 <td>On the <b>Basic settings</b> tab in the <b>Authentication</b> page, TFA (two-factor authentication) is now correctly shown as enabled if enforced by the platform.</td>
 <td>MTM-49942</td>
 <td>10.16.259.0</td>
@@ -220,6 +227,13 @@ MTM-49760</td>
 <td>Fixed an issue with inventory roles when a user had assigned different inventory roles for different groups in the same inventory hierarchy. Now, if a user has inventory access to a parent group for one API and inventory access to a child group for a different API, queries made by this user return properly filtered documents for both APIs.</td>
 <td>MTM-45018</td>
 <td>10.16.8.0</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>Fixed an issue where POST and PUT requests without Content-Type header were rejected with a 415 HTTP error. The fix has been applied to the Identity, Inventory, Measurements, Alarms and Events APIs.</td>
+<td>MTM-51886</td>
+<td>10.17.0.74</td>
 </tr>
 
 <tr>

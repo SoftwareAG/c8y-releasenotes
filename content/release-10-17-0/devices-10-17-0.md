@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.65-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.80-->
 
 ### Improvements
 
@@ -216,6 +216,13 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>For assets created with the Digital Twin Manager, custom properties of the type "number" with the value "0" are now displayed properly as "0", not as "Undefined".</td>
 <td>MTM-49870</td>
 <td>10.16.185.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M device type can be freely chosen by the user. Therefore, devices which do not have the type "c8y_lwm2m" but still are LWM2M devices now also show the LWM2M bootstrap parameters view.</td>
+<td>DM-2066</td>
+<td>10.17.0.72</td>
 </tr>
 
 <tr>

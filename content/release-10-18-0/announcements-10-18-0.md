@@ -12,7 +12,7 @@ layout: bundle
 
 ##### Breaking change in REST APIs
 
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.18+, wrong value of `pageSize` or `currentPage` will result in response code of 422 instead of 500.
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.18+, wrong values for `pageSize` or `currentPage` result in a response code 422 instead of 500.
 
 ### Security changes
 

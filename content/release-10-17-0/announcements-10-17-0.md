@@ -25,7 +25,7 @@ This change is necessary to improve the Inventory API performance.
 
 ##### Breaking change in REST APIs
 
-As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a response code 422 instead of 500.
+As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
 
 #### Implemented
 

@@ -58,6 +58,10 @@ As of release 10.19+, if the deletion of a managed object and its dependencies d
 The return code will still be 204 if the control can be returned immediately.
 This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
+##### Breaking change in REST APIs
+
+As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
+
 #### Implemented
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string

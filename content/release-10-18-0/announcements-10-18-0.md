@@ -43,6 +43,10 @@ For example, if a user sends a request in the following format:
 ```
 Since this release, the `c8y_LatestMeasurements` fragment will be ignored and not saved.
 
+##### Breaking change in REST APIs
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
+
 ### Security changes
 
 #### Planned

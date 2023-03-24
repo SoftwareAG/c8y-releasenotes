@@ -12,11 +12,11 @@ layout: bundle
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 
-For the Inventory API, as of the 10.18 GA release, a set of properties will be restricted for internal system usage and cannot be set by external users. This change is motivated by planned features and future use cases.
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.18+, a set of properties in the Inventory API is restricted to internal system usage and cannot be set by external users. This change is motivated by planned features and future use cases.
 
 In case of a request sent with these properties, they will be ignored by the platform and not set.
 
-The mentioned internal fragments are: `c8y_LatestMeasurements`, `c8y_LatestEvents`, `c8y_LatestAlarms`, `c8y_LatestOperations`, `c8y_LastAlarm`, `c8y_LastEvent`, `c8y_LastOperation` .
+This change applies to the following fragments: `c8y_LatestMeasurements`, `c8y_LatestEvents`, `c8y_LatestAlarms`, `c8y_LatestOperations`, `c8y_LastAlarm`, `c8y_LastEvent`, `c8y_LastOperation` .
 
 For example, if a user sends a request in the following format:
 

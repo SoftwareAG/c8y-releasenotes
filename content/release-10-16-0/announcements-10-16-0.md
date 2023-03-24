@@ -73,7 +73,7 @@ This change affects the following APIs:
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 
-For the Inventory API, as of the 10.18+ GA release, a set of properties will be restricted for internal system usage and cannot be set by external users. This change is motivated by planned features and future use cases.
+As of release 10.18+, a set of properties in the Inventory API will be restricted to internal system usage and cannot be set by external users. This change is motivated by planned features and future use cases.
 
 In case of a request sent with these properties, they will be ignored by the platform and not set.
 

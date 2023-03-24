@@ -200,7 +200,7 @@ instead of
 
 ##### Breaking change in the offloading mechanism - deprecation of support for mixed types
 
-In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data needs to be converted.
+In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.
 
 ##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
 
@@ -208,7 +208,7 @@ In future releases of Cumulocity IoT DataHub the offloading mechanism may levera
 
 ##### Breaking change in the offloading mechanism - removal of history column in alarms collection
 
-In a future release of Cumulocity IoT core the history column will be removed from the alarms collection. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake folder still includes the history column as part of its schema. With new offloading runs the values of this column will be null.
+In a future release of Cumulocity IoT core the history attribute will be removed from the alarms. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake table still includes the history column, but for new offloading runs the value will not be included anymore and thus will be null.
 
 ### Cumulocity IoT Machine Learning
 

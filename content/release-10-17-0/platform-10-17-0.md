@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.66-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.65-->
 
 ### Improvements
 
@@ -48,15 +48,15 @@ Prior to this change, the existence of the measurement was only validated for pe
 
 <tr>
 <td>Core platform</td>
-<td>Inventory binaries now support chunk download (by setting specific Range headers) and resuming a file download. See also the <a href="https://cumulocity.com/api/core/10.17.0/#operation/getBinariesResource" class="no-ajaxy">Cumulocity IoT OpenAPI Specification<a/>.</td>
+<td>To save network bandwidth and improve the time to download when the network connection is lost, Cumulocity IoT now supports chunked binary file downloads. To take advantage of this it is necessary to set the Range header. If set the binaries are split into chunks and if the network connection is lost the download is resumed rather than started from the beginning. See also the <a href="https://cumulocity.com/api/core/10.17.0/#operation/getBinariesResource" class="no-ajaxy">Cumulocity IoT OpenAPI Specification<a/>.</td>
 <td>MTM-49998</td>
 <td>10.16.248.0</td>
 </tr>
 
 <tr>
 <td>Core platform</td>
-<td>Delete by <code>dateFrom</code> and <code>dateTo</code> query parameters is now supported for time series measurements.
-Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.</td>
+<td>Deleting measurements by the <code>dateFrom</code> and <code>dateTo</code> query parameters is now supported on tenants with enabled enhanced time series support. Parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.
+</td>
 <td>MTM-49441</td>
 <td>10.16.74.0</td>
 </tr>
@@ -220,6 +220,13 @@ MTM-49760</td>
 <td>Fixed an issue with inventory roles when a user had assigned different inventory roles for different groups in the same inventory hierarchy. Now, if a user has inventory access to a parent group for one API and inventory access to a child group for a different API, queries made by this user return properly filtered documents for both APIs.</td>
 <td>MTM-45018</td>
 <td>10.16.8.0</td>
+</tr>
+
+<tr>
+<td>Performance</td>
+<td>The performance of widgets like the "Data point list", "Data point graph" and "Data point table", has been improved for users with inventory roles access. Moreover, the performance of the <b>Measurements</b> tab in the Device Management application and the <b>Data explorer</b> in the Cockpit application have been improved.</td>
+<td>MTM-50693</td>
+<td>10.17.0.48</td>
 </tr>
 
 <tr>

@@ -23,6 +23,12 @@ As of release 10.20+, the default value for the `withChildren` parameter of the 
 As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
 This change is necessary to improve the Inventory API performance.
 
+##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
+
+As of release 10.19+, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
+The return code will still be 204 if the control can be returned immediately.
+This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
+
 ##### Breaking change in REST APIs
 
 As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
@@ -207,3 +213,11 @@ instead of
 As of Cumulocity IoT 10.16, Machine Learning Engine and Machine Learning Workbench are deprecated, and we will end further development of these components. After Cumulocity IoT 10.17, both will be removed from the platform. If you have existing (production) projects which rely on MLE and/or MLW applications, then Software AG is committed to work together with you to find an appropriate transition path. If we have not yet been in contact for this matter, feel free to contact us at [c8y_mlw_mle_sunsetting@softwareag.com](mailto:c8y_mlw_mle_sunsetting@softwareag.com).
 
 For details, see the announcement in the release notes for [release 10.16](/release-10-16-0/announcements-10-16-0).
+
+### Digital Twin Manager
+
+#### Implemented
+
+##### Deprecation of former asset navigation
+
+The former asset navigation using left navigation, which allowed users to navigate to different assets and move them to another asset hierarchy, is deprecated. With release 10.17, we introduce an improved way of viewing the hierarchical representation of an asset with our new asset tree feature which allows users to easily view the hierarchical representation of an asset and navigate to different hierarchies.

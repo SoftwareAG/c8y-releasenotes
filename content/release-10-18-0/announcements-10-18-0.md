@@ -47,6 +47,9 @@ Since this release, the `c8y_LatestMeasurements` fragment will be ignored and no
 
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
 
+##### Breaking change in the Map widget
+With version 10.18 the Map Widget will be migrated and the support for realtime updates on all devices will be removed by an configurable refresh interval. This will allow us to display more then 100 devices on the map by default. Additionally the Map Widget will not support the "show track" option anymore.
+
 ### Security changes
 
 #### Planned

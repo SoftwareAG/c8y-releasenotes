@@ -241,7 +241,7 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>Loriot</td>
-<td>Events created by the Loriot agent when sending uplink requests sre now considered as device requests and provide connectivity status and availability monitoring.</td>
+<td>Events created by the Loriot agent when sending uplink requests are now considered device requests and provide connectivity status and availability monitoring.</td>
 <td>DM-2139</td>
 <td>10.17.0.81</td>
 </tr>

@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.159.0-->
+<!--10.17.1.0 - 10.17.180.0-->
 
 ### Improvements
 
@@ -20,6 +20,13 @@ Issue</th>
 Fix Version</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Authentication</td>
+<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was an issue in rare cases where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+<td>MTM-52049</td>
+<td>10.17.164.0</td>
+</tr>
 
 <tr>
 <td>Authentication</td>
@@ -48,6 +55,14 @@ Fix Version</th>
 <td>MTM-49740</td>
 <td>10.17.73.0</td>
 </tr>
+
+<tr>
+<td>Core platform</td>
+<td>The X-XSS-Protection header is no longer included in platform HTTP responses.</td>
+<td>MTM-51504</td>
+<td>10.17.161.0</td>
+</tr>
+
 
 <tr>
 <td>Core platform</td>
@@ -129,6 +144,13 @@ Fix Version</th>
 <td>Fixed a branding issue where the background color and the primary label were not using the brand color.</td>
 <td>MTM-50807</td>
 <td>10.17.86.0</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>Fixed an issue where POST and PUT requests without Content-Type header were rejected with a 415 HTTP error. The fix has been applied to the Identity, Inventory, Measurements, Alarms and Events APIs.</td>
+<td>MTM-51886</td>
+<td>10.17.170.0</td>
 </tr>
 
 <tr>

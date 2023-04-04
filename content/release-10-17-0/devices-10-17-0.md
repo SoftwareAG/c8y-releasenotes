@@ -106,7 +106,7 @@ Issue</th>
 
 <tr>
 <td>Device Management</td>
-<td>On the <b>Services</b> tab in the device details, the filter for the "Status" column did not work properly and didn´t return any results when filtering was applied. This is now fixed.</td>
+<td>On the <b>Services</b> tab in the device details, the filter for the "Status" column did not work properly and didn't return any results when a filter was applied. This is now fixed.</td>
 <td>DM-2002</td>
 <td>10.17.0.87</td>
 </tr>

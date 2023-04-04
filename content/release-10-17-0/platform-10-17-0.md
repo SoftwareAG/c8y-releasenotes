@@ -196,6 +196,13 @@ MTM-49760</td>
 
 <tr>
 <td>Core platform</td>
+<td>Fixed an issue where deleting enhanced time series measurements did not work with the <code>fragmentType</code> query parameter.</td>
+<td>MTM-51379</td>
+<td>10.17.0.92</td>
+</tr>
+
+<tr>
+<td>Core platform</td>
 <td>Fixed an issue in which some queries containing single apostrophes resulted in an incorrect query being sent.</td>
 <td>MTM-49123</td>
 <td>10.16.60.0</td>
@@ -230,17 +237,17 @@ MTM-49760</td>
 </tr>
 
 <tr>
+<td>Performance</td>
+<td>The performance of widgets like the "Data point list", "Data point graph" and "Data point table" has been improved for users with inventory roles access. Moreover, the performance of the <b>Measurements</b> tab in the Device Management application and the <b>Data explorer</b> in the Cockpit application have been improved.</td>
+<td>MTM-50693</td>
+<td>10.17.0.48</td>
+</tr>
+
+<tr>
 <td>REST API</td>
 <td>Fixed an issue where POST and PUT requests without Content-Type header were rejected with a 415 HTTP error. The fix has been applied to the Identity, Inventory, Measurements, Alarms and Events APIs.</td>
 <td>MTM-51886</td>
 <td>10.17.0.74</td>
-</tr>
-
-<tr>
-<td>Performance</td>
-<td>The performance of widgets like the "Data point list", "Data point graph" and "Data point table", has been improved for users with inventory roles access. Moreover, the performance of the <b>Measurements</b> tab in the Device Management application and the <b>Data explorer</b> in the Cockpit application have been improved.</td>
-<td>MTM-50693</td>
-<td>10.17.0.48</td>
 </tr>
 
 <tr>
@@ -256,8 +263,5 @@ MTM-49760</td>
 <td>MTM-48474</td>
 <td>10.16.60.0</td>
 </tr>
-
-
-
 
 </tbody></table></div>

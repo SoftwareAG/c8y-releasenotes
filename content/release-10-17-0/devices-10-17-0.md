@@ -99,6 +99,27 @@ Issue</th>
 
 <tr>
 <td>Device Management</td>
+<td>When removing a device which has child devices, users can now choose either to remove a device user or to remove all child devices. Prior to this change, it was possible to choose both options in the UI, but such an action is not supported by the backend.</td>
+<td>MTM-45277</td>
+<td>10.17.0.103</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>On the <b>Services</b> tab in the device details, the filter for the "Status" column did not work properly and didn´t return any results when filtering was applied. This is now fixed.</td>
+<td>DM-2002</td>
+<td>10.17.0.87</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>Due to a limitation of the Leshan library used by the LWM2M agent, only device registration messages were supported where the LWM2M version is attached to the LWM2M object. The LWM2M agent has now been extended to also accept LWM2M registration messages where the LWM2M version is attached to the LWM2M object instance.</td>
+<td>DM-1893</td>
+<td>10.17.0.83</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
 <td>On the <b>Software</b> tab in the device details, the <b>Reload</b> button now correctly updates the <b>Installed software</b> list.</td>
 <td>DM-2005</td>
 <td>10.17.0.64</td>
@@ -216,6 +237,20 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>For assets created with the Digital Twin Manager, custom properties of the type "number" with the value "0" are now displayed properly as "0", not as "Undefined".</td>
 <td>MTM-49870</td>
 <td>10.16.185.0</td>
+</tr>
+
+<tr>
+<td>Loriot</td>
+<td>Events created by the Loriot agent when sending uplink requests sre now considered as device requests and provide connectivity status and availability monitoring.</td>
+<td>DM-2139</td>
+<td>10.17.0.81</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>During the LWM2M client registration, if the agent failed to find the registered device from the database due to a communication problem, an internal object related to the device managed object was automatically removed by the agent. Afterwards, LWM2M clients always failed to connect. This is now fixed and the internal object is only removed if the actual device managed object does not exist in the database.</td>
+<td>DM-2131</td>
+<td>10.17.0.82</td>
 </tr>
 
 <tr>

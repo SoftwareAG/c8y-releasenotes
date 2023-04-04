@@ -93,6 +93,13 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>Fixed a localization issue in the tooltip of the <b>Load More</b> button in the custom Cockpit application configuration.</td>
+<td>MTM-52177</td>
+<td>10.17.0.98</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>The datapoint library now correctly parses older datapoint library entries, which stored numeric values as strings instead of numbers in the JSON object.</td>
 <td>MTM-51785</td>
 <td>10.17.0.48</td>
@@ -170,6 +177,13 @@ Fix Version</th>
 
 <tr>
 <td>UI</td>
+<td>The German localization in the <b>Connect smartphone</b> wizard has been corrected.</td>
+<td>MTM-51935</td>
+<td>10.17.0.89</td>
+</tr>
+
+<tr>
+<td>UI</td>
 <td>If the backend returns a 401 error, the UI (the AngularJS part) checks if the user must be logged out by requesting the current user endpoint. If more than one request returns a 401 error, the UI will logout the user only once. Prior to this fix, the logout was called several times.</td>
 <td>MTM-45204</td>
 <td>10.16.188.0</td>
@@ -180,6 +194,34 @@ Fix Version</th>
 <td>Resizing widgets on smartphones now depends on the size and orientation of the screen.</td>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>An issue with the "copy dashboard" functionality has been addressed. The device context of a configured widget is now again replaced by the context it has been pasted to. This applies, for example, to the selected asset or to datapoints.</td>
+<td>MTM-52374</td>
+<td>10.17.0.102</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Datapoints no longer contain irrelevant data from the template after the link to the template has been removed. The datapoint now only contains the data from the template which is relevant for the current context.</td>
+<td>MTM-51682</td>
+<td>10.17.0.102</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Added examples for developers on how to bundle images correctly into a plugin. These examples are shown when you scaffold a new widget-plugin application with the c8ycli tool.</td>
+<td>MTM-50721</td>
+<td>10.17.0.97</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The <code>DatapointSelectorModule</code> can now be used in a module federation plugin.</td>
+<td>MTM-52251</td>
+<td>10.17.0.83</td>
 </tr>
 
 <tr>
@@ -206,7 +248,6 @@ Fix Version</th>
 <tr>
 <td>Web SDK</td>
 <td>A toggle has been added to the plugin installation dialog, which allows to filter the plugin versions for only the latest version or all versions.</td>
-
 <td>MTM-50901</td>
 <td>10.17.0.2</td>
 </tr>

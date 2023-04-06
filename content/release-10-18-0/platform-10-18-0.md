@@ -23,7 +23,8 @@ Fix Version</th>
 
 <tr>
 <td>Authentication</td>
-<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was an issue in rare cases where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+
 <td>MTM-52049</td>
 <td>10.17.164.0</td>
 </tr>

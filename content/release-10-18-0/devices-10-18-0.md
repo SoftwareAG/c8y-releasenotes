@@ -51,7 +51,7 @@ Fix Version</th>
 
 <tr>
 <td>OPC UA</td>
-<td>The OPC UA device gateway can now be run with Thin Edge. The gateway device is automatically created as child of the Thin Edge device. For more information on the configurations, check the Thin Edge section in <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/opcua/#gateway-register" class="no-ajaxy">OPC UA > Gateway configuration and registration <a/>in the <i>Protocol integration guide</i>.</td>
+<td>The OPC UA device gateway can now be run with Thin Edge. The gateway device is automatically created as a child of the Thin Edge device. For more information on the configurations, refer to the Thin Edge section in <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/opcua/#gateway-register" class="no-ajaxy">OPC UA > Gateway configuration and registration<a/> in the <i>Protocol integration guide</i>.</td>
 <td>DM-887</td>
 <td>10.17.174.0</td>
 </tr>

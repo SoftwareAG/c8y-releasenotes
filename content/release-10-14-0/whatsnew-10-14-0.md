@@ -29,7 +29,7 @@ For details, see [Cockpit > Configuring Cockpit applications](https://cumulocity
 
 ### New asset selector
 
-Widgets now support the new device and asset selector. The new selector allows navigating quickly through all groups and devices applicable for the currently selected widget. This feature is available to all non-datapoint related widgets.
+Widgets now support the new device and asset selector. The new selector allows navigating quickly through all groups and devices applicable for the currently selected widget. Note that this functionality is not available for widgets which are related to datapoints.
 
 ![Device selector](/images/release-notes/cockpit-device-selector.png)
 

@@ -116,7 +116,7 @@ However, the documentation is still available and all links to it still work. To
 Where previously Apama Analytics Builder and Apama EPL Apps were separate applications, these have now been combined into a single Streaming Analytics application available from the Cumulocity IoT application switcher.
 
 The Streaming Analytics application provides mechanisms to control visibility of the Analytics Builder and EPL Apps pages.
-If the old Apama Analytics Builder or Apama EPL Apps applications had been assigned to specific groups or users, a tenant will need to
+If the old Apama Analytics Builder or Apama EPL Apps applications had been assigned to specific groups or users, a tenant must
 configure role-based access and assign roles to control the visibility of the corresponding pages within the Streaming Analytics application.
 See [Controlling access to the Streaming Analytics application](https://cumulocity.com/guides/10.9.0/apama/advanced/#control-access) for more information.
 This migration is a one-time step that must be performed manually.

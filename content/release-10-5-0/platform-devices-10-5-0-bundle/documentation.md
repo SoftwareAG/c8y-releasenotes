@@ -28,9 +28,9 @@ The information formerly provided in the Device guides on the [Cumulocity IoT do
 
 The descriptions on how to integrate the demo devices **Cinterion Java modules**, **Mbed u-blox C027**, **Raspberry Pi**, and **Tinkerforge** with Cumulocity IoT have been moved from the Device guides to the examples repository in Bitbucket at [https://bitbucket.org/m2m/cumulocity-examples/src/develop/device-integrations]( https://bitbucket.org/m2m/cumulocity-examples/src/develop/device-integrations).
 
-#### OPCUA agent 1.0
+#### OPC UA agent 1.0
 
-The documentation of the OPCUA Java gateway has been moved from the Device guides to the Java agent sources in Bitbucket at [https://bitbucket.org/m2m/cumulocity-agents-opc/src/develop/opcua-agent/documentation/](https://bitbucket.org/m2m/cumulocity-agents-opc/src/develop/opcua-agent/documentation/).
+The documentation of the OPC UA Java gateway has been moved from the Device guides to the Java agent sources in Bitbucket at [https://bitbucket.org/m2m/cumulocity-agents-opc/src/develop/opcua-agent/documentation/](https://bitbucket.org/m2m/cumulocity-agents-opc/src/develop/opcua-agent/documentation/).
 
 ### Device SDK guide: Device SDK for Java
 

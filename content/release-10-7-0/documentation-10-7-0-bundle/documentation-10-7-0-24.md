@@ -160,7 +160,7 @@ Issue</th>
 <td>
 Protocol integration guide</td>
 <td>
-OPCUA</td>
+OPC UA</td>
 <td > The <a href="https://cumulocity.com/guides/10.7.0/protocol-integration/opcua" class="no-ajaxy">OPC UA documentation</a> has been updated to state that the name of the user that runs the gateway is set as gateway identifier and as name by default if not provided.</td>
 <td>
 MTM-31428</td>

@@ -16,7 +16,7 @@ This change is required to make the API consistent with the HTTP protocol semant
 
 ##### Breaking change in the Web SDK -- deprecation of HOOK_ prefixed injection tokens
 
-As of release 10.20+, the Web SDK will no longer expose the `HOOK_` prefixed injection tokens, like for example `HOOK_COMPONENTS`, `HOOK_ROUTE` or `HOOK_NAVIGATOR_NODES`, to users. In version 10.17 an alternative to these hooks has been introduced, which allows typed usage. These are a hugh benefit for Web SDK users since they no longer have to guess the types and attributes offered by those hooks.
+As of release 10.20+, the Web SDK will no longer expose the `HOOK_` prefixed injection tokens, like for example `HOOK_COMPONENTS`, `HOOK_ROUTE` or `HOOK_NAVIGATOR_NODES`, to users. In version 10.17 an alternative to these hooks has been introduced, which allows typed usage. This is a hugh benefit for Web SDK users since they no longer have to guess the types and attributes offered by these hooks.
 
 A migration is only required for users who used the Web SDK for customizing their user interface.
 

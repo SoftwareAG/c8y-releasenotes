@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.159.0-->
+<!--10.17.1.0 - 10.17.180.0-->
 
 ### Improvements
 
@@ -58,9 +58,37 @@ Fix Version</th>
 
 <tr>
 <td>Microservices</td>
+<td>The Smartrule agent now uses the Microservice API 2.</td>
+<td>MTM-48740</td>
+<td>10.17.178.0</td>
+</tr>
+
+<tr>
+<td>Microservices</td>
+<td>The Report agent now uses the Microservice API 2.</td>
+<td>MTM-48736</td>
+<td>10.17.178.0</td>
+</tr>
+
+<tr>
+<td>Microservices</td>
+<td>The Echo agent now uses the Microservice API 2.</td>
+<td>MTM-48729</td>
+<td>10.17.178.0</td>
+</tr>
+
+<tr>
+<td>Microservices</td>
 <td>The Java SDK and the Microservice SDK are now compatible with Java 17.</td>
 <td>MTM-44319</td>
 <td>10.17.114.0</td>
+</tr>
+
+<tr>
+<td>UI</td>
+<td>Context help has been added to various tabs such as <b>Dashboard</b> and <b>Subassets</b>.</td>
+<td>MTM-51868</td>
+<td>10.17.171.0</td>
 </tr>
 
 <tr>

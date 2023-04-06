@@ -14,6 +14,50 @@ As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of
 The return code will still be 204 if the control can be returned immediately.
 This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
+##### Breaking change in the Web SDK -- deprecation of HOOK_ prefixed injection tokens
+
+As of release 10.20+, the Web SDK will no longer expose the `HOOK_` prefixed injection tokens, like for example `HOOK_COMPONENTS`, `HOOK_ROUTE` or `HOOK_NAVIGATOR_NODES`, to users. In version 10.17 an alternative to these hooks has been introduced, which allows typed usage. This is a significant benefit for Web SDK users since they no longer have to guess the types and attributes offered by these hooks.
+
+A migration is only required for users who used the Web SDK for customizing their user interface.
+
+For example the `HOOK_ROUTE` would be migrated from:
+
+```
+providers: [
+   {
+      provide: HOOK_ROUTE,
+      useValue: [{
+         context: ViewContext.Device,
+         path: 'hello',
+         component: HelloComponent,
+         label: 'hello',
+         priority: 100,
+         icon: 'rocket'
+      }],
+      multi: true
+   }
+]
+```
+
+to the new hook function:
+
+```
+providers: [
+   hookRoute([
+      {
+         context: ViewContext.Device,
+         path: 'hello',
+         component: HelloComponent,
+         label: 'hello',
+         priority: 100,
+         icon: 'rocket'
+      }
+   ]);
+]
+```
+
+All of the impacted injection tokens have been marked as deprecated with 10.18, and references to their replacements are provided in the respective documentation and deprecation notice.
+
 #### Implemented
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties

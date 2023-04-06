@@ -56,7 +56,7 @@ providers: [
 ]
 ```
 
-All of the impacted injection tokens have been marked as deprecated with 10.18 and their documentation and deprecation notice points to their replacement.
+All of the impacted injection tokens have been marked as deprecated with 10.18, and references to their respective replacements are provided in the documentation and the deprecation notice.
 
 #### Implemented
 

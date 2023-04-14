@@ -139,7 +139,8 @@ Fix Version</th>
 
 <tr>
 <td>Authentication</td>
-<td>Fixed an issue with the device requests counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
+<td>Fixed an issue with the device request counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
+
 <td>MTM-49427</td>
 <td>10.17.0.120</td>
 </tr>

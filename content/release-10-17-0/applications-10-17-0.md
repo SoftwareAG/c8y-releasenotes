@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.80-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.122-->
 
 ### Improvements
 
@@ -173,6 +173,13 @@ Fix Version</th>
 <td>The Microservice SDK is now based on Spring Boot 2.7.6, using Spring Framework 5.3.24.</td>
 <td>MTM-48361</td>
 <td>10.16.232.0</td>
+</tr>
+
+<tr>
+<td>UI</td>
+<td>Corrected Japanese localizations in the <b>App configuration</b> page and in the <b>Add smart rules</b> dialog.</td>
+<td>MTM-52050</td>
+<td>10.17.0.106</td>
 </tr>
 
 <tr>

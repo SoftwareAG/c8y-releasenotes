@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.80-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.122-->
 
 ### Improvements
 
@@ -60,6 +60,13 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 
 <tr>
 <td>LWM2M</td>
+<td>The performance of the <code>migrateLwm2mDevices</code> operation has been improved. New command line arguments have been introduced with the operation. A list of legacy LWM2M devices can be directly specified from the shell command. Moreover, the migration of the LWM2M client registration objects can also be skipped using an argument. Refer to <a href="https://cumulocity.com/guides/protocol-integration/lwm2m/#migration-of-the-lwm2m-devices" class="no-ajaxy">LWM2M > LWM2M connector device > Migration of the LWM2M devices</a> in the <i>Protocol integration guide</i> for more details about the usage.</td>
+<td>DM-1866</td>
+<td>10.17.0.121</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>The accessibility of the LWM2M UI has been improved, for example, in the <b>LWM2M bootstrap parameters</b> tab and in the <b>LWM2M post-operations</b> page.</td>
 <td>DM-1692</td>
 <td>10.16.248.0</td>
@@ -98,8 +105,15 @@ Issue</th>
 </tr>
 
 <tr>
+<td>Connectivity</td>
+<td>Due to a compatibility error of the connectivity microservice with the Kite provider, an error occurred on the metrics page, when the monthly consumption data was an out-of-scope integer. This has been fixed by changing the data type.</td>
+<td>DM-1566</td>
+<td>10.17.0.112</td>
+</tr>
+
+<tr>
 <td>Device Management</td>
-<td>When removing a device which has child devices, users can now choose either to remove a device user or to remove all child devices. Prior to this change, it was possible to choose both options in the UI, but such an action is not supported by the backend.</td>
+<td>When removing a device which has child devices, users can now select either to remove a device user or to remove all child devices. Prior to this change, it was possible to select both options in the UI, but such an action is not supported by the backend.</td>
 <td>MTM-45277</td>
 <td>10.17.0.103</td>
 </tr>

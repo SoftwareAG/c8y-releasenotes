@@ -121,7 +121,7 @@ Microservice API version 2 provides an improved microservice container security 
 
 Refer to [this Linux man page](https://man7.org/linux/man-pages/man7/capabilities.7.html) for more information about these capabilities.
 
-**What you need to do by the 10.15 release**
+**What you must do by the 10.15 release**
 
 Migrate your microservice to the new API version 2. In the simplest case it is sufficient to set the API version 2 in your microservice manifest. However, for microservices which currently make use of Linux Kernel API which requires one of the above-mentioned user privileges you additionally must refactor the source code so that the service doesn’t require the invocation of these privileged Linux Kernel APIs anymore. For details refer to [Microservice migration to API version 2](https://cumulocity.com/guides/10.15.0/microservice-sdk/concept/#migration) in the <i>Microservice SDK guide</i>.
 
@@ -151,7 +151,7 @@ Such a forced log out is no longer needed and will not be implemented, as permis
 
 ##### Updating the Web SDK to Angular 14
 
-As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what needs to be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/10.15.0/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
+As of release 10.16 we plan to update the Web SDK to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what must be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/10.15.0/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
 
 ##### New default branding
 
@@ -322,7 +322,7 @@ To further enhance the security, the above functionalities will be limited to th
 
 ##### Breaking change in the offloading mechanism - deprecation of support for mixed types
 
-In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data needs to be converted.
+In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types in a single column. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake contents containing mixed data types, so corresponding data must be converted.
 
 ##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
 

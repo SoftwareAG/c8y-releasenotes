@@ -40,7 +40,7 @@ In an effort to provide you a more consistent experience across the platform the
 
 Extensible device registration is a new feature that allows microservice developers to implement their own device registration process without explicitly extending a single line of UI source code.
 
-A custom device registration form can be created using JSON schema and some specific endpoints that the microservice needs to provide. This form is then displayed when the user clicks on the corresponding button in a dropdown on the **device registration** page as soon as the microservice is subscribed to the tenant.
+A custom device registration form can be created using JSON schema and some specific endpoints that the microservice must provide. This form is then displayed when the user clicks on the corresponding button in a dropdown on the **device registration** page as soon as the microservice is subscribed to the tenant.
 
 Our revised device registration for LWM2M also uses this feature.
 

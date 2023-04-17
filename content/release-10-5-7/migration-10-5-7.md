@@ -17,4 +17,4 @@ The breadcrumb functionality which is currently available in the Cumulocity IoT 
 
 ### Disabling TLS 1.0 support on all public cloud instances
 
-Encryption based on Transport Layer Security v1.0 will be disabled on all public Cumulocity IoT instances on July 1st, 2020. As all modern browsers do already support by default more recent versions of TLS we do not expect limitations for users. Devices connecting to Cumulocity IoT might need to be updated.
+Encryption based on Transport Layer Security v1.0 will be disabled on all public Cumulocity IoT instances on July 1st, 2020. As all modern browsers do already support by default more recent versions of TLS we do not expect limitations for users. Devices connecting to Cumulocity IoT may need to be updated.

@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.180.0-->
+<!--10.17.1.0 - 10.17.187.0; 10.18.0.0-10.18.0.16-->
 
 ### Improvements
 
@@ -33,6 +33,23 @@ Fix Version</th>
 <td>The step headers "1, 2, 3 ..." of the "Connect smartphone" wizard can no longer be clicked. The navigation now works exclusively via the buttons in the footer of the wizard. Moreover, the text which is displayed if an error occurs during the registration has been revised. If the last step ends in an error message, the last header now also reflects this error status.</td>
 <td>DM-1930</td>
 <td>10.17.25.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Two new LWM2M shell commands have been added.
+- The new <code>executelegacy</code> command allows LWM2M execute requests with non-standard LWM2M parameters. The behavior of this operation resembles the semantics of the existing <code>execute</code> operation until version 10.15.
+- The new <code>coap</code> shell command enables making raw CoAP requests to devices to facilitate non-standard communication in exceptional cases.
+<br>Refer to the <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#shell-commands" class="no-ajaxy">LWM2M > Handling LWM2M shell commands<a/> in the <i>Protocol integration guide</i> for details on these operations.</td>
+<td>DM-2153</td>
+<td>10.18.0.6</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The performance of the <code>migrateLwm2mDevices</code> operation has been improved. New command line arguments were introduced with the operation. A list of legacy LWM2M devices can be directly specified from the shell command. Moreover, the migration of the LWM2M client registration objects can also be skipped using an argument. For details, refer to <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#migration-of-the-lwm2m-devices" class="no-ajaxy">LWM2M > LWM2M connector device > Migration of the LWM2M devices<a/> in the <i>Protocol integration guide</i>.</td>
+<td>DM-1866</td>
+<td>10.18.0.5</td>
 </tr>
 
 <tr>
@@ -72,6 +89,13 @@ Issue</th>
 Fix Version</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device Management</td>
+<td>On the <b>Services</b> tab in the device details, the filter for the "Status" column did not work properly and did not return any results when filtering was applied. This is now fixed.</td>
+<td>DM-2002</td>
+<td>10.17.186.0</td>
+</tr>
 
 <tr>
 <td>Device Management</td>
@@ -117,6 +141,20 @@ Fix Version</th>
 
 <tr>
 <td>LWM2M</td>
+<td>The "TYPE" CSV column is now treated as case-insensitive in the LWM2M bulk device registration. This means that the device type gets properly assigned, no matter if "type", "TYPE", "Type" or other variants are used in the CSV file.</td>
+<td>DM-2120</td>
+<td>10.17.185.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M agent now ensures that a LWM2M client registration is expired and removed from the database if the LWM2M client does not update its registration within the respective registration lifetime period.</td>
+<td>DM-1895</td>
+<td>10.17.185.0</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>During the LWM2M client registration, if the agent failed to find the registered device from the database due to a communication problem, an internal object related to the device managed object was automatically removed by the agent. Afterwards, LWM2M clients always failed to connect. This is now fixed and the internal object is only removed if the actual device managed object does not exist in the database.</td>
 <td>DM-2131</td>
 <td>10.17.178.0</td>
@@ -131,7 +169,7 @@ Fix Version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>LWM2M</td>
 <td>Due to a limitation of the Leshan library used by the LWM2M agent, only device registration messages were supported where the LWM2M version is attached to the LWM2M object. The LWM2M agent has now been extended to also accept LWM2M registration messages where the LWM2M version is attached to the LWM2M object instance.</td>
 <td>DM-1893</td>
 <td>10.17.169.0</td>

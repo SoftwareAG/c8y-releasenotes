@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.180.0-->
+<!--10.17.1.0 - 10.17.187.0; 10.18.0.0-10.18.0.16-->
 
 ### Improvements
 
@@ -23,8 +23,15 @@ Fix Version</th>
 
 <tr>
 <td>Authentication</td>
-<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+<td>In the single sign-on configuration page, users can now enable and configure the external token validation process. For details, see <a href="https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-single-sign-on" class="no-ajaxy">Administration > Configuring single sign-on<a/> in the <i>User guide</i>.</td>
+<td>MTM-49801</td>
+<td>10.18.0.8</td>
+</tr>
 
+
+<tr>
+<td>Authentication</td>
+<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
 <td>MTM-52049</td>
 <td>10.17.164.0</td>
 </tr>
@@ -89,6 +96,21 @@ Fix Version</th>
 
 <tr>
 <td>REST API</td>
+<td>The performance of GET requests on the <code>/user/users</code> endpoint has been improved by better utilization of database indexes.</td>
+<td>MTM-52566</td>
+<td>10.18.0.9</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>The performance of the Inventory API has been improved by removing two additional database queries for GET <code>/managedObjects</code>.</td>
+<td>MTM-51973</td>
+<td>10.18.0.7</td>
+</tr>
+
+
+<tr>
+<td>REST API</td>
 <td>The performance of the Identity API <code>GET /externalIds/{type}/{externalId}</code> method has been improved.</td>
 <td>MTM-50837</td>
 <td>10.17.122.0</td>
@@ -111,6 +133,13 @@ Issue</th>
 Fix Version</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>In the files repository, an issue has been fixed where the counter of the total files number displayed an incorrect value or was not displayed at all.</td>
+<td>MTM-52710</td>
+<td>10.18.0.4</td>
+</tr>
 
 <tr>
 <td>Administration</td>

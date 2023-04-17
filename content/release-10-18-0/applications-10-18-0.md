@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.180.0-->
+<!--10.17.1.0 - 10.17.187.0; 10.18.0.0-10.18.0.16-->
 
 ### Improvements
 

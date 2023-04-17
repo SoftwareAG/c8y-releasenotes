@@ -100,7 +100,7 @@ For example, if a user sends a request in the following format:
 currently the whole payload is saved. In the future, the `c8y_LatestMeasurements` fragment will be ignored and not saved.
 
 ##### Breaking change in the Map widget
-With version 10.18 the Map Widget will be migrated and the support for realtime updates on all devices will be removed by an configurable refresh interval. This will allow us to display more then 100 devices on the map by default. Additionally the Map Widget will not support the "show track" option anymore.
+With release 10.18, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
 
 #### Implemented
 

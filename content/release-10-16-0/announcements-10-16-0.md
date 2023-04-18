@@ -9,6 +9,7 @@ layout: bundle
 #### Planned
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
+
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.17+, a SmartREST 2.0 DATE field used as a custom property will be stored as a string in the Cumulocity IoT database.
 This affects the REST response format.
 
@@ -71,6 +72,34 @@ This change affects the following APIs:
 * `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
+##### Breaking change in the Inventory API - restrictions for a set of properties
+
+As of release 10.18+, a set of properties in the Inventory API will be restricted to internal system usage and cannot be set by external users. This change is motivated by planned features and future use cases.
+
+In case of a request sent with these properties, they will be ignored by the platform and not set.
+
+This change applies to the following fragments: `c8y_LatestMeasurements`, `c8y_LatestEvents`, `c8y_LatestAlarms`, `c8y_LatestOperations`, `c8y_LastAlarm`, `c8y_LastEvent`, `c8y_LastOperation`.
+
+For example, if a user sends a request in the following format:
+
+```
+{
+    "name": "testDevice",
+    "owner": "device_654321",
+    "c8y_IsDevice": {},
+    "c8y_LatestMeasurements":{
+      "c8y_Temperature":{
+         "T": :{
+            "value" : 25.4,
+            "unit" : "C"
+         }
+      }
+    }
+}
+```
+
+currently the whole payload is saved. In the future, the `c8y_LatestMeasurements` fragment will be ignored and not saved.
+
 #### Implemented
 
 ##### Breaking change in the Measurements API - several APIs will no longer be supported when "enhanced time-series support" is enabled
@@ -123,7 +152,13 @@ declaration for applications to start. Refer to the [Spring Security documentati
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), as of release 10.17, we will update the default branding for all Cumulocity IoT default applications. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
 
 ##### The Web SDK extension HOOK_SEARCH will be refactored
+
 The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
+
+##### Breaking change in the Map widget
+
+With release 10.18, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
+
 
 #### Implemented
 

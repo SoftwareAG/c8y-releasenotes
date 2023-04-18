@@ -62,9 +62,6 @@ This change is required to make the API consistent with the HTTP protocol semant
 
 As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
 
-##### Breaking change in the Map widget
-As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), with release 10.18+, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
-
 #### Implemented
 
 ##### Breaking change in SmartREST 2.0 - DATE field used as custom property will be stored as string
@@ -152,6 +149,10 @@ To process this new token type, Cumulocity IoT uses the [Nimbus JOSE + JWT](http
 ##### The Web SDK extension HOOK_SEARCH will be refactored
 
 The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), as of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
+
+##### Breaking change in the Map widget
+
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), with release 10.18+, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
 
 #### Implemented
 

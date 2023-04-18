@@ -63,7 +63,7 @@ This change is required to make the API consistent with the HTTP protocol semant
 As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
 
 ##### Breaking change in the Map widget
-With release 10.18, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), with release 10.18+, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
 
 #### Implemented
 

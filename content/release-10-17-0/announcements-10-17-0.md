@@ -236,6 +236,22 @@ instead of
 
 `sag_apama_correlator_user_httpServer_instance_5_metricname`
 
+### Cumulocity IoT DataHub
+
+#### Planned
+
+##### Breaking change in the offloading mechanism - deprecation of support for mixed types
+
+In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.
+
+##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
+
+In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.
+
+##### Breaking change in the offloading mechanism - removal of history column in alarms collection
+
+In a future release of Cumulocity IoT core the history attribute will be removed from the alarms. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake table still includes the history column, but for new offloading runs the value will not be included anymore and thus will be null.
+
 ### Cumulocity IoT Machine Learning
 
 #### Planned

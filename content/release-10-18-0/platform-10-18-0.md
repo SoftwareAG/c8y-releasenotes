@@ -23,7 +23,7 @@ Fix Version</th>
 
 <tr>
 <td>Authentication</td>
-<td>In the single sign-on configuration page, users can now enable and configure the external token validation process. For details, see <a href="https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-single-sign-on" class="no-ajaxy">Administration > Configuring single sign-on<a/> in the <i>User guide</i>.</td>
+<td>In the single sign-on configuration page, users can now enable and configure the validation of external tokens. For details, see <a href="https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-single-sign-on" class="no-ajaxy">Administration > Configuring single sign-on<a/> in the <i>User guide</i>.</td>
 <td>MTM-49801</td>
 <td>10.18.0.8</td>
 </tr>

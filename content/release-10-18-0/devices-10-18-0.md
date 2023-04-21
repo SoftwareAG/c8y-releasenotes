@@ -38,16 +38,16 @@ Fix Version</th>
 <tr>
 <td>LWM2M</td>
 <td>Two new LWM2M shell commands have been added.
-- The new <code>executelegacy</code> command allows LWM2M execute requests with non-standard LWM2M parameters. The behavior of this operation resembles the semantics of the existing <code>execute</code> operation until version 10.15.
-- The new <code>coap</code> shell command enables making raw CoAP requests to devices to facilitate non-standard communication in exceptional cases.
-<br>Refer to the <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#shell-commands" class="no-ajaxy">LWM2M > Handling LWM2M shell commands<a/> in the <i>Protocol integration guide</i> for details on these operations.</td>
+<br>- The new <code>executelegacy</code> command allows LWM2M execute requests with non-standard LWM2M parameters. The behavior of this operation resembles the semantics of the existing <code>execute</code> operation until version 10.15.
+<br>- The new <code>coap</code> shell command enables making raw CoAP requests to devices to facilitate non-standard communication in exceptional cases.
+<br>Refer to <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#shell-commands" class="no-ajaxy">LWM2M > Handling LWM2M shell commands<a/> in the <i>Protocol integration guide</i> for details on these operations.</td>
 <td>DM-2153</td>
 <td>10.18.0.6</td>
 </tr>
 
 <tr>
 <td>LWM2M</td>
-<td>The performance of the <code>migrateLwm2mDevices</code> operation has been improved. New command line arguments were introduced with the operation. A list of legacy LWM2M devices can be directly specified from the shell command. Moreover, the migration of the LWM2M client registration objects can also be skipped using an argument. For details, refer to <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#migration-of-the-lwm2m-devices" class="no-ajaxy">LWM2M > LWM2M connector device > Migration of the LWM2M devices<a/> in the <i>Protocol integration guide</i>.</td>
+<td>The performance of the <code>migrateLwm2mDevices</code> operation has been improved. New command line arguments have been introduced with the operation. A list of legacy LWM2M devices can be specified directly from the shell command. Moreover, the migration of the LWM2M client registration objects can be skipped b< using an argument. For details, refer to <a href="https://cumulocity.com/guides/protocol-integration/lwm2m/#migration-of-the-lwm2m-devices" class="no-ajaxy">LWM2M > LWM2M connector device > Migration of the LWM2M devices</a> in the <i>Protocol integration guide</i>.</td>
 <td>DM-1866</td>
 <td>10.18.0.5</td>
 </tr>
@@ -71,6 +71,13 @@ Fix Version</th>
 <td>The OPC UA device gateway can now be run with Thin Edge. The gateway device is automatically created as a child of the Thin Edge device. For more information on the configurations, refer to the Thin Edge section in <a href="https://cumulocity.com/guides/10.18.0/protocol-integration/opcua/#gateway-register" class="no-ajaxy">OPC UA > Gateway configuration and registration<a/> in the <i>Protocol integration guide</i>.</td>
 <td>DM-887</td>
 <td>10.17.174.0</td>
+</tr>
+
+<tr>
+<td>SmartREST 2.0</td>
+<td>A new SmartREST static template (201) for creating measurements with multiple fragments and series has been added.</td>
+<td>DM-1860</td>
+<td>10.18.0.21</td>
 </tr>
 
 </tbody></table></div>

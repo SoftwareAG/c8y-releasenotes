@@ -93,6 +93,13 @@ Fix Version</th>
 
 <tr>
 <td>Web SDK</td>
+<td>It is now possible to remove a file when updating its file property within a complex property of an asset.</td>
+<td>MTM-51514</td>
+<td>10.18.0.28</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
 <td>The Web SDK is now versioned independently from the backend.</td>
 <td>MTM-50809</td>
 <td>10.17.106.0</td>
@@ -132,6 +139,20 @@ Fix Version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>The asset property of type Boolean no longer shows "undefined" but correctly shows "false" when its value is <code>false</code>.</td>
+<td>MTM-51513</td>
+<td>10.18.0.28</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Improved the localization of dialog window titles for adding and editing dashboards and reports.</td>
+<td>MTM-51106</td>
+<td>10.18.0.22</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>The datapoint library now correctly parses older datapoint library entries, which stored numeric values as strings instead of numbers in the JSON object.</td>
 <td>MTM-51785</td>
 <td>10.17.121.0</td>
@@ -157,6 +178,13 @@ Fix Version</th>
 <td>If the DTM asset custom property is declared as required and complex, all of its subproperties are required too.</td>
 <td>MTM-50101</td>
 <td>10.17.12.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The optional links of a package shown in the packages details now point to the right location.</td>
+<td>MTM-52691</td>
+<td>10.18.0.7</td>
 </tr>
 
 <tr>

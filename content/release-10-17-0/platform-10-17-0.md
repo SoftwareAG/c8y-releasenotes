@@ -4,7 +4,7 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.122-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.134-->
 
 ### Improvements
 
@@ -36,7 +36,6 @@ Fix Version</th>
 <td>MTM-49607</td>
 <td>10.16.260.0</td>
 </tr>
-
 
 <tr>
 <td>Core platform</td>
@@ -73,6 +72,27 @@ Prior to this change, the existence of the measurement was only validated for pe
 <td>Users can now disable (or enable) all in-product information & communication options. Prior to this change, users could only opt-out from the  Knowledge Hub (product experience tracking).</td>
 <td>MTM-48214</td>
 <td>10.16.79.0</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>The performance of GET requests on the <code>/user/users</code> endpoint has been improved by better utilization of database indexes.</td>
+<td>MTM-52566</td>
+<td>10.17.0.1241</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>The performance of the Inventory API has been improved by removing two additional database queries for GET <code>/managedObjects</code>.</td>
+<td>MTM-51973</td>
+<td>10.17.0.123</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>The REST API endpoint <code>/application/applications/{id}/logs</code> so far required the role ROLE_APPLICATION_MANAGEMENT_ADMIN. This has been changed. The endpoint now requires either the ROLE_APPLICATION_MANAGEMENT_ADMIN or ROLE_APPLICATION_MANAGEMENT_READ.</td>
+<td>MTM-52028</td>
+<td>10.17.0.107</td>
 </tr>
 
 <tr>
@@ -115,7 +135,6 @@ Fix Version</th>
 <td>MTM-49427</td>
 <td>10.17.0.120</td>
 </tr>
-
 
 <tr>
 <td>Administration</td>

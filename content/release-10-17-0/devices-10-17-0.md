@@ -4,7 +4,7 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.122-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.134-->
 
 ### Improvements
 
@@ -109,6 +109,14 @@ Issue</th>
 <td>Due to compatibility issues of the connectivity microservice with the Kite provider, an error occurred on the metrics page, when the monthly consumption data was an out-of-scope integer. This has been fixed by changing the data type.</td>
 <td>DM-1566</td>
 <td>10.17.0.112</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>SmartREST Inventory GET templates created in the UI did not generate responses when there was no external ID type declared in the template. This issue has been addressed for both existing and newly created templates.</td>
+<td>DM-2126</td>
+<td>10.17.0.119</td>
+
 </tr>
 
 <tr>
@@ -258,6 +266,23 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>Events created by the Loriot agent when sending uplink requests are now considered device requests and provide connectivity status and availability monitoring.</td>
 <td>DM-2139</td>
 <td>10.17.0.81</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Multi-line LWM2M post-operations were not executed right after the LWM2M device's new registration when realtime was disabled for the tenant who owns the device. As a result the device might not receive these operations until the next LWM2M device's registration update. This issue is now resolved and LWM2M post-operations are executed right after the LWM2M device's new registration, no matter whether realtime is enabled or not for this kind of devices.</td>
+<td>DM-2100</td>
+<td>10.17.0.127</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Two new LWM2M shell commands have been added.
+<br>- The new <code>executelegacy</code> command allows LWM2M execute requests with non-standard LWM2M parameters. The behavior of this operation resembles the semantics of the existing <code>execute</code> operation until version 10.15.
+<br>- The new <code>coap</code> shell command enables making raw CoAP requests to devices to facilitate non-standard communication in exceptional cases.
+<br>For details, refer to <a href="https://cumulocity.com/guides/10.17.0/guides/protocol-integration/lwm2m/#shell-commands" class="no-ajaxy">LWM2M > Handling LWM2M shell commands<a/> in the <i>Protocol integration guide</i>.</td>
+<td>DM-2153</td>
+<td>10.17.0.122</td>
 </tr>
 
 <tr>

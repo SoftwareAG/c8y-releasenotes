@@ -7,39 +7,40 @@ layout: bundle
 Release 10.18.0 includes the following new features or major feature enhancements.
 
 ### Application enablement
-#### Global Time Selector for dashboards
+#### Global time selector for dashboards
 
-A new global time context feature has been introduced, allowing users to apply a consistent time context (e.g., display data from the last hour, last month, etc.) across an entire dashboard. Widget developers can now set the global time context for the whole dashboard or a particular widget. Widgets bound to the global time context are marked accordingly. Users can also share dashboards with a specific time context by including the time context parameters in a URL.
+It is now possible to specify a global time context, which allows users to align all data on a dashboard to the same time range, for example, the last hour or last month. Widget developers can set the global time for the entire dashboard or particular widgets. Users can also share dashboards with a specific time context by including the time context parameters in a URL.
 
-The global time context is available for the following existing widgets: Event list, Data points graph, and Data points table.
+The global time context is currently available for the following widgets: Event list, Data points graph, and Data points table.
 
 #### Map feature migration and enhancements
 
 The map feature has been migrated from AngularJS to Angular, bringing along several improvements and modifications:
 
-Breaking changes:
+Breaking change:
 * Real-time tracking has been limited to a single device at a time.
   
-New features:
+New functionalities:
 
 * A device can now be followed in real-time.
 * Device icons can be customized.
 * Zoom level adjustments have been introduced.
-* Center point settings have been added.
+* Center point settings have been added to the map, allowing users to designate a specific point for the map to consistently center on. Users can also utilize their current location as the central point. The map will remain centered on this point when refreshing the page or navigating back from another tab.
 * Clustering support has been implemented to handle a high number of devices.
 * Devices are now loaded exclusively within the visible map area.
 * Refresh polling capabilities have been incorporated for multiple devices, allowing users to adjust the polling interval as needed.
 
-#### Improvements in the packages view
+#### Improvements in the Packages tab
 
-Several improvements have been made to the packages view:
-* When deploying a blueprint or installing a plugin, users are now informed about the license that needs to be approved before proceeding further.
+Several improvements have been made to the **Packages** tab:
+* To improve the user experience, the **Packages** tab has been renamed to "Extensions" and added to the navigator as a new separate entry.
+* When deploying a blueprint or installing a plugin, users are now informed about the license that must be approved before proceeding further.
 * The extensions view has been improved with additional information about package types, offering better transparency about their origin and trustworthiness:
   * OFFICIAL: Packages coming from the official Software AG GitHub Enterprise.
   * COMMUNITY: Packages provided by connected partner repositories.
-  * UNKNOWN: Packages with unknown origins (e.g., uploaded to the management system with an unknown label).
+  * UNKNOWN: Packages with unknown origins, for example, uploaded to the management system with an unknown label.
   * CUSTOM: Custom packages uploaded to the tenant by a user.
-* To improve the user experience, the packages tab has been renamed to "extensions" and moved to the navigator as a new separate entry.
+
 
 
 ### Authentication

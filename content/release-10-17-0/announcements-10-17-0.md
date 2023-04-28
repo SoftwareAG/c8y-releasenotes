@@ -58,9 +58,18 @@ As of release 10.19+, if the deletion of a managed object and its dependencies d
 The return code will still be 204 if the control can be returned immediately.
 This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
-##### Breaking change in REST APIs
+##### Breaking change in all REST APIs
 
 As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
+
+As of release 10.19+, the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
+A `withTotalPages=true` parameter has to be explicitly provided to the requests when `totalPages` is expected.
+
+For example:
+`GET /user/users?pageSize=1000` does not return `totalPages` statistics.
+`GET /user/users?withTotalPages=true` does return `totalPages` statistics.
+
+The change is enforced by performance reasons.
 
 #### Implemented
 

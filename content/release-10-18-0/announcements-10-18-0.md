@@ -14,6 +14,17 @@ As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of
 The return code will still be 204 if the control can be returned immediately.
 This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
+##### Breaking change in all REST APIs
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.19+, 
+the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
+A `withTotalPages=true` parameter has to be explicitly provided to the requests when `totalPages` is expected.
+
+For example:
+`GET /user/users?pageSize=1000` does not return `totalPages` statistics.
+`GET /user/users?withTotalPages=true` does return `totalPages` statistics.
+
+The change is enforced by performance reasons.
+
 #### Implemented
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties

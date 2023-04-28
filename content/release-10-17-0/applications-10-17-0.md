@@ -4,7 +4,7 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.122-->
+<!--10.16.1.0 - 10.16.260.0; 10.17.0.134-->
 
 ### Improvements
 
@@ -90,6 +90,13 @@ Issue</th>
 Fix Version</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>Improved the localization of the dialog window titles for adding and editing dashboards and reports.</td>
+<td>MTM-51106</td>
+<td>10.17.0.130</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -201,6 +208,13 @@ Fix Version</th>
 <td>Resizing widgets on smartphones now depends on the size and orientation of the screen.</td>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The optional links of a package shown in the packages details now point to the right location.</td>
+<td>MTM-52691</td>
+<td>10.17.0.118</td>
 </tr>
 
 <tr>

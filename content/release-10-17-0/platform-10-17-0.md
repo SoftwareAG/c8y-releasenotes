@@ -111,6 +111,14 @@ Fix Version</th>
 
 <tr>
 <td>Administration</td>
+<td>Fixed an issue with the device request counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
+<td>MTM-49427</td>
+<td>10.17.0.120</td>
+</tr>
+
+
+<tr>
+<td>Administration</td>
 <td>UTF-8 characters are now supported in names of files downloaded from the files repository with the export functionality.</td>
 <td>MTM-46346</td>
 <td>10.17.0.51</td>
@@ -135,14 +143,6 @@ Fix Version</th>
 <td>Providing a non-existing tenant ID when resetting the password will no longer cause a server error.</td>
 <td>MTM-45633</td>
 <td>10.16.13.0</td>
-</tr>
-
-<tr>
-<td>Authentication</td>
-<td>Fixed an issue with the device request counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
-
-<td>MTM-49427</td>
-<td>10.17.0.120</td>
 </tr>
 
 <tr>

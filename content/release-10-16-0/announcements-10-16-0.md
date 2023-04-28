@@ -179,9 +179,12 @@ The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a 
 
 #### Planned
 
-##### Analytics Builder - Deprecation of Machine Learning
+##### Deprecation of Machine Learning
 
-The Machine Learning block for Analytics Builder is deprecated and will be removed in a future release. This is in line with the deprecation of [Machine Learning Engine](#machine-learning-deprecation).
+The **Machine Learning** block in Analytics Builder is deprecated and will be removed in a future release.
+In addition, the EPL Apps sample "Call another microservice", which uses the Zementis microservice, has been renamed to "Call Zementis microservice".
+This sample is now deprecated and will also be removed in a future release.
+This is in line with the deprecation of [Machine Learning Engine](#machine-learning-deprecation).
 
 #### Implemented
 

@@ -9,7 +9,8 @@ layout: bundle
 ### Improvements
 
 <div><table ><colgroup>
-<col style="width: 15%;"><col style="width: 55%;"><col style="width: 15%;"><col style="width: 15%;"></colgroup><thead><tr>
+<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<thead><tr>
 <th>
 Component</th>
 <th>
@@ -17,16 +18,25 @@ Description</th>
 <th>
 Issue</th>
 <th>
-Fix Version</th>
+Build version</th>
+<th>Part</th>
 </tr>
 </thead><tbody>
 
 <tr>
 <td>Authentication</td>
-<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+<td>In the SSO configuration page, users can now enable and configure the external token validation.</td>
+<td>MTM-49801</td>
+<td>10.18.0.8</td>
+<td>UI</td>
+</tr>
 
+<tr>
+<td>Authentication</td>
+<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
 <td>MTM-52049</td>
 <td>10.17.164.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -34,6 +44,15 @@ Fix Version</th>
 <td>In the single sign-on configuration page, the input fields for the body and the URL of request tokens have been enlarged to show more data.</td>
 <td>MTM-50381</td>
 <td>10.17.66.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The performance of GET requests on the <code>/user/users</code> endpoint has been improved by better utilization of database indexes.</td>
+<td>MTM-52566</td>
+<td>10.18.0.9</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -41,6 +60,7 @@ Fix Version</th>
 <td>The usability of the platform email communication dialogs has been improved.</td>
 <td>MTM-51735</td>
 <td>10.17.130.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -48,6 +68,7 @@ Fix Version</th>
 <td>In the files repository, a preview button for image and video files has been added.</td>
 <td>MTM-51562</td>
 <td>10.17.116.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -55,6 +76,7 @@ Fix Version</th>
 <td>The files repository view now uses the new data grid component. Filtering and sorting of files is now available. Additionally it is possible to select multiple files for bulk removal operations.</td>
 <td>MTM-49740</td>
 <td>10.17.73.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -70,6 +92,7 @@ Fix Version</th>
 <td>In order to address the CVE-2022-33681 vulnerability, the pulsar-client version has been updated to version 2.8.4.</td>
 <td>MTM-50283</td>
 <td>10.17.100.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -78,6 +101,7 @@ Fix Version</th>
 </td>
 <td>MTM-49607</td>
 <td>10.17.25.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -89,9 +113,18 @@ Fix Version</th>
 
 <tr>
 <td>REST API</td>
+<td>The performance of the Inventory API has been improved by removing two additional database queries for GET <code>/managedObjects</code>.</td>
+<td>MTM-51973</td>
+<td>10.18.0.7</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>REST API</td>
 <td>The performance of the Identity API <code>GET /externalIds/{type}/{externalId}</code> method has been improved.</td>
 <td>MTM-50837</td>
 <td>10.17.122.0</td>
+<td>Core</td>
 </tr>
 
 </tbody></table></div>
@@ -100,7 +133,8 @@ Fix Version</th>
 ### Fixes
 
 <div><table ><colgroup>
-<col style="width: 15%;"><col style="width: 55%;"><col style="width: 15%;"><col style="width: 15%;"></colgroup><thead><tr>
+<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<thead><tr>
 <th>
 Component</th>
 <th>
@@ -108,9 +142,42 @@ Description</th>
 <th>
 Issue</th>
 <th>
-Fix Version</th>
+Build version</th>
+<th>Part</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue with the names of the files downloaded from the platform (for example, from the file repository or from event attachments). UTF-8 characters, for example, in the Japanese localization, are no longer missing, if the file name includes special characters like "+".</td>
+<td>MTM-53056</td>
+<td>10.18.0.42</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Context help has been added in the <b>Extensions</b> page.</td>
+<td>MTM-50209</td>
+<td>10.18.0.34</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Redundant activity log entries in the application details are now filtered out.</td>
+<td>MTM-52309</td>
+<td>10.18.0.26</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>In the files repository, an issue has been fixed where the counter of the total files number displayed an incorrect value or was not displayed at all.</td>
+<td>MTM-52710</td>
+<td>10.18.0.4</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -131,6 +198,7 @@ Fix Version</th>
 <td>In order to address the CVE-2022-41881 vulnerability, the Netty version has been updated to version "4.1.89.Final".</td>
 <td>MTM-51428</td>
 <td>10.17.100.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -138,6 +206,7 @@ Fix Version</th>
 <td>To fix a security issue, the vulnerable library jackson-databind was upgraded to version 2.14.1.</td>
 <td>MTM-51431</td>
 <td>10.17.67.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -145,6 +214,7 @@ Fix Version</th>
 <td>Fixed a branding issue where the background color and the primary label were not using the brand color.</td>
 <td>MTM-50807</td>
 <td>10.17.86.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -159,6 +229,7 @@ Fix Version</th>
 <td>In the Cockpit application, several security issues in the HTML widget have been fixed.</td>
 <td>MTM-50921</td>
 <td>10.17.52.0</td>
+<td>UI</td>
 </tr>
 
 

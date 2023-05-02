@@ -9,7 +9,8 @@ layout: bundle
 ### Improvements
 
 <div><table ><colgroup>
-<col style="width: 15%;"><col style="width: 55%;"><col style="width: 15%;"><col style="width: 15%;"></colgroup><thead><tr>
+<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<thead><tr>
 <th>
 Component</th>
 <th>
@@ -17,7 +18,8 @@ Description</th>
 <th>
 Issue</th>
 <th>
-Fix Version</th>
+Build version</th>
+<th>Part</th>
 </tr>
 </thead><tbody>
 
@@ -26,6 +28,7 @@ Fix Version</th>
 <td>The "Rotation" widget has been migrated to Angular.</td>
 <td>MTM-50847</td>
 <td>10.17.68.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -33,6 +36,7 @@ Fix Version</th>
 <td>Widgets that use the global date context are now marked with an icon and a corresponding tooltip.</td>
 <td>MTM-51225</td>
 <td>10.17.68.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -40,6 +44,7 @@ Fix Version</th>
 <td>It is now possible to use a global time range in "Data point table" widgets so that you can align all data point graphs on a dashboard to the same time range without setting each time range individually.</td>
 <td>MTM-50924</td>
 <td>10.17.68.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -47,6 +52,7 @@ Fix Version</th>
 <td>It is now possible to a the global time range in "Event list" widgets so that you can align all data point graphs on a dashboard to the same time range without setting each time range individually.</td>
 <td>MTM-50925</td>
 <td>10.17.67.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -54,6 +60,7 @@ Fix Version</th>
 <td>It is now possible to use a global time range in "Data point graph" widgets so that you can align all data point graphs on a dashboard to the same time range without setting each time range individually.</td>
 <td>MTM-48198</td>
 <td>10.17.11.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -61,6 +68,7 @@ Fix Version</th>
 <td>The Smartrule agent now uses the Microservice API 2.</td>
 <td>MTM-48740</td>
 <td>10.17.178.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -68,6 +76,7 @@ Fix Version</th>
 <td>The Report agent now uses the Microservice API 2.</td>
 <td>MTM-48736</td>
 <td>10.17.178.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -75,6 +84,7 @@ Fix Version</th>
 <td>The Echo agent now uses the Microservice API 2.</td>
 <td>MTM-48729</td>
 <td>10.17.178.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -82,6 +92,7 @@ Fix Version</th>
 <td>The Java SDK and the Microservice SDK are now compatible with Java 17.</td>
 <td>MTM-44319</td>
 <td>10.17.114.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -89,6 +100,15 @@ Fix Version</th>
 <td>Context help has been added to various tabs such as <b>Dashboard</b> and <b>Subassets</b>.</td>
 <td>MTM-51868</td>
 <td>10.17.171.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>It is now possible to remove a file when updating its file property within a complex property of an asset.</td>
+<td>MTM-51514</td>
+<td>10.18.0.25</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -96,6 +116,7 @@ Fix Version</th>
 <td>The Web SDK is now versioned independently from the backend.</td>
 <td>MTM-50809</td>
 <td>10.17.106.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -103,6 +124,7 @@ Fix Version</th>
 <td>It is now possible to open a blueprint directly after the installation has finished.</td>
 <td>MTM-50637</td>
 <td>10.17.47.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -110,7 +132,9 @@ Fix Version</th>
 <td>The <code>HOOK_COMPONENTS</code> now allows to lazily load the components used, for example, within widgets by utilizing the <code>loadComponent</code> and <code>loadConfigComponent</code> attributes of the <code>DynamicComponentDefinition</code> type (see <a href="https://resources.cumulocity.com/documentation/websdk/1016.0.110/ngx-components/interfaces/LazyDynamicComponents.html" class="no-ajaxy">https://resources.cumulocity.com/documentation/websdk/1016.0.110/ngx-components/interfaces/LazyDynamicComponents.html</a>).</td>
 <td>MTM-51161</td>
 <td>10.17.27.0</td>
+<td>UI</td>
 </tr>
+
 
 </tbody></table></div>
 
@@ -118,7 +142,8 @@ Fix Version</th>
 ### Fixes
 
 <div><table ><colgroup>
-<col style="width: 15%;"><col style="width: 55%;"><col style="width: 15%;"><col style="width: 15%;"></colgroup><thead><tr>
+<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<thead><tr>
 <th>
 Component</th>
 <th>
@@ -126,9 +151,42 @@ Description</th>
 <th>
 Issue</th>
 <th>
-Fix Version</th>
+Build version</th>
+<th>Part</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>The latest events are now correctly displayed in the data point graph, even if a custom interval has been selected.</td>
+<td>MTM-52175</td>
+<td>10.18.0.40</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The table used for the SCADA widget configuration has been replaced by a list group, allowing better visualization of data and actions.</td>
+<td>MTM-51932</td>
+<td>10.18.0.31</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The asset property of type Boolean now shows "false" instead of "Undefined" when it's value is "false".</td>
+<td>MTM-51513</td>
+<td>10.18.0.24</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Improved the localization of the dialog window titles for adding and editing dashboards and reports.</td>
+<td>MTM-51106</td>
+<td>10.18.0.22</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -142,14 +200,15 @@ Fix Version</th>
 <td>An issue has been fixed that caused AngularJS widgets to not show up in the "Add widget" dialog.</td>
 <td>MTM-51482</td>
 <td>10.17.67.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
 <td>Web SDK</td>
 <td>Opening the widget configuration for a micro frontend plugin multiple times does no longer cause performance issues in the UI.</td>
-
 <td>MTM-50306</td>
 <td>10.17.53.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -157,6 +216,15 @@ Fix Version</th>
 <td>If the DTM asset custom property is declared as required and complex, all of its subproperties are required too.</td>
 <td>MTM-50101</td>
 <td>10.17.12.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The optional links of a package shown in the packages details now point to the right location.</td>
+<td>MTM-52691</td>
+<td>10.18.0.7</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -171,6 +239,7 @@ Fix Version</th>
 <td>A toggle has been added to the plugin installation dialog, which allows to filter the plugin versions for only the latest versions or all versions.</td>
 <td>MTM-50901</td>
 <td>10.17.3.0</td>
+<td>UI</td>
 </tr>
 
 <tr>

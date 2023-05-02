@@ -145,9 +145,18 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>Redundant activity log entries in the application details are now filtered out.</td>
+<td>MTM-52309</td>
+<td>10.17.0.1734</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>Fixed an issue with the device request counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
 <td>MTM-49427</td>
 <td>10.17.0.120</td>
+<td>UI</td>
 </tr>
 
 <tr>

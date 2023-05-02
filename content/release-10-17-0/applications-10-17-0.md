@@ -8,8 +8,14 @@ layout: bundle
 
 ### Improvements
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 15%;">
+<col style="width: 10%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -19,7 +25,7 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
 
@@ -80,13 +86,19 @@ A JSON file can be downloaded with more platform details, such as information on
 <td>n/a</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>
 
 
 ### Fixes
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 15%;">
+<col style="width: 10%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -96,7 +108,7 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
 
@@ -357,4 +369,4 @@ In addition the <code>DatapointLibraryModule</code> can now be configured to not
 <td>n/a</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>

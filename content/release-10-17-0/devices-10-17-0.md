@@ -8,8 +8,14 @@ layout: bundle
 
 ### Improvements
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 15%;">
+<col style="width: 10%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -19,7 +25,7 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
 
@@ -88,15 +94,20 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 <td>n/a</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>
 
 
 
 ### Fixes
 
-<div><table >
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table >
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 15%;">
+<col style="width: 10%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -106,7 +117,7 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
 
@@ -463,4 +474,4 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>n/a</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>

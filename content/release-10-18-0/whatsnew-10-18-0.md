@@ -15,7 +15,7 @@ The global time context is currently available for the following widgets: Event 
 
 ![Global time context](/images/release-10-18/global-time-context.png)
 
-For more info, see the [global time context](https://www.cumulocity.com/guides/10.18.0/users-guide/cockpit/#global-time-context) entry in the users guide.
+For details, see [Cockpit > Working with dashboards > Global time context](https://www.cumulocity.com/guides/10.18.0/users-guide/cockpit/#global-time-context) in the *User guide*.
 
 #### Map feature migration and enhancements
 

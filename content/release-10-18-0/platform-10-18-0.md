@@ -4,12 +4,18 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.180.0-->
+<!--10.17.1.0 - 10.17.230.0; 10.18.0.0-10.18.0.33-->
 
 ### Improvements
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -19,7 +25,7 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
 
@@ -105,6 +111,13 @@ Build version</th>
 </tr>
 
 <tr>
+<td>Enterprise tenant</td>
+<td>For more security, the Enterprise tenant configuration email texts have been updated.</td>
+<td>DM-2165</td>
+<td>10.17.189.0</td>
+<td>Core</td>
+
+<tr>
 <td>Performance</td>
 <td>The performance of widgets like the "Data point list", "Data point graph" and "Data point table", has been improved for users with inventory roles access. Moreover, the performance of the "Measurements" tab in the Device Management application and the data explorer in the Cockpit application have been improved.</td>
 <td>MTM-50693</td>
@@ -127,13 +140,19 @@ Build version</th>
 <td>Core</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>
 
 
 ### Fixes
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -143,7 +162,7 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
 
@@ -176,6 +195,13 @@ Build version</th>
 <td>In the files repository, an issue has been fixed where the counter of the total files number displayed an incorrect value or was not displayed at all.</td>
 <td>MTM-52710</td>
 <td>10.18.0.4</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Duplicate plugin installations are now prevented by graying out and disabling already installed plugins in the selection.</td>
+<td>10.17.192.0</td>
 <td>UI</td>
 </tr>
 
@@ -233,4 +259,4 @@ Build version</th>
 </tr>
 
 
-</tbody></table></div>
+</tbody></table>

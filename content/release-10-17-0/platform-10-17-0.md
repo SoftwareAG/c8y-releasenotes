@@ -13,8 +13,8 @@ layout: bundle
 <col style="width: 15%;">
 <col style="width:50%;">
 <col style="width: 10%;">
-<col style="width: 15%;">
-<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
 </colgroup>
 <thead><tr>
 <th>
@@ -139,8 +139,8 @@ Prior to this change, the existence of the measurement was only validated for pe
 <col style="width: 15%;">
 <col style="width:50%;">
 <col style="width: 10%;">
-<col style="width: 15%;">
-<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
 </colgroup>
 <thead><tr>
 <th>

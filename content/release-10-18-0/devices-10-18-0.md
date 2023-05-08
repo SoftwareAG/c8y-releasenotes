@@ -4,12 +4,18 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.180.0-->
+<!--10.17.1.0 - 10.17.230.0; 10.18.0.0-10.18.0.33-->
 
 ### Improvements
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -19,9 +25,17 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device Management</td>
+<td>The Device Management home page now also provides a customizable dashboard so that users can add customized widgets.</td>
+<td>DM-1644</td>
+<td>10.17.194.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device Management</td>
@@ -73,18 +87,40 @@ Build version</th>
 
 <tr>
 <td>SmartREST 2.0</td>
+<td>Added SmartREST static templates for updating the operation status by its internal ID. 504 for setting the status to executing, 505 for failed, 506 for successful.</td>
+<td>DM-1832</td>
+<td>10.17.188.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>SmartREST 2.0</td>
+<td>Added SmartREST static templates for requesting the device's internal ID (123 for request, 124 for response).</td>
+<td>DM-1821</td>
+<td>10.17.188.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>SmartREST 2.0</td>
 <td>Added a new SmartREST static template (201) for creating measurements with multiple fragments and series.</td>
 <td>DM-1860</td>
 <td>10.17.128.0</td>
 <td>Core</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>
 
 ### Fixes
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -94,9 +130,10 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
+
 
 <tr>
 <td>Device Management</td>
@@ -151,6 +188,14 @@ Build version</th>
 <br>For details, refer to <a href="https://cumulocity.com/guides/10.17.0/guides/protocol-integration/lwm2m/#shell-commands" class="no-ajaxy">LWM2M > Handling LWM2M shell commands<a/> in the <i>Protocol integration guide</i>.</td>
 <td>DM-2153</td>
 <td>10.18.0.6</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M agent now ensures that a LWM2M client registration is expired and removed from the database if the LWM2M client does not update its registration within the respective registration lifetime period.</td>
+<td>DM-1895</td>
+<td>10.17.190.0</td>
 <td>Core</td>
 </tr>
 
@@ -214,4 +259,4 @@ Build version</th>
 <td>Core</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>

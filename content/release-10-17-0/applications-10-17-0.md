@@ -13,8 +13,8 @@ layout: bundle
 <col style="width: 15%;">
 <col style="width:50%;">
 <col style="width: 10%;">
-<col style="width: 15%;">
-<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
 </colgroup>
 <thead><tr>
 <th>
@@ -96,8 +96,8 @@ A JSON file can be downloaded with more platform details, such as information on
 <col style="width: 15%;">
 <col style="width:50%;">
 <col style="width: 10%;">
-<col style="width: 15%;">
-<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
 </colgroup>
 <thead><tr>
 <th>

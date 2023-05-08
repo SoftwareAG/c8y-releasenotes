@@ -4,12 +4,18 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.180.0-->
+<!--10.17.1.0 - 10.17.230.0; 10.18.0.0-10.18.0.33-->
 
 ### Improvements
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -19,9 +25,17 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Web SDK</td>
+<td>A real-time indicator has been added to the "Data point table" widget.</td>
+<td>MTM-51537</td>
+<td>10.17.190.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -136,13 +150,19 @@ Build version</th>
 </tr>
 
 
-</tbody></table></div>
+</tbody></table>
 
 
 ### Fixes
 
-<div><table ><colgroup>
-<col style="width: 15%;"><col style="width:50%;"><col style="width: 10%;"><col style="width: 15%;"><col style="width: 10%;"></colgroup>
+<table>
+<colgroup>
+<col style="width: 15%;">
+<col style="width:50%;">
+<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
+</colgroup>
 <thead><tr>
 <th>
 Component</th>
@@ -152,7 +172,7 @@ Description</th>
 Issue</th>
 <th>
 Build version</th>
-<th>Part</th>
+<th>Build comp.</th>
 </tr>
 </thead><tbody>
 
@@ -249,4 +269,4 @@ Build version</th>
 <td>10.17.86.0</td>
 </tr>
 
-</tbody></table></div>
+</tbody></table>

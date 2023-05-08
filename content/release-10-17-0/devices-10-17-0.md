@@ -13,8 +13,8 @@ layout: bundle
 <col style="width: 15%;">
 <col style="width:50%;">
 <col style="width: 10%;">
-<col style="width: 15%;">
-<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
 </colgroup>
 <thead><tr>
 <th>
@@ -105,8 +105,8 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 <col style="width: 15%;">
 <col style="width:50%;">
 <col style="width: 10%;">
-<col style="width: 15%;">
-<col style="width: 10%;">
+<col style="width: 12%;">
+<col style="width: 13%;">
 </colgroup>
 <thead><tr>
 <th>

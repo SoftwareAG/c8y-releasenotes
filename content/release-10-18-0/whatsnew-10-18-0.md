@@ -19,7 +19,7 @@ For more info, see the [global time context](https://www.cumulocity.com/guides/1
 
 #### Map feature migration and enhancements
 
-The map feature has been migrated from AngularJS to Angular, bringing along several improvements and modifications:
+The map feature has been migrated from AngularJS to Angular, bringing along several improvements and modifications.
 
 Breaking change:
 * Real-time tracking has been limited to a single device at a time.
@@ -36,9 +36,11 @@ New functionalities:
 
 ![Map widget improvements](/images/release-10-18/map-widget-improvements.png)
 
-#### Improvements in the Packages tab
+#### Improvements in the Packages/Extensions view
 
-* The **Extensions** page has been improved with additional information about package types, offering better transparency about their origin and trustworthiness:
+The **Packages** tab has been renamed to "Extensions" and added to the navigator as a new separate entry.
+
+*The new **Extensions** page has been improved with additional information about package types, offering better transparency about their origin and trustworthiness:
   * OFFICIAL: Packages coming from the official Software AG GitHub Enterprise.
   * COMMUNITY: Packages provided by connected partner repositories.
   * UNKNOWN: Packages with unknown origins, for example, uploaded to the management system with an unknown label.
@@ -46,11 +48,9 @@ New functionalities:
 
 ![Package labels](/images/release-10-18/package-labels.png)
 
-For more information, see the [extensions entry](https://www.cumulocity.com/guides/10.18.0/users-guide/administration/#extensions) in the administration users guide.
+For more information, see [Administration > Managing applications > Extensions](https://www.cumulocity.com/guides/10.18.0/users-guide/administration/#extensions) in the *User guide*.
 
-Several improvements have been made to the **Packages** tab:
-* To improve the user experience, the **Packages** tab has been renamed to "Extensions" and added to the navigator as a new separate entry.
-* When deploying a blueprint or installing a plugin, users are now informed about the license that must be approved before proceeding further.
+Moreover, when deploying a blueprint or installing a plugin, users are now informed about the license that must be approved before proceeding further.
 
 ![Accept license](/images/release-10-18/accept-license.png)
 

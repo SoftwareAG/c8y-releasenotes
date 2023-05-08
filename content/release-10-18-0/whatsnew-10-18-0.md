@@ -40,7 +40,7 @@ New functionalities:
 
 The **Packages** tab has been renamed to "Extensions" and added to the navigator as a new separate entry.
 
-*The new **Extensions** page has been improved with additional information about package types, offering better transparency about their origin and trustworthiness:
+The new **Extensions** page has been improved with additional information about package types, offering better transparency about their origin and trustworthiness:
   * OFFICIAL: Packages coming from the official Software AG GitHub Enterprise.
   * COMMUNITY: Packages provided by connected partner repositories.
   * UNKNOWN: Packages with unknown origins, for example, uploaded to the management system with an unknown label.

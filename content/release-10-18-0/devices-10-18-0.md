@@ -111,7 +111,7 @@ Build version</th>
 
 <tr>
 <td>SmartREST 2.0</td>
-<td>Added a new SmartREST static template 201 for creating measurements with multiple fragments and series.</td>
+<td>Added the SmartREST static template 201 for creating measurements with multiple fragments and series.</td>
 <td>DM-1860</td>
 <td>10.17.128.0</td>
 <td>Core</td>

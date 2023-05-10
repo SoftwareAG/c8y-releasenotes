@@ -29,13 +29,6 @@ Build version</th>
 </tr>
 </thead><tbody>
 
-<tr>
-<td>Web SDK</td>
-<td>A real-time indicator has been added to the "Data point table" widget.</td>
-<td>MTM-51537</td>
-<td>10.17.190.0</td>
-<td>UI</td>
-</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -119,9 +112,67 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
+<td>When updating blueprints via the UI users now get a notification instead of Cumulocity IoT silently updating in the background.</td>
+
+<td>MTM-50636</td>
+<td>10.17.257.0</td>
+<td>UI</td>
+</tr>
+
+
+<tr>
+<td>Web SDK</td>
 <td>It is now possible to remove a file when updating its file property within a complex property of an asset.</td>
 <td>MTM-51514</td>
 <td>10.18.0.25</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The application switcher is now updated whenever changes to applications have been made within the same browser tab. This covers, for example, the creation of new applications, updates of existing applications or the deletion of applications. Other browser tabs still require a reload to refresh the applications.</td>
+<td>MTM-52060</td>
+<td>10.17.233.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The <code>@ngx-formly/core</code> dependency of <code>@c8y/ngx-components</code> has been upgraded to version 6.1.3.</td>
+<td>DM-1996</td>
+<td>10.17.223.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The <b>Files repository</b> page has been migrated from AngularJS to Angular. It now uses the new data grid with configurable columns which can be filtered or sorted. Moreover, you can now select multiple files for upload. The file search via the search input field is performed on the server side and searches through the entire available data set.</td>
+<td>MTM-51333</td>
+<td>10.17.216.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The <code>DatapointSelectorModule</code> can now be used in a module federation plugin.</td>
+<td>MTM-52251</td>
+<td>10.17.215.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Added examples for developers on how to bundle images correctly into a plugin. These examples are shown when you scaffold a new widget-plugin application with the c8ycli tool.</td>
+<td>MTM-50721</td>
+<td>10.17.205.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>A real-time indicator has been added to the "Data point table" widget.</td>
+<td>MTM-51537</td>
+<td>10.17.190.0</td>
 <td>UI</td>
 </tr>
 
@@ -210,6 +261,30 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>The <b>Properties</b> tab is no longer shown when the associated asset model has no properties.</td>
+<td>MTM-52015</td>
+<td>10.17.270.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed a localization issue in the tooltip of the <b>Load More</b> button in the custom Cockpit application configuration.</td>
+<td>MTM-52177</td>
+<td>10.17.262.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The <b>Properties</b> section is now displayed correctly for newly created assets.</td>
+<td>MTM-50725</td>
+<td>10.17.247.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>The datapoint library now correctly parses older datapoint library entries, which stored numeric values as strings instead of numbers in the JSON object.</td>
 <td>MTM-51785</td>
 <td>10.17.121.0</td>
@@ -220,14 +295,6 @@ Build version</th>
 <td>An issue has been fixed that caused AngularJS widgets to not show up in the "Add widget" dialog.</td>
 <td>MTM-51482</td>
 <td>10.17.67.0</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Web SDK</td>
-<td>Opening the widget configuration for a micro frontend plugin multiple times does no longer cause performance issues in the UI.</td>
-<td>MTM-50306</td>
-<td>10.17.53.0</td>
 <td>UI</td>
 </tr>
 
@@ -249,9 +316,42 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
+<td>An issue with the "Copy dashboard" functionality has been addressed. The device context of a configured widget is now again replaced by the context it has been pasted to. This applies, for example, to the selected asset or to datapoints.</td>
+<td>MTM-52374</td>
+<td>10.17.259.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Datapoints no longer contain irrelevant data from the template after the link to the template has been removed. The datapoint now only contains the data from the template which is relevant for the current context.</td>
+<td>MTM-51682</td>
+<td>10.17.257.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The <code>HOOK_</code> prefixed injection tokens have been marked as deprecated. Details on their replacement are provided in their deprecation notice.</td>
+<td>MTM-52376</td>
+<td>10.17.259.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
 <td>The HOOK_WIZARD can now be used in a module federation plugin.</td>
 <td>MTM-51776</td>
 <td>10.17.154.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Opening the widget configuration for a micro frontend plugin multiple times does no longer cause performance issues in the UI.</td>
+<td>MTM-50306</td>
+<td>10.17.53.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -264,9 +364,26 @@ Build version</th>
 
 <tr>
 <td>UI</td>
+<td>Corrected Japanese localizations in the <b>App configuration</b> page and in the <b>Add smart rules</b> dialog.</td>
+<td>MTM-52050</td>
+<td>10.17.272.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>UI</td>
+<td>The German localization in the "Connect smartphone" wizard has been corrected.</td>
+<td>MTM-51935</td>
+<td>10.17.207.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>UI</td>
 <td>Fixed a branding issue where the background color and the primary label were not using the brand color.</td>
 <td>MTM-50807</td>
 <td>10.17.86.0</td>
+<td>UI</td>
 </tr>
 
 </tbody></table>

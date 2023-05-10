@@ -57,7 +57,7 @@ Build version</th>
 <td>LWM2M</td>
 <td>The performance of the <code>migrateLwm2mDevices</code> operation has been improved. New command line arguments have been introduced with the operation. A list of legacy LWM2M devices can be specified directly from the shell command. Moreover, the migration of the LWM2M client registration objects can be skipped b< using an argument. For details, refer to <a href="https://cumulocity.com/guides/protocol-integration/lwm2m/#migration-of-the-lwm2m-devices" class="no-ajaxy">LWM2M > LWM2M connector device > Migration of the LWM2M devices</a> in the <i>Protocol integration guide</i>.</td>
 <td>DM-1866</td>
-<td>10.15.0.5</td>
+<td>10.18.0.5</td>
 <td>Core</td>
 </tr>
 
@@ -87,6 +87,14 @@ Build version</th>
 
 <tr>
 <td>SmartREST 2.0</td>
+<td>Added the SmartREST static template 143 for setting device-supported software types.</td>
+<td>DM-1820</td>
+<td>10.17.224.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>SmartREST 2.0</td>
 <td>Added SmartREST static templates for updating the operation status by its internal ID. 504 for setting the status to executing, 505 for failed, 506 for successful.</td>
 <td>DM-1832</td>
 <td>10.17.188.0</td>
@@ -103,7 +111,7 @@ Build version</th>
 
 <tr>
 <td>SmartREST 2.0</td>
-<td>Added a new SmartREST static template (201) for creating measurements with multiple fragments and series.</td>
+<td>Added the SmartREST static template 201 for creating measurements with multiple fragments and series.</td>
 <td>DM-1860</td>
 <td>10.17.128.0</td>
 <td>Core</td>
@@ -134,12 +142,20 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+<tr>
+<td>Device Management</td>
+<td>When removing a device which has child devices, users can now select either to remove a device user or to remove all child devices. Prior to this change, it was possible to select both options in the UI, but such an action is not supported by the backend.</td>
+<td>MTM-45277</td>
+<td>10.17.262.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device Management</td>
 <td>On the <b>Software</b> tab in the device details, the <b>Reload</b> button now correctly updates the <b>Installed software</b> list.</td>
 <td>DM-2005</td>
 <td>10.17.141.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -147,6 +163,7 @@ Build version</th>
 <td>In events and alarms views, custom properties with numeric values were incorrectly parsed and displayed as dates in the Chrome browser. This is now fixed.</td>
 <td>DM-1999</td>
 <td>10.17.118.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -167,7 +184,7 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
-<td>The <b>Assign devices<b> button is now disabled for users without the required permissions.</td>
+<td>The <b>Assign devices</b> button is now disabled for users without the required permissions.</td>
 <td>MTM-50928</td>
 <td>10.17.16.0</td>
 <td>UI</td>
@@ -178,6 +195,7 @@ Build version</th>
 <td>Events created by the Loriot agent when sending uplink requests are now considered device requests and provide connectivity status and availability monitoring.</td>
 <td>DM-2139</td>
 <td>10.17.170.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -193,6 +211,14 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
+<td>In the <b>Device objects</b> tab, an issue with entering a parameter in the <b>Execute with parameters</b> field has been resolved.
+<td>DM-2160</td>
+<td>10.17.226.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>The LWM2M agent now ensures that a LWM2M client registration is expired and removed from the database if the LWM2M client does not update its registration within the respective registration lifetime period.</td>
 <td>DM-1895</td>
 <td>10.17.190.0</td>
@@ -204,6 +230,7 @@ Build version</th>
 <td>During the LWM2M client registration, if the agent failed to find the registered device from the database due to a communication problem, an internal object related to the device managed object was automatically removed by the agent. Afterwards, LWM2M clients always failed to connect. This is now fixed and the internal object is only removed if the actual device managed object does not exist in the database.</td>
 <td>DM-2131</td>
 <td>10.17.178.0</td>
+<td>Core</td>
 </tr>
 
 
@@ -212,6 +239,7 @@ Build version</th>
 <td>The LWM2M device type can freely be chosen by the user. Therefore, devices which do not have the type "c8y_lwm2m" but still are LWM2M devices now also show the LWM2M bootstrap parameters view.</td>
 <td>DM-2066</td>
 <td>10.17.171.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -219,6 +247,7 @@ Build version</th>
 <td>Due to a limitation of the Leshan library used by the LWM2M agent, only device registration messages were supported where the LWM2M version is attached to the LWM2M object. The LWM2M agent has now been extended to also accept LWM2M registration messages where the LWM2M version is attached to the LWM2M object instance.</td>
 <td>DM-1893</td>
 <td>10.17.169.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -226,6 +255,7 @@ Build version</th>
 <td>In certain cases the migration of LWM2M devices registered on versions before 10.15 reported "Unable to process device" for certain devices. This happened due to adjustments to the device configuration, for example when editing the registration lifetime. With this fix, the migration logic robustness has been improved.</td>
 <td>10.17.107.0</td>
 <td>DM-2022</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -233,6 +263,7 @@ Build version</th>
 <td>In the older Leshan demo client, the device registration requests for the Cumulocity IoT LWM2M demo device and possibly also some other devices could contain spaces between the core link separators. This was successfully handled by the LWM2M agent 10.14 and below but caused the LWM2M agent 10.15 and above to reject these device requests. Now, the LWM2M server accepts these requests again. The older device registration requests can be processed again.</td>
 <td>10.17.105.0</td>
 <td>DM-2070</td>
+<td>Core</td>
 </tr>
 
 <tr>

@@ -211,7 +211,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>In the <b>Device objects</b> tab, an issue with entering a parameter in the  <b>Execute with parameters</b> field has been resolved.
+<td>In the <b>Device objects</b> tab, an issue with entering a parameter in the <b>Execute with parameters</b> field has been resolved.
 <td>DM-2160</td>
 <td>10.17.226.0</td>
 <td>UI</td>

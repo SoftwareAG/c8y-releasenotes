@@ -319,7 +319,8 @@ Build version</th>
 
 <tr>
 <td>REST API</td>
-<td>At least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+<td>Several REST API methods have been changed so that at least one query parameter limiting the affected data is required to prevent accidental deletion of too many objects during a bulk delete operation.
+
 This change affects the following APIs:
 <br>DELETE /alarm/alarms
 <br>DELETE /event/events

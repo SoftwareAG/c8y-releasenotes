@@ -87,7 +87,7 @@ Build version</th>
 
 <tr>
 <td>SmartREST 2.0</td>
-<td>Added a SmartREST static template 143 for setting device-supported software types.</td>
+<td>Added the SmartREST static template 143 for setting device-supported software types.</td>
 <td>DM-1820</td>
 <td>10.17.224.0</td>
 <td>Core</td>

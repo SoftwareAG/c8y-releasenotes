@@ -59,7 +59,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>The <b>Revoke Tokens</b> button has been renamed to <b>Logout all users</b>. The button is only available from the <b>User</b> page. A warning message informs about revoking device tokens too.</td>
+<td>The <b>Revoke Tokens</b> button has been renamed to <b>Logout all users</b>. The button is only available from the <b>User</b> page. When used, a message warns that device tokens are revoked as well.</td>
+
 <td>MTM-51772</td>
 <td>10.17.275.0</td>
 <td>UI</td>

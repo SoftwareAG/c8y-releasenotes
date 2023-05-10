@@ -30,6 +30,52 @@ Build version</th>
 </thead><tbody>
 
 <tr>
+<td>Administration</td>
+<td>On the <b>Data subscriptions</b> page, real-time subscription to the <code>managedObjects/*</code> channel has been replaced by data polling with an interval of 15s to avoid putting extensive load on the platform.</td>
+<td>MTM-45892</td>
+<td>10.17.283.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The files repository now provides improved layout and user experience:
+<br>- each selected or dropped file is displayed in a separate row
+<br>- a type icon and size info is displayed for each file
+<br>- users can cancel the selection of any file
+<br>- for easier usage, the drop area enlarges when files are being dragged over</td>
+<td>MTM-32081</td>
+<td>10.17.283.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Users can now configure inventory role mapping in the <b>Access mapping</b> section of the SSO configuration page. </td>
+<td>MTM-51423</td>
+<td>10.17.280.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The <b>Revoke Tokens</b> button has been renamed to <b>Logout all users</b>. The button is only available from the <b>User</b> page. When used, a message warns that device tokens are revoked as well.</td>
+
+<td>MTM-51772</td>
+<td>10.17.275.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>In the updated package installation process, users are notified when installing community-created packages, indicating that a third-party plugin is being installed.</td>
+
+<td>MTM-50206</td>
+<td>10.17.225.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
 <td>Authentication</td>
 <td>In the SSO configuration page, users can now enable and configure the external token validation.</td>
 <td>MTM-49801</td>
@@ -90,6 +136,7 @@ Build version</th>
 <td>The X-XSS-Protection header is no longer included in platform HTTP responses.</td>
 <td>MTM-51504</td>
 <td>10.17.161.0</td>
+<td>Core</td>
 </tr>
 
 
@@ -122,6 +169,7 @@ Build version</th>
 <td>The performance of widgets like the "Data point list", "Data point graph" and "Data point table", has been improved for users with inventory roles access. Moreover, the performance of the "Measurements" tab in the Device Management application and the data explorer in the Cockpit application have been improved.</td>
 <td>MTM-50693</td>
 <td>10.17.67.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -201,6 +249,7 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>Duplicate plugin installations are now prevented by graying out and disabling already installed plugins in the selection.</td>
+<td>MTM-50012</td>
 <td>10.17.192.0</td>
 <td>UI</td>
 </tr>
@@ -210,6 +259,7 @@ Build version</th>
 <td>UTF-8 characters are now supported in names of files downloaded from the files repository with the export functionality.</td>
 <td>MTM-46346</td>
 <td>10.17.125.0</td>
+<td>UI</td
 </tr>
 
 <tr>
@@ -217,6 +267,23 @@ Build version</th>
 <td>Fixed an issue with incorrect titles on several application detail tabs. The page title now consistently shows the application name.</td>
 <td>MTM-51150</td>
 <td>10.17.70.0</td>
+<td>UI</td
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>Fixed an issue with the device request counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
+<td>MTM-49427</td>
+<td>10.17.265.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Core platform</td>
+<td>Fixed an issue where deleting enhanced time series measurements did not work with the <code>fragmentType</code> query parameter.</td>
+<td>MTM-51379</td>
+<td>10.17.204.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -244,10 +311,41 @@ Build version</th>
 </tr>
 
 <tr>
+<td>Authentication</td>
+<td>The REST API endpoint <code>/application/applications/{id}/logs</code> so far required the role ROLE_APPLICATION_MANAGEMENT_ADMIN. This has been changed. The endpoint now requires either the ROLE_APPLICATION_MANAGEMENT_ADMIN or ROLE_APPLICATION_MANAGEMENT_READ.</td>
+<td>MTM-52028</td>
+<td>10.17.220.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>Several REST API methods have been changed so that at least one query parameter limiting the affected data is required to prevent accidental deletion of too many objects during a bulk delete operation.
+
+This change affects the following APIs:
+<br>DELETE /alarm/alarms
+<br>DELETE /event/events
+<br>DELETE /measurements/measurement</td>
+<td>MTM-46642</td>
+<td>10.17.231.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>REST API</td>
 <td>Fixed an issue where POST and PUT requests without Content-Type header were rejected with a 415 HTTP error. The fix has been applied to the Identity, Inventory, Measurements, Alarms and Events APIs.</td>
 <td>MTM-51886</td>
 <td>10.17.170.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Security</td>
+<td>To improve security, the "Notes" widget on the <b>Info</b> tab in the device details now sanitizes links in user input by replacing any "target" and "rel" attributes of "a" tags by <code>target="_blank" rel="noreferrer noopener nofollow"</code>.</td>
+
+<td>DM-2084</td>
+<td>10.17.281.0</td>
+<td>UI</td>
 </tr>
 
 <tr>

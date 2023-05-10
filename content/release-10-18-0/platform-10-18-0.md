@@ -340,7 +340,8 @@ This change affects the following APIs:
 
 <tr>
 <td>Security</td>
-<td>To improve the security, the "Notes" widget  on the <b>Info</b> tab in the device details now sanitizes links in user input by replacing any "target" and "rel" attributes of "a" tags by <code>target="_blank" rel="noreferrer noopener nofollow"</code>.</td>
+<td>To improve security, the "Notes" widget on the <b>Info</b> tab in the device details now sanitizes links in user input by replacing any "target" and "rel" attributes of "a" tags by <code>target="_blank" rel="noreferrer noopener nofollow"</code>.</td>
+
 <td>DM-2084</td>
 <td>10.17.281.0</td>
 <td>UI</td>

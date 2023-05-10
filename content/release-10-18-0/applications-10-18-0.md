@@ -18,7 +18,7 @@ layout: bundle
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>
@@ -216,7 +216,7 @@ Build version</th>
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>

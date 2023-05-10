@@ -18,7 +18,7 @@ layout: bundle
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>
@@ -144,7 +144,7 @@ Prior to this change, the existence of the measurement was only validated for pe
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>

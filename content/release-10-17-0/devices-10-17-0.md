@@ -18,7 +18,7 @@ layout: bundle
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>
@@ -110,7 +110,7 @@ In the <b>Filter target devices</b> grid in bulk operations and in the <b>Assign
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>

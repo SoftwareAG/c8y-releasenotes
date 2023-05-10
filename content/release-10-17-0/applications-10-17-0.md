@@ -18,7 +18,7 @@ layout: bundle
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>
@@ -101,7 +101,7 @@ A JSON file can be downloaded with more platform details, such as information on
 </colgroup>
 <thead><tr>
 <th>
-Component</th>
+Product area</th>
 <th>
 Description</th>
 <th>

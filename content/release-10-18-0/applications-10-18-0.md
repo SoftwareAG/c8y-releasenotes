@@ -112,7 +112,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>When updating blueprints via the UI users now get an information instead of silently updating in the background.</td>
+<td>When updating blueprints via the UI users now get a notification instead of Cumulocity IoT silently updating in the background.</td>
+
 <td>MTM-50636</td>
 <td>10.17.257.0</td>
 <td>UI</td>

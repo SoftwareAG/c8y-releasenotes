@@ -67,7 +67,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>In the updated package installation process, users will be notified when installing community-created packages, indicating that a third-party plugin is being installed.</td>
+<td>In the updated package installation process, users are notified when installing community-created packages, indicating that a third-party plugin is being installed.</td>
+
 <td>MTM-50206</td>
 <td>10.17.225.0</td>
 <td>UI</td>

@@ -5,7 +5,15 @@ title: Overview
 layout: bundle
 ---
 
-These release notes for **Cumulocity IoT release 10.17.0** include information on all relevant changes, such as new features, improvements, and fixes, that have been implemented in Cumulocity IoT Core (here divided into the components Application enablement, Device management & connectivity, and Platform services), in its layered products and in integrated applications (if released) since the previous GA release.
+These release notes for **Cumulocity IoT release 10.17.0** include information on all relevant changes, such as new features, improvements, and fixes, that have been implemented in Cumulocity IoT Core (here divided into the product areas Application enablement, Device management & connectivity, and Platform services), in its layered products and in integrated applications (if released) since the previous GA release.
+
+For each improvement or fix, the following information is provided:
+
+- The product area in which a change applies
+- The actual change description
+- The internal ticket number (only relevant for our Support team)
+- The build version in which the change has been implemented
+- The build component into which the change has been implemented
 
 Moreover it includes [announcements](/release-10-17-0/announcements-10-17-0/) for planned and implemented deprecations that might require action on your side at some time.
 

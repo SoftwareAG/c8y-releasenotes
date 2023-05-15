@@ -184,10 +184,10 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) and [r
 
 ##### Deprecation of Machine Learning
 
-The Machine Learning block in Analytics Builder is deprecated and will be removed in a future release.
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the **Machine Learning** block in Analytics Builder is deprecated and will be removed in a future release.
 In addition, the EPL Apps sample "Call another microservice" which uses the Zementis microservice, has been renamed to "Call Zementis microservice".
 This sample is now deprecated and will also be removed in a future release.
-This is in line with the deprecation of [Machine Learning Engine](#machine-learning-deprecation).
+This is in line with the deprecation of [Machine Learning Engine](/release-10-16-0/announcements-10-16-0/#machine-learning-deprecation) announced in release 10.16.
 
 #### Implemented
 

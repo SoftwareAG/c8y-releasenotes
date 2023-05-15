@@ -143,6 +143,15 @@ As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), with 
 
 ### Streaming Analytics
 
+#### Planned
+
+##### Deprecation of Machine Learning
+
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the **Machine Learning** block in Analytics Builder is deprecated and will be removed in a future release.
+In addition, the EPL Apps sample "Call another microservice" which uses the Zementis microservice, has been renamed to "Call Zementis microservice".
+This sample is now deprecated and will also be removed in a future release.
+This is in line with the deprecation of [Machine Learning Engine](/release-10-16-0/announcements-10-16-0/#machine-learning-deprecation) announced in release 10.16.
+
 #### Implemented
 
 ##### Removal of required roles from the manifest

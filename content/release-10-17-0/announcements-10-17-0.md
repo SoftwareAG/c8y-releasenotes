@@ -191,7 +191,7 @@ This is in line with the deprecation of [Machine Learning Engine](/release-10-16
 
 ##### Documentation
 
-In a future release, we are going to integrate the Analytics Builder documentation in the Cumulocity IoT documentation.
+In a future release, we are going to integrate the Analytics Builder documentation into the Cumulocity IoT documentation.
 It will then no longer be available as a separate webhelp.
 We will focus on our high-quality, up-to-date English user documentation.
 The German version of the Analytics Builder documentation, which is also available as a separate webhelp until release 10.17, is deprecated.

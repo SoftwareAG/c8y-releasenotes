@@ -160,3 +160,9 @@ For security reasons, ROLE_APPLICATION_MANAGEMENT_ADMIN and ROLE_OPTION_MANAGEME
 removed from the required roles which are defined in the manifest file of the Apama-ctrl microservice.
 Any applications deployed with the Streaming Analytics application (for example, EPL apps) can no longer
 perform security-sensitive operations such as application creation or modification of tenant options.
+
+##### Documentation
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the German version of the Analytics Builder documentation,
+which is available as a separate webhelp until release 10.17, is no longer provided.
+See also the information on the restructured *Streaming Analytics guide* in the [Streaming Analytics](/release-10-18-0/streaming-analytics-10-18-0/) release notes.

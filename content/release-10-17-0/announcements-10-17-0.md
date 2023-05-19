@@ -189,6 +189,13 @@ In addition, the EPL Apps sample "Call another microservice" which uses the Zeme
 This sample is now deprecated and will also be removed in a future release.
 This is in line with the deprecation of [Machine Learning Engine](/release-10-16-0/announcements-10-16-0/#machine-learning-deprecation) announced in release 10.16.
 
+##### Documentation
+
+In a future release, we are going to integrate the Analytics Builder documentation in the Cumulocity IoT documentation.
+It will then no longer be available as a separate webhelp.
+We will focus on our high-quality, up-to-date English user documentation.
+The German version of the Analytics Builder documentation, which is also available as a separate webhelp until release 10.17, is deprecated.
+
 #### Implemented
 
 ##### Analytics Builder - Change of type for Clear Alarm input port

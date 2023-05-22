@@ -4,7 +4,9 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.230.0; 10.18.0.0-10.18.0.33-->
+{{< c8y-admon-info >}}
+These release notes contain all changes until build version 10.18.0.59.
+{{< /c8y-admon-info >}}
 
 ### Improvements
 
@@ -245,6 +247,14 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>In the datapoint library, it is now possible to pick fragment and series from an existing datapoint.</td>
+<td>MTM-52704</td>
+<td>10.18.0.30</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>The asset property of type Boolean now shows "false" instead of "Undefined" when it's value is "false".</td>
 <td>MTM-51513</td>
 <td>10.18.0.24</td>
@@ -304,6 +314,38 @@ Build version</th>
 <td>MTM-50101</td>
 <td>10.17.12.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>Java SDK</td>
+<td>The dependency to "com.jayway.jsonpath:json-path" has been removed from the Java SDK.</td>
+<td>MTM-53341</td>
+<td>10.18.0.59</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Java SDK</td>
+<td>The dependency to "org.json:json" has been removed from the Java SDK.</td>
+<td>MTM-53340</td>
+<td>10.18.0.55</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Microservice SDK</td>
+<td>The Spring Boot dependency has been updated to version 2.7.11.</td>
+<td>MTM-53342</td>
+<td>10.18.0.54</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Microservice SDK</td>
+<td>Dependencies to "org.eclipse.jetty:jetty-*"" were updated to version 9.4.51.v20230217.</td>
+<td>MTM-53359</td>
+<td>10.18.0.55</td>
+<td>Core</td>
 </tr>
 
 <tr>

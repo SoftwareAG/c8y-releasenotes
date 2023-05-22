@@ -4,7 +4,10 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.134-->
+{{< c8y-admon-info >}}
+These release notes contain all changes until build version 10.17.0.161.
+{{< /c8y-admon-info >}}
+
 
 ### Improvements
 
@@ -135,6 +138,22 @@ Build version</th>
 <td>DM-1566</td>
 <td>10.17.0.112</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the ID/externalId/externalIdType values.</td>
+<td>DM-2093</td>
+<td>10.17.0.159</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In case of bad connectivity or network delay it could happen that a gateway device went to the state of being disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
+<td>DM-2037</td>
+<td>10.17.0.142</td>
+<td>Messaging Service</td>
 </tr>
 
 <tr>
@@ -313,6 +332,46 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>DM-2139</td>
 <td>10.17.0.81</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Bulk device registrations and other operations being executed on the LWM2M connector device now show the status FAILED if a problem occurs. Prior to this change, partial failures were reported as SUCCESSFUL.</td>
+<td>DM-1951</td>
+<td>10.17.0.158</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>In certain cases, the registration couldn't be associated to a LWM2M 1.1 SEND request, leading to a 4.04 CoAP response. This is now fixed.</td>
+<td>DM-2270</td>
+<td>10.17.0.157</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M Agent now ignores trailing commas at the end of object links in the registration request of a LWM2M client.</td>
+<td>DM-2342</td>
+<td>10.17.0.156</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M agent is now able to properly convert the timestamps from the SenML data reported by the LWM2M client to a platform compatible date-time format for performing respective resource actions.</td>
+<td>DM-2150</td>
+<td>10.17.0.154</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Custom actions were not always executed if a LWM2M device used a SEND operation to report the whole LWM2M object data. This issue is now resolved and the custom actions are always executed for the resource instances for which they are defined.</td>
+<td>DM-2188</td>
+<td>10.17.0.146</td>
+<td>Messaging Service</td>
 </tr>
 
 <tr>

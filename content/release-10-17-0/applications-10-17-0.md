@@ -4,7 +4,9 @@ title: Application enablement
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.134-->
+{{< c8y-admon-info >}}
+These release notes contain all changes until build version 10.17.0.161.
+{{< /c8y-admon-info >}}
 
 ### Improvements
 
@@ -111,6 +113,30 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>The latest events are now correctly displayed in the data point graph, even if a custom interval has been selected.</td>
+<td>MTM-52175</td>
+<td>10.17.0.143</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>In the datapoint library, it is now possible to pick fragment and series from an existing datapoint.</td>
+<td>MTM-52704</td>
+<td>10.17.0.139</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The table used for the SCADA widget configuration has been replaced by a list group, allowing better visualization of data and actions.</td>
+<td>MTM-51932</td>
+<td>10.17.0.135</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>

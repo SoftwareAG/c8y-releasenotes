@@ -176,7 +176,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Fixed an issue with the names of the files downloaded from the platform (for example, from the file repository or from event attachments). UTF-8 characters, for example, in the Japanese localization, are no longer missing, if the file name includes special characters like "+".</td>
+<td>Fixed an issue with the names of the files downloaded from the platform (for example, from the file repository or from event attachments). UTF-8 characters, for example, in the Japanese localization are no longer missing if the file name includes special characters like "+".</td>
+
 <td>MTM-53056</td>
 <td>10.17.0.145</td>
 <td>UI</td>

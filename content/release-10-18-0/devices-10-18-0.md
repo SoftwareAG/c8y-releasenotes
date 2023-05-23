@@ -242,7 +242,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>The LWM2M Agent now ignores trailing commas at the end of object links in the registration request of a LWM2M client.</td>
+<td>The LWM2M agent now ignores trailing commas at the end of object links in the registration request of a LWM2M client.</td>
 <td>DM-2342</td>
 <td>10.18.0.46</td>
 <td>Core</td>

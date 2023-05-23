@@ -168,7 +168,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Fixed an issue where users with inventory roles only could not add new groups.</td>
+<td>Fixed an issue where users which only have inventory roles could not add new groups.</td>
+
 <td>MTM-52413</td>
 <td>10.17.0.147</td>
 <td>UI</td>

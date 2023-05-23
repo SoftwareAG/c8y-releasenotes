@@ -142,7 +142,7 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
-<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the ID/externalId/externalIdType values.</td>
+<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the ID, externalId and externalIdType values.</td>
 <td>DM-2093</td>
 <td>10.17.0.159</td>
 <td>UI</td>

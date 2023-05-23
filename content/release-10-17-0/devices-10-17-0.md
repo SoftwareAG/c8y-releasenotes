@@ -150,7 +150,7 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
-<td>In case of bad connectivity or network delay it could happen that a gateway device went to the state of being disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
+<td>In case of bad connectivity or network delay gateway devices could go to a state where they were disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
 <td>DM-2037</td>
 <td>10.17.0.142</td>
 <td>Messaging Service</td>

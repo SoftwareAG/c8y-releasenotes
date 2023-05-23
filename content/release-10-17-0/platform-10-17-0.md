@@ -4,7 +4,10 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.16.1.0 - 10.16.260.0; 10.17.0.134-->
+{{< c8y-admon-info >}}
+These release notes contain all changes until build version 10.17.0.161.
+{{< /c8y-admon-info >}}
+
 
 ### Improvements
 
@@ -28,6 +31,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>Context help has been added in the <b>Extensions</b> page.</td>
+<td>MTM-50209</td>
+<td>10.17.0.141</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Authentication</td>
@@ -154,6 +165,24 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue where users which only have inventory roles could not add new groups.</td>
+
+<td>MTM-52413</td>
+<td>10.17.0.147</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue with the names of the files downloaded from the platform (for example, from the file repository or from event attachments). UTF-8 characters, for example, in the Japanese localization are no longer missing if the file name includes special characters like "+".</td>
+
+<td>MTM-53056</td>
+<td>10.17.0.145</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>

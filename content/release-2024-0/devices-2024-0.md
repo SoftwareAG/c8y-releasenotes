@@ -33,14 +33,6 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
-<td>In case of bad connectivity or network delay it could happen that a gateway device went to the state of being disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
-<td>DM-2037</td>
-<td>10.18.50.0</td>
-<td>Messaging Service</td>
-</tr>
-
-<tr>
-<td>Device Management</td>
 <td>The Device Management home page now also provides a customizable dashboard so that users can add customized widgets.</td>
 <td>DM-1644</td>
 <td>10.18.39.0</td>
@@ -53,22 +45,6 @@ Build version</th>
 <td>DM-2221</td>
 <td>10.18.23.0</td>
 <td>UI</td>
-</tr>
-
-<tr>
-<td>Device Management</td>
-<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the ID, externalId, externalIdType values.</td>
-<td>DM-2093</td>
-<td>10.18.22.0</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Device Management</td>
-<td>SmartREST Inventory GET templates created in the UI did not generate responses when there was no external ID type declared in the template. This issue has been addressed for both existing and newly created templates.</td>
-<td>DM-2126</td>
-<td>10.18.7.0</td>
-<td>Core</td>
 </tr>
 
 <tr>
@@ -123,7 +99,23 @@ Build version</th>
 </tr>
 </thead><tbody>
 
-tr>
+<tr>
+<td>Device Management</td>
+<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the ID, externalId, externalIdType values.</td>
+<td>DM-2093</td>
+<td>10.18.22.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>SmartREST Inventory GET templates created in the UI did not generate responses when there was no external ID type declared in the template. This issue has been addressed for both existing and newly created templates.</td>
+<td>DM-2126</td>
+<td>10.18.7.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>LWM2M</td>
 <td>Bulk device registrations and other operations being executed on the LWM2M connector device now show the status FAILED if a problem occurs. Prior to this change, partial failures were reported as SUCCESSFUL.</td>
 <td>DM-1951</td>
@@ -161,6 +153,14 @@ tr>
 <td>DM-2150</td>
 <td>10.18.58.0</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
+<td>In case of bad connectivity or network delay gateway devices could go to a state where they were disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
+<td>DM-2037</td>
+<td>10.18.50.0</td>
+<td>Messaging Service</td>
 </tr>
 
 </tbody></table>

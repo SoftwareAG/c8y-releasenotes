@@ -154,7 +154,7 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
-<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the ID, externalId and externalIdType values.</td>
+<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the "ID", "externalId" and "externalIdType" values.</td>
 <td>DM-2093</td>
 <td>10.18.0.55</td>
 <td>UI</td>
@@ -343,7 +343,7 @@ Build version</th>
 
 <tr>
 <td>OPC UA</td>
-<td>In case of bad connectivity or network delay there was the possibility that a gateway device went to the state of being disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
+<td>In case of bad connectivity or network delay gateway devices could go to a state where they were disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
 <td>DM-2037</td>
 <td>10.18.0.30</td>
 <td>Messaging Service</td>

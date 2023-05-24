@@ -327,7 +327,8 @@ Build version</th>
 
 <tr>
 <td>Java SDK</td>
-<td>The dependency to "org.json:json" has been removed from the Java SDK.</td>
+<td>The dependency on <code>org.json:json</code> has been removed from the Java SDK.</td>
+
 <td>MTM-53340</td>
 <td>10.18.0.55</td>
 <td>Core</td>

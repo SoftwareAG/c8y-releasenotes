@@ -133,7 +133,7 @@ Build version</th>
 
 <tr>
 <td>Java SDK</td>
-<td>The dependency to "com.jayway.jsonpath:json-path" has been removed from Java SDK.</td>
+<td>The dependency on <code>com.jayway.jsonpath:json-path</code> has been removed from Java SDK.</td>
 <td>MTM-53341</td>
 <td>10.18.84.0</td>
 <td>Core</td>
@@ -141,7 +141,7 @@ Build version</th>
 
 <tr>
 <td>Java SDK</td>
-<td>The dependency to "org.json:json" has been removed from the Java SDK.</td>
+<td>The dependency on <code>org.json:json</code> has been removed from the Java SDK.</td>
 <td>MTM-53340</td>
 <td>10.18.83.0</td>
 <td>Core</td>
@@ -149,7 +149,7 @@ Build version</th>
 
 <tr>
 <td>Microservice SDK</td>
-<td>Dependencies to "org.eclipse.jetty:jetty-*"" were updated to version 9.4.51.v20230217.</td>
+<td>Dependencies on <code>org.eclipse.jetty:jetty-*</code> were updated to version 9.4.51.v20230217.</td>
 <td>MTM-53359</td>
 <td>10.18.79.0</td>
 <td>Core</td>

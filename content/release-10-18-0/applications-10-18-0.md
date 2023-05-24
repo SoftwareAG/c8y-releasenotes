@@ -344,7 +344,7 @@ Build version</th>
 
 <tr>
 <td>Microservice SDK</td>
-<td>Dependencies to "org.eclipse.jetty:jetty-*"" were updated to version 9.4.51.v20230217.</td>
+<td>Dependencies on <code>org.eclipse.jetty:jetty-*</code> were updated to version 9.4.51.v20230217.</td>
 <td>MTM-53359</td>
 <td>10.18.0.55</td>
 <td>Core</td>

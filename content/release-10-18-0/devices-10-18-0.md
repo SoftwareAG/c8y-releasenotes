@@ -4,7 +4,9 @@ title: Device management & connectivity
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.230.0; 10.18.0.0-10.18.0.33-->
+{{< c8y-admon-info >}}
+These release notes contain all changes until build version 10.18.0.59.
+{{< /c8y-admon-info >}}
 
 ### Improvements
 
@@ -144,6 +146,22 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
+<td>In the device grid, issues with applying filters have been fixed.</td>
+<td>DM-2321</td>
+<td>10.18.0.57</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
+<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the "ID", "externalId" and "externalIdType" values.</td>
+<td>DM-2093</td>
+<td>10.18.0.55</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device Management</td>
 <td>When removing a device which has child devices, users can now select either to remove a device user or to remove all child devices. Prior to this change, it was possible to select both options in the UI, but such an action is not supported by the backend.</td>
 <td>MTM-45277</td>
 <td>10.17.262.0</td>
@@ -197,6 +215,55 @@ Build version</th>
 <td>10.17.170.0</td>
 <td>Core</td>
 </tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Custom actions were not always executed if a LWM2M device used a SEND operation to report the whole LWM2M object data. This issue is now resolved and the custom actions are always executed for the resource instances for which they are defined.</td>
+<td>DM-2188</td>
+<td>10.18.0.57</td>
+<td>Messaging Service</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Bulk device registrations and other operations being executed on the LWM2M connector device now show the status FAILED if a problem occurs. Prior to this change, partial failures were reported as SUCCESSFUL.</td>
+<td>DM-1951</td>
+<td>10.18.0.54</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>In certain cases, the registration couldn't be associated to a LWM2M 1.1 SEND request, leading to a 4.04 CoAP response. This is now fixed.</td>
+<td>DM-2270</td>
+<td>10.18.0.47</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M agent now ignores trailing commas at the end of object links in the registration request of a LWM2M client.</td>
+<td>DM-2342</td>
+<td>10.18.0.46</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M agent is now able to properly convert the timestamps from the SenML data reported by the LWM2M client to a platform compatible date-time format for performing respective resource actions.</td>
+<td>DM-2150</td>
+<td>10.18.0.43</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Multi-line LWM2M post-operations were not executed right after the LWM2M device's new registration when realtime was disabled for the tenant who owns the device. As a result the device might not receive these operations until the next LWM2M device's registration update. This issue is now resolved and LWM2M post-operations are executed right after the LWM2M device's new registration, no matter whether realtime is enabled or not for this kind of devices.</td>
+<td>DM-2100</td>
+<td>10.18.0.37</td>
+<td>Core</td>
+</tr>
+
 
 <tr>
 <td>LWM2M</td>
@@ -276,7 +343,7 @@ Build version</th>
 
 <tr>
 <td>OPC UA</td>
-<td>In case of bad connectivity or network delay there was the possibility that a gateway device went to the state of being disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
+<td>In case of bad connectivity or network delay gateway devices could go to a state where they were disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
 <td>DM-2037</td>
 <td>10.18.0.30</td>
 <td>Messaging Service</td>

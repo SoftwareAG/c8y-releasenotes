@@ -4,7 +4,9 @@ title: Platform services
 layout: bundle
 ---
 
-<!--10.17.1.0 - 10.17.230.0; 10.18.0.0-10.18.0.33-->
+{{< c8y-admon-info >}}
+These release notes contain all changes until build version 10.18.0.59.
+{{< /c8y-admon-info >}}
 
 ### Improvements
 
@@ -28,6 +30,31 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+
+<tr>
+<td>Administration</td>
+<td>The undelegate action button in the user details was not working. This has been fixed.</td>
+<td>DM-2356</td>
+<td>10.18.0.48</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>In the files repository, it is now possible to select a file, discard it and then select it again for upload.</td>
+<td>MTM-52549</td>
+<td>10.18.0.46</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Context help has been added in the <b>Extensions</b> page.</td>
+<td>MTM-50209</td>
+<td>10.18.0.34</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -216,17 +243,25 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Fixed an issue with the names of the files downloaded from the platform (for example, from the file repository or from event attachments). UTF-8 characters, for example, in the Japanese localization, are no longer missing, if the file name includes special characters like "+".</td>
-<td>MTM-53056</td>
-<td>10.18.0.42</td>
+<td>Applications are now automatically deployed right after being copied (no additional request is needed). Moreover, the first manifest update request, right after the application copying, now works correctly.</td>
+<td>MTM-51585</td>
+<td>10.18.0.55</td>
+<td>None</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue where users which only have inventory roles could not add new groups.</td>
+<td>MTM-52413</td>
+<td>10.18.0.45</td>
 <td>UI</td>
 </tr>
 
 <tr>
 <td>Administration</td>
-<td>Context help has been added in the <b>Extensions</b> page.</td>
-<td>MTM-50209</td>
-<td>10.18.0.34</td>
+<td>Fixed an issue with the names of the files downloaded from the platform (for example, from the file repository or from event attachments). UTF-8 characters, for example, in the Japanese localization are no longer missing if the file name includes special characters like "+".</td>
+<td>MTM-53056</td>
+<td>10.18.0.42</td>
 <td>UI</td>
 </tr>
 

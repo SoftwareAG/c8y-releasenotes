@@ -66,7 +66,7 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>Core platform</td>
-<td>The ExplainQuery result info has been extended by the algorithm used when performing queries for a user with inventory roles.
+<td>The ExplainQuery result info has been extended by the algorithm used when performing queries for a user with inventory roles: <code>GET {{url}}/inventory/hierarchy/info/management</code>  
 <br>Example: <code>{"algorithm": "Legacy" }</code>
 <br>Possible results: <code>Legacy, LimitedSourcesAcl, PostFilteringBySourceAcl, SingleSourceAcl, HierarchyAcl, SingleAgentAcl, SingleDeviceAcl, SingleAgentAndDeviceAcl</code></td>
 <td>MTM-52350</td>

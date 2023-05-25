@@ -73,7 +73,7 @@ The change is enforced by performance reasons.
 
 ##### Announcing API changes in application API (REST API and Java SDK)
 
-In a future release, we will remove the “resourcesUrl” field from the application API (both REST API and java sdk). The “resourcesUrl” is a legacy field, and the functionality behind it was removed. 
+In a future release, we will remove the `resourcesUrl` field from the Application API (both REST API and Java SDK). The `resourcesUrl` is a legacy field, and the functionality behind it was removed. 
 This change should not affect any user in a negative way, nor break an existing functionality.
 
 #### Implemented

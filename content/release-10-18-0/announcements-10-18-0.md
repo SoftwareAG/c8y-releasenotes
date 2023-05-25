@@ -165,17 +165,6 @@ removed from the required roles which are defined in the manifest file of the Ap
 Any applications deployed with the Streaming Analytics application (for example, EPL apps) can no longer
 perform security-sensitive operations such as application creation or modification of tenant options.
 
-##### Documentation
-
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the German version of the Analytics Builder documentation,
-which is available as a separate webhelp until release 10.17, is no longer provided.
-See also the information on the restructured *Streaming Analytics guide* in the [Streaming Analytics](/release-10-18-0/streaming-analytics-10-18-0/) release notes.
-
-##### Cumulocity IoT transport in Apama
-
-As of Apama 10.15.3, the Cumulocity IoT transport supports handling of standard Cumulocity IoT microservice proxy environment variables such as
-`PROXY_HTTP_HOST` and `PROXY_HTTP_PORT`. See also [Proxy variables](https://cumulocity.com/guides/10.18.0/microservice-sdk/concept/#proxy-variables) in the *Microservice SDK guide*.
-
 ##### Updated events in com.apama.cumulocity
 
 In Apama 10.15.3, the following events of the `com.apama.cumulocity` package have been updated to improve consistency in error handling:
@@ -196,3 +185,9 @@ The above events now have the following additional members:
 
 You should now use the updated events listed above instead of the `Error` event since it is sent to the same channel as the updated events.
 For more details, see the [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/pam/10.15.3/en/webhelp/related/ApamaDoc/index.html).
+
+##### Documentation
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the German version of the Analytics Builder documentation,
+which is available as a separate webhelp until release 10.17, is no longer provided.
+See also the information on the restructured *Streaming Analytics guide* in the [Streaming Analytics](/release-10-18-0/streaming-analytics-10-18-0/) release notes.

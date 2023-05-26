@@ -165,6 +165,27 @@ removed from the required roles which are defined in the manifest file of the Ap
 Any applications deployed with the Streaming Analytics application (for example, EPL apps) can no longer
 perform security-sensitive operations such as application creation or modification of tenant options.
 
+##### Updated events in com.apama.cumulocity
+
+In Apama 10.15.3, the following events of the `com.apama.cumulocity` package have been updated to improve consistency in error handling:
+
+- `FindAlarmResponseAck`
+- `FindEventResponseAck`
+- `FindManagedObjectResponseAck`
+- `FindMeasurementResponseAck`
+- `FindOperationResponseAck`
+- `FindTenantOptionsResponse`
+
+In all cases of a server acknowledgement, the response is now sent to the correct response channel.
+The above events now have the following additional members:
+
+- `boolean error` - Set to true if the find request received either an error content type or an error response HTTP return code.
+- `integer status` - The HTTP return code.
+- `string errorDetails` - Details of the error.
+
+You should now use the updated events listed above instead of the `Error` event since it is sent to the same channel as the updated events.
+For more details, see the [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/pam/10.15.3/en/webhelp/related/ApamaDoc/index.html).
+
 ##### Documentation
 
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the German version of the Analytics Builder documentation,

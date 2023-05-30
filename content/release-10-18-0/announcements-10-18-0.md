@@ -38,6 +38,11 @@ For example:
 
 The change is enforced by performance reasons.
 
+##### Change in the Application API (REST API and Java SDK)
+
+In a future release, we will remove the `resourcesUrl` field from the Application API (both REST API and Java SDK). The `resourcesUrl` is a legacy field, and the functionality behind it was removed. 
+This change will not affect any user in a negative way, nor break an existing functionality.
+
 #### Implemented
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties

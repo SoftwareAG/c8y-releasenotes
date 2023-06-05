@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.18.120.0.
+These release notes contain all changes until build version 10.18.164.0.
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -31,6 +31,15 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+<tbody>
+<tr>
+<td>Administration</td>
+<td>The repository-connect microservice now offers the ability for users to sync packages which include a versioning matrix which allows to filter exactly which versions will be synced. Versions which are not included in the matrix but uploaded to the platform will be removed by the microservice.</td>
+<td>MTM-52341</td>
+<td>10.18.143.0</td>
+<td>UI</td>
+</tr>
+
 <tr>
 <td>Administration</td>
 <td>In the files repository, it is now possible to select a file, discard it and then select it again for upload.</td>
@@ -45,6 +54,14 @@ Build version</th>
 <td>MTM-50209</td>
 <td>10.18.65.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Applications are now automatically deployed right after being copied without any additional request. Moreover, the first manifest update request, right after the application copying, now works correctly.</td>
+<td>MTM-51585</td>
+<td>10.18.58.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -104,7 +121,7 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>REST API</td>
-<td>The REST APIs do no longer return the <code>totalPages</code> value if no query criteria are provided.</td>
+<td>The REST APIs no longer return the <code>totalPages</code> value if no query criteria are provided.</td>
 <td>MTM-52969</td>
 <td>10.18.54.0</td>
 <td>Core</td>
@@ -178,6 +195,22 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>The undelegate action button in the user details was not working. This has been fixed by re-enabling its functionality.</td>
+<td>DM-2356</td>
+<td>10.18.108.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are send as expected to the Ericsson DCP API.</td>
+<td>DM-2215</td>
+<td>10.18.101.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>Fixed an issue where users which only have inventory roles could not add new groups.</td>
 <td>MTM-52413</td>
 <td>10.18.90.0</td>
@@ -194,6 +227,14 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>Updating a custom alarm property, no longer creates a redundant audit log entry with misleading information about alarm clearance.</td>
+<td>MTM-51919</td>
+<td>10.18.88.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>Redundant activity log entries in the application details are now filtered out.</td>
 <td>MTM-52309</td>
 <td>10.18.18.0</td>
@@ -206,6 +247,30 @@ Build version</th>
 <td>MTM-52710</td>
 <td>10.18.17.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>Authorization</td>
+<td>In the <b>Trusted certificates</b> page, refreshing and downloading the verification code for the Proof of Possession process now works properly if a new certificate was uploaded or the verification code was refreshed by the user.</td>
+<td>MTM-52956</td>
+<td>10.18.140.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>Issues on refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
+<td>MTM-53559</td>
+<td>10.18.101.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The verification code which is signed in the Proof of Possession process now supports end-of-line characters from various operating systems.</td>
+<td>MTM-53296</td>
+<td>10.18.86.0</td>
+<td>Core</td>
 </tr>
 
 <tr>

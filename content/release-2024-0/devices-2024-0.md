@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.18.120.0.
+These release notes contain all changes until build version 10.18.164.0.
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -98,6 +98,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device Management</td>
+<td>In the device grid, issues with applying filters have been fixed.</td>
+<td>DM-2321</td>
+<td>10.18.128.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device Management</td>

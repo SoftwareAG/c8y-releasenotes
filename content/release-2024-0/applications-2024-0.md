@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.18.120.0.
+These release notes contain all changes until build version 10.18.164.0.
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -31,6 +31,13 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+<tr>
+<td>Web SDK</td>
+<td>The Web SDK has been upgraded to Angular 15.</td>
+<td>MTM-52940</td>
+<td>10.18.158.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Web SDK</td>

@@ -316,7 +316,8 @@ Build version</th>
 
 <tr>
 <td>Authentication</td>
-<td>TIssues on refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
+<td>Issues on refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
+
 <td>MTM-53559</td>
 <td>10.18.0.69</td>
 <td>Core</td>

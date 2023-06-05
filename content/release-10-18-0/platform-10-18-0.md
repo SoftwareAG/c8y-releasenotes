@@ -1,3 +1,4 @@
+
 ---
 weight: 40
 title: Platform services
@@ -243,6 +244,14 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are send as expected to the Ericsson DCP API.</td>
+<td>DM-2215</td>
+<td>10.18.0.69</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>Applications are now automatically deployed right after being copied (no additional request is needed). Moreover, the first manifest update request, right after the application copying, now works correctly.</td>
 <td>MTM-51585</td>
 <td>10.18.0.55</td>
@@ -304,6 +313,32 @@ Build version</th>
 <td>10.17.70.0</td>
 <td>UI</td
 </tr>
+
+<tr>
+<td>Authentication</td>
+<td>TIssues on refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
+<td>MTM-53559</td>
+<td>10.18.0.69</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The verification code which is signed in the Proof of Possession process now supports end-of-line characters from various operating systems.</td>
+<td>MTM-53296</td>
+<td>10.18.0.63</td>
+<td>Core</td>
+</tr>
+
+
+<tr>
+<td>Authentication</td>
+<td>In the <b>Trusted certificates</b> page, refreshing and downloading the verification code for the Proof of Possession process now works properly if a new certificate was uploaded or the verification code was refreshed by the user.</td>
+<td>MTM-52956</td>
+<td>10.18.0.60</td>
+<td>UI</td>
+</tr>
+
 
 <tr>
 <td>Authentication</td>

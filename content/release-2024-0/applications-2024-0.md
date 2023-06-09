@@ -49,7 +49,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>A versioning matrix can now be added to the <i>cumulocity.json</i> of a blueprint/plugin. It adds version validation compared to the platform when a blueprint/plugin is installed. If the versions are incompatible a warning is shown.</td>
+<td>A versioning matrix can now be added to the <i>cumulocity.json</i> of a blueprint/plugin. When a blueprint/plugin is installed, its version is validated against the platform version. If the versions are incompatible a warning is shown.</td>
+
 <td>MTM-52340</td>
 <td>10.18.63.0</td>
 <td>UI</td>

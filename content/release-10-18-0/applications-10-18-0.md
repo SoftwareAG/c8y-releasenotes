@@ -255,7 +255,7 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>The asset property of type Boolean now shows "false" instead of "Undefined" when it's value is "false".</td>
+<td>The asset property of type Boolean now shows "false" instead of "Undefined" when its value is "false".</td>
 <td>MTM-51513</td>
 <td>10.18.0.24</td>
 <td>UI</td>

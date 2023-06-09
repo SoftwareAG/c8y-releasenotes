@@ -33,7 +33,7 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
-<td>The Device Management home page now also provides a customizable dashboard so that users can add customized widgets.</td>
+<td>The Device management home page now also provides a customizable dashboard which lets users add customized widgets.</td>
 <td>DM-1644</td>
 <td>10.18.39.0</td>
 <td>UI</td>
@@ -49,7 +49,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>The performance of the <code>migrateLwm2mDevices</code> operation has been improved. New command line arguments have been introduced with the operation. A list of legacy LWM2M devices can be specified directly from the shell command. Moreover, the migration of the LWM2M client registration objects can be skipped b< using an argument. For details, refer to <a href="https://cumulocity.com/guides/protocol-integration/lwm2m/#migration-of-the-lwm2m-devices" class="no-ajaxy">LWM2M > LWM2M connector device > Migration of the LWM2M devices</a> in the <i>Protocol integration guide</i>.</td>
+<td>The performance of the <code>migrateLwm2mDevices</code> operation has been improved. New command line arguments have been introduced with the operation. A list of legacy LWM2M devices can be specified directly from the shell command. Moreover, the migration of the LWM2M client registration objects can be skipped by using an argument. For details, refer to <a href="https://cumulocity.com/guides/protocol-integration/lwm2m/#migration-of-the-lwm2m-devices" class="no-ajaxy">LWM2M > LWM2M connector device > Migration of the LWM2M devices</a> in the <i>Protocol integration guide</i>.</td>
 <td>DM-1866</td>
 <td>10.18.10.0</td>
 <td>Core</td>
@@ -109,7 +109,7 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
-<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the ID, externalId, externalIdType values.</td>
+<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the "ID", "externalId" and "externalIdType" values.</td>
 <td>DM-2093</td>
 <td>10.18.22.0</td>
 <td>UI</td>
@@ -133,7 +133,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>In certain cases, the registration couldn't be associated to a LWM2M 1.1 SEND request, leading to a 4.04 CoAP response. This is now fixed.</td>
+<td>In certain cases, the registration couldn't be associated with a LWM2M 1.1 SEND request, leading to a 4.04 CoAP response. This is now fixed.</td>
 <td>DM-2270</td>
 <td>10.18.69.0</td>
 <td>Core</td>

@@ -203,7 +203,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are send as expected to the Ericsson DCP API.</td>
+<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
+
 <td>DM-2215</td>
 <td>10.18.101.0</td>
 <td>Core</td>
@@ -227,7 +228,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Updating a custom alarm property, no longer creates a redundant audit log entry with misleading information about alarm clearance.</td>
+<td>Updating a custom alarm property no longer creates a redundant audit log entry with misleading information about alarm clearance.</td>
+
 <td>MTM-51919</td>
 <td>10.18.88.0</td>
 <td>Core</td>

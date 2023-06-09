@@ -244,7 +244,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are send as expected to the Ericsson DCP API.</td>
+<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
+
 <td>DM-2215</td>
 <td>10.18.0.69</td>
 <td>Core</td>

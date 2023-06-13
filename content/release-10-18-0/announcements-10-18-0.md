@@ -8,11 +8,6 @@ layout: bundle
 
 #### Planned
 
-##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
-
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.19+, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
-The return code will still be 204 if the control can be returned immediately.
-This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
 ##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
 
@@ -39,6 +34,16 @@ For example:
 The change is enforced by performance reasons.
 
 #### Implemented
+
+##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
+
+As announced earlier, most recently with [release 10.17](/release-10-17-0/announcements-10-17-0), at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+This change affects the following APIs:
+
+* `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
+* `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
+
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 

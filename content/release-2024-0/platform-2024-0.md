@@ -109,18 +109,6 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>REST API</td>
-<td>At least one query parameter limiting the affected data is required to prevent accidental deletion of too many objects during a bulk delete operation.
-<br>This change affects the following APIs:
-<br>DELETE /alarm/alarms
-<br>DELETE /event/events
-<br>DELETE /measurements/measurement</td>
-<td>MTM-46642</td>
-<td>10.18.73.0</td>
-<td>Core</td>
-</tr>
-
-<tr>
-<td>REST API</td>
 <td>The REST APIs no longer return the <code>totalPages</code> value if no query criteria are provided.</td>
 <td>MTM-52969</td>
 <td>10.18.54.0</td>

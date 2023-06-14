@@ -26,6 +26,11 @@ This change affects the following APIs:
 
 #### Implemented
 
+##### Removal of deprecated device-grid model classes, column implementations and services
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0) shared classes, components and services from the device-grid package are deprecated and new ones are created in the core data-grid component. All those deprecated classes are now removed.
+
+This change only affects you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications.
 
 ### Streaming Analytics
 

@@ -75,6 +75,7 @@ For example, if a user sends a request in the following format:
     }
 }
 ```
+
 Since this release, the `c8y_LatestMeasurements` fragment will be ignored and not saved.
 
 ##### Breaking change in all REST APIs
@@ -90,7 +91,6 @@ As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), to improve security, as of a future releases, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
 This change prevents that an attacker could have access to all users, in case the administrator account was compromised.
 Note that the administrator will still have the option to force the user to reset the password on the next login or disable the user.
-
 
 ### SDK changes
 
@@ -144,12 +144,17 @@ All of the impacted injection tokens have been marked as deprecated with 10.18, 
 
 The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of a future release, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
 
+##### Deprecated device-grid model classes, column implementations and services
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0) shared classes, components and services from the device-grid package are deprecated and new ones are created in the core data-grid component.
+
+This change only affects you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications.
+
 #### Implemented
 
 ##### Breaking change in the Map widget
 
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), with release 10.18+, the "Map" widget has been migrated and support for real-time updates on all devices has been replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget no longer supports the "show track" option.
-
 
 ### Streaming Analytics
 

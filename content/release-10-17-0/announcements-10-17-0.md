@@ -87,30 +87,30 @@ Example of previous response format (note `aCustomDateField` field):
 
 ```json
 {
-   "source":{
-      "id":"91123"
-   },
-   "type":"TYPE-911",
-   "aCustomDateField":{
-      "date":{
-         "date":14,
-         "seconds":15,
-         "hours":12,
-         "month":10,
-         "year":122,
-         "timezoneOffset":-60,
-         "minutes":41,
-         "time":1668426075840,
-         "day":1
-      },
-      "offset":120
-   },
-   "c8y_TemperatureMeasurement":{
-      "T":{
-         "unit":"C",
-         "value":10
-      }
-   }
+  "source": {
+    "id": "91123"
+  },
+  "type": "TYPE-911",
+  "aCustomDateField": {
+    "date": {
+      "date": 14,
+      "seconds": 15,
+      "hours": 12,
+      "month": 10,
+      "year": 122,
+      "timezoneOffset": -60,
+      "minutes": 41,
+      "time": 1668426075840,
+      "day": 1
+    },
+    "offset": 120
+  },
+  "c8y_TemperatureMeasurement": {
+    "T": {
+      "unit": "C",
+      "value": 10
+    }
+  }
 }
 ```
 
@@ -118,19 +118,20 @@ New format:
 
 ```json
 {
-   "source":{
-      "id":"91123"
-   },
-   "type":"TYPE-911",
-   "aCustomDateField":"2022-11-14T12:44:11.481+01:00",
-   "c8y_TemperatureMeasurement":{
-      "T":{
-         "unit":"C",
-         "value":10
-      }
-   }
+  "source": {
+    "id": "91123"
+  },
+  "type": "TYPE-911",
+  "aCustomDateField": "2022-11-14T12:44:11.481+01:00",
+  "c8y_TemperatureMeasurement": {
+    "T": {
+      "unit": "C",
+      "value": 10
+    }
+  }
 }
 ```
+
 The change has been introduced to improve the consistency between different Cumulocity IoT protocols.
 
 ### Security changes
@@ -146,7 +147,6 @@ Note that the administrator will still have the option to force the user to rese
 ##### Deprecation of SMS TFA feature
 
 Unlike the former announcement with [release 10.16](/release-10-16-0/announcements-10-16-0), the SMS TFA (Two-Factor Authentication) feature will not be removed, and we will continue to support SMS TFA.
-
 
 #### Implemented
 
@@ -167,6 +167,12 @@ The HOOK_SEARCH can be used by developers to extend the web integration of the s
 ##### Breaking change in the Map widget
 
 As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), with release 10.18+, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
+
+##### Deprecated device-grid model classes, column implementations and services
+
+Shared classes, components and services from the device-grid package are deprecated and new ones are created in the core data-grid component.
+
+This change only affects you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications. If you do and you do use the device-grid functionalities, check the deprecation documentation and alter your code accordingly. Refer to the deprecations in the WebSDK resources documentation for the device-grid service [here](http://resources.cumulocity.com/documentation/websdk/ngx-components/injectables/DeviceGridService.html). Other deprecations for reference are also marked in this documentation.
 
 #### Implemented
 
@@ -283,6 +289,7 @@ In a future release of Cumulocity IoT core the history attribute will be removed
 #### Planned
 
 <a name="machine-learning-deprecation"></a>
+
 ##### Deprecation of Machine Learning Engine and Machine Learning Workbench
 
 As of Cumulocity IoT 10.16, Machine Learning Engine and Machine Learning Workbench are deprecated, and we will end further development of these components. After Cumulocity IoT 10.17, both will be removed from the platform. If you have existing (production) projects which rely on MLE and/or MLW applications, then Software AG is committed to work together with you to find an appropriate transition path. If we have not yet been in contact for this matter, feel free to contact us at [c8y_mlw_mle_sunsetting@softwareag.com](mailto:c8y_mlw_mle_sunsetting@softwareag.com).

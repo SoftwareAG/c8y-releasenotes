@@ -30,7 +30,7 @@ This change affects the following APIs:
 
 As announced earlier, most recently with [release 10.17](/release-10-17-0/announcements-10-17-0), shared classes, components and services from the device-grid package are deprecated and have now been removed. New ones are created in the core data-grid component.
 
-This change only affects you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications.
+This change only affects you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications. If you use the device-grid functionalities, check the deprecation documentation and alter your code accordingly. Refer to the deprecations in the [WebSDK resources documentation for the device-grid service](http://resources.cumulocity.com/documentation/websdk/ngx-components/injectables/DeviceGridService.html). Other deprecations for reference are also marked in this documentation.
 
 ### Streaming Analytics
 

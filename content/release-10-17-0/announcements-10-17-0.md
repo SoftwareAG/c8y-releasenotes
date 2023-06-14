@@ -168,7 +168,7 @@ The HOOK_SEARCH can be used by developers to extend the web integration of the s
 
 As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), with release 10.18+, the "Map" widget will be migrated and support for real-time updates on all devices will be replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget will no longer support the "show track" option.
 
-##### Deprecated device-grid model classes, column implementations and services
+##### Deprecation of device-grid model classes, column implementations and services
 
 Shared classes, components and services from the device-grid package are deprecated and new ones are created in the core data-grid component.
 

@@ -75,7 +75,17 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>Authentication</td>
-<td>In the SSO configuration page, users can now enable and configure the external token validation process.</td>
+<td>The OpenSSL command for generating a "signed verification code" for Proof of Possession has been enhanced to include additional encoding functionality.</td>
+<td>MTM-52775</td>
+<td>10.18.108.0</td>
+<td>UI</td>
+</tr>
+
+
+<tr>
+<td>Authentication</td>
+<td>In the single-sign-on configuration page, users can now enable and configure the external token validation process.</td>
+
 <td>MTM-49801</td>
 <td>10.18.3.0</td>
 <td>UI</td>
@@ -217,7 +227,6 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>Updating a custom alarm property no longer creates a redundant audit log entry with misleading information about alarm clearance.</td>
-
 <td>MTM-51919</td>
 <td>10.18.88.0</td>
 <td>Core</td>
@@ -240,7 +249,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Authorization</td>
+<td>Authentication</td>
 <td>In the <b>Trusted certificates</b> page, refreshing and downloading the verification code for the Proof of Possession process now works properly if a new certificate was uploaded or the verification code was refreshed by the user.</td>
 <td>MTM-52956</td>
 <td>10.18.140.0</td>
@@ -258,7 +267,7 @@ Build version</th>
 <tr>
 <td>Authentication</td>
 <td>The verification code which is signed in the Proof of Possession process now supports end-of-line characters from various operating systems.</td>
-<td>MTM-53296</td>
+<td>MTM-</td>
 <td>10.18.86.0</td>
 <td>Core</td>
 </tr>

@@ -32,7 +32,7 @@ Build version</th>
 </thead><tbody>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>The Device management home page now also provides a customizable dashboard which lets users add customized widgets.</td>
 <td>DM-1644</td>
 <td>10.18.39.0</td>
@@ -40,7 +40,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>The "Connect Smartphone" wizard illustrations have been updated.</td>
 <td>DM-2221</td>
 <td>10.18.23.0</td>
@@ -100,7 +100,7 @@ Build version</th>
 </thead><tbody>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>In the device grid, issues with applying filters have been fixed.</td>
 <td>DM-2321</td>
 <td>10.18.128.0</td>
@@ -109,6 +109,22 @@ Build version</th>
 
 <tr>
 <td>Device Management</td>
+<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
+<td>DM-2215</td>
+<td>10.18.101.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>Issues with flashing the device availability connection status have been fixed.</td>
+<td>MTM-51541</td>
+<td>10.18.106.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Device management</td>
 <td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the "ID", "externalId" and "externalIdType" values.</td>
 <td>DM-2093</td>
 <td>10.18.22.0</td>
@@ -116,10 +132,18 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>SmartREST Inventory GET templates created in the UI did not generate responses when there was no external ID type declared in the template. This issue has been addressed for both existing and newly created templates.</td>
 <td>DM-2126</td>
 <td>10.18.7.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The configuration flag <code>fwResetStateMachineOnStart</code> has been added to control if the LWM2M agent resets the firmware update state machine on the client at the beginning of a firmware update. The default of this flag is <code>true</code> which matches the existing behaviour of the LWM2M agent. It is available in the [device registration settings](https://cumulocity.com/guides/protocol-integration/lwm2m/#device-registration-settings).</td>
+<td>DM-2292</td>
+<td>10.18.107.0</td>
 <td>Core</td>
 </tr>
 

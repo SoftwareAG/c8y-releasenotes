@@ -141,7 +141,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>The configuration flag <code>fwResetStateMachineOnStart</code> has been added to control if the LWM2M agent resets the firmware update state machine on the client at the beginning of a firmware update. The default of this flag is true which matches the existing behaviour of the LWM2M agent. It is available in the [device registration settings](https://cumulocity.com/guides/protocol-integration/lwm2m/#device-registration-settings).</td>
+<td>The configuration flag <code>fwResetStateMachineOnStart</code> has been added to control if the LWM2M agent resets the firmware update state machine on the client at the beginning of a firmware update. The default of this flag is <code>true</code> which matches the existing behaviour of the LWM2M agent. It is available in the [device registration settings](https://cumulocity.com/guides/protocol-integration/lwm2m/#device-registration-settings).</td>
 <td>DM-2292</td>
 <td>10.18.107.0</td>
 <td>Core</td>

@@ -97,33 +97,8 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>In the updated package installation process, users are notified when installing community-created packages, indicating that a third-party plugin is being installed.</td>
-
 <td>MTM-50206</td>
 <td>10.17.225.0</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Authentication</td>
-<td>In the SSO configuration page, users can now enable and configure the external token validation.</td>
-<td>MTM-49801</td>
-<td>10.18.0.8</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Authentication</td>
-<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
-<td>MTM-52049</td>
-<td>10.17.164.0</td>
-<td>Core</td>
-</tr>
-
-<tr>
-<td>Authentication</td>
-<td>In the single sign-on configuration page, the input fields for the body and the URL of request tokens have been enlarged to show more data.</td>
-<td>MTM-50381</td>
-<td>10.17.66.0</td>
 <td>UI</td>
 </tr>
 
@@ -156,6 +131,30 @@ Build version</th>
 <td>The files repository view now uses the new data grid component. Filtering and sorting of files is now available. Additionally it is possible to select multiple files for bulk removal operations.</td>
 <td>MTM-49740</td>
 <td>10.17.73.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>In the single sign-on configuration page, users can now enable and configure the external token validation.</td>
+<td>MTM-49801</td>
+<td>10.18.0.8</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+<td>MTM-52049</td>
+<td>10.17.164.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>In the single sign-on configuration page, the input fields for the body and the URL of request tokens have been enlarged to show more data.</td>
+<td>MTM-50381</td>
+<td>10.17.66.0</td>
 <td>UI</td>
 </tr>
 
@@ -245,7 +244,6 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
-
 <td>DM-2215</td>
 <td>10.18.0.69</td>
 <td>Core</td>
@@ -318,8 +316,6 @@ Build version</th>
 <tr>
 <td>Authentication</td>
 <td>Issues with refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
-
-
 <td>MTM-53559</td>
 <td>10.18.0.69</td>
 <td>Core</td>

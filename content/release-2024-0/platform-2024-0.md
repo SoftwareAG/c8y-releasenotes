@@ -84,7 +84,8 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>Authentication</td>
-<td>In the single-sign on configuration page, users can now enable and configure the external token validation process.</td>
+<td>In the single-sign-on configuration page, users can now enable and configure the external token validation process.</td>
+
 <td>MTM-49801</td>
 <td>10.18.3.0</td>
 <td>UI</td>

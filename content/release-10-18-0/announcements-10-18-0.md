@@ -201,3 +201,22 @@ For more details, see the [API Reference for EPL (ApamaDoc)](https://documentati
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the German version of the Analytics Builder documentation,
 which is available as a separate webhelp until release 10.17, is no longer provided.
 See also the information on the restructured *Streaming Analytics guide* in the [Streaming Analytics](/release-10-18-0/streaming-analytics-10-18-0/) release notes.
+
+<a name="data-hub"></a>
+### Cumulocity IoT DataHub
+
+#### Planned
+
+##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
+
+In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.
+
+##### Breaking change in the offloading mechanism - removal of history column in alarms collection
+
+In a future release of Cumulocity IoT core the history attribute will be removed from the alarms. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake table still includes the history column, but for new offloading runs the value will not be included anymore and thus will be null.
+
+#### Implemented
+
+###### Deprecation of support for mixed types
+
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), Cumulocity IoT DataHub removes support for mixed data types. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.

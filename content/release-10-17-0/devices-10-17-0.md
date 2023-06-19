@@ -527,7 +527,7 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>OPC UA</td>
-<td>If the namespace is not defined for a specific node, a missing error handler in the past prevented the scan operation to complete. This is now fixed by skipping nodes that cannot be read. The opcua-device-gateway logs further detail in such cases. The log level INFO contains the failure message and DEBUG contains the stack trace.</td>
+<td>If the namespace is not defined for a specific node, a missing error handler in the past prevented completion of the scan operation. This is now fixed by skipping nodes that cannot be read. The opcua-device-gateway logs include further details in such cases. The log level INFO contains the failure message and the log level DEBUG contains the stacktrace.</td>
 <td>DM-1920</td>
 <td>10.17.0.166</td>
 <td>Core</td>

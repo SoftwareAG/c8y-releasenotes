@@ -152,7 +152,10 @@ As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), with 
 
 
 ### Streaming Analytics
-<!-- The following has been copied to the 10.17 release notes. TODO: remove it here for now. -->
+<!-- The following has been copied to the 10.17 release notes.
+TODO: Make this identical to the 10.17 release notes, and sync any future changes.
+But make sure that the links then go to 10.18.
+Maybe repeat here that PAQ 10.18 is already in C8Y 10.17. -->
 
 #### Planned
 

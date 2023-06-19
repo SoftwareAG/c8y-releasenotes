@@ -205,17 +205,11 @@ It has been replaced by a new "Call another microservice" sample which now uses 
 See also [Connecting Apama to other microservices](https://cumulocity.com/guides/10.17.0/streaming-analytics/epl-apps/#microservices) in the *Streaming Analytics guide*.
 
 ##### Documentation
-<!-- Had to rewrite the "Planned" and move to "Implemented".
-However, this is also mentioned in the "streaming-analytics-10-17-0" bundle, but without mentioning the German doc.
-So where do we want to have this info? -->
-The Analytics Builder documentation has been integrated into the Cumulocity IoT documentation.
-Analytics Builder developers can now search and reference the Analytics Builder documentation within the Cumulocity IoT documentation.
-This makes it easier for new users to get started and for advanced users to use a single documentation interface.
-The Analytics Builder documentation is no longer available as a separate webhelp.
-See also [Restructured Streaming Analytics guide](/release-10-17-0/streaming-analytics-10-17-0/).
 
-The German version of the Analytics Builder documentation, which is also available as a separate webhelp until release 10.16, is no longer provided.
+The German version of the Analytics Builder documentation, which is available as a separate webhelp until release 10.16, is no longer provided.
 We will focus on our high-quality, up-to-date English user documentation.
+The English version of the Analytics Builder documentation has been integrated into the Cumulocity IoT documentation.
+See also [Restructured Streaming Analytics guide](/release-10-17-0/streaming-analytics-10-17-0/).
 
 ##### Analytics Builder - Change of type for Clear Alarm input port
 

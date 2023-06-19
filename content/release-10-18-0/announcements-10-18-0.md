@@ -102,7 +102,7 @@ cgroup is a Linux kernel feature to organize processes hierarchically and distri
 Starting with Cumulocity IoT version 2024, it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
 
 When using the Cumulocity IoT Microservice SDK for developing microservices, ensure to configure a Java version which is cgroup v2 aware when building your microservice. When using Java 8, ensure to use openjdk8u372 or higher. When using Java 11, use Java 11.0.16 or higher, or use Java 15 or higher.
-When using a server runtime other than OpenJDK Java as microservice application runtime please refer to the documentation of the provider. 
+When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider. 
 
 ### SDK changes
 

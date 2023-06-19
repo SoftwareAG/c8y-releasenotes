@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.161.
+These release notes contain all changes until build version 10.17.0.195.
 {{< /c8y-admon-info >}}
 
 

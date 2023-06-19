@@ -42,6 +42,14 @@ Build version</th>
 
 <tr>
 <td>Authentication</td>
+<td>The OpenSSL command for generating a "signed verification code" for Proof of Possession has been enhanced to include additional encoding functionality.</td>
+<td>MTM-52775</td>
+<td>10.17.0.153</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
 <td>In the <b>Trusted certificates</b> page, an issue with the border of the <b>Certificate</b> field has been fixed.</td>
 <td>MTM-48649</td>
 <td>10.16.45.0</td>
@@ -168,8 +176,32 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Fixed an issue where users which only have inventory roles could not add new groups.</td>
+<td>Issues with flashing the device availability connection status have been fixed.</td>
+<td>MTM-51541</td>
+<td>10.17.0.180</td>
+<td>None</td>
+</tr>
 
+<tr>
+<td>Administration</td>
+<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
+<td>DM-2215</td>
+<td>10.17.0.176</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Applications are now automatically deployed right after being copied (no additional request is needed). Moreover, the first manifest update request after copying the application now works correctly.</td>
+
+<td>MTM-51585</td>
+<td>10.17.0.166</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue where users which only have inventory roles could not add new groups.</td>
 <td>MTM-52413</td>
 <td>10.17.0.147</td>
 <td>UI</td>
@@ -178,7 +210,6 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>Fixed an issue with the names of the files downloaded from the platform (for example, from the file repository or from event attachments). UTF-8 characters, for example, in the Japanese localization are no longer missing if the file name includes special characters like "+".</td>
-
 <td>MTM-53056</td>
 <td>10.17.0.145</td>
 <td>UI</td>
@@ -222,6 +253,31 @@ Build version</th>
 <td>MTM-45633</td>
 <td>10.16.13.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>Issues with refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
+<td>MTM-53559</td>
+<td>10.17.0.176</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The verification code which is signed in the Proof of Possession process now supports end-of-line characters from various operating systems.</td>
+<td>MTM-53296</td>
+<td>10.17.0.172</td>
+<td>Core</td>
+</tr>
+
+
+<tr>
+<td>Authentication</td>
+<td>In the <b>Trusted certificates</b> page, refreshing and downloading the verification code for the Proof of Possession process now works properly if a new certificate was uploaded or the verification code was refreshed by the user.</td>
+<td>MTM-52956</td>
+<td>10.17.0.171</td>
+<td>UI</td>
 </tr>
 
 <tr>

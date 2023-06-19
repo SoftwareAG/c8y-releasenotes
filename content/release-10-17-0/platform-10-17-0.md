@@ -192,7 +192,8 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Applications are now automatically deployed right after being copied (no additional request is needed). Moreover, the first manifest update request, right after the application copying, now works correctly.</td>
+<td>Applications are now automatically deployed right after being copied (no additional request is needed). Moreover, the first manifest update request after copying the application now works correctly.</td>
+
 <td>MTM-51585</td>
 <td>10.17.0.166</td>
 <td>Core</td>

@@ -211,7 +211,7 @@ So where do we want to have this info? -->
 The Analytics Builder documentation has been integrated into the Cumulocity IoT documentation.
 Analytics Builder developers can now search and reference the Analytics Builder documentation within the Cumulocity IoT documentation.
 This makes it easier for new users to get started and for advanced users to use a single documentation interface.
-The Analytics Builder documentation is no longer be available as a separate webhelp.
+The Analytics Builder documentation is no longer available as a separate webhelp.
 See also [Restructured Streaming Analytics guide](/release-10-17-0/streaming-analytics-10-17-0/).
 
 The German version of the Analytics Builder documentation, which is also available as a separate webhelp until release 10.16, is no longer provided.

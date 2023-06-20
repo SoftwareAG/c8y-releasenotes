@@ -199,7 +199,7 @@ This is in line with the deprecation of [Machine Learning Engine](/release-10-16
 #### Implemented
 
 ##### New sample for calling another microservice
-<!-- from 10.18 release notes -->
+
 As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the EPL Apps sample "Call Zementis microservice" sample has been removed.
 It has been replaced by a new "Call another microservice" sample which now uses the `/health` endpoint of an Apama-ctrl microservice.
 See also [Connecting Apama to other microservices](https://cumulocity.com/guides/10.17.0/streaming-analytics/epl-apps/#microservices) in the *Streaming Analytics guide*.
@@ -239,7 +239,7 @@ For more details, see the Streaming Analytics release notes for
 [release 10.18.0](/release-10-17-0/streaming-analytics-10-17-0).
 
 ##### Removal of required roles from the manifest
-<!-- from 10.18 release notes -->
+
 For security reasons, ROLE_APPLICATION_MANAGEMENT_ADMIN and ROLE_OPTION_MANAGEMENT_ADMIN have been
 removed from the required roles which are defined in the manifest file of the Apama-ctrl microservice.
 Any applications deployed with the Streaming Analytics application (for example, EPL apps) can no longer
@@ -274,7 +274,7 @@ instead of
 `sag_apama_correlator_user_httpServer_instance_5_metricname`
 
 ##### Updated events in com.apama.cumulocity in Apama 10.15.3
-<!-- from 10.18 release notes -->
+
 In Apama 10.15.3, the following events of the `com.apama.cumulocity` package have been updated to improve consistency in error handling:
 
 - `FindAlarmResponseAck`

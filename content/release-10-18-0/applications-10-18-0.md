@@ -116,8 +116,15 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>When updating blueprints via the UI users now get a notification instead of Cumulocity IoT silently updating in the background.</td>
+<td>The context help and other help links point to a documentation website defined by the application option <code>docsBaseUrl</code>. This option now supports the <code>{{ version }}</code> placeholder, which allows the administrator to choose whether to use versioned or unversioned documentation links. By default, versioned links will be used.</td>
+<td>MTM-41135</td>
+<td>10.18.0.70</td>
+<td>UI</td>
+</tr>
 
+<tr>
+<td>Web SDK</td>
+<td>When updating blueprints via the UI users now get a notification instead of Cumulocity IoT silently updating in the background.</td>
 <td>MTM-50636</td>
 <td>10.17.257.0</td>
 <td>UI</td>
@@ -230,6 +237,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue where the default group icon was displayed instead of the corresponding asset icon.</td>
+<td>MTM-53403</td>
+<td>10.18.0.68</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue where users were not able to see all top-level node groups, even if they had the required permissions.</td>
+<td>MTM-53394</td>
+<td>10.18.0.66</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>

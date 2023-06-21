@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.161.
+These release notes contain all changes until build version 10.17.0.195.
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -45,6 +45,14 @@ Build version</th>
 <td>MTM-45890</td>
 <td>10.16.159.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The context help and other help links point to a documentation website defined by the application option <code>docsBaseUrl</code>. This option now supports the <code>{{ version }}</code> placeholder, which allows the administrator to choose whether to use versioned or unversioned documentation links. By default, versioned links will be used.</td>
+<td>MTM-41135</td>
+<td>10.17.0.185</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -113,6 +121,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue where the default group icon was displayed instead of the corresponding asset icon.</td>
+<td>MTM-53403</td>
+<td>10.17.0.181</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue where users were not able to see all top-level node groups, even if they had the required permissions.</td>
+<td>MTM-53394</td>
+<td>10.17.0.180</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -224,6 +248,14 @@ Build version</th>
 <td>MTM-49181</td>
 <td>10.16.31.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Microservice SDK</td>
+<td>The Spring Boot dependency has been updated to version 2.7.11.</td>
+<td>MTM-53342</td>
+<td>10.17.0.165</td>
+<td>Core</td>
 </tr>
 
 <tr>

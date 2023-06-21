@@ -5,7 +5,9 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.18.0.59.
+These release notes contain all changes until build versions
+- Core: 10.18.0.86
+- UI: 10.18.0.70
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -32,7 +34,7 @@ Build version</th>
 </thead><tbody>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>The Device Management home page now also provides a customizable dashboard so that users can add customized widgets.</td>
 <td>DM-1644</td>
 <td>10.17.194.0</td>
@@ -40,7 +42,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>Added support for rendering dropdown fields in JSON Schema Formly in the extensible device registration.</td>
 <td>DM-1921</td>
 <td>10.17.67.0</td>
@@ -48,7 +50,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>The step headers "1, 2, 3 ..." of the "Connect smartphone" wizard can no longer be clicked. The navigation now works exclusively via the buttons in the footer of the wizard. Moreover, the text which is displayed if an error occurs during the registration has been revised. If the last step ends in an error message, the last header now also reflects this error status.</td>
 <td>DM-1930</td>
 <td>10.17.25.0</td>
@@ -145,7 +147,15 @@ Build version</th>
 </thead><tbody>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
+<td>Issues with flashing the device availability connection status have been fixed.</td>
+<td>MTM-51541</td>
+<td>10.18.0.73</td>
+<td>None</td>
+</tr>
+
+<tr>
+<td>Device management</td>
 <td>In the device grid, issues with applying filters have been fixed.</td>
 <td>DM-2321</td>
 <td>10.18.0.57</td>
@@ -153,7 +163,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the "ID", "externalId" and "externalIdType" values.</td>
 <td>DM-2093</td>
 <td>10.18.0.55</td>
@@ -161,7 +171,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>When removing a device which has child devices, users can now select either to remove a device user or to remove all child devices. Prior to this change, it was possible to select both options in the UI, but such an action is not supported by the backend.</td>
 <td>MTM-45277</td>
 <td>10.17.262.0</td>
@@ -169,7 +179,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>On the <b>Software</b> tab in the device details, the <b>Reload</b> button now correctly updates the <b>Installed software</b> list.</td>
 <td>DM-2005</td>
 <td>10.17.141.0</td>
@@ -177,7 +187,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>In events and alarms views, custom properties with numeric values were incorrectly parsed and displayed as dates in the Chrome browser. This is now fixed.</td>
 <td>DM-1999</td>
 <td>10.17.118.0</td>
@@ -185,7 +195,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>On the <b>Shell</b> tab in the device details, when a shell command operation is created, its name now corresponds to the command text if available. If no command text is available then it displays the operation description.</td>
 <td>DM-2069</td>
 <td>10.17.74.0</td>
@@ -193,7 +203,7 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>In device list views, when a device was deleted, any related child devices were deleted as well. This functionality has now been enhanced. On device deletion, any existing child hierarchy types, that is, not only devices but also additions and assets are deleted accordingly.</td>
 <td>DM-2003</td>
 <td>10.17.73.0</td>
@@ -201,11 +211,19 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device Management</td>
+<td>Device management</td>
 <td>The <b>Assign devices</b> button is now disabled for users without the required permissions.</td>
 <td>MTM-50928</td>
 <td>10.17.16.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>Loriot</td>
+<td>The memory limit for the Loriot microservice has been increased to 2Gi.</td>
+<td>DM-2427</td>
+<td>10.18.0.74</td>
+<td>Core</td>
 </tr>
 
 <tr>

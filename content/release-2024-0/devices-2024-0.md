@@ -69,8 +69,16 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Smart Rest 2.0</td>
-<td>Added a SmartREST static template (201) for creating measurements with multiple fragments and series.</td>
+<td>SmartREST 2.0</td>
+<td>Added the SmartREST static template 125 for sending heartbeat from a device.</td>
+<td>DM-2346</td>
+<td>10.18.110.0</td>
+<td>Messaging Service</td>
+</tr>
+
+<tr>
+<td>SmartREST2.0 </td>
+<td>Added the SmartREST static template 201 for creating measurements with multiple fragments and series.</td>
 <td>DM-1860</td>
 <td>10.18.34.0</td>
 <td>Core</td>
@@ -100,6 +108,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device management</td>
+<td>The Device simulator microservice sent some internal requests without application key header which resulted in these requests being counted as device requests. The appropriate application key header has been added so that all requests are now counted correctly.</td>
+<td>DM-2306</td>
+<td>10.18.127.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>In the SmartREST template editor, issues with the presentation of the <b>External ID type</b> field for Inventory POST messages have been fixed. Under <b>CSV preview</b> the generated "Template creation CSV" has been adjusted to include the "ID", "externalId" and "externalIdType" values.</td>
+<td>DM-2093</td>
+<td>10.18.122.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device management</td>
@@ -138,6 +162,22 @@ Build version</th>
 <td>SmartREST Inventory GET templates created in the UI did not generate responses when there was no external ID type declared in the template. This issue has been addressed for both existing and newly created templates.</td>
 <td>DM-2126</td>
 <td>10.18.7.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Loriot</td>
+<td>The memory limit for the Loriot microservice has been increased to 2Gi.</td>
+<td>DM-2427</td>
+<td>10.18.112.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>For operation execution the LWM2M agent now selects the content format based on the set of content formats supported by the device.</td>
+<td>DM-2269</td>
+<td>10.18.117.0</td>
 <td>Core</td>
 </tr>
 

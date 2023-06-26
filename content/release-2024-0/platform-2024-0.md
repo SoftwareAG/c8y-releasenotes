@@ -202,7 +202,6 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
-
 <td>DM-2215</td>
 <td>10.18.101.0</td>
 <td>Core</td>
@@ -277,6 +276,14 @@ Build version</th>
 <td>Fixed an issue where deleting enhanced time series measurements did not work with the <code>fragmentType</code> query parameter.</td>
 <td>MTM-51379</td>
 <td>10.18.86.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>MQTT</td>
+<td>The error handling when publishing operations to MQTT devices has been improved.</td>
+<td>MTM-53168</td>
+<td>10.18.125.0</td>
 <td>Core</td>
 </tr>
 

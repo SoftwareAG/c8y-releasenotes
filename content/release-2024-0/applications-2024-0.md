@@ -33,6 +33,14 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
+<td>The context help and other help links point to a documentation website defined by the application option <code>docsBaseUrl</code>. This option now supports the <code>{{ version }}</code> placeholder, which allows the administrator to choose whether to use versioned or unversioned documentation links. By default, versioned links will be used.</td>
+<td>MTM-41135</td>
+<td>10.18.134.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
 <td>The Web SDK has been upgraded to Angular 15.</td>
 <td>MTM-52940</td>
 <td>10.18.158.0</td>

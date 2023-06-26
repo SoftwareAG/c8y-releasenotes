@@ -33,6 +33,14 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>In the datapoint library, it is now possible to pick fragment and series from an existing datapoint.</td>
+<td>MTM-52704</td>
+<td>10.17.0.139</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>In order to improve the Welcome page by providing more meaningful information, a "Markdown" widget is now available on dashboards. The widget can be used to display markdown content either from a URL or from a file.</td>
 <td>MTM-49220</td>
 <td>10.16.254.0</td>
@@ -143,14 +151,6 @@ Build version</th>
 <td>The latest events are now correctly displayed in the data point graph, even if a custom interval has been selected.</td>
 <td>MTM-52175</td>
 <td>10.17.0.143</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Cockpit</td>
-<td>In the datapoint library, it is now possible to pick fragment and series from an existing datapoint.</td>
-<td>MTM-52704</td>
-<td>10.17.0.139</td>
 <td>UI</td>
 </tr>
 
@@ -304,6 +304,14 @@ Build version</th>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The optional links of a package shown in the packages details now point to the right location.</td>
+<td>MTM-52691</td>
+<td>10.17.0.118</td>
+<td>UI</td>
 </tr>
 
 <tr>

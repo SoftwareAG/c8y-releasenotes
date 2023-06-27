@@ -112,6 +112,25 @@ That will result in performance degradation, which depends on number of series t
 stored with each and goes from 5% for single series in each measurement to 
 more than 20% in case of 50 series per measurement.
 
+#### Limitations
+
+##### Security
+
+The latest measurements values are part of managed object, and they follow the managed object inventory role permissions.
+It's not respecting the inventory roles for measurements. 
+
+##### Data model
+
+The latest measurements are not store the measurement type this information is lost
+and can be found only using original measurement document.
+
+#### Last value
+
+The value stored at device managed object is the last value send to platform. 
+Means that if the order of measurement delivery to platform is not correct 
+then also that latest values will be affected. 
+
+
 ### SDK changes
 
 #### Planned

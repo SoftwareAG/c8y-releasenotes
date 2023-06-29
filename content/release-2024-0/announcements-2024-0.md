@@ -20,13 +20,15 @@ This change affects the following APIs:
 * `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
 
-##### *[Feature Preview]* Latest measurement values can be stored as part of Device Managed Object
-**Important:** The feature is at Public Preview stage means that it's not enabled by default and maybe subject to change in future.
+##### *[Feature Preview]* Latest measurement values can be stored as part of a device managed object
+{{< c8y-admon-important >}}
+The feature is in Public Preview mode, that is, it is not enabled by default and maybe subject to change in future.
+{{< /c8y-admon-important >}} 
 
-Starting from this release we are introducing the support of automated persistence of measurement values under `c8y_LatestMeasurements` fragment.
+Starting from this release we introduce the support of automated persistence of measurement values under the `c8y_LatestMeasurements` fragment.
 
 ##### How to enable it
-Using tenant options you should create a category named `measurement.series.latestvalue` with put request to [ tenant options category ](https://cumulocity.com/api/core/#operation/putCategoryOptionResource)
+Use the tenant options to create a category named `measurement.series.latestvalue` with a PUT request to a [tenant options category](https://cumulocity.com/api/core/#operation/putCategoryOptionResource).
 Example: 
 ```
 PUT /tenant/options/measurement.series.latestvalue
@@ -36,13 +38,15 @@ PUT /tenant/options/measurement.series.latestvalue
   // or "*":"" to enable all 
 }
 ```
-Where the key is a filter of measurement series that should be persistent and value must be always empty string, it's left for future use case.
+where the key is a filter of measurement series that must be persistent and its value must always be an empty string (left for a future use case).
 
 ##### How it works
 
-When measurement is created with series that are matching to configuration then device managed object
-will be updated with last series send to platform.
-E.g. when you send 
+If a measurement is created with a series that matches the configuration the device managed object
+is updated with the last series sent to the platform.
+Example:
+
+If you send 
 ```
 POST /measurement/measurements
 {
@@ -62,10 +66,10 @@ POST /measurement/measurements
   }
 }
 ```
-Then if you consider our example configuration only `c8y_Temperature.T` will be stored as part of device,the `c8y_Speed.S` will be ignored.
-Means measurement will be stored as before, only the state update is skipped.
-To read the latest values on device level you need to use inventory api.
-To get single device:
+then,  considering the example configuration, only `c8y_Temperature.T` is stored as part of the device, while `c8y_Speed.S` is ignored.
+This means, that the measurement is stored like before, only the state update is skipped.
+To read the latest values on device level you must use the Inventory API.
+To get a single device:
 ```
 GET /inventory/managedObjects/5413?withLatestValues=true
 {
@@ -82,7 +86,7 @@ GET /inventory/managedObjects/5413?withLatestValues=true
 }
 
 ```
-or to get list of devices matching expected criteria 
+To get a list of devices matching the expected criteria, 
 e.g. get all devices which have reported temperature higher than 10 degrees :
 
 ```

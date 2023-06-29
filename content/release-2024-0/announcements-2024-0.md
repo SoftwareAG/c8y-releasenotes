@@ -111,7 +111,7 @@ GET /inventory/managedObjects?withLatestValues=true&query=$filter=c8y_LatestMeas
 ```
 ##### Implications
 
-The feature is introducing addition operation upon measurement creation.
+This feature introduces an additional operation upon measurement creation.
 This results in performance degradation, depending on the number of series to be
 stored in each measurement, reaching from 5% for single series in each measurement to 
 more than 20% in case of 50 series per measurement.

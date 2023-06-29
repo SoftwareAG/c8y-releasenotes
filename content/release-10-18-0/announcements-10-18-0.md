@@ -215,6 +215,10 @@ In future releases of Cumulocity IoT DataHub the offloading mechanism may levera
 
 In a future release of Cumulocity IoT core the history attribute will be removed from the alarms. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake table still includes the history column, but for new offloading runs the value will not be included anymore and thus will be null.
 
+##### Deprecation of embedded PowerBI reports
+
+In a future release of Cumulocity IoT DataHub the access to PowerBI reports from within the Cumulocity IoT DataHub UI may be removed. Comparable functionality can be integrated into the core UI based on a PowerBI extension.
+
 #### Implemented
 
 ###### Deprecation of support for mixed types

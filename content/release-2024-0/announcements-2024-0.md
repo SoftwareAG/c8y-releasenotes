@@ -87,7 +87,7 @@ GET /inventory/managedObjects/5413?withLatestValues=true
 
 ```
 To get a list of devices matching the expected criteria, 
-e.g. get all devices which have reported temperature higher than 10 degrees :
+for example, get all devices which have a reported temperature higher than 10 degrees:
 
 ```
 GET /inventory/managedObjects?withLatestValues=true&query=$filter=c8y_LatestMeasurements.c8y_Temperature.T.value+gt+10
@@ -112,26 +112,26 @@ GET /inventory/managedObjects?withLatestValues=true&query=$filter=c8y_LatestMeas
 ##### Implications
 
 The feature is introducing addition operation upon measurement creation.
-That will result in performance degradation, which depends on number of series that needs to be 
-stored with each and goes from 5% for single series in each measurement to 
+This results in performance degradation, depending on the number of series to be
+stored in each measurement, reaching from 5% for single series in each measurement to 
 more than 20% in case of 50 series per measurement.
 
 #### Limitations
 
 ##### Security
 
-The latest measurements values are part of managed object, and they follow the managed object inventory role permissions.
+The latest measurement values are part of the managed object and they follow the managed object inventory role permissions.
 It's not respecting the inventory roles for measurements. 
 
 ##### Data model
 
-The latest measurements are not store the measurement type this information is lost
-and can be found only using original measurement document.
+The latest measurements do not store the measurement type. This information
+can be obtained using the Measurements API.
 
 #### Last value
 
-The value stored at device managed object is the last value send to platform. 
-Means that if the order of measurement delivery to platform is not correct 
+The value stored in the device managed object is the last value sent to the platform. 
+If the order of measurement delivery to the platform is different from the measurement creation time
 then also that latest values will be affected. 
 
 

@@ -120,8 +120,7 @@ more than 20% in case of 50 series per measurement.
 
 ##### Security
 
-The latest measurement values are part of the managed object and they follow the managed object inventory role permissions.
-It's not respecting the inventory roles for measurements. 
+The latest measurement values are part of the managed object and they follow the managed object inventory role permissions instead of respecting the inventory roles for measurements. 
 
 ##### Data model
 

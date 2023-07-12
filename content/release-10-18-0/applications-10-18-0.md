@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.86
-- UI: 10.18.0.70
+- Core: 10.18.0.127
+- UI: 10.18.0.97
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -130,7 +130,6 @@ Build version</th>
 <td>UI</td>
 </tr>
 
-
 <tr>
 <td>Web SDK</td>
 <td>It is now possible to remove a file when updating its file property within a complex property of an asset.</td>
@@ -237,6 +236,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>In case the <code>doNotAddGlobalFragmentByDefault</code> option has been set in the configuration of the <code>DatapointLibraryModule</code>, the <code>c8y_Global</code> fragment is no longer unintentionally set to <code>null</code> during the creation of a new data point library entry.</td>
+<td>MTM-54213</td>
+<td>10.18.0.91</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -371,6 +378,14 @@ Build version</th>
 <td>MTM-53359</td>
 <td>10.18.0.55</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Fixed an issue where the text for a link on the login screen was cut off.</td>
+<td>MTM-53597</td>
+<td>10.18.0.76</td>
+<td>UI</td>
 </tr>
 
 <tr>

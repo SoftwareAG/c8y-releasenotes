@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.109.0
-- UI 10.18.164.0
+- Core 10.18.165.0
+- UI 10.18.165.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -70,6 +70,14 @@ Build version</th>
 
 <tr>
 <td>SmartREST 2.0</td>
+<td>Added the SmartREST static template 507 for changing the device operations status from EXECUTING to FAILED. The operations can be filtered by type. The template is intended for facilitating an operations cleanup after a crash.</td>
+<td>DM-2347</td>
+<td>10.18.114.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>SmartREST 2.0</td>
 <td>Added the SmartREST static template 125 for sending heartbeat from a device.</td>
 <td>DM-2346</td>
 <td>10.18.110.0</td>
@@ -108,6 +116,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Connectivity</td>
+<td>The performance of MQTT connections has been improved.  MQTT devices can now connect or reconnect faster, especially if the platform already has a large number of MQTT devices connected.</td>
+<td>MTM-53819</td>
+<td>10.18.157.0</td>
+<td>Core</td>
+</tr>
 
 <tr>
 <td>Device management</td>

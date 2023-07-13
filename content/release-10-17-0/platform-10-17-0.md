@@ -411,7 +411,8 @@ MTM-49760</td>
 
 <tr>
 <td>Notifications 2.0</td>
-<td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription.  For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
+<td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
+
 <td>MTM-53848</td>
 <td>10.17.0.216</td>
 <td>Messaging Service</td>

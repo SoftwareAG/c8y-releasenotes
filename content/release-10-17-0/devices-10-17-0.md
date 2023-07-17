@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.161.
+These release notes contain all changes until build version 10.17.0.216.
 {{< /c8y-admon-info >}}
 
 
@@ -138,6 +138,14 @@ Build version</th>
 <td>DM-1566</td>
 <td>10.17.0.112</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>The device list now shows complex columns like <code>c8y_SoftwareList</code> correctly after converting them to strings.</td>
+<td>DM-2410</td>
+<td>10.17.0.211</td>
+<td>UI</td>
 </tr>
 
 <tr>

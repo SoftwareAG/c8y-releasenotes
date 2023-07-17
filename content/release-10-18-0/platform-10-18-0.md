@@ -6,7 +6,9 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.18.0.59.
+These release notes contain all changes until build versions
+- Core: 10.18.0.127
+- UI: 10.18.0.96
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -97,33 +99,8 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>In the updated package installation process, users are notified when installing community-created packages, indicating that a third-party plugin is being installed.</td>
-
 <td>MTM-50206</td>
 <td>10.17.225.0</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Authentication</td>
-<td>In the SSO configuration page, users can now enable and configure the external token validation.</td>
-<td>MTM-49801</td>
-<td>10.18.0.8</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Authentication</td>
-<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
-<td>MTM-52049</td>
-<td>10.17.164.0</td>
-<td>Core</td>
-</tr>
-
-<tr>
-<td>Authentication</td>
-<td>In the single sign-on configuration page, the input fields for the body and the URL of request tokens have been enlarged to show more data.</td>
-<td>MTM-50381</td>
-<td>10.17.66.0</td>
 <td>UI</td>
 </tr>
 
@@ -156,6 +133,30 @@ Build version</th>
 <td>The files repository view now uses the new data grid component. Filtering and sorting of files is now available. Additionally it is possible to select multiple files for bulk removal operations.</td>
 <td>MTM-49740</td>
 <td>10.17.73.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>In the single sign-on configuration page, users can now enable and configure the external token validation.</td>
+<td>MTM-49801</td>
+<td>10.18.0.8</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The performance of the first user requests sent after node restart has been improved. Prior to this change, there was a rare issue where the number of all global roles in a tenant was close to but not exceeding 100, and many thousands of devices were concurrently trying to authorize MQTT connections on the restarted node.</td>
+<td>MTM-52049</td>
+<td>10.17.164.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>In the single sign-on configuration page, the input fields for the body and the URL of request tokens have been enlarged to show more data.</td>
+<td>MTM-50381</td>
+<td>10.17.66.0</td>
 <td>UI</td>
 </tr>
 
@@ -244,8 +245,31 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
+<td>Fixed an issue when cloning some of the default global roles (for example, "devices").</td>
+<td>MTM-45858</td>
+<td>10.18.0.98</td>
+<td>UI</td>
+</tr>
 
+<tr>
+<td>Administration</td>
+<td>Fixed an issue where the <b>Clear</b> button on the <b>Usage statistics</b> page failed to remove applied filters.</td>
+<td>MTM-50302</td>
+<td>10.18.0.93</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The button name for confirming the revocation of all tokens has been revised to <b>Log out all users and invalidate tokens</b>.</td>
+<td>MTM-53366</td>
+<td>10.18.0.74</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
 <td>DM-2215</td>
 <td>10.18.0.69</td>
 <td>Core</td>
@@ -318,8 +342,6 @@ Build version</th>
 <tr>
 <td>Authentication</td>
 <td>Issues with refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
-
-
 <td>MTM-53559</td>
 <td>10.18.0.69</td>
 <td>Core</td>
@@ -342,7 +364,6 @@ Build version</th>
 <td>UI</td>
 </tr>
 
-
 <tr>
 <td>Authentication</td>
 <td>Fixed an issue with the device request counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
@@ -350,6 +371,15 @@ Build version</th>
 <td>10.17.265.0</td>
 <td>UI</td>
 </tr>
+
+<tr>
+<td>Authentication</td>
+<td>The REST API endpoint <code>/application/applications/{id}/logs</code> so far required the role ROLE_APPLICATION_MANAGEMENT_ADMIN. This has been changed. The endpoint now requires either the ROLE_APPLICATION_MANAGEMENT_ADMIN or ROLE_APPLICATION_MANAGEMENT_READ.</td>
+<td>MTM-52028</td>
+<td>10.17.220.0</td>
+<td>Core</td>
+</tr>
+
 
 <tr>
 <td>Core platform</td>
@@ -384,10 +414,10 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Authentication</td>
-<td>The REST API endpoint <code>/application/applications/{id}/logs</code> so far required the role ROLE_APPLICATION_MANAGEMENT_ADMIN. This has been changed. The endpoint now requires either the ROLE_APPLICATION_MANAGEMENT_ADMIN or ROLE_APPLICATION_MANAGEMENT_READ.</td>
-<td>MTM-52028</td>
-<td>10.17.220.0</td>
+<td>MQTT</td>
+<td>The error handling when publishing operations to MQTT devices has been improved.</td>
+<td>MTM-53168</td>
+<td>10.18.0.90</td>
 <td>Core</td>
 </tr>
 

@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.161.
+These release notes contain all changes until build version 10.17.0.216.
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -30,6 +30,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>In the datapoint library, it is now possible to pick fragment and series from an existing datapoint.</td>
+<td>MTM-52704</td>
+<td>10.17.0.139</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -143,14 +151,6 @@ Build version</th>
 <td>The latest events are now correctly displayed in the data point graph, even if a custom interval has been selected.</td>
 <td>MTM-52175</td>
 <td>10.17.0.143</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Cockpit</td>
-<td>In the datapoint library, it is now possible to pick fragment and series from an existing datapoint.</td>
-<td>MTM-52704</td>
-<td>10.17.0.139</td>
 <td>UI</td>
 </tr>
 
@@ -304,6 +304,14 @@ Build version</th>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The optional links of a package shown in the packages details now point to the right location.</td>
+<td>MTM-52691</td>
+<td>10.17.0.118</td>
+<td>UI</td>
 </tr>
 
 <tr>

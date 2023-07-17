@@ -5,7 +5,9 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.18.164.0.
+These release notes contain all changes until build versions
+- Core 10.18.165.0
+- UI 10.18.165.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -200,7 +202,6 @@ Build version</th>
 <tr>
 <td>Administration</td>
 <td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
-
 <td>DM-2215</td>
 <td>10.18.101.0</td>
 <td>Core</td>
@@ -265,8 +266,17 @@ Build version</th>
 <tr>
 <td>Authentication</td>
 <td>The verification code which is signed in the Proof of Possession process now supports end-of-line characters from various operating systems.</td>
-<td>MTM-</td>
+<td>MTM-53296</td>
 <td>10.18.86.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Core platform</td>
+<td>Fixed a possible race condition with duplicate identity mappings for devices by introducing a unique database index.</td>
+
+<td>MTM-48399</td>
+<td>10.18.135.0</td>
 <td>Core</td>
 </tr>
 
@@ -276,6 +286,23 @@ Build version</th>
 <td>MTM-51379</td>
 <td>10.18.86.0</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>MQTT</td>
+<td>The error handling when publishing operations to MQTT devices has been improved.</td>
+<td>MTM-53168</td>
+<td>10.18.125.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Notifications 2.0</td>
+<td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
+
+<td>MTM-53848</td>
+<td>10.18.151.0</td>
+<td>Messaging Service</td>
 </tr>
 
 <tr>
@@ -301,6 +328,5 @@ Build version</th>
 <td>10.18.12.0</td>
 <td>Core</td>
 </tr>
-
 
 </tbody></table>

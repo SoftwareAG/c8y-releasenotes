@@ -35,7 +35,7 @@ The change is enforced by performance reasons.
 
 ##### Change in the Application API (REST API and Java SDK)
 
-In a future release, we will remove the `resourcesUrl` field from the Application API (both REST API and Java SDK). The `resourcesUrl` is a legacy field, and the functionality behind it was removed. 
+In a future release, we will remove the `resourcesUrl` field from the Application API (both REST API and Java SDK). The `resourcesUrl` is a legacy field, and the functionality behind it was removed.
 This change will not affect any user in a negative way, nor break an existing functionality.
 
 #### Implemented
@@ -75,6 +75,7 @@ For example, if a user sends a request in the following format:
     }
 }
 ```
+
 Since this release, the `c8y_LatestMeasurements` fragment will be ignored and not saved.
 
 ##### Breaking change in all REST APIs
@@ -90,6 +91,20 @@ As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), to improve security, as of a future releases, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
 This change prevents that an attacker could have access to all users, in case the administrator account was compromised.
 Note that the administrator will still have the option to force the user to reset the password on the next login or disable the user.
+
+
+### Microservice infrastructure changes
+
+#### Planned
+
+##### Breaking change: Use of Linux cgroup v2
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), from release 2024, microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in a version higher than 10.18 it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process. 
+
+cgroup is a Linux kernel feature to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. Every process in the system belongs to one and only one cgroup. In Cumulocity IoT cgroups are used to enforce container resource limits. 
+Starting with Cumulocity IoT release 2024, it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
+
+When using the Cumulocity IoT Microservice SDK for developing microservices, ensure to configure a Java version which is cgroup v2 aware when building your microservice. When using Java 8, ensure to use openjdk8u372 or higher. When using Java 11, use Java 11.0.16 or higher, or use Java 15 or higher.
+When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider. 
 
 
 ### SDK changes
@@ -144,14 +159,23 @@ All of the impacted injection tokens have been marked as deprecated with 10.18, 
 
 The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of a future release, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
 
+##### Deprecation of device-grid model classes, column implementations and services
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0) shared classes, components and services previously defined in @c8y/ngx-components/device-grid have been moved to @c8y/ngx-components. Therefore the obsolete items are deprecated.
+
+This change only affects you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications. If you use the device-grid functionalities, check the deprecation documentation and alter your code accordingly. Refer to the deprecations in the [WebSDK resources documentation for the device-grid service](http://resources.cumulocity.com/documentation/websdk/ngx-components/injectables/DeviceGridService.html). Other deprecations for reference are also marked in this documentation.
+
 #### Implemented
 
 ##### Breaking change in the Map widget
 
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), with release 10.18+, the "Map" widget has been migrated and support for real-time updates on all devices has been replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget no longer supports the "show track" option.
 
-
 ### Streaming Analytics
+
+{{< c8y-admon-important >}}
+Streaming Analytics release 10.18.0 has already been made available with Cumulocity IoT release 10.17.0.
+{{< /c8y-admon-important >}}
 
 #### Planned
 
@@ -168,6 +192,40 @@ As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the E
 It has been replaced by a new "Call another microservice" sample which now uses the `/health` endpoint of an Apama-ctrl microservice.
 See also [Connecting Apama to other microservices](https://cumulocity.com/guides/10.18.0/streaming-analytics/epl-apps/#microservices) in the *Streaming Analytics guide*.
 
+##### Documentation
+
+The German version of the Analytics Builder documentation, which is available as a separate webhelp until release 10.16, is no longer provided.
+We will focus on our high-quality, up-to-date English user documentation.
+The English version of the Analytics Builder documentation has been integrated into the Cumulocity IoT documentation.
+See also [Restructured Streaming Analytics guide](/release-10-18-0/streaming-analytics-10-18-0/).
+
+##### Analytics Builder - Change of type for Clear Alarm input port
+
+In the [Alarm Output](https://cumulocity.com/guides/10.18.0/streaming-analytics/block-reference/#alarm-output) block,
+the type of the **Clear Alarm** input port has changed from `boolean` to `pulse`.
+Thus any existing model which has a Boolean input to the port will now only trigger a clear alarm on the transition
+from `false` to `true`, instead of the entire time that the input remains `true`.
+If you wish to retain the old behavior, connect a
+[Pulse](https://cumulocity.com/guides/10.18.0/streaming-analytics/block-reference/#pulse)
+block to the **Clear Alarm** input port to send a sequence of pulse signals into the **Alarm Output** block.
+However, it is unlikely that a model should be attempting to clear the same alarm multiple times,
+and the previous behavior had the effect of sending numerous unnecessary HTTP requests, potentially causing a drop in performance.
+For more information on the `pulse` type and how inputs are converted, see
+[The pulse type](https://cumulocity.com/guides/10.18.0/streaming-analytics/analytics-builder/#the-pulse-type) and
+[Type conversions](https://cumulocity.com/guides/10.18.0/streaming-analytics/analytics-builder/#type-conversions),
+both in the *Streaming Analytics guide*.
+
+##### Changes to microservice health endpoint
+
+For reasons of security and performance, the REST endpoint `/service/cep/health` no longer returns a comprehensive list of status values. All of the same information is still available from REST endpoints under `/service/cep/diagnostics/...`.
+
+##### Removal of application_queue_full alarm type
+
+The `application_queue_full` alarm type has been removed. It has been replaced by three new types of
+performance alarms which give a better explanation of why the input and output queues are filling up.
+For more details, see the Streaming Analytics release notes for
+[release 10.18.0](/release-10-18-0/streaming-analytics-10-18-0).
+
 ##### Removal of required roles from the manifest
 
 For security reasons, ROLE_APPLICATION_MANAGEMENT_ADMIN and ROLE_OPTION_MANAGEMENT_ADMIN have been
@@ -175,7 +233,35 @@ removed from the required roles which are defined in the manifest file of the Ap
 Any applications deployed with the Streaming Analytics application (for example, EPL apps) can no longer
 perform security-sensitive operations such as application creation or modification of tenant options.
 
-##### Updated events in com.apama.cumulocity
+##### Removal of version 1 API of Analytics Builder Block SDK
+
+The deprecated version 1 API of the Analytics Builder Block SDK for writing input and output blocks has been removed.
+See also the announcement in the Streaming Analytics release notes for
+[release 10.7.0](/release-10-7-0/streaming-analytics-10-7-0/#10_7_0).
+Existing blocks that use the version 1 API must be migrated to use the version 2 API.
+See [Migrating input and output blocks to the version 2 API](https://github.com/SoftwareAG/apama-analytics-builder-block-sdk/blob/rel/10.18.0.x/doc/150-MigrateInputOutputBlocks.md)
+in the Analytics Builder Block SDK documentation on GitHub for more details.
+
+##### Cumulocity IoT transport in Apama 10.15.2
+
+In Apama 10.15.2, user status metrics with names containing labels in the form `{keyA=valueA,keyB=valueB}` are converted
+to Prometheus metrics with those labels in the Prometheus labels.
+The HTTP server transport now uses this syntax for chains that it creates dynamically.
+For example, if you have `somename{key=value}` as part of the user status name,
+this is now converted to a Prometheus label on the metric `somename`.
+Previously, a user status with a name like this did not appear in Prometheus at all.
+
+As a result, the HTTP server transport, which used to prefix all metrics on its chains for example
+with `httpServer_instance_5_`, now prefixes them with `httpServer{chain=5}` instead.
+This means, that the resulting metrics now look like this:
+
+`sag_apama_correlator_user_httpServer_metricname{chain=5}`
+
+instead of
+
+`sag_apama_correlator_user_httpServer_instance_5_metricname`
+
+##### Updated events in com.apama.cumulocity in Apama 10.15.3
 
 In Apama 10.15.3, the following events of the `com.apama.cumulocity` package have been updated to improve consistency in error handling:
 
@@ -195,6 +281,7 @@ The above events now have the following additional members:
 
 You should now use the updated events listed above instead of the `Error` event since it is sent to the same channel as the updated events.
 For more details, see the [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/pam/10.15.3/en/webhelp/related/ApamaDoc/index.html).
+
 
 ##### Documentation
 
@@ -224,3 +311,4 @@ In a future release of Cumulocity IoT DataHub the access to PowerBI reports from
 ###### Deprecation of support for mixed types
 
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), Cumulocity IoT DataHub removes support for mixed data types. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.
+

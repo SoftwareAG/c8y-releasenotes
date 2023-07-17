@@ -7,8 +7,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.86
-- UI: 10.18.0.70
+- Core: 10.18.0.127
+- UI: 10.18.0.96
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -245,6 +245,30 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>Fixed an issue when cloning some of the default global roles (for example, "devices").</td>
+<td>MTM-45858</td>
+<td>10.18.0.98</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue where the <b>Clear</b> button on the <b>Usage statistics</b> page failed to remove applied filters.</td>
+<td>MTM-50302</td>
+<td>10.18.0.93</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The button name for confirming the revocation of all tokens has been revised to <b>Log out all users and invalidate tokens</b>.</td>
+<td>MTM-53366</td>
+<td>10.18.0.74</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>Issues with the Ericsson DCP SMS provider when attempting to send an SMS have been resolved and outgoing requests are sent as expected to the Ericsson DCP API.</td>
 <td>DM-2215</td>
 <td>10.18.0.69</td>
@@ -340,7 +364,6 @@ Build version</th>
 <td>UI</td>
 </tr>
 
-
 <tr>
 <td>Authentication</td>
 <td>Fixed an issue with the device request counter being increased while switching between the standard applications (Administration, Cockpit, Device management).</td>
@@ -348,6 +371,15 @@ Build version</th>
 <td>10.17.265.0</td>
 <td>UI</td>
 </tr>
+
+<tr>
+<td>Authentication</td>
+<td>The REST API endpoint <code>/application/applications/{id}/logs</code> so far required the role ROLE_APPLICATION_MANAGEMENT_ADMIN. This has been changed. The endpoint now requires either the ROLE_APPLICATION_MANAGEMENT_ADMIN or ROLE_APPLICATION_MANAGEMENT_READ.</td>
+<td>MTM-52028</td>
+<td>10.17.220.0</td>
+<td>Core</td>
+</tr>
+
 
 <tr>
 <td>Core platform</td>
@@ -382,10 +414,10 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Authentication</td>
-<td>The REST API endpoint <code>/application/applications/{id}/logs</code> so far required the role ROLE_APPLICATION_MANAGEMENT_ADMIN. This has been changed. The endpoint now requires either the ROLE_APPLICATION_MANAGEMENT_ADMIN or ROLE_APPLICATION_MANAGEMENT_READ.</td>
-<td>MTM-52028</td>
-<td>10.17.220.0</td>
+<td>MQTT</td>
+<td>The error handling when publishing operations to MQTT devices has been improved.</td>
+<td>MTM-53168</td>
+<td>10.18.0.90</td>
 <td>Core</td>
 </tr>
 

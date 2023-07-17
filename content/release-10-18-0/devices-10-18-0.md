@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.86
-- UI: 10.18.0.70
+- Core: 10.18.0.127
+- UI: 10.18.0.97
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -145,6 +145,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device management</td>
+<td>The device list now shows complex columns like <code>c8y_SoftwareList</code> correctly after converting them to strings.</td>
+<td>DM-2410</td>
+<td>10.18.0.78</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device management</td>

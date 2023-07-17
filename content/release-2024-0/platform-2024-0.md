@@ -273,7 +273,8 @@ Build version</th>
 
 <tr>
 <td>Core platform</td>
-<td>Fixed a possible race condition with duplicated identity mappings for devices by introducing a unique database index.</td>
+<td>Fixed a possible race condition with duplicate identity mappings for devices by introducing a unique database index.</td>
+
 <td>MTM-48399</td>
 <td>10.18.135.0</td>
 <td>Core</td>

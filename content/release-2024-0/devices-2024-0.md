@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.165.0
-- UI 10.18.165.0
+- Core 10.18.213.0
+- UI 10.18.250.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -32,6 +32,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device management</td>
+<td>In the Device management application, a wizard has been implemented which guides users through replacing a physical device with another one. The replacing device must be registered in the platform in advance and is removed after the replacement procedure has been finished.</td>
+<td>DM-2168</td>
+<td>10.18.242.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device management</td>
@@ -127,6 +135,23 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
+<td>The device list now shows complex columns like <code>c8y_SoftwareList</code> correctly after converting them to strings.</td>
+<td>DM-2410</td>
+<td>10.18.226.0</td>
+<td>UI</td>
+</tr>
+
+
+<tr>
+<td>Device management</td>
+<td>Issues with the group filter in device grids resulting in empty result lists have been fixed. The first matching asset is now correctly shown as filter value.</td>
+<td>DM-2371</td>
+<td>10.18.236.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
 <td>The Device simulator microservice sent some internal requests without application key header which resulted in these requests being counted as device requests. The appropriate application key header has been added so that all requests are now counted correctly.</td>
 <td>DM-2306</td>
 <td>10.18.127.0</td>
@@ -191,6 +216,14 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
+<td>The LWM2M agent now correctly persists all registration update parameters. Previously, the LWM2M agent did not store changes of registration parameters, for example updated registration lifetimes. This is now fixed.</td>
+<td>DM-2503</td>
+<td>10.18.196.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>For operation execution the LWM2M agent now selects the content format based on the set of content formats supported by the device.</td>
 <td>DM-2269</td>
 <td>10.18.117.0</td>
@@ -242,6 +275,15 @@ Build version</th>
 <td>The LWM2M agent can now properly convert the timestamps from the SenML data reported by the LWM2M client to a platform compatible date-time format for performing respective resource actions.</td>
 <td>DM-2150</td>
 <td>10.18.58.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
+<td>In OPC UA device gateway nodes, expected but missing information prevented the completion of the address space scan operation. This is now fixed by skipping these nodes with a respective error message in the opcua-device-gateway log files.
+Additionally, the overall scanning speed has been improved for the full and partial address space scan operations.</td>
+<td>DM-2365</td>
+<td>10.18.198.0</td>
 <td>Core</td>
 </tr>
 

@@ -216,7 +216,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>The LWM2M agent now correctly persists all registration update parameters. Previously, the LWM2M agent did not store changes of registration parameters, for example updated registration lifetimes. This is now fixed.</td>
+<td>The LWM2M agent now correctly persists all registration update parameters. Previously, the LWM2M agent did not store changes of registration parameters, for example, updated registration lifetimes. This is now fixed.</td>
 <td>DM-2503</td>
 <td>10.18.196.0</td>
 <td>Core</td>

@@ -280,7 +280,7 @@ Build version</th>
 
 <tr>
 <td>OPC UA</td>
-<td>In OPC UA device gateway nodes, expected but missing information prevented the completion of the address space scan operation. This is now fixed by skipping these nodes with a respective error message in the opcua-device-gateway log files.
+<td>In OPC UA device gateway nodes, expected but missing information prevented the completion of the address space scan operation. This is now fixed by skipping these nodes and adding an error message in the opcua-device-gateway log files.
 Additionally, the overall scanning speed has been improved for the full and partial address space scan operations.</td>
 <td>DM-2365</td>
 <td>10.18.198.0</td>

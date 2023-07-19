@@ -53,7 +53,8 @@ For custom column implementations, the WebSDK allows developers to provide their
 
 <tr>
 <td>Web SDK</td>
-<td>In release 10.16.0.0, core re-usable data-grid-related components and services have been moved to the <code> @c8y/ngx-components</code>. The initial implementations were deprecated and have now been removed.</td>
+<td>In release 10.16.0.0, core re-usable data-grid-related components and services have been moved to the <code>@c8y/ngx-components</code>. The initial implementations were deprecated and have now been removed.</td>
+
 <td>DM-1294</td>
 <td>10.18.206.0</td>
 <td>UI</td>

@@ -45,7 +45,7 @@ For custom column implementations, the WebSDK allows developers to provide their
 
 <tr>
 <td>Web SDK</td>
-<td>A new <code>activeClassName</code> input has been added to the data-grid and device-grid components. It can be used to define a class name to be appended to the last clicked row in the grid. Its default value is "active". This option can be deactivated by setting an empty string to the input.</td>
+<td>A new <code>activeClassName</code> input has been added to the data-grid and device-grid components. It can be used to define a class name to be appended to the last clicked row in the grid. Its default value is "active". This option can be deactivated by setting the input value to an empty string.</td>
 <td>DM-2324</td>
 <td>10.18.245.0</td>
 <td>UI</td>

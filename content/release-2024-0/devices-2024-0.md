@@ -144,7 +144,7 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
-<td>Issues with the group filter in device grids resulting in empty result lists have been fixed. The first matching asset is now correctly shown as filter value.</td>
+<td>Issues with the group filter in device grids resulting in empty result lists have been fixed. The first matching asset is now correctly shown as the filter value.</td>
 <td>DM-2371</td>
 <td>10.18.236.0</td>
 <td>UI</td>

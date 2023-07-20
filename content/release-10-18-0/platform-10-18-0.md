@@ -7,8 +7,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.127
-- UI: 10.18.0.96
+- Core: 10.18.0.133
+- UI: 10.18.0.98
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -194,6 +194,14 @@ Build version</th>
 <td>Core</td>
 
 <tr>
+<td>MongoDB</td>
+<td>The MongoDB version has been upgraded to 5.0.18-1 in offline installation dependencies.</td>
+<td>MTM-53200</td>
+<td>10.18.0.119</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>Performance</td>
 <td>The performance of widgets like the "Data point list", "Data point graph" and "Data point table", has been improved for users with inventory roles access. Moreover, the performance of the "Measurements" tab in the Device Management application and the data explorer in the Cockpit application have been improved.</td>
 <td>MTM-50693</td>
@@ -245,7 +253,7 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
-<td>Fixed an issue when cloning some of the default global roles (for example, "devices").</td>
+<td>Fixed an issue whith cloning some of the default global roles (for example, "devices").</td>
 <td>MTM-45858</td>
 <td>10.18.0.98</td>
 <td>UI</td>
@@ -341,9 +349,9 @@ Build version</th>
 
 <tr>
 <td>Authentication</td>
-<td>Issues with refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication have been fixed.</td>
+<td>Issues have been fixed with refreshing the session tokens when the OAI-Secure login mode is configured with two-factor authentication.</td>
 <td>MTM-53559</td>
-<td>10.18.0.69</td>
+<td>10.18.0.113</td>
 <td>Core</td>
 </tr>
 
@@ -419,6 +427,14 @@ Build version</th>
 <td>MTM-53168</td>
 <td>10.18.0.90</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Notifications 2.0</td>
+<td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
+<td>MTM-53848</td>
+<td>10.18.0.109</td>
+<td>Messaging Service</td>
 </tr>
 
 <tr>

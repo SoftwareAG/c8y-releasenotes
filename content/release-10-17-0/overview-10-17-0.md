@@ -13,9 +13,9 @@ For each improvement or fix, the following information is provided:
 - The actual change description
 - The internal ticket number (only relevant for our Support team)
 - The build version in which the change has been implemented
-- The build component into which the change has been implemented
+- The build component into which the change has been implemented (only relevant as of 10.17.0+)
 
-Moreover it includes [announcements](/release-10-17-0/announcements-10-17-0/) for planned and implemented deprecations that might require action on your side at some time.
+Moreover the release notes includes [announcements](/release-10-17-0/announcements-10-17-0/) for planned and implemented deprecations that might require action on your side at some time.
 
 You can find the corresponding product documentation for release 10.17.0 at [https://cumulocity.com/guides/10.17.0/welcome/intro-documentation](https://cumulocity.com/guides/10.17.0/welcome/intro-documentation/).
 

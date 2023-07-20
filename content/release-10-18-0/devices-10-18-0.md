@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.127
-- UI: 10.18.0.97
+- Core: 10.18.0.133
+- UI: 10.18.0.98
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -147,6 +147,14 @@ Build version</th>
 </thead><tbody>
 
 <tr>
+<td>Connectivity</td>
+<td>The performance of MQTT connections has been improved. MQTT devices can now connect or reconnect faster, especially if the platform already has a large number of MQTT devices connected.</td>
+<td>MTM-53819</td>
+<td>10.18.0.113</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>Device management</td>
 <td>The device list now shows complex columns like <code>c8y_SoftwareList</code> correctly after converting them to strings.</td>
 <td>DM-2410</td>
@@ -244,6 +252,14 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
+<td>The LWM2M agent now correctly persists all registration update parameters. Previously, the LWM2M agent did not store changes of registration parameters, for example, updated registration lifetimes. This is now fixed.</td>
+<td>DM-2503</td>
+<td>10.18.0.129</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>Custom actions were not always executed if a LWM2M device used a SEND operation to report the whole LWM2M object data. This issue is now resolved and the custom actions are always executed for the resource instances for which they are defined.</td>
 <td>DM-2188</td>
 <td>10.18.0.57</td>
@@ -290,7 +306,6 @@ Build version</th>
 <td>Core</td>
 </tr>
 
-
 <tr>
 <td>LWM2M</td>
 <td>Two new LWM2M shell commands have been added.
@@ -325,7 +340,6 @@ Build version</th>
 <td>10.17.178.0</td>
 <td>Core</td>
 </tr>
-
 
 <tr>
 <td>LWM2M</td>
@@ -364,6 +378,15 @@ Build version</th>
 <td>The <b>Objects</b> tab now correctly displays JSON values in string fields.</td>
 <td>DM-1973</td>
 <td>10.17.47.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
+<td>In OPC UA device gateway nodes, expected but missing information prevented the completion of the address space scan operation. This is now fixed by skipping these nodes and adding an error message in the opcua-device-gateway log files.
+Additionally, the overall scanning speed has been improved for the full and partial address space scan operations.</td>
+<td>DM-2365</td>
+<td>10.18.0.128</td>
 <td>Core</td>
 </tr>
 

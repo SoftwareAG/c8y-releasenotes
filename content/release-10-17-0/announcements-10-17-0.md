@@ -161,13 +161,13 @@ To process this new token type, Cumulocity IoT uses the [Nimbus JOSE + JWT](http
 #### Planned
 
 ##### Breaking change: Use of Linux cgroup v2
-From release 2024, microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in a version higher than 10.18 it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process. 
+From release 2024, microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in a version higher than 10.18 it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process.
 
-cgroup is a Linux kernel feature to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. Every process in the system belongs to one and only one cgroup. In Cumulocity IoT cgroups are used to enforce container resource limits. 
+cgroup is a Linux kernel feature to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. Every process in the system belongs to one and only one cgroup. In Cumulocity IoT cgroups are used to enforce container resource limits.
 Starting with Cumulocity IoT release 2024, it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
 
 When using the Cumulocity IoT Microservice SDK for developing microservices, ensure to configure a Java version which is cgroup v2 aware when building your microservice. When using Java 8, ensure to use openjdk8u372 or higher. When using Java 11, use Java 11.0.16 or higher, or use Java 15 or higher.
-When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider. 
+When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider.
 
 ### SDK changes
 
@@ -202,6 +202,25 @@ declaration for applications to start. Refer to the [Spring Security documentati
 
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) and [release 10.16](/release-10-16-0/announcements-10-16-0), as of release 10.17, the default branding for all Cumulocity IoT default applications has been updated. Branded applications will not be affected, however, as the new navigator changes from a dark color to a light color, the default navigator font color might not work with your current branding settings. You might end up with a dark font color on a dark background, which might not be readable or accessible by your users. You can review this by opening the branding editor in the Administration application and check what font color you are using in the current version.
 
+### Documentation
+
+#### Planned
+
+##### German User guide
+
+The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future release we are going to remove the German *User guide* from the documentation website and focus on our high-quality, up-to-date English user documentation.
+
+#### Implemented
+
+##### Analytics Builder documentation
+
+The English version of the Analytics Builder documentation has been integrated into the Cumulocity IoT documentation.
+See also [Restructured Streaming Analytics guide](/release-10-17-0/streaming-analytics-10-17-0/).
+
+The German version of the Analytics Builder documentation, which is available as a separate webhelp until release 10.16, is no longer provided. We will focus on our high-quality, up-to-date English user documentation.
+
+
+
 ### Streaming Analytics
 
 {{< c8y-admon-important >}}
@@ -223,12 +242,6 @@ As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the E
 It has been replaced by a new "Call another microservice" sample which now uses the `/health` endpoint of an Apama-ctrl microservice.
 See also [Connecting Apama to other microservices](https://cumulocity.com/guides/10.17.0/streaming-analytics/epl-apps/#microservices) in the *Streaming Analytics guide*.
 
-##### Documentation
-
-The German version of the Analytics Builder documentation, which is available as a separate webhelp until release 10.16, is no longer provided.
-We will focus on our high-quality, up-to-date English user documentation.
-The English version of the Analytics Builder documentation has been integrated into the Cumulocity IoT documentation.
-See also [Restructured Streaming Analytics guide](/release-10-17-0/streaming-analytics-10-17-0/).
 
 ##### Analytics Builder - Change of type for Clear Alarm input port
 

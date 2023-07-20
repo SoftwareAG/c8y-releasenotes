@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.165.0
-- UI 10.18.165.0
+- Core 10.18.213.0
+- UI 10.18.250.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -33,7 +33,27 @@ Build version</th>
 </tr>
 </thead><tbody>
 
-<tbody>
+<tr>
+<td>Administration</td>
+<td>Removed Esper CEP related features from the UI such as:
+<br>- the <b>Event processing</b> page from the Administration application
+<br>- the inspect feature from the smart rules menu (rule debug was originally available for Esper only)
+<br>Removed Esper CEP related services and modules from the AngularJS Web SDK:
+<br>- <code>eventProcessingSvc</code> (<i>@c8y/ng1-modules/administration-eventProcessing/cumulocity.json</i>)
+<br>- <code>c8yCepModule</code>, <code>c8yCepModuleExamples</code> (<i>@c8y/ng1-modules/notifications/cumulocity.json</i>)</td>
+<td>MTM-49963</td>
+<td>10.18.209.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The button name for confirming the revocation of all tokens has been changed to <b>Log out all users and invalidate tokens</b>.</td>
+<td>MTM-53366</td>
+<td>10.18.207.0</td>
+<td>UI</td>
+</tr>
+
 <tr>
 <td>Administration</td>
 <td>The repository-connect microservice now offers the ability for users to sync packages which include a versioning matrix which allows to filter exactly which versions will be synced. Versions which are not included in the matrix but uploaded to the platform will be removed by the microservice.</td>
@@ -93,7 +113,8 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>Core platform</td>
-<td>The ExplainQuery result info has been extended by the algorithm used when performing queries for a user with inventory roles: <code>GET {{url}}/inventory/hierarchy/info/management</code>  
+<td>The ExplainQuery result info has been extended by the algorithm used when performing queries for a user with inventory roles:
+<br><code>GET {{url}}/inventory/hierarchy/info/management</code>  
 <br>Example: <code>{"algorithm": "Legacy" }</code>
 <br>Possible results: <code>Legacy, LimitedSourcesAcl, PostFilteringBySourceAcl, SingleSourceAcl, HierarchyAcl, SingleAgentAcl, SingleDeviceAcl, SingleAgentAndDeviceAcl</code></td>
 <td>MTM-52350</td>
@@ -118,18 +139,26 @@ For applications with versions, by default the application with the "latest" tag
 </tr>
 
 <tr>
-<td>REST API</td>
-<td>The REST APIs no longer return the <code>totalPages</code> value if no query criteria are provided.</td>
-<td>MTM-52969</td>
-<td>10.18.54.0</td>
+<td>MongoDB</td>
+<td>The MongoDB version has been upgraded to 5.0.18-1 in offline installation dependencies.</td>
+<td>MTM-53200</td>
+<td>10.18.180.0</td>
 <td>Core</td>
 </tr>
 
 <tr>
 <td>REST API</td>
-<td>Fixed an issue where the alarm source name was not returned after alarm de-duplication.</td>
-<td>MTM-52700</td>
-<td>10.18.29.0</td>
+<td>The alarm status and severity are now case-insensitive. When searching by alarm status <code>active</code> the API also returns alarms with status <code>ACTIVE</code>. The same applies for the alarm severity, that is, searching for <code>critical</code> alarms also returns <code>CRITICAL</code> alarms. Alarms with status <code>active</code> and <code>acknowledged</code> are now subject of alarm deduplication.</td>
+<td>MTM-52515</td>
+<td>10.18.166.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>The REST APIs no longer return the <code>totalPages</code> value if no query criteria are provided.</td>
+<td>MTM-52969</td>
+<td>10.18.54.0</td>
 <td>Core</td>
 </tr>
 
@@ -151,19 +180,20 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>REST API</td>
-<td>The Inventory API performance has been improved by removing an additional request to the database.</td>
+<td>The performance of the Inventory API has been improved by removing an additional request to the database.</td>
 <td>MTM-50840</td>
 <td>10.18.15.0</td>
 <td>Core</td>
 </tr>
 
 <tr>
-<td>Rest API</td>
-<td>When the DELETE <code>/inventory/managedObject/{id}</code> endpoint did not finish immediately but continued in the background, the platform returned a 202 HTTP code instead of 204. This has been fixed.</td>
-<td>MTM-51095</td>
-<td>10.18.1.0</td>
+<td>REST API</td>
+<td>The performance of the Inventory API has been improved by removing two additional database queries for GET <code>/managedObjects</code>.</td>
+<td>MTM-51973</td>
+<td>10.18.12.0</td>
 <td>Core</td>
 </tr>
+
 
 </tbody></table>
 
@@ -190,6 +220,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>When uploading files to the files repository, a separate progress bar is now displayed for each file.</td>
+<td>MTM-52682</td>
+<td>10.18.229.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>In the Administration application, missing translations have been added in the <b>SIM provider settings</b> tab in the <b>Connectivity</b> page.</td>
+<td>DM-1987</td>
+<td>10.18.197.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -245,6 +291,31 @@ Build version</th>
 <td>MTM-52710</td>
 <td>10.18.17.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The default value of the "response_type" request parameter for the authorization request in the single sign-on configuration has been set to "code".</td>
+<td>MTM-53918</td>
+<td>10.18.221.0</td>
+<td>UI</td>
+</tr>
+
+
+<tr>
+<td>Authentication</td>
+<td>Issues with the redirection from the login page to the SSO server have been fixed.</td>
+<td>MTM-53723</td>
+<td>10.18.211.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The issue of an inaccessible endpoint for obtaining an OAI-Secure access token through cross-origin requests has been resolved.</td>
+<td>MTM-52217</td>
+<td>10.18.193.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -323,9 +394,17 @@ Build version</th>
 
 <tr>
 <td>REST API</td>
-<td>The performance of the Inventory API has been improved by removing two additional database queries for GET <code>/managedObjects</code>.</td>
-<td>MTM-51973</td>
-<td>10.18.12.0</td>
+<td>Fixed an issue where the alarm source name was not returned after alarm de-duplication.</td>
+<td>MTM-52700</td>
+<td>10.18.29.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Rest API</td>
+<td>When the DELETE <code>/inventory/managedObject/{id}</code> endpoint did not finish immediately but continued in the background, the platform returned a 202 HTTP code instead of 204. This has been fixed.</td>
+<td>MTM-51095</td>
+<td>10.18.1.0</td>
 <td>Core</td>
 </tr>
 

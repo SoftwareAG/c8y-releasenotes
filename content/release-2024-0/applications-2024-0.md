@@ -33,6 +33,34 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+
+<tr>
+<td>Web SDK</td>
+<td>In the data grid component, a new filter overview dropdown has been added. It displays all active filters in one place and allows users to remove filters.
+For custom column implementations, the WebSDK allows developers to provide their own logic to display active filters as items in the filter overview.</td>
+<td>DM-1616</td>
+<td>10.18.246.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>A new <code>activeClassName</code> input has been added to the data-grid and device-grid components. It can be used to define a class name to be appended to the last clicked row in the grid. Its default value is "active". This option can be deactivated by setting the input value to an empty string.</td>
+<td>DM-2324</td>
+<td>10.18.245.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In release 10.16.0.0, core re-usable data-grid-related components and services have been moved to the <code>@c8y/ngx-components</code>. The initial implementations were deprecated and have now been removed.</td>
+
+<td>DM-1294</td>
+<td>10.18.206.0</td>
+<td>UI</td>
+</tr>
+
+
 <tr>
 <td>Web SDK</td>
 <td>The context help and other help links point to a documentation website defined by the application option <code>docsBaseUrl</code>. This option now supports the <code>{{ version }}</code> placeholder, which allows the administrator to choose whether to use versioned or unversioned documentation links. By default, versioned links will be used.</td>
@@ -100,6 +128,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue where the default group icon was displayed instead of the corresponding asset icon.</td>
+<td>MTM-53403</td>
+<td>10.18.185.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue where users were not able to see all top-level node groups, even if they had the required permissions.</td>
+<td>MTM-53394</td>
+<td>10.18.184.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -187,6 +231,14 @@ Build version</th>
 <td>The action buttons in the windows <b>Usage statistics filters</b>, <b>Add bulk operation</b> and <b>Add device protocol</b> are now properly aligned when using mobile screens.</td>
 <td>DM-2274</td>
 <td>10.18.72.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Fixed an issue where the text for a link on the login screen was cut off.</td>
+<td>MTM-53597</td>
+<td>10.18.172.0</td>
 <td>UI</td>
 </tr>
 

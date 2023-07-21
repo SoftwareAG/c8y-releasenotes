@@ -12,7 +12,7 @@ Continuous updates will provide you with a steady stream of enhancements, bug fi
 
 If you own a dedicated Cumulocity IoT instance, we will collaborate with you on an individual basis to plan the transition to either continuous deployment or the alternative yearly release model.
 
-We appreciate your support as we embark on this transition. Your feedback and suggestions are invaluable as we shape the future of our product. You will find more details about the planned changes in the 10.18 release announcement. Stay tuned for the exciting updates coming your way! 
+We appreciate your support as we embark on this transition. Your feedback and suggestions are invaluable as we shape the future of our product. You will find more details about the planned changes in the 10.18 release announcement. 
 
 ### REST API changes
 

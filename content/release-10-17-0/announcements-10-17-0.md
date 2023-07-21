@@ -19,9 +19,9 @@ Find more details in the document [Continuous Deployment for Cumulocity IoT](/fi
 
 ### Changes in build components
 
-Cumulocity IoT releases consist of various components such as Core (backend) and UI (frontend). In earlier releases these components were released as one build component at the same time with the same [fix release version](/about/release-types). This has changed in release 10.17.
+Cumulocity IoT releases consist of various components such as Core (backend) and UI (frontend). In earlier releases these components were released as one build component at the same time with the same [maintenance release version](/about/release-types). This has changed in release 10.17.
 
-Starting from release 10.17, Core, UI, and several other components such as Messaging Service are released as separate build components with independent fix release versions, that is, fix release versions might be different for each component. Consequently, the release notes entries now show the build component (Core, UI, Messaging Service) in conjunction with the component's build version.
+Starting from release 10.17, Core, UI, and several other components such as Messaging Service are released as separate build components with independent maintenance release versions, that is, fix release versions might be different for each component. Consequently, the release notes entries now show the build component (Core, UI, Messaging Service) in conjunction with the component's build version.
 
 
 ### REST API changes

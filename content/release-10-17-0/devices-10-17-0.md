@@ -165,11 +165,11 @@ Build version</th>
 </tr>
 
 <tr>
-<td>Device management</td>
+<td>OPC UA</td>
 <td>In case of bad connectivity or network delay gateway devices could go to a state where they were disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
 <td>DM-2037</td>
 <td>10.17.0.142</td>
-<td>Messaging Service</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -395,7 +395,7 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>Custom actions were not always executed if a LWM2M device used a SEND operation to report the whole LWM2M object data. This issue is now resolved and the custom actions are always executed for the resource instances for which they are defined.</td>
 <td>DM-2188</td>
 <td>10.17.0.146</td>
-<td>Messaging Service</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -436,25 +436,17 @@ mandatory <b>Software type</b> field is filled.</td>
 <tr>
 <td>LWM2M</td>
 <td>In certain cases the migration of LWM2M devices registered on versions before 10.15 reported "Unable to process device" for certain devices. This happened due to adjustments to the device configuration, for example when editing the registration lifetime. With this fix, the migration logic robustness has been improved.</td>
-<td>10.17.0.47</td>
 <td>DM-2022</td>
+<td>10.17.0.47</td>
 <td>Core</td>
 </tr>
 
 <tr>
 <td>LWM2M</td>
 <td>In the older Leshan demo client, the device registration requests for the Cumulocity IoT LWM2M demo device and possibly also some other devices could contain spaces between the core link separators. This was successfully handled by the LWM2M agent 10.14 and below but caused the LWM2M agent 10.15 and above to reject these device requests. Now, the LWM2M server accepts these requests again. The older device registration requests can be processed again.</td>
-<td>10.17.0.41</td>
 <td>DM-2070</td>
+<td>10.17.0.41</td>
 <td>Core</td>
-</tr>
-
-<tr>
-<td>LWM2M</td>
-<td>The LWM2M agent now provides a better processing rate of the external decoder events by parallelizing their execution.</td>
-<td>DM-1840</td>
-<td>10.16.260.0</td>
-<td>n/a</td>
 </tr>
 
 <tr>

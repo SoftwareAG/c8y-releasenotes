@@ -262,6 +262,11 @@ As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the E
 It has been replaced by a new "Call another microservice" sample which now uses the `/health` endpoint of an Apama-ctrl microservice.
 See also [Connecting Apama to other microservices](https://cumulocity.com/guides/10.17.0/streaming-analytics/epl-apps/#microservices) in the *Streaming Analytics guide*.
 
+##### Breaking change in Analytics Builder - Acknowledged alarms
+
+The [Alarm Output](https://cumulocity.com/guides/10.17.0/streaming-analytics/block-reference/#alarm-output) block
+no longer reactivates "Acknowledged" alarms with every modification.
+See also the fix release note for [10.16.0.4](/release-10-16-0/streaming-analytics-10-16-0/#10_16_0_4).
 
 ##### Analytics Builder - Change of type for Clear Alarm input port
 

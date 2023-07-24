@@ -312,6 +312,10 @@ In a future release of Cumulocity IoT core the history attribute will be removed
 
 In a future release of Cumulocity IoT DataHub the access to PowerBI reports from within the Cumulocity IoT DataHub UI may be removed. Comparable functionality can be integrated into the core UI based on a PowerBI extension.
 
+##### Deprecation of HDFS support
+
+In a future release of Cumulocity IoT DataHub the use of HDFS as data lake will be removed. Instead of HDFS, one of the other supported data lakes must be used.
+
 #### Implemented
 
 ###### Deprecation of support for mixed types

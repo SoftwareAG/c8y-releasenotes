@@ -67,7 +67,7 @@ Build version</th>
 
 <tr>
 <td>Core platform</td>
-<td>On creating a measurement, it is now validated for all processing modes if the measurement exists, that is for PERSISTENT, QUIESCENT, TRANSIENT and CEP.
+<td>On creating a measurement, it is now validated for all processing modes if the source object exists, that is for PERSISTENT, QUIESCENT, TRANSIENT and CEP.
 Prior to this change, the existence of the measurement was only validated for persistence processing modes (PERSISTENT and QUIESCENT).</td>
 <td>MTM-50498</td>
 <td>10.16.248.0</td>

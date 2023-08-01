@@ -7,7 +7,7 @@ layout: bundle
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
 - Core: 10.18.0.133
-- UI: 10.18.0.98
+- UI: 10.18.0.107
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -111,6 +111,14 @@ Build version</th>
 <td>Context help has been added to various tabs such as <b>Dashboard</b> and <b>Subassets</b>.</td>
 <td>MTM-51868</td>
 <td>10.17.171.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Data grid components no longer persist their current page. After reloading they always return to the first page in the list.</td>
+<td>DM-1830</td>
+<td>10.18.0.103</td>
 <td>UI</td>
 </tr>
 
@@ -236,6 +244,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>The asset selection within the datapoint selector is now filterable.</td>
+<td>MTM-54463</td>
+<td>10.18.0.100</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -378,6 +394,14 @@ Build version</th>
 <td>MTM-53359</td>
 <td>10.18.0.55</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>On developing a widget plugin with the Web SDK, a dependency issue could occur due to a missing dependency in the <i>package.json</i>. This missing dependency has now been added.</td>
+<td>MTM-54393</td>
+<td>10.18.0.97</td>
+<td>UI</td>
 </tr>
 
 <tr>

@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.213.0
-- UI 10.18.250.0
+- Core 10.18.229.0
+- UI 10.18.350.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -32,6 +32,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device management</td>
+<td>Users can now customize the dashboard on the <b>Info</b> tab in the device details. Widgets can be moved and resized, and new widgets can be added from a list of available widgets. The dashboard can be reset anytime to the default dashboard settings. By default, the "Asset notes" widget has been removed.</td>
+<td>DM-2279</td>
+<td>10.18.327.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device management</td>

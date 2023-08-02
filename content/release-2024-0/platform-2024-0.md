@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.213.0
-- UI 10.18.250.0
+- Core 10.18.229.0
+- UI 10.18.350.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -223,6 +223,14 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>Fixed an issue whith cloning some of the default global roles (for example, "devices").</td>
+<td>MTM-45858</td>
+<td>10.18.323.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>When uploading files to the files repository, a separate progress bar is now displayed for each file.</td>
 <td>MTM-52682</td>
 <td>10.18.229.0</td>
@@ -234,6 +242,14 @@ Build version</th>
 <td>In the Administration application, missing translations have been added in the <b>SIM provider settings</b> tab in the <b>Connectivity</b> page.</td>
 <td>DM-1987</td>
 <td>10.18.197.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Implemented pagination on the <b>Inventory roles</b> tab in the user details to fix an issue with larger numbers of groups and subgroups.</td>
+<td>MTM-47720</td>
+<td>10.18.166.0</td>
 <td>UI</td>
 </tr>
 
@@ -345,9 +361,16 @@ Build version</th>
 <tr>
 <td>Core platform</td>
 <td>Fixed a possible race condition with duplicate identity mappings for devices by introducing a unique database index.</td>
-
 <td>MTM-48399</td>
 <td>10.18.135.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Messaging Service</td>
+<td>Fixed an issue where requests from the core platform into the Messaging Service could take a long time to complete, slowing down the response to HTTP requests and potentially preventing the platform from handling new incoming requests. For example, a request from the core platform to publish a message using Notifications 2.0 could block if the tenant had reached its quota for unconsumed notifications, only timing out after a long delay. This issue has been resolved by ensuring that Messaging Service requests that would have blocked now time out quickly.</td>
+<td>MTM-53509</td>
+<td>10.18.185.0</td>
 <td>Core</td>
 </tr>
 
@@ -370,10 +393,18 @@ Build version</th>
 <tr>
 <td>Notifications 2.0</td>
 <td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
-
 <td>MTM-53848</td>
 <td>10.18.151.0</td>
 <td>Messaging Service</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>Fixed the rare occurrence of an HTTP status 500 response from <code>/tenant/statistics/allTenantsSummary</code>, if one of the tenants was deleted during the request.</td>
+
+<td>MTM-53273</td>
+<td>10.18.181.0</td>
+<td>Core</td>
 </tr>
 
 <tr>

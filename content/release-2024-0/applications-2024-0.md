@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.165.0
-- UI 10.18.165.0
+- Core 10.18.229.0
+- UI 10.18.350.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -33,6 +33,14 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+<tr>
+<td>Web SDK</td>
+<td>Shell applications now wait with their initial navigation until all plugins have been loaded. This allows,
+for example, to directly navigate via a link to a route which is provided by a plugin.</td>
+<td>MTM-53695</td>
+<td>10.18.290.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Web SDK</td>
@@ -54,7 +62,6 @@ For custom column implementations, the WebSDK allows developers to provide their
 <tr>
 <td>Web SDK</td>
 <td>In release 10.16.0.0, core re-usable data-grid-related components and services have been moved to the <code>@c8y/ngx-components</code>. The initial implementations were deprecated and have now been removed.</td>
-
 <td>DM-1294</td>
 <td>10.18.206.0</td>
 <td>UI</td>
@@ -88,7 +95,6 @@ For custom column implementations, the WebSDK allows developers to provide their
 <tr>
 <td>Web SDK</td>
 <td>A versioning matrix can now be added to the <i>cumulocity.json</i> of a blueprint/plugin. When a blueprint/plugin is installed, its version is validated against the platform version. If the versions are incompatible a warning is shown.</td>
-
 <td>MTM-52340</td>
 <td>10.18.63.0</td>
 <td>UI</td>
@@ -128,6 +134,39 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>The asset selection in the datapoint selector is now filterable.</td>
+
+<td>MTM-54463</td>
+<td>10.18.346.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The right drawer now always shows the language selected in the user preferences.</td>
+<td>MTM-53189</td>
+<td>10.18.319.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Activating or deactivating child assets is now executed with a single request.</td>
+<td>MTM-49732</td>
+<td>10.18.292.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>In case the <code>doNotAddGlobalFragmentByDefault</code> option has been set in the configuration of the <code>DatapointLibraryModule</code>, the <code>c8y_Global</code> fragment is no longer unintentionally set to <code>null</code> during the creation of a new data point library entry.</td>
+<td>MTM-54213</td>
+<td>10.18.288.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -231,6 +270,41 @@ Build version</th>
 <td>The action buttons in the windows <b>Usage statistics filters</b>, <b>Add bulk operation</b> and <b>Add device protocol</b> are now properly aligned when using mobile screens.</td>
 <td>DM-2274</td>
 <td>10.18.72.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The SCADA widget mapping now holds child device data properly and is not overridden by the parent device.</td>
+
+<td>MTM-53912</td>
+<td>10.18.338.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>On developing a widget plugin with the Web SDK, a dependency issue could occur due to a missing dependency in the <i>package.json</i>. This missing dependency has now been added.</td>
+<td>MTM-54393</td>
+<td>10.18.323.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The locale of the web app can be set via the URL parameter <code>lang</code>, for example, <code>/apps/administration/index.html?lang=zh-cn</code>. The locale code is case-insensitive and must have 2 letters or 4 letters, separated by a hyphen "-" or an underscore "_". If the provided locale code is not supported, the web app is displayed in English.</td>
+
+<td>MTM-48676</td>
+<td>10.18.317.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In non-hybrid applications, the <code>lang</code> attribute of the <code>html</code> tag is now correctly set to the language preference of the current user.</td>
+
+<td>MTM-53576</td>
+<td>10.18.285.0</td>
 <td>UI</td>
 </tr>
 

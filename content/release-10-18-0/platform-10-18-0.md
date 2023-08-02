@@ -8,7 +8,7 @@ layout: bundle
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
 - Core: 10.18.0.133
-- UI: 10.18.0.98
+- UI: 10.18.0.107
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -250,6 +250,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>The pagination check of the user list has been modified to prevent duplicate requests.</td>
+<td>MTM-52287</td>
+<td>10.18.0.106</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>In some cases log files of devices stored in the platform could not be downloaded from the <b>Logs</b> tab. This has been addressed by requesting with the correct user credentials.</td>
+<td>DM-2471</td>
+<td>10.18.0.102</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>

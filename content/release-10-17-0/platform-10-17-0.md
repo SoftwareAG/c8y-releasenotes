@@ -459,7 +459,7 @@ MTM-49760</td>
 
 <tr>
 <td>REST API</td>
-<td>Fixed the rare occurrence of an HTTP status 500 response from <code>/tenant/statistics/allTenantsSummary</code>, when one of the tenants was deleted during the request.</td>
+<td>Fixed the rare occurrence of an HTTP status 500 response from <code>/tenant/statistics/allTenantsSummary</code>, if one of the tenants was deleted during the request.</td>
 <td>MTM-53273</td>
 <td>10.17.0.241</td>
 <td>Core</td>

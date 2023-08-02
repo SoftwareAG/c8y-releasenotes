@@ -140,7 +140,7 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>The asset selection within the datapoint selector is now filterable.</td>
+<td>The asset selection in the datapoint selector is now filterable.</td>
 <td>MTM-54463</td>
 <td>10.17.0.242</td>
 <td>UI</td>

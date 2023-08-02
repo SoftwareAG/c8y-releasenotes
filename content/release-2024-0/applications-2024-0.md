@@ -137,7 +137,8 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>The asset selection within the datapoint selector is now filterable.</td>
+<td>The asset selection in the datapoint selector is now filterable.</td>
+
 <td>MTM-54463</td>
 <td>10.18.346.0</td>
 <td>UI</td>
@@ -274,7 +275,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>The SCADA widget mapping now holds child devices data properly and is not overridden by the parent device.</td>
+<td>The SCADA widget mapping now holds child device data properly and is not overridden by the parent device.</td>
+
 <td>MTM-53912</td>
 <td>10.18.338.0</td>
 <td>UI</td>
@@ -290,7 +292,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>The locale of the web app can be set via the URL parameter <code>lang</code>, for example, <code>/apps/administration/index.html?lang=zh-cn</code>. The locale code is case-insensitive and must have 2 letters or 4 letters, separated with a hyphen "-" or an underscore or "_". If the provided locale code is not supported, the web app will be displayed in English.</td>
+<td>The locale of the web app can be set via the URL parameter <code>lang</code>, for example, <code>/apps/administration/index.html?lang=zh-cn</code>. The locale code is case-insensitive and must have 2 letters or 4 letters, separated by a hyphen "-" or an underscore "_". If the provided locale code is not supported, the web app is displayed in English.</td>
+
 <td>MTM-48676</td>
 <td>10.18.317.0</td>
 <td>UI</td>
@@ -298,7 +301,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>In none-hybrid applications, the <code>lang</code> attribute of the <code>html</code> tag is now correctly set to the language preference of the current user.</td>
+<td>In non-hybrid applications, the <code>lang</code> attribute of the <code>html</code> tag is now correctly set to the language preference of the current user.</td>
+
 <td>MTM-53576</td>
 <td>10.18.285.0</td>
 <td>UI</td>

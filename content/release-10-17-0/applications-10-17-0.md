@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.216.
+These release notes contain all changes until build version 10.17.0.249.
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -53,6 +53,14 @@ Build version</th>
 <td>MTM-45890</td>
 <td>10.16.159.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Data grid components no longer persist their current page. After reloading they always return to the first page in the list.</td>
+<td>DM-1830</td>
+<td>10.17.0.245</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -129,6 +137,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>The asset selection in the datapoint selector is now filterable.</td>
+<td>MTM-54463</td>
+<td>10.17.0.242</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>In case the <code>doNotAddGlobalFragmentByDefault</code> option has been set in the configuration of the <code>DatapointLibraryModule</code>, the <code>c8y_Global</code> fragment is no longer unintentionally set to <code>null</code> during the creation of a new data point library entry.</td>
+<td>MTM-54213</td>
+<td>10.17.0.230</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>

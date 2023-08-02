@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.216.
+These release notes contain all changes until build version 10.17.0.249.
 {{< /c8y-admon-info >}}
 
 
@@ -100,6 +100,14 @@ Prior to this change, the existence of the measurement was only validated for pe
 </tr>
 
 <tr>
+<td>MongoDB</td>
+<td>The MongoDB version has been upgraded to 5.0.18-1 in offline installation dependencies.</td>
+<td>MTM-53200</td>
+<td>10.17.0.225</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>Product experience</td>
 <td>Users can now disable (or enable) all in-product information & communication options. Prior to this change, users could only opt-out from the  Knowledge Hub (product experience tracking).</td>
 <td>MTM-48214</td>
@@ -173,6 +181,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue whith cloning some of the default global roles (for example, "devices").</td>
+<td>MTM-45858</td>
+<td>10.17.0.238</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue where the <b>Clear</b> button on the <b>Usage statistics</b> page failed to remove applied filters.</td>
+<td>MTM-50302</td>
+<td>10.17.0.232</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -402,6 +426,14 @@ MTM-49760</td>
 </tr>
 
 <tr>
+<td>Messaging Service</td>
+<td>Fixed an issue where requests from the core platform into the Messaging Service could take a long time to complete, slowing down the response to HTTP requests and potentially preventing the platform from handling new incoming requests. For example, a request from the core platform to publish a message using Notifications 2.0 could block if the tenant had reached its quota for unconsumed notifications, only timing out after a long delay. This issue has been resolved by ensuring that Messaging Service requests that would have blocked now time out quickly.</td>
+<td>MTM-53509</td>
+<td>10.17.0.244</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>MQTT</td>
 <td>The error handling when publishing operations to MQTT devices has been improved.</td>
 <td>MTM-53168</td>
@@ -412,7 +444,6 @@ MTM-49760</td>
 <tr>
 <td>Notifications 2.0</td>
 <td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
-
 <td>MTM-53848</td>
 <td>10.17.0.216</td>
 <td>Messaging Service</td>
@@ -424,6 +455,14 @@ MTM-49760</td>
 <td>MTM-50693</td>
 <td>10.17.0.48</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>Fixed the rare occurrence of an HTTP status 500 response from <code>/tenant/statistics/allTenantsSummary</code>, if one of the tenants was deleted during the request.</td>
+<td>MTM-53273</td>
+<td>10.17.0.241</td>
+<td>Core</td>
 </tr>
 
 <tr>

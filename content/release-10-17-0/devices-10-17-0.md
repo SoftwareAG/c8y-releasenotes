@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.216.
+These release notes contain all changes until build version 10.17.0.249.
 {{< /c8y-admon-info >}}
 
 
@@ -130,6 +130,14 @@ Build version</th>
 <td>MTM-48256</td>
 <td>10.16.119.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Connectivity</td>
+<td>The performance of MQTT connections has been improved. MQTT devices can now connect or reconnect faster, especially if the platform already has a large number of MQTT devices connected.</td>
+<td>MTM-53819</td>
+<td>10.17.0.219</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -360,6 +368,22 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>LWM2M</td>
+<td>If the LWM2M device observation frequency is high, for example, a few milliseconds, the LWM2M Agent processed the same message multiple times, occupying a lot of resources. This is now resolved. The LWM2M agent no longer reprocesses the same observation request.</td>
+<td>DM-1823</td>
+<td>10.17.0.248</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The LWM2M agent now correctly persists all registration update parameters. Previously, the LWM2M agent did not store changes of registration parameters, for example, updated registration lifetimes. This is now fixed.</td>
+<td>DM-2503</td>
+<td>10.17.0.235</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>Bulk device registrations and other operations being executed on the LWM2M connector device now show the status FAILED if a problem occurs. Prior to this change, partial failures were reported as SUCCESSFUL.</td>
 <td>DM-1951</td>
 <td>10.17.0.158</td>
@@ -523,6 +547,15 @@ mandatory <b>Software type</b> field is filled.</td>
 <td>DM-1602</td>
 <td>10.16.12.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
+<td>In OPC UA device gateway nodes, expected but missing information prevented the completion of the address space scan operation. This is now fixed by skipping these nodes and adding an error message in the opcua-device-gateway log files.
+Additionally, the overall scanning speed has been improved for the full and partial address space scan operations.</td>
+<td>DM-2365</td>
+<td>10.17.0.234</td>
+<td>Core</td>
 </tr>
 
 <tr>

@@ -73,7 +73,7 @@ In the **User** page, at the right of the top menu bar, click **Revoke tokens** 
 
 An updated version of the Cumulocity IoT OEE application is now available. 
 
-This version adds support for defining one-off and repeating work Shifts on a per-location basis. Doing so will allow calculation of OEE (Overall Equipment Efficiency), Availability, Performance, Quality and various other metrics over these timeframes. 
+This version adds support for defining one-off and repeating work shifts on a per-location basis. This allows the calculation of OEE (Overall Equipment Efficiency), Availability, Performance, Quality and various other metrics over these timeframes. 
 
 ![Admin shift plan configuration](/images/release-notes/oee-admin-shift-plans.png)
 

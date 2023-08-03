@@ -77,4 +77,4 @@ This version adds support in the UI for defining one-off and repeating work shif
 
 ![Admin shift plan configuration](/images/release-notes/oee-admin-shift-plans.png)
 
-For details, refer to the [Cumulocity IoT OEE](https://cumulocity.com/guides/10.17.0/oee/overview/) section of the *User guide*
+For details, refer to the [Cumulocity IoT OEE guide](https://cumulocity.com/guides/10.17.0/oee/overview/).

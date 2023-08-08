@@ -7,8 +7,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.133
-- UI: 10.18.0.107
+- Core: 10.18.0.150
+- UI: 10.18.0.116
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -253,6 +253,14 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>Improved the performance of the user hierarchy management by reducing the number of server requests executed when expanding the sub-user list.</td>
+<td>MTM-49969</td>
+<td>10.18.0.112</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>The pagination check of the user list has been modified to prevent duplicate requests.</td>
 <td>MTM-52287</td>
 <td>10.18.0.106</td>
@@ -438,6 +446,14 @@ Build version</th>
 </tr>
 
 <tr>
+<td>Messaging Service</td>
+<td>Fixed an issue where requests from the core platform into the Messaging Service could take a long time to complete, slowing down the response to HTTP requests and potentially preventing the platform from handling new incoming requests. For example, a request from the core platform to publish a message using Notifications 2.0 could block if the tenant had reached its quota for unconsumed notifications, only timing out after a long delay. This issue has been resolved by ensuring that Messaging Service requests that would have blocked now time out quickly.</td>
+<td>MTM-53509</td>
+<td>10.18.0.138</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>MQTT</td>
 <td>The error handling when publishing operations to MQTT devices has been improved.</td>
 <td>MTM-53168</td>
@@ -447,10 +463,26 @@ Build version</th>
 
 <tr>
 <td>Notifications 2.0</td>
+<td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent. Previously, these notifications were not reliably sent in all cases.</td>
+<td>MTM-54097</td>
+<td>10.18.0.144</td>
+<td>Messaging Service</td>
+</tr>
+
+<tr>
+<td>Notifications 2.0</td>
 <td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
 <td>MTM-53848</td>
 <td>10.18.0.109</td>
 <td>Messaging Service</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>Fixed the rare occurrence of an HTTP status 500 response from <code>/tenant/statistics/allTenantsSummary</code>, if one of the tenants was deleted during the request.</td>
+<td>MTM-53273</td>
+<td>10.18.0.135</td>
+<td>Core</td>
 </tr>
 
 <tr>

@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.133
-- UI: 10.18.0.107
+- Core: 10.18.0.150
+- UI: 10.18.0.116
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -394,6 +394,32 @@ Build version</th>
 <td>MTM-53359</td>
 <td>10.18.0.55</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries as installed plugin. Now only one plugin is shown.</td>
+<td>MTM-54208</td>
+<td>10.18.0.112</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The return types of several static functions of Angular modules have been adjusted. In certain cases this previously caused an error message like "Unable to evaluate this expression statically". This is now resolved.</td>
+<td>MTM-54674</td>
+<td>10.18.0.109</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The data points graph now displays alarms using either its <code>firstOccurrenceTime</code>, <code>time</code> or <code>creationTime</code> attribute instead of only using <code>creationTime</code>.
+<br>Alarms are now displayed with a minimum width of one pixel, to assure that alarms with a very short duration, for example, alarms created with a CLEARED status, are displayed.
+<br>The alarm tooltip in the data points graph now displays the <code>lastUpdated</code> timestamp in the user's timezone and format.</td>
+<td>MTM-54596</td>
+<td>10.18.0.108</td>
+<td>UI</td>
 </tr>
 
 <tr>

@@ -398,7 +398,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries as installed plugin. Now only one plugin is shown.</td>
+<td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries for the same installed plugin. Now only one plugin is shown.</td>
+
 <td>MTM-54208</td>
 <td>10.18.0.112</td>
 <td>UI</td>

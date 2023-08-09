@@ -153,7 +153,8 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>Fixed an issue with group/device names being translated when displayed in the navigator menu, while not being translated in other places such as the subassets grid or device group selector.</td>
+<td>Fixed an issue with group and device names being translated when displayed in the navigator menu, while not being translated in other places such as the subassets grid or device group selector.</td>
+
 <td>MTM-53130</td>
 <td>10.18.376.0</td>
 <td>UI</td>

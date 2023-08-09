@@ -424,7 +424,8 @@ Build version</th>
 
 <tr>
 <td>Notifications 2.0</td>
-<td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent.  Previously, these notifications were not reliably sent in all cases.</td>
+<td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent. Previously, these notifications were not reliably sent in all cases.</td>
+
 <td>MTM-54097</td>
 <td>10.18.230.0</td>
 <td>Messaging Service</td>

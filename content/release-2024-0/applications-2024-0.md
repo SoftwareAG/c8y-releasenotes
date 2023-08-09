@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.229.0
-- UI 10.18.350.0
+- Core 10.18.252.0
+- UI 10.18.424.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -32,6 +32,22 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Web SDK</td>
+<td>References to the deprecated classes <code>ComponentFactory</code> and <code>ComponentFactoryResolver</code> have been removed from the @c8y/ngx-components library.</td>
+<td>DM-1829</td>
+<td>10.18.387.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Data grid components no longer persist their current page. After reloading they always return to the first page in the list.</td>
+<td>DM-1830</td>
+<td>10.18.353.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Web SDK</td>
@@ -137,8 +153,31 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>The asset selection in the datapoint selector is now filterable.</td>
+<td>Fixed an issue with group/device names being translated when displayed in the navigator menu, while not being translated in other places such as the subassets grid or device group selector.</td>
+<td>MTM-53130</td>
+<td>10.18.376.0</td>
+<td>UI</td>
+</tr>
 
+<tr>
+<td>Cockpit</td>
+<td>The time format (12/24 hours) used for device availability and measurements is now consistent.</td>
+<td>MTM-48837</td>
+<td>10.18.366.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The range in the "Linear gauge" widget and in the "Silo" widget is now set to 0-100 if no custom range has been assigned by the user.</td>
+<td>MTM-53980</td>
+<td>10.18.364.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The asset selection in the datapoint selector is now filterable.</td>
 <td>MTM-54463</td>
 <td>10.18.346.0</td>
 <td>UI</td>
@@ -219,7 +258,6 @@ Build version</th>
 <tr>
 <td>Cockpit</td>
 <td>The asset property of type Boolean now shows "false" instead of "Undefined" when its value is "false".</td>
-
 <td>MTM-51513</td>
 <td>10.18.32.0</td>
 <td>UI</td>
@@ -275,8 +313,49 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>The SCADA widget mapping now holds child device data properly and is not overridden by the parent device.</td>
+<td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries for the same installed plugin. Now only one plugin is shown.</td>
+<td>MTM-54208</td>
+<td>10.18.394.0</td>
+<td>UI</td>
+</tr>
 
+<tr>
+<td>Web SDK</td>
+<td>The asset property can now be cleared if not required.</td>
+<td>MTM-54362</td>
+<td>10.18.391.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The return types of several static functions of Angular modules have been adjusted. In certain cases this previously caused an error message like "Unable to evaluate this expression statically". This is now resolved.</td>
+<td>MTM-54674</td>
+<td>10.18.390.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The data points graph now displays alarms using either its <code>firstOccurrenceTime</code>, <code>time</code> or <code>creationTime</code> attribute instead of only using <code>creationTime</code>.
+<br>Alarms are now displayed with a minimum width of one pixel, to assure that alarms with a very short duration, for example, alarms created with a CLEARED status, are displayed.
+<br>The alarm tooltip in the data points graph now displays the <code>lastUpdated</code> timestamp in the user's timezone and format.</td>
+<td>MTM-54596</td>
+<td>10.18.389.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The version in the plugins list is now displayed with a "v" prefix.</td>
+<td>MTM-54210</td>
+<td>10.18.364.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The SCADA widget mapping now holds child device data properly and is not overridden by the parent device.</td>
 <td>MTM-53912</td>
 <td>10.18.338.0</td>
 <td>UI</td>
@@ -302,7 +381,6 @@ Build version</th>
 <tr>
 <td>Web SDK</td>
 <td>In non-hybrid applications, the <code>lang</code> attribute of the <code>html</code> tag is now correctly set to the language preference of the current user.</td>
-
 <td>MTM-53576</td>
 <td>10.18.285.0</td>
 <td>UI</td>

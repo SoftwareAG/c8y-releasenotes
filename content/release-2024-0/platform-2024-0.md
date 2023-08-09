@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.229.0
-- UI 10.18.350.0
+- Core 10.18.252.0
+- UI 10.18.424.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -223,6 +223,30 @@ Build version</th>
 
 <tr>
 <td>Administration</td>
+<td>Improved the performance of the user hierarchy management by reducing the number of server requests executed when expanding the sub-user list.</td>
+<td>MTM-49969</td>
+<td>10.18.398.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The pagination check of the user list has been modified to prevent duplicate requests.</td>
+<td>MTM-52287</td>
+<td>10.18.380.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>In some cases log files of devices stored in the platform could not be downloaded from the <b>Logs</b> tab. This has been addressed by requesting with the correct user credentials.</td>
+<td>DM-2471</td>
+<td>10.18.355.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
 <td>Fixed an issue whith cloning some of the default global roles (for example, "devices").</td>
 <td>MTM-45858</td>
 <td>10.18.323.0</td>
@@ -311,7 +335,15 @@ Build version</th>
 
 <tr>
 <td>Authentication</td>
-<td>The default value of the "response_type" request parameter for the authorization request in the single sign-on configuration has been set to "code".</td>
+<td>Clicking on the popup for the signed verification code no longer closes the tooltip, so that users can now copy the SSL command. The tooltip can be closed by clicking outside of it.</td>
+<td>MTM-53811</td>
+<td>10.18.369.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The default value of the <code>response_type</code> request parameter for the authorization request in the single sign-on configuration has been set to <code>code</code>.</td>
 <td>MTM-53918</td>
 <td>10.18.221.0</td>
 <td>UI</td>
@@ -392,6 +424,14 @@ Build version</th>
 
 <tr>
 <td>Notifications 2.0</td>
+<td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent.  Previously, these notifications were not reliably sent in all cases.</td>
+<td>MTM-54097</td>
+<td>10.18.230.0</td>
+<td>Messaging Service</td>
+</tr>
+
+<tr>
+<td>Notifications 2.0</td>
 <td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
 <td>MTM-53848</td>
 <td>10.18.151.0</td>
@@ -400,8 +440,15 @@ Build version</th>
 
 <tr>
 <td>REST API</td>
-<td>Fixed the rare occurrence of an HTTP status 500 response from <code>/tenant/statistics/allTenantsSummary</code>, if one of the tenants was deleted during the request.</td>
+<td>When removing an application that is used in SSO access mappings, the login configuration will be updated accordingly.</td>
+<td>MTM-52943</td>
+<td>10.18.235.0</td>
+<td>Core</td>
+</tr>
 
+<tr>
+<td>REST API</td>
+<td>Fixed the rare occurrence of an HTTP status 500 response from <code>/tenant/statistics/allTenantsSummary</code>, if one of the tenants was deleted during the request.</td>
 <td>MTM-53273</td>
 <td>10.18.181.0</td>
 <td>Core</td>

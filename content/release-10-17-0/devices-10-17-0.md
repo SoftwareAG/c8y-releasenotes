@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.249.
+These release notes contain all changes until build version 10.17.0.268.
 {{< /c8y-admon-info >}}
 
 
@@ -170,14 +170,6 @@ Build version</th>
 <td>DM-2093</td>
 <td>10.17.0.159</td>
 <td>UI</td>
-</tr>
-
-<tr>
-<td>OPC UA</td>
-<td>In case of bad connectivity or network delay gateway devices could go to a state where they were disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
-<td>DM-2037</td>
-<td>10.17.0.142</td>
-<td>Core</td>
 </tr>
 
 <tr>
@@ -368,6 +360,14 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>LWM2M</td>
+<td>When reading an entire LWM2M object, which contains multiple object instances, in a simple read, observer or send operation, the LWM2M agent processed and stored only one of the resources of these object instances. This is now resolved and the LWM2M agent processes and stores all resource data from multiple object instances correctly.</td>
+<td>DM-2426</td>
+<td>10.17.0.264</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>If the LWM2M device observation frequency is high, for example, a few milliseconds, the LWM2M Agent processed the same message multiple times, occupying a lot of resources. This is now resolved. The LWM2M agent no longer reprocesses the same observation request.</td>
 <td>DM-1823</td>
 <td>10.17.0.248</td>
@@ -551,6 +551,14 @@ mandatory <b>Software type</b> field is filled.</td>
 
 <tr>
 <td>OPC UA</td>
+<td>The application of OPC UA device protocols was unreliable when there were more than 1000 protocols. This is now fixed.</td>
+<td>DM-2634</td>
+<td>10.17.0.264</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
 <td>In OPC UA device gateway nodes, expected but missing information prevented the completion of the address space scan operation. This is now fixed by skipping these nodes and adding an error message in the opcua-device-gateway log files.
 Additionally, the overall scanning speed has been improved for the full and partial address space scan operations.</td>
 <td>DM-2365</td>
@@ -563,6 +571,14 @@ Additionally, the overall scanning speed has been improved for the full and part
 <td>If the namespace is not defined for a specific node, a missing error handler in the past prevented completion of the scan operation. This is now fixed by skipping nodes that cannot be read. The opcua-device-gateway logs include further details in such cases. The log level INFO contains the failure message and the log level DEBUG contains the stacktrace.</td>
 <td>DM-1920</td>
 <td>10.17.0.166</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
+<td>In case of bad connectivity or network delay gateway devices could go to a state where they were disconnected. This resulted in operation execution being suspended. This issue is now resolved.</td>
+<td>DM-2037</td>
+<td>10.17.0.142</td>
 <td>Core</td>
 </tr>
 

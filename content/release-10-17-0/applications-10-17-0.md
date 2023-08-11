@@ -5,7 +5,7 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.249.
+These release notes contain all changes until build version 10.17.0.268.
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -137,6 +137,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>Activating or deactivating child assets is now executed with a single request.</td>
+<td>MTM-49732</td>
+<td>10.17.0.251</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -328,6 +336,40 @@ Build version</th>
 <td>MTM-46526</td>
 <td>10.16.102.0</td>
 <td>n/a</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>On developing a widget plugin with the Web SDK, a dependency issue could occur due to a missing dependency in the <i>package.json</i>. This missing dependency has now been added.</td>
+<td>MTM-54393</td>
+<td>10.17.0.263</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries for the same installed plugin. Now only one plugin is shown.</td>
+<td>MTM-54208</td>
+<td>10.17.0.262</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The return types of several static functions of Angular modules have been adjusted. In certain cases this previously caused an error message like "Unable to evaluate this expression statically". This is now resolved.</td>
+<td>MTM-54674</td>
+<td>10.17.0.257</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The data points graph now displays alarms using either its <code>firstOccurrenceTime</code>, <code>time</code> or <code>creationTime</code> attribute instead of only using <code>creationTime</code>.
+<br>Alarms are now displayed with a minimum width of one pixel, to assure that alarms with a very short duration, for example, alarms created with a CLEARED status, are displayed.
+<br>The alarm tooltip in the data points graph now displays the <code>lastUpdated</code> timestamp in the user's timezone and format.</td>
+<td>MTM-54596</td>
+<td>10.17.0.256</td>
+<td>UI</td>
 </tr>
 
 <tr>

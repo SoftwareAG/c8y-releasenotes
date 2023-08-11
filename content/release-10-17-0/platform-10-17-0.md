@@ -5,12 +5,11 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build version 10.17.0.249.
+These release notes contain all changes until build version 10.17.0.268.
 {{< /c8y-admon-info >}}
 
 
 ### Improvements
-
 
 <table ><colgroup>
 <col style="width: 15%;">
@@ -181,6 +180,30 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>Improved the performance of the user hierarchy management by reducing the number of server requests executed when expanding the sub-user list.</td>
+<td>MTM-49969</td>
+<td>10.17.0.263</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>The pagination check of the user list has been modified to prevent duplicate requests.</td>
+<td>MTM-52287</td>
+<td>10.17.0.255</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>In some cases log files of devices stored in the platform could not be downloaded from the <b>Logs</b> tab. This has been addressed by requesting with the correct user credentials.</td>
+<td>DM-2471</td>
+<td>10.17.0.250</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -439,6 +462,14 @@ MTM-49760</td>
 <td>MTM-53168</td>
 <td>10.17.0.196</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Notifications 2.0</td>
+<td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent. Previously, these notifications were not reliably sent in all cases.</td>
+<td>MTM-54097</td>
+<td>10.17.0.253</td>
+<td>Messaging Service</td>
 </tr>
 
 <tr>

@@ -192,13 +192,6 @@ As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the E
 It has been replaced by a new "Call another microservice" sample which now uses the `/health` endpoint of an Apama-ctrl microservice.
 See also [Connecting Apama to other microservices](https://cumulocity.com/guides/10.18.0/streaming-analytics/epl-apps/#microservices) in the *Streaming Analytics guide*.
 
-##### Documentation
-
-The German version of the Analytics Builder documentation, which is available as a separate webhelp until release 10.16, is no longer provided.
-We will focus on our high-quality, up-to-date English user documentation.
-The English version of the Analytics Builder documentation has been integrated into the Cumulocity IoT documentation.
-See also [Restructured Streaming Analytics guide](/release-10-18-0/streaming-analytics-10-18-0/).
-
 ##### Breaking change in Analytics Builder - Acknowledged alarms
 
 The [Alarm Output](https://cumulocity.com/guides/10.18.0/streaming-analytics/block-reference/#alarm-output) block
@@ -287,13 +280,6 @@ The above events now have the following additional members:
 
 You should now use the updated events listed above instead of the `Error` event since it is sent to the same channel as the updated events.
 For more details, see the [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/pam/10.15.3/en/webhelp/related/ApamaDoc/index.html).
-
-
-##### Documentation
-
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the German version of the Analytics Builder documentation,
-which is available as a separate webhelp until release 10.17, is no longer provided.
-See also the information on the restructured *Streaming Analytics guide* in the [Streaming Analytics](/release-10-18-0/streaming-analytics-10-18-0/) release notes.
 
 <a name="data-hub"></a>
 ### Cumulocity IoT DataHub

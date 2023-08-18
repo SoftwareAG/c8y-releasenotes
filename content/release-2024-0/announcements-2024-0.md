@@ -155,3 +155,7 @@ This change only affects you, if you or your development team use the Web SDK to
 #### Planned
 
 #### Implemented
+
+##### Cumulocity IoT transport in Apama 10.15.4 - breaking change in REST APIs
+
+Due to a change in Cumulocity IoT announced with [release 10.17](/release-10-17-0/announcements-10-17-0), Apama 10.15.4 now explicitly sets `withTotalPages` to `true` for applicable requests.

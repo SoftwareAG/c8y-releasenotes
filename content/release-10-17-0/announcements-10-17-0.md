@@ -14,7 +14,7 @@ If you own a dedicated Cumulocity IoT instance, we will collaborate with you on 
 
 We appreciate your support as we embark on this transition. Your feedback and suggestions are invaluable as we shape the future of our product. You will find more details about the planned changes in the 10.18 release announcement.
 
-Find more details in the document [Continuous Deployment for Cumulocity IoT](/files/202307-CumulocityIoT-CD-Customer-Communication.pdf).
+Find more details in the document [Continuous Deployment for Cumulocity IoT](/files/202307-CumulocityIoT-CD-Customer-Communication-v1.2.pdf).
 
 
 ### Changes in build components

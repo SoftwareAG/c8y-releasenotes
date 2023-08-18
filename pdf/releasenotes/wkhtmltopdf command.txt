@@ -20,4 +20,5 @@ wkhtmltopdf \
  http://localhost:1313/releasenotes/release-10-18-0/applications-10-18-0/ \
  http://localhost:1313/releasenotes/release-10-18-0/streaming-analytics-10-18-0/ \
  http://localhost:1313/releasenotes/release-10-18-0/digital-twin-manager-10-18-0/ \
+ http://localhost:1313/releasenotes/release-10-18-0/datahub-10-18-0/ \
  "Cumulocity IoT release notes PREVIEW-v10.18.0.pdf"

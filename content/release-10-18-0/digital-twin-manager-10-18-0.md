@@ -1,5 +1,5 @@
 ---
 weight: 80
-title: Digital Twin Manager
+title: Digital twin manager
 layout: bundle
 ---

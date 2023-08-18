@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.133
-- UI: 10.18.0.98
+- Core: 10.18.0.150
+- UI: 10.18.0.116
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -247,6 +247,14 @@ Build version</th>
 <td>Events created by the Loriot agent when sending uplink requests are now considered device requests and provide connectivity status and availability monitoring.</td>
 <td>DM-2139</td>
 <td>10.17.170.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>If the LWM2M device observation frequency is high, for example, a few milliseconds, the LWM2M Agent processed the same message multiple times, occupying a lot of resources. This is now resolved. The LWM2M agent no longer reprocesses the same observation request.</td>
+<td>DM-1823</td>
+<td>10.18.0.141</td>
 <td>Core</td>
 </tr>
 

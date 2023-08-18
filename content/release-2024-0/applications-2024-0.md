@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.165.0
-- UI 10.18.165.0
+- Core 10.18.252.0
+- UI 10.18.424.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -33,6 +33,30 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+<tr>
+<td>Web SDK</td>
+<td>References to the deprecated classes <code>ComponentFactory</code> and <code>ComponentFactoryResolver</code> have been removed from the @c8y/ngx-components library.</td>
+<td>DM-1829</td>
+<td>10.18.387.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Data grid components no longer persist their current page. After reloading they always return to the first page in the list.</td>
+<td>DM-1830</td>
+<td>10.18.353.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Shell applications now wait with their initial navigation until all plugins have been loaded. This allows,
+for example, to directly navigate via a link to a route which is provided by a plugin.</td>
+<td>MTM-53695</td>
+<td>10.18.290.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Web SDK</td>
@@ -54,7 +78,6 @@ For custom column implementations, the WebSDK allows developers to provide their
 <tr>
 <td>Web SDK</td>
 <td>In release 10.16.0.0, core re-usable data-grid-related components and services have been moved to the <code>@c8y/ngx-components</code>. The initial implementations were deprecated and have now been removed.</td>
-
 <td>DM-1294</td>
 <td>10.18.206.0</td>
 <td>UI</td>
@@ -88,7 +111,6 @@ For custom column implementations, the WebSDK allows developers to provide their
 <tr>
 <td>Web SDK</td>
 <td>A versioning matrix can now be added to the <i>cumulocity.json</i> of a blueprint/plugin. When a blueprint/plugin is installed, its version is validated against the platform version. If the versions are incompatible a warning is shown.</td>
-
 <td>MTM-52340</td>
 <td>10.18.63.0</td>
 <td>UI</td>
@@ -128,6 +150,63 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue with group and device names being translated when displayed in the navigator menu, while not being translated in other places such as the subassets grid or device group selector.</td>
+
+<td>MTM-53130</td>
+<td>10.18.376.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The time format (12/24 hours) used for device availability and measurements is now consistent.</td>
+<td>MTM-48837</td>
+<td>10.18.366.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The range in the "Linear gauge" widget and in the "Silo" widget is now set to 0-100 if no custom range has been assigned by the user.</td>
+<td>MTM-53980</td>
+<td>10.18.364.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The asset selection in the datapoint selector is now filterable.</td>
+<td>MTM-54463</td>
+<td>10.18.346.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The right drawer now always shows the language selected in the user preferences.</td>
+<td>MTM-53189</td>
+<td>10.18.319.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Activating or deactivating child assets is now executed with a single request.</td>
+<td>MTM-49732</td>
+<td>10.18.292.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>In case the <code>doNotAddGlobalFragmentByDefault</code> option has been set in the configuration of the <code>DatapointLibraryModule</code>, the <code>c8y_Global</code> fragment is no longer unintentionally set to <code>null</code> during the creation of a new data point library entry.</td>
+<td>MTM-54213</td>
+<td>10.18.288.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -180,7 +259,6 @@ Build version</th>
 <tr>
 <td>Cockpit</td>
 <td>The asset property of type Boolean now shows "false" instead of "Undefined" when its value is "false".</td>
-
 <td>MTM-51513</td>
 <td>10.18.32.0</td>
 <td>UI</td>
@@ -231,6 +309,81 @@ Build version</th>
 <td>The action buttons in the windows <b>Usage statistics filters</b>, <b>Add bulk operation</b> and <b>Add device protocol</b> are now properly aligned when using mobile screens.</td>
 <td>DM-2274</td>
 <td>10.18.72.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries for the same installed plugin. Now only one plugin is shown.</td>
+<td>MTM-54208</td>
+<td>10.18.394.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The asset property can now be cleared if not required.</td>
+<td>MTM-54362</td>
+<td>10.18.391.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The return types of several static functions of Angular modules have been adjusted. In certain cases this previously caused an error message like "Unable to evaluate this expression statically". This is now resolved.</td>
+<td>MTM-54674</td>
+<td>10.18.390.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The data points graph now displays alarms using either its <code>firstOccurrenceTime</code>, <code>time</code> or <code>creationTime</code> attribute instead of only using <code>creationTime</code>.
+<br>Alarms are now displayed with a minimum width of one pixel, to assure that alarms with a very short duration, for example, alarms created with a CLEARED status, are displayed.
+<br>The alarm tooltip in the data points graph now displays the <code>lastUpdated</code> timestamp in the user's timezone and format.</td>
+<td>MTM-54596</td>
+<td>10.18.389.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The version in the plugins list is now displayed with a "v" prefix.</td>
+<td>MTM-54210</td>
+<td>10.18.364.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The SCADA widget mapping now holds child device data properly and is not overridden by the parent device.</td>
+<td>MTM-53912</td>
+<td>10.18.338.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>On developing a widget plugin with the Web SDK, a dependency issue could occur due to a missing dependency in the <i>package.json</i>. This missing dependency has now been added.</td>
+<td>MTM-54393</td>
+<td>10.18.323.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The locale of the web app can be set via the URL parameter <code>lang</code>, for example, <code>/apps/administration/index.html?lang=zh-cn</code>. The locale code is case-insensitive and must have 2 letters or 4 letters, separated by a hyphen "-" or an underscore "_". If the provided locale code is not supported, the web app is displayed in English.</td>
+
+<td>MTM-48676</td>
+<td>10.18.317.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In non-hybrid applications, the <code>lang</code> attribute of the <code>html</code> tag is now correctly set to the language preference of the current user.</td>
+<td>MTM-53576</td>
+<td>10.18.285.0</td>
 <td>UI</td>
 </tr>
 

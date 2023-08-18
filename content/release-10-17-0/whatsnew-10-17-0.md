@@ -68,3 +68,13 @@ This feature is useful, for example, if there is a security issue with the token
 In the **User** page, at the right of the top menu bar, click **Revoke tokens** to revoke all session tokens immediately.
 
 ![User token revocation](/images/release-notes/admin-users-list.png)
+
+### OEE App
+
+An updated version of the Cumulocity IoT OEE application is now available. 
+
+This version adds support in the UI for defining one-off and repeating work shifts on a per-location basis. This allows the calculation of OEE (Overall Equipment Efficiency), Availability, Performance, Quality and various other metrics over these timeframes. 
+
+![Admin shift plan configuration](/images/release-notes/oee-admin-shift-plans.png)
+
+For details, refer to the [Cumulocity IoT OEE guide](https://cumulocity.com/guides/10.17.0/oee/overview/).

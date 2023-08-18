@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.213.0
-- UI 10.18.250.0
+- Core 10.18.252.0
+- UI 10.18.424.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -32,6 +32,23 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Device management</td>
+<td>Users can now customize the dashboard on the <b>Info</b> tab in the device details. Widgets can be moved and resized, and new widgets can be added from a list of available widgets. The dashboard can be reset anytime to the default dashboard settings. By default, the "Asset notes" widget has been removed.</td>
+<td>DM-2279</td>
+<td>10.18.327.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>In the data grid component, a new filter overview dropdown has been added. It displays all active filters in one place and allows users to remove filters.
+For custom column implementations, the WebSDK allows developers to provide their own logic to display active filters as items in the filter overview.</td>
+<td>DM-1616</td>
+<td>10.18.246.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device management</td>
@@ -211,6 +228,14 @@ Build version</th>
 <td>The memory limit for the Loriot microservice has been increased to 2Gi.</td>
 <td>DM-2427</td>
 <td>10.18.112.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The <code>queueMode</code> property of LWM2M registrations is now persisted correctly for the LWM2M registration updates.</td>
+<td>DM-2563</td>
+<td>10.18.230.0</td>
 <td>Core</td>
 </tr>
 

@@ -97,12 +97,14 @@ GET /inventory/managedObjects?withLatestValues=true&query=$filter=c8y_LatestMeas
 }
 
 ```
-##### Implications
+##### Implications & Precondition
 
 This feature introduces an additional operation upon measurement creation.
 This results in performance degradation, depending on the number of series to be
 stored in each measurement, reaching from 5% for single series in each measurement to
-more than 20% in case of 50 series per measurement.
+more than 20% in case of 50 series per measurement. Such drawback applies if the text index is disabled. In other cases,
+the performance degradation can be much higher, up to more than 100%. Therefore
+**disabling the text index is considered as a precondition**.
 
 ##### Limitations
 

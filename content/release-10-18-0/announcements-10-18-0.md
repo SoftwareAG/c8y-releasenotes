@@ -4,10 +4,22 @@ title: Important announcements
 layout: bundle
 ---
 
+### Transition to continuous updates
+
+For all public cloud instances, we are moving from quarterly releases towards a continuous deployment of software updates. The 10.18 release will be the last release deployed using our current release model. After the 10.18 release, the different components of our platform will be updated on a continuous basis.
+
+Continuous updates will provide you with a steady stream of enhancements, bug fixes, and exciting new functionalities as they become available. This change allows us to respond swiftly to your feedback and ensure you always have the most up-to-date version of our product.
+
+If you own a dedicated Cumulocity IoT instance, we will collaborate with you on an individual basis to plan the transition to either continuous deployment or the alternative yearly release model.
+
+We appreciate your support as we embark on this transition. Your feedback and suggestions are invaluable as we shape the future of our product. You will find more details about the planned changes in the 10.18 release announcement.
+
+Find more details in the document [Continuous Deployment for Cumulocity IoT](/files/202307-CumulocityIoT-CD-Customer-Communication-v1.2.pdf).
+
+
 ### REST API changes
 
 #### Planned
-
 
 ##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
 

@@ -35,7 +35,7 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
-<td>If a pending device in the registration list has been accepted, the device will now be removed from the list - no "accepted" status will be shown.</td>
+<td>If a pending device in the registration list has been accepted, the device is now removed from the list instead of the list showing the "accepted" status for the device.</td>
 <td>DM-1723</td>
 <td>10.18.458.0</td>
 <td>UI</td>

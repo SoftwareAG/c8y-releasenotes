@@ -260,7 +260,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>During a large number of parallel LWM2M DTLS device connection requests, used for devices using PSK secured mode, the LWM2M agent was not able to handle all connections at the same time. This caused connection failures for these devices to the platform. In the LWM2M agent, the default settings for this part have been adjusted and made configurable to serve large parallel connections.</td>
+<td>During a large number of parallel LWM2M DTLS device connection requests, used for devices using PSK secured mode, the LWM2M agent was not able to handle all connections at the same time. This caused platform connection failures for the devices. In the LWM2M agent, the default settings for this part have been adjusted and made configurable to serve large parallel connections.</td>
 <td>DM-2651</td>
 <td>10.18.0.162</td>
 <td>Core</td>
@@ -268,7 +268,7 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
-<td>When reading an entire LWM2M object, which contains multiple object instances, in a simple read, observer or send operation, the LWM2M agent processed and stored only one of the resources of these object instances. This is now resolved and the LWM2M agent processes and stores all resource data from multiple object instances correctly.</td>
+<td>When reading an entire LWM2M object which contains multiple object instances, in a simple read observer or send operation, the LWM2M agent processed and stored only one of the resources of these object instances. This is now resolved and the LWM2M agent processes and stores all resource data from multiple object instances correctly.</td>
 <td>DM-2426</td>
 <td>10.18.0.155</td>
 <td>Core</td>

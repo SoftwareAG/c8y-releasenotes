@@ -399,7 +399,6 @@ Build version</th>
 <tr>
 <td>Web SDK</td>
 <td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries for the same installed plugin. Now only one plugin is shown.</td>
-
 <td>MTM-54208</td>
 <td>10.18.0.112</td>
 <td>UI</td>
@@ -428,6 +427,14 @@ Build version</th>
 <td>On developing a widget plugin with the Web SDK, a dependency issue could occur due to a missing dependency in the <i>package.json</i>. This missing dependency has now been added.</td>
 <td>MTM-54393</td>
 <td>10.18.0.97</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In the data explorer, when deleting the min/max value of a data point, the Y-axis displayed "-1" and "1" instead of determining the maximum and minimum value based on the data. This has been fixed and the Y-axis shows the min/max value of the data again.</td>
+<td>MTM-54008</td>
+<td>10.18.0.96</td>
 <td>UI</td>
 </tr>
 

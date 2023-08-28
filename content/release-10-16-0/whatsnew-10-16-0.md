@@ -67,7 +67,7 @@ The Loriot agent now supports the configuration of multiple connections per tena
 
 ![All devices](/images/release-notes/multiple_lns_connection_loriot.png)
 
-For details, refer to [Loriot LoRa > Device registration via Cumulocity IoT](https://cumulocity.com/guides/protocol-integration/lora-loriot/#configure-loriot-credentials-cumulocity) in the *Protocol integration guide*.
+For details, refer to [Loriot LoRa > Device registration via Cumulocity IoT](https://cumulocity.com/guides/10.16.0/protocol-integration/lora-loriot/#configure-loriot-credentials-cumulocity) in the *Protocol integration guide*.
 
 ##### Support for Loriot device registration
 
@@ -75,17 +75,17 @@ Using the Loriot LNS connections created in the **Connectivity** page in **Setti
 
 ![Device Registration](/images/release-notes/loriot-registration.png)
 
-For details refer to [Loriot LoRa > Device registration via Cumulocity IoT](https://cumulocity.com/guides/protocol-integration/lora-loriot/#configure-loriot-credentials-cumulocity) in the *Protocol integration guide*.
+For details refer to [Loriot LoRa > Device registration via Cumulocity IoT](https://cumulocity.com/guides/10.16.0/protocol-integration/lora-loriot/#configure-loriot-credentials-cumulocity) in the *Protocol integration guide*.
 
 For the devices registered with the Loriot agent, downlink operations can be sent from the **Shell** tab.
 
-For details refer to [Loriot LoRa > Sending operations](https://cumulocity.com/guides/protocol-integration/lora-loriot/#operations-loriot) in the *Protocol integration guide*.
+For details refer to [Loriot LoRa > Sending operations](https://cumulocity.com/guides/10.16.0/protocol-integration/lora-loriot/#operations-loriot) in the *Protocol integration guide*.
 
 #### Actility agent support for Thingpark Enterprise Edition
 
 Users can now register devices on Thingpark Enterprise and Wireless using the Cumulocity IoT Actility agent. Also, the Cumulocity IoT Actility agent now supports JSON as an input payload type in addition to XML for the uplink messages from Thingpark Actility.
 
-For details, refer to [Actility LoRa](https://cumulocity.com/guides/protocol-integration/lora-actility/) in the *Protocol integration guide*.
+For details, refer to [Actility LoRa](https://cumulocity.com/guides/10.16.0/protocol-integration/lora-actility/) in the *Protocol integration guide*.
 
 ### Platform services
 
@@ -94,7 +94,7 @@ For details, refer to [Actility LoRa](https://cumulocity.com/guides/protocol-int
 A new and improved data model for holding measurements in a timeseries provides a significant improvement to the use of the underlying infrastructure. The changes provide a smoother throughput on the database, both from disk read/write and memory usage, which in turn ensures the load on the system is reduced. Users will see improved performance on the data retention policy implementation.
 
 The new data model is only available for new tenants, the old and the new data model will co-exist.
- 
+
 #### Security
 
-Single sign-on experience has been improved so that a Cumulocity IoT administrator can edit the role of a SSO user. This allows users of Cumulocity IoT to participate in the [Role Based Access Control](https://cumulocity.com/guides/concepts/tenant-hierarchy/#comparison) in the same way a local user can, and greatly enhances the security capability for users managed by an external Identity Access Manager.
+Single sign-on experience has been improved so that a Cumulocity IoT administrator can edit the role of a SSO user. This allows users of Cumulocity IoT to participate in the [Role Based Access Control](https://cumulocity.com/guides/10.16.0/concepts/tenant-hierarchy/#comparison) in the same way a local user can, and greatly enhances the security capability for users managed by an external Identity Access Manager.

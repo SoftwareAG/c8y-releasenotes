@@ -160,7 +160,7 @@ The HOOK_SEARCH can be used by developers to extend the web integration of the s
 
 ##### Updating the Web SDK to Angular 14
 
-As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) the Web SDK has been updated to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what must be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
+As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) the Web SDK has been updated to Angular 14. See the [Angular upgrade guide](https://v14.angular.io/guide/update-to-latest-version) for more information on what must be changed in your custom application. You can use our [default upgrade instructions](https://cumulocity.com/guides/10.16.0/web/upgrade/#update-to-an-newer-version) to update the files provided by the Cumulocity CLI tool.
 
 ##### Removal of Cumulocity IoT Device SDKs in favor of thin-edge.io
 

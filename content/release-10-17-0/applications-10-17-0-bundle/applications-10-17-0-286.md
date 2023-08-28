@@ -38,4 +38,12 @@ Build version</th>
 <td>UI</td>
 </tr>
 
+<tr>
+<td>Web SDK</td>
+<td>In the data explorer, when deleting the min/max value of a data point, the Y-axis displayed "-1" and "1" instead of determining the maximum and minimum value based on the data. This has been fixed and the Y-axis shows the min/max value of the data again.</td>
+<td>MTM-54008</td>
+<td>10.17.0.235</td>
+<td>UI</td>
+</tr>
+
 </tbody></table>

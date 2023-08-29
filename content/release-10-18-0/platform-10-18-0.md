@@ -7,8 +7,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.150
-- UI: 10.18.0.116
+- Core: 10.18.0.179
+- UI: 10.18.0.122
 {{< /c8y-admon-info >}}
 
 ### Improvements

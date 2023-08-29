@@ -23,7 +23,7 @@ Find more details in the document [Continuous Deployment for Cumulocity IoT](/fi
 
 ##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
 
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.19+, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of a future release, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
 The return code will still be 204 if the control can be returned immediately.
 This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
@@ -35,7 +35,7 @@ This change is necessary to improve the Inventory API performance.
 
 ##### Breaking change in all REST APIs
 
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of release 10.19+,
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of a future release,
 the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
 A `withTotalPages=true` parameter has to be explicitly provided to the requests when `totalPages` is expected.
 
@@ -110,10 +110,11 @@ Note that the administrator will still have the option to force the user to rese
 #### Planned
 
 ##### Breaking change: Use of Linux cgroup v2
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), from release 2024, microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in a version higher than 10.18 it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process.
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), in releases higher than 10.18, microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in these releases it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process.
 
 cgroup is a Linux kernel feature to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. Every process in the system belongs to one and only one cgroup. In Cumulocity IoT cgroups are used to enforce container resource limits.
-Starting with Cumulocity IoT release 2024, it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
+
+In releases higher than 10.18 it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
 
 When using the Cumulocity IoT Microservice SDK for developing microservices, ensure to configure a Java version which is cgroup v2 aware when building your microservice. When using Java 8, ensure to use openjdk8u372 or higher. When using Java 11, use Java 11.0.16 or higher, or use Java 15 or higher.
 When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider.
@@ -125,7 +126,7 @@ When using a server runtime other than OpenJDK Java as microservice application 
 
 ##### Breaking change in the Web SDK - deprecation of HOOK_ prefixed injection tokens
 
-As of release 10.20+, the Web SDK will no longer expose the `HOOK_` prefixed injection tokens, like for example `HOOK_COMPONENTS`, `HOOK_ROUTE` or `HOOK_NAVIGATOR_NODES`, to users. In version 10.17 an alternative to these hooks has been introduced, which allows typed usage. This is a significant benefit for Web SDK users since they no longer have to guess the types and attributes offered by these hooks.
+As of a future release, the Web SDK will no longer expose the `HOOK_` prefixed injection tokens, like for example `HOOK_COMPONENTS`, `HOOK_ROUTE` or `HOOK_NAVIGATOR_NODES`, to users. In version 10.17 an alternative to these hooks has been introduced, which allows typed usage. This is a significant benefit for Web SDK users since they no longer have to guess the types and attributes offered by these hooks.
 
 A migration is only required for users who used the Web SDK for customizing their user interface.
 

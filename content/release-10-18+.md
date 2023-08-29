@@ -1,6 +1,6 @@
 ---
-title: Release 2024.0 DRAFT
-bundle: release-2024-0
+title: CD model
+bundle: release-10-18+
 icon: "c8y-icon c8y-icon-notification"
 type: root
 layout: root

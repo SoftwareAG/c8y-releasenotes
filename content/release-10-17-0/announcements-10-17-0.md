@@ -68,13 +68,13 @@ currently the whole payload is saved. In the future, the `c8y_LatestMeasurements
 
 ##### Breaking change in the Inventory API -- change of the default value for the `withChildren` parameter
 
-As of release 10.20+, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
+As of a future release, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
 As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
 This change is necessary to improve the Inventory API performance.
 
 ##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
 
-As of release 10.19+, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
+As of a future release, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
 The return code will still be 204 if the control can be returned immediately.
 This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
@@ -82,7 +82,7 @@ This change is required to make the API consistent with the HTTP protocol semant
 
 As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
 
-As of release 10.19+, the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
+As of a future release, the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
 A `withTotalPages=true` parameter has to be explicitly provided to the requests when `totalPages` is expected.
 
 For example:
@@ -160,7 +160,7 @@ The change has been introduced to improve the consistency between different Cumu
 
 ##### User administrator can no longer set password for other users
 
-To improve security, from release 10.20, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
+To improve security, from a future release, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
 This change prevents that an attacker could have access to all users, in case the administrator account was compromised.
 Note that the administrator will still have the option to force the user to reset the password on the next login or disable the user.
 
@@ -181,10 +181,11 @@ To process this new token type, Cumulocity IoT uses the [Nimbus JOSE + JWT](http
 #### Planned
 
 ##### Breaking change: Use of Linux cgroup v2
-From release 2024, microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in a version higher than 10.18 it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process.
+In releases higher than 10.18 microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in such these releases it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process.
 
 cgroup is a Linux kernel feature to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. Every process in the system belongs to one and only one cgroup. In Cumulocity IoT cgroups are used to enforce container resource limits.
-Starting with Cumulocity IoT release 2024, it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
+
+In releases higher than 10.18 it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
 
 When using the Cumulocity IoT Microservice SDK for developing microservices, ensure to configure a Java version which is cgroup v2 aware when building your microservice. When using Java 8, ensure to use openjdk8u372 or higher. When using Java 11, use Java 11.0.16 or higher, or use Java 15 or higher.
 When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider.

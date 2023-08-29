@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.252.0
-- UI 10.18.424.0
+- Core 10.18.308.0
+- UI 10.18.463.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -32,6 +32,24 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+
+<tr>
+<td>Web SDK</td>
+<td>When installing a plugin and the tenant has no custom applications, it is now possible to duplicate any existing applications.</td>
+<td>MTM-51757</td>
+<td>10.18.457.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The Impact connectivity feature has been removed from @c8y/ngx-components and @c8y/ng1-modules packages.</td>
+<td>DM-2548</td>
+<td>10.18.431.0</td>
+<td>UI</td>
+</tr>
+
 
 <tr>
 <td>Web SDK</td>
@@ -153,8 +171,23 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>Fixed an issue with group and device names being translated when displayed in the navigator menu, while not being translated in other places such as the subassets grid or device group selector.</td>
+<td>It is now possible to type numbers in scientific notation (for example "1.234e2") in the subassets custom properties form.</td>
+<td>MTM-54503</td>
+<td>10.18.452.0</td>
+<td>UI</td>
+</tr>
 
+<tr>
+<td>Cockpit</td>
+<td>The KPI widget shows the correct previous value when hovering over the trend indicator, if no real-time updates have been received yet.</td>
+<td>MTM-55095</td>
+<td>10.18.444.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue with group and device names being translated when displayed in the navigator menu, while not being translated in other places such as the subassets grid or device group selector.</td>
 <td>MTM-53130</td>
 <td>10.18.376.0</td>
 <td>UI</td>
@@ -314,6 +347,14 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
+<td>It is now possible to install multiple plugins from one package to an application. Users can uninstall plugins only from an application that has this specific plugin installed.</td>
+<td>MTM-55073</td>
+<td>10.18.460.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
 <td>In the application plugin view, if multiple packages (subscribed and custom) were available for the same widget, the platform displayed multiple entries for the same installed plugin. Now only one plugin is shown.</td>
 <td>MTM-54208</td>
 <td>10.18.394.0</td>
@@ -386,6 +427,15 @@ Build version</th>
 <td>10.18.285.0</td>
 <td>UI</td>
 </tr>
+
+<tr>
+<td>Web SDK</td>
+<td>In the data explorer, when deleting the min/max value of a data point, the Y-axis displayed "-1" and "1" instead of determining the maximum and minimum value based on the data. This has been fixed and the Y-axis shows the min/max value of the data again.</td>
+<td>MTM-54008</td>
+<td>10.18.244.0</td>
+<td>UI</td>
+</tr>
+
 
 <tr>
 <td>Web SDK</td>

@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core 10.18.252.0
-- UI 10.18.424.0
+- Core 10.18.308.0
+- UI 10.18.463.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -135,6 +135,22 @@ For applications with versions, by default the application with the "latest" tag
 <td>The platform performance has been improved by introducing a new cache for managed objects.</td>
 <td>MTM-50113</td>
 <td>10.18.9.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>MongoDB</td>
+<td>Inventory API queries that use the <code>text</code> parameter are now sorted by relevance.</td>
+<td>MTM-54563</td>
+<td>10.18.291.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>MongoDB</td>
+<td>A MongoDB Java driver has been upgraded to the latest version 4.10.2.</td>
+<td>MTM-53824</td>
+<td>10.18.286.0</td>
 <td>Core</td>
 </tr>
 

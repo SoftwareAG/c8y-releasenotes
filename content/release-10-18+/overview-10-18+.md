@@ -5,7 +5,8 @@ title: Overview
 layout: bundle
 ---
 
-These release notes for the **Cumulocity IoT CD model** include information on all relevant changes, such as new features, improvements, and fixes, that have been implemented in Cumulocity IoT Core (here divided into the product areas Application enablement, Device management & connectivity, and Platform services), in its layered products and in integrated applications (if released) since the previous GA release.
+These release notes for the **Cumulocity IoT cloud deployments** include information on all relevant changes, such as new features, improvements, and fixes, that have been implemented in Cumulocity IoT Core (here divided into the product areas Application enablement, Device management & connectivity, and Platform services), in its layered products and in integrated applications (if released) since the previous GA release.
+
 
 For each improvement or fix, the following information is provided:
 

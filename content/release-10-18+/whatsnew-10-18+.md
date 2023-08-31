@@ -4,4 +4,4 @@ title: What´s new
 layout: bundle
 ---
 
-The CD model includes the following new features or major feature enhancements.
+The cloud deployments include the following new features or major feature enhancements.

@@ -30,13 +30,14 @@ Starting from release 10.17, Core, UI, and several other components such as Mess
 
 ##### Breaking change in the Alarms, Events, Measurements APIs - required parameters will be introduced
 
-As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), in a future release, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), in the future, at least one query parameter limiting the affected data will be required to prevent accidental deletion of too many objects during a bulk delete operation.
 This change affects the following APIs:
 
 * `DELETE /alarm/alarms` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
+This change will be implemented after a 6-month period at the earliest.
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 
@@ -68,21 +69,19 @@ currently the whole payload is saved. In the future, the `c8y_LatestMeasurements
 
 ##### Breaking change in the Inventory API -- change of the default value for the `withChildren` parameter
 
-As of a future release, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
-As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
-This change is necessary to improve the Inventory API performance.
+In a future version, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
+As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query. This change is necessary to improve the Inventory API performance.
+
 
 ##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
 
-As of a future release, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
-The return code will still be 204 if the control can be returned immediately.
-This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
+In a future version, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content). The return code will still be 204 if the control can be returned immediately. This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
 ##### Breaking change in all REST APIs
 
 As of release 10.18+, wrong values for `pageSize` or `currentPage` result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
 
-As of a future release, the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
+In a future version, the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
 A `withTotalPages=true` parameter has to be explicitly provided to the requests when `totalPages` is expected.
 
 For example:
@@ -93,7 +92,8 @@ The change is enforced by performance reasons.
 
 ##### Change in the Application API (REST API and Java SDK)
 
-In a future release, we will remove the `resourcesUrl` field from the Application API (both REST API and Java SDK). The `resourcesUrl` is a legacy field, and the functionality behind it was removed.
+In a future version, we will remove the `resourcesUrl` field from the Application API (both REST API and Java SDK). The `resourcesUrl` is a legacy field, and the functionality behind it was removed.
+
 This change will not affect any user in a negative way, nor break an existing functionality.
 
 #### Implemented
@@ -160,7 +160,7 @@ The change has been introduced to improve the consistency between different Cumu
 
 ##### User administrator can no longer set password for other users
 
-To improve security, from a future release, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
+To improve security, from a future version, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
 This change prevents that an attacker could have access to all users, in case the administrator account was compromised.
 Note that the administrator will still have the option to force the user to reset the password on the next login or disable the user.
 
@@ -181,11 +181,11 @@ To process this new token type, Cumulocity IoT uses the [Nimbus JOSE + JWT](http
 #### Planned
 
 ##### Breaking change: Use of Linux cgroup v2
-In releases higher than 10.18 microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in these releases it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process.
+In Cumulocity IoT versions higher than 10.18, microservices must use a Linux cgroup v2 aware application runtime. When executing microservices which are not compatible with cgroup v2 on Cumulocity IoT in these versions it might happen that the information provided by the application runtime concerning available CPU and memory is not correct. This might lead to incorrect memory and thread allocation in the microservice container process.
 
 cgroup is a Linux kernel feature to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. Every process in the system belongs to one and only one cgroup. In Cumulocity IoT cgroups are used to enforce container resource limits.
 
-In releases higher than 10.18 it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
+In versions higher than 10.18 it will be necessary for all microservices to be compatible with Linux cgroup v2. This updated version brings significant improvements and enhanced functionality for resource management and isolation, ensuring better performance and scalability of your applications. Linux cgroup v2 was released with kernel version 4.5 in March 2016.
 
 When using the Cumulocity IoT Microservice SDK for developing microservices, ensure to configure a Java version which is cgroup v2 aware when building your microservice. When using Java 8, ensure to use openjdk8u372 or higher. When using Java 11, use Java 11.0.16 or higher, or use Java 15 or higher.
 When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider.
@@ -196,7 +196,7 @@ When using a server runtime other than OpenJDK Java as microservice application 
 
 ##### The Web SDK extension HOOK_SEARCH will be refactored
 
-The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), as of release 10.18, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
+The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), in a future version we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
 
 ##### Breaking change in the Map widget
 
@@ -229,7 +229,7 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0) and [r
 
 ##### German User guide
 
-The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future release we are going to remove the German *User guide* from the documentation website and focus on our high-quality, up-to-date English user documentation.
+The German version of the *User guide* (*Benutzerhandbuch*) is deprecated. In a future version we are going to remove the German *User guide* from the documentation website and focus on our high-quality, up-to-date English user documentation.
 
 #### Implemented
 
@@ -252,7 +252,7 @@ Cumulocity IoT release 10.17.0 already includes Streaming Analytics release 10.1
 
 ##### Deprecation of Machine Learning
 
-As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the **Machine Learning** block in Analytics Builder is deprecated and will be removed in a future release.
+As announced with [release 10.16](/release-10-16-0/announcements-10-16-0), the **Machine Learning** block in Analytics Builder is deprecated and will be removed in a future version.
 This is in line with the deprecation of [Machine Learning Engine](/release-10-16-0/announcements-10-16-0/#machine-learning-deprecation) announced in release 10.16.
 
 #### Implemented
@@ -358,19 +358,19 @@ For more details, see the [API Reference for EPL (ApamaDoc)](https://documentati
 
 ##### Breaking change in the offloading mechanism - deprecation of support for mixed types
 
-In a future release of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.
+In a future version of Cumulocity IoT DataHub a newer version of Dremio will be adopted that removes support for mixed data types. The offloading process will be adapted so that mixed types will be automatically resolved during offloading. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.
 
 ##### Breaking change in the offloading mechanism - switch to new table format may introduce incompatibilities
 
-In future releases of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.
+In future versions of Cumulocity IoT DataHub the offloading mechanism may leverage the Apache Iceberg table format, which is an open format supported by Dremio. Due to this change, current offloading configurations may fail. For example, they may fail due to rarely used data types which are incompatible with the Apache Iceberg format. Further details and remediation actions will be provided closer to the respective release.
 
 ##### Breaking change in the offloading mechanism - removal of history column in alarms collection
 
-In a future release of Cumulocity IoT core the history attribute will be removed from the alarms. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake table still includes the history column, but for new offloading runs the value will not be included anymore and thus will be null.
+In a future version of Cumulocity IoT core the history attribute will be removed from the alarms. Therefore, Cumulocity IoT DataHub does no longer include this column in newly defined offloadings. If alarms data has been already offloaded into the data lake, the Dremio table associated with that data lake table still includes the history column, but for new offloading runs the value will not be included anymore and thus will be null.
 
 ##### Deprecation of HDFS support
 
-In a future release of Cumulocity IoT DataHub the use of HDFS as data lake will be removed. Instead of HDFS, one of the other supported data lakes must be used.
+In a future version of Cumulocity IoT DataHub the use of HDFS as data lake will be removed. Instead of HDFS, one of the other supported data lakes must be used.
 
 ### Cumulocity IoT Machine Learning
 

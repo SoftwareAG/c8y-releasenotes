@@ -37,7 +37,6 @@ This change affects the following APIs:
 * `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
-This change will be implemented after a 6-month period at the earliest.
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 

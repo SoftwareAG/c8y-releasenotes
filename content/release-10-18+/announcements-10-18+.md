@@ -139,6 +139,21 @@ This change affects the following APIs:
 * `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
 
+##### Change in full text search feature of Inventory API
+
+Starting with 2024 release only following properties are included into full text search functionality:
+* `_id`
+* `name`
+* `type`
+* `owner`
+* `external id`
+
+A text search functionality corresponds to a `text` parameter of `GET {url}/inventory/managedObjects`.
+Example:
+When executing following query: `GET {url}/inventory/managedObjects?text=c8y_MajorDevice` only `id, name, type, owner` and `external id` properties will be examined.
+
+The change improves user experience of the text search functionality by returning more relevant managed objects.
+At the same time the change improves Inventory API performance.
 
 ### SDK changes
 

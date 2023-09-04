@@ -1,5 +1,5 @@
 ---
-title: Release 2024.0 DRAFT
+title: Cloud deployment
 bundle: release-10-18+
 icon: "c8y-icon c8y-icon-notification"
 type: root

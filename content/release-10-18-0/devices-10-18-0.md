@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.150
-- UI: 10.18.0.116
+- Core: 10.18.0.179
+- UI: 10.18.0.122
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -252,6 +252,30 @@ Build version</th>
 
 <tr>
 <td>LWM2M</td>
+<td>A fail-safe mechanism to regularly get pending LWM2M device connector operations from the platform has been added in addition to the real-time mechanism in the LWM2M agent. This mechanism is beneficial when real-time connections between the LWM2M agent and the platform are unstable.</td>
+<td>DM-2652</td>
+<td>10.18.0.170</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>During a large number of parallel LWM2M DTLS device connection requests, used for devices using PSK secured mode, the LWM2M agent was not able to handle all connections at the same time. This caused platform connection failures for the devices. In the LWM2M agent, the default settings for this part have been adjusted and made configurable to serve large parallel connections.</td>
+<td>DM-2651</td>
+<td>10.18.0.162</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>When reading an entire LWM2M object which contains multiple object instances, in a simple read observer or send operation, the LWM2M agent processed and stored only one of the resources of these object instances. This is now resolved and the LWM2M agent processes and stores all resource data from multiple object instances correctly.</td>
+<td>DM-2426</td>
+<td>10.18.0.155</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
 <td>If the LWM2M device observation frequency is high, for example, a few milliseconds, the LWM2M Agent processed the same message multiple times, occupying a lot of resources. This is now resolved. The LWM2M agent no longer reprocesses the same observation request.</td>
 <td>DM-1823</td>
 <td>10.18.0.141</td>
@@ -394,6 +418,22 @@ Build version</th>
 <td>The LWM2M agent now provides a better processing rate of the external decoder events by parallelizing their execution.</td>
 <td>DM-1840</td>
 <td>10.17.36.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
+<td>The endpoint validation happening during the connection to an OPC UA server can now optionally be disabled. This can be done in the gateway configuration by changing the <code>gateway.connectivity.validateDiscoveredEndpoints</code> setting to "false". Alternatively, it can be controlled via the OPC UA server managed object by setting the fragment <code>validateDiscoveredEndpoints</code> to "false". For details, refer to <a href="https://cumulocity.com/guides/protocol-integration/opcua/" class="no-ajaxy">OPC UA</a> in the <i>Protocol integration guide</i>.</td>
+<td>DM-2425</td>
+<td>10.18.0.157</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>OPC UA</td>
+<td>The application of OPC UA device protocols was unreliable when there were more than 1000 protocols. This is now fixed.</td>
+<td>DM-2634</td>
+<td>10.18.0.155</td>
 <td>Core</td>
 </tr>
 

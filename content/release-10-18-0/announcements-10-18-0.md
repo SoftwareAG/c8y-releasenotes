@@ -19,6 +19,32 @@ Find more details in the document [Continuous Deployment for Cumulocity IoT](/fi
 
 ### REST API changes
 
+#### Planned
+
+##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), in a version after 10.18, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content).
+The return code will still be 204 if the control can be returned immediately.
+This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
+
+##### Breaking change in the Inventory API -- change of the default value for the `withChildren` parameter
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), in a version after 10.18, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
+As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query.
+This change is necessary to improve the Inventory API performance.
+
+##### Breaking change in all REST APIs
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), for versions after 10.18,
+the `totalPages` statistics value by default is no longer returned for REST API requests without search criteria.
+A `withTotalPages=true` parameter has to be explicitly provided to the requests when `totalPages` is expected.
+
+For example:
+`GET /user/users?pageSize=1000` does not return `totalPages` statistics.
+`GET /user/users?withTotalPages=true` does return `totalPages` statistics.
+
+The change is enforced by performance reasons.
+
 
 #### Implemented
 
@@ -63,6 +89,17 @@ Since this release, the `c8y_LatestMeasurements` fragment will be ignored and no
 ##### Breaking change in all REST APIs
 
 As announced earlier, see [release 10.17](/release-10-17-0/announcements-10-17-0), wrong values for `pageSize` or `currentPage` now result in a 422 (Unprocessable entity) HTTP status code instead of a 500 (Internal server error) HTTP status code.
+
+### Security changes
+
+#### Planned
+
+##### User administrator can no longer set password for other users
+
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), to improve security, in versions higher than 10.18, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
+This change prevents that an attacker could have access to all users, in case the administrator account was compromised.
+Note that the administrator will still have the option to force the user to reset the password on the next login or disable the user.
+
 
 ### Microservice infrastructure changes
 
@@ -127,6 +164,11 @@ providers: [
 ```
 
 All of the impacted injection tokens have been marked as deprecated with 10.18, and references to their replacements are provided in the respective documentation and deprecation notice.
+
+##### The Web SDK extension HOOK_SEARCH will be refactored
+
+The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of a future version, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
+
 
 #### Implemented
 
@@ -267,6 +309,6 @@ In a future version of Cumulocity IoT DataHub the use of HDFS as data lake will 
 
 #### Implemented
 
-###### Deprecation of support for mixed types
+##### Deprecation of support for mixed types
 
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), Cumulocity IoT DataHub removes support for mixed data types. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.

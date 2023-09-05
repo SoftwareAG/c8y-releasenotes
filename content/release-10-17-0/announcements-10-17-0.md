@@ -37,7 +37,7 @@ This change affects the following APIs:
 * `DELETE /event/events` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`
 * `DELETE /measurements/measurement` requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`
 
-Following our [compatibility policy](https://cumulocity.com/guides/10.18.0/concepts/introduction/#compatibility-policy), this change will be implemented after a 6-month period at the earliest.
+Following our [compatibility policy](https://cumulocity.com/guides/10.17.0/concepts/introduction/#compatibility-policy), this change will be implemented after a 6-month period at the earliest.
 
 ##### Breaking change in the Inventory API - restrictions for a set of properties
 
@@ -72,13 +72,13 @@ currently the whole payload is saved. In the future, the `c8y_LatestMeasurements
 In a future version, the default value for the `withChildren` parameter of the `GET /inventory/managedObjects` endpoint will be changed from `true` to `false`.
 As a consequence, if a request is supposed to return child assets, devices and additions, a parameter `?withChildren=true` has to be provided in the query. This change is necessary to improve the Inventory API performance.
 
-Following our [compatibility policy](https://cumulocity.com/guides/10.18.0/concepts/introduction/#compatibility-policy), this change will be implemented after a 6-month period at the earliest.
+Following our [compatibility policy](https://cumulocity.com/guides/10.17.0/concepts/introduction/#compatibility-policy), this change will be implemented after a 6-month period at the earliest.
 
 ##### Breaking change in the Inventory API -- change of the return code for the deletion of managed objects
 
 In a future version, if the deletion of a managed object and its dependencies doesn´t finish immediately, the platform will return a 202 (Accepted) HTTP status code instead of 204 (No content). The return code will still be 204 if the control can be returned immediately. This change is required to make the API consistent with the HTTP protocol semantics (asynchronous request).
 
-Following our [compatibility policy](https://cumulocity.com/guides/10.18.0/concepts/introduction/#compatibility-policy), this change will be implemented after a 6-month period at the earliest.
+Following our [compatibility policy](https://cumulocity.com/guides/10.17.0/concepts/introduction/#compatibility-policy), this change will be implemented after a 6-month period at the earliest.
 
 ##### Breaking change in all REST APIs
 

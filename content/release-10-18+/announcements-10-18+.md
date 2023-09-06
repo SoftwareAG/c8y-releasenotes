@@ -153,8 +153,8 @@ A text search functionality corresponds to a `text` parameter of `GET {url}/inve
 Example:
 When executing the following query: `GET {url}/inventory/managedObjects?text=c8y_MajorDevice` only the properties `id`, `name`, `type`, `owner` and `external id` will be examined.
 
-The change improves the user experience of the text search functionality by returning more relevant managed objects.
-At the same time the change improves the Inventory API performance.
+This change improves the user experience of the text search functionality by returning more relevant managed objects.
+At the same time it improves the Inventory API performance.
 
 This change will be implemented after a 6-month period at the earliest.
 

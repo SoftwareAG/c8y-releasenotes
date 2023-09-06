@@ -156,7 +156,7 @@ When executing the following query: `GET {url}/inventory/managedObjects?text=c8y
 This change improves the user experience of the text search functionality by returning more relevant managed objects.
 At the same time it improves the Inventory API performance.
 
-This change will be implemented after a 6-month period at the earliest.
+This change will be implemented after a 3-month period at the earliest.
 
 ### SDK changes
 

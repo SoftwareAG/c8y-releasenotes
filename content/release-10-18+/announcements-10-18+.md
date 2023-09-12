@@ -175,7 +175,7 @@ registry=https://registry.npmjs.org/
 ```
 
 The scaffolding process via `c8ycli` will already include this additional file depending on the version that you use.
-Note that this is only a temporary work-around until the issue with the npm registry has been resolved.
+Note that this is only a temporary workaround until the issue with the npm registry has been resolved.
 
 ##### Removal of deprecated device-grid model classes, column implementations and services
 

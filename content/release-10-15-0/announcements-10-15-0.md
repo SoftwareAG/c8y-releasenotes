@@ -165,6 +165,19 @@ As a recommended mechanism to integrate Linux-based devices into Cumulocity IoT 
 
 #### Implemented
 
+##### Node package registry for Web SDK
+
+Since August, 1st 2023, we are unable to publish new releases of the Web SDK package `@c8y/ngx-components` due to an ongoing issue with npm.
+Until the issue with npm is resolved, the node packages can be loaded from another registry.
+To configure this additional registry for the packages prefixed with `@c8y`, a file with the name `.npmrc` and the following content must be present in your project directory:
+```
+registry=https://registry.npmjs.org/
+@c8y:registry=https://download.cumulocity.com/npm/
+```
+
+The scaffolding process via `c8ycli` will already include this additional file depending on the version that you use.
+Note that this is only a temporary workaround until the issue with the npm registry has been resolved.
+
 ##### Removal of support for Angular Schema Form
 
 As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of release 10.15 the support for [Angular Schema Form](http:/schemaform.io/) in the `filteringConfig` of device grid columns has stopped in favor of the more modern [Angular Formly](https://formly.dev/). It is now no longer feasible to build an application until all device grid custom column definitions are migrated to use the new definitions.

@@ -1,10 +1,10 @@
 ---
 weight: 47
-title: 10.17.0.315
+title: 10.17.0.317
 layout: bundle
 ---
 
-<!--10.17.0.290 - 10.17.0.315-->
+<!--10.17.0.290 - 10.17.0.317-->
 
 
 ### Fixes
@@ -29,6 +29,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>In the "Data points graph" widget, when realtime is enabled and users double-click on a chart, the time range expands now and the data for the current range is shown.</td>
+<td>MTM-55199</td>
+<td>10.17.0.317</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>

@@ -64,9 +64,9 @@ On top of standard SSO, Cumulocity IoT now also allows you to access the platfor
 
 #### LWM2M external decoder event execution improvements
 
-The forwarding of device data to LWM2M decoder microservices (LWM2M device protocol [custom actions](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#custom-actions)) has been significantly improved. By using a different internal mechanism to parallelize decoder invocations, the received data is now passed to the microservices at a faster rate, leading to a reduction in overall decoding delay.
+The forwarding of device data to LWM2M decoder microservices (LWM2M device protocol [custom actions](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#custom-actions)) has been significantly improved. By using a different internal mechanism to parallelize decoder invocations, the received data is now passed to the microservices at a faster rate, leading less decoding delay.
 
 #### Device deletion improvement for the LWM2M devices
 
-Starting from version 10.18.0, a LWM2M device can be completely deleted from the [All devices](https://cumulocity.com/guides/10.18.0/users-guide/device-management/#viewing-devices) list. The additional execution of the LWM2M Connector device operation called `cleanupClusterTenantObjectsForEndpoint` is not anymore required in order to re-register the same device.
+Starting from version 10.18.0, a LWM2M device can be completely deleted from the [All devices](https://cumulocity.com/guides/10.18.0/users-guide/device-management/#viewing-devices) list. The additional execution of the LWM2M connector device operation called `cleanupClusterTenantObjectsForEndpoint` is not anymore required in order to re-register the same device.
 Deletion of the LWM2M device is done in the same way as any other device deletion, that is, via the delete icon in the respective row. 

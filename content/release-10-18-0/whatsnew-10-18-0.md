@@ -59,3 +59,16 @@ Moreover, when deploying a blueprint or installing a plugin, users are now infor
 #### Authentication with OAuth2 access tokens from authorization servers
 
 On top of standard SSO, Cumulocity IoT now also allows you to access the platform resources using access tokens from third-party authorization server directly as a Bearer token. The SSO configuration has been extended accordingly. For details refer to [Configuring single sign-on > Configuring authentication with OAuth2 access tokens from authorization servers](https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-authentication-with-oauth2-access-tokens-from-authorization-servers) in the *User guide*.
+
+
+### Device Management
+
+#### LWM2M external decoder event execution improvements
+
+LWM2M Agent has parallelization improvements for the external decoder event executions which results in faster forward of requests to the external decoder microservices for the LWM2M object resources that has this custom action functionality selected in [LWM2M device protocol](https://www.cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#device-protocols).
+
+
+#### Device deletion improvement for the LWM2M devices
+
+Starting from version 10.18.0, a LWM2M device can be completely deleted from the [All devices](https://cumulocity.com/guides/10.18.0/users-guide/device-management/#viewing-devices) list without the need of the additional execution of the LWM2M Connector device operation called `cleanupClusterTenantObjectsForEndpoint`, which was required before to be executed in order to re-register the same device. 
+Deletion of the LWM2M device is done in the same way as any other device deletion, that is, via the delete icon in the respective row. 

@@ -70,3 +70,7 @@ The forwarding of device data to LWM2M decoder microservices (LWM2M device proto
 
 Starting from version 10.18.0, a LWM2M device can be completely deleted from the [All devices](https://cumulocity.com/guides/10.18.0/users-guide/device-management/#viewing-devices) list. The additional execution of the LWM2M connector device operation called `cleanupClusterTenantObjectsForEndpoint` is not anymore required in order to re-register the same device.
 Deletion of the LWM2M device is done in the same way as any other device deletion, that is, via the delete icon in the respective row. 
+
+#### OPC UA thin-edge.io integration
+
+The OPC UA device gateway can also be registered and operated via [thin-edge.io](https://thin-edge.io/). For more details about how to enable this, follow the instructions in [OPC UA > Thin Edge](https://cumulocity.com/guides/10.18.0/protocol-integration/opcua/#thin-edge) in the *Protocol integration guide*.

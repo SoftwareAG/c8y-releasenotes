@@ -59,3 +59,18 @@ Moreover, when deploying a blueprint or installing a plugin, users are now infor
 #### Authentication with OAuth2 access tokens from authorization servers
 
 On top of standard SSO, Cumulocity IoT now also allows you to access the platform resources using access tokens from third-party authorization server directly as a Bearer token. The SSO configuration has been extended accordingly. For details refer to [Configuring single sign-on > Configuring authentication with OAuth2 access tokens from authorization servers](https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-authentication-with-oauth2-access-tokens-from-authorization-servers) in the *User guide*.
+
+### Device Management
+
+#### LWM2M external decoder event execution improvements
+
+The forwarding of device data to LWM2M decoder microservices (LWM2M device protocol [custom actions](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#custom-actions)) has been significantly improved. By using a different internal mechanism to parallelize decoder invocations, the received data is now passed to the microservices at a faster rate, which reduces the decoding delay.
+
+#### Device deletion improvement for the LWM2M devices
+
+Starting from version 10.18.0, a LWM2M device can be completely deleted from the [All devices](https://cumulocity.com/guides/10.18.0/users-guide/device-management/#viewing-devices) list. The additional execution of the LWM2M connector device operation called `cleanupClusterTenantObjectsForEndpoint` is no longer required in order to re-register the same device.
+Deletion of the LWM2M device is done in the same way as any other device deletion, that is, via the delete icon in the respective row. 
+
+#### OPC UA thin-edge.io integration
+
+The OPC UA device gateway can also be registered and operated via [thin-edge.io](https://thin-edge.io/). For more details about how to enable this, follow the instructions in [OPC UA > Thin Edge](https://cumulocity.com/guides/10.18.0/protocol-integration/opcua/#thin-edge) in the *Protocol integration guide*.

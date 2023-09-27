@@ -46,4 +46,10 @@ Build version</th>
 <td>UI</td>
 </tr>
 
+<tr>
+<td>Java SDK</td>
+<td>Fixed an issue in the Java realtime notification SDK where a client would stop trying to re-establish a subscription after receiving a "402::Unknown client" error from the Cumulocity IoT platform. The impact of this issue was that future notifications would not be delivered to the client. Typically, the problem was observed after the subscription was moved from one Cumulocity IoT core node to another, for example after a core restart or a network outage. This issue has now been resolved, and the notification subscription is transparently restored with no impact to the client.</td>
+<td>MTM-54196</td>
+</tr>
+
 </tbody></table>

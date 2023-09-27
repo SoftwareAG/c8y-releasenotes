@@ -56,14 +56,6 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Due to an issue with the npm registry, a workaround has been implemented which allows you to load node packages from another registry. For details, see <a href="/release-10-15-0/announcements-10-15-0/" class="no-ajaxy">Important announcements<a/>.</td>
-<td>MTM-55504</td>
-<td></td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Web SDK</td>
 <td>Blueprints are no longer shown in the app switcher in case they have not been deployed.</td>
 <td>MTM-55619</td>
 <td>10.17.0.329</td>

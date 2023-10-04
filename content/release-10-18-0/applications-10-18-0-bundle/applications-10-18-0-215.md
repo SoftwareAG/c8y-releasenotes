@@ -1,12 +1,12 @@
 ---
 weight: 49
-title: 10.18.0.203
+title: 10.18.0.215
 layout: redirect
 ---
 
 {{< c8y-admon-info >}}
 These release notes contain all changes until build versions
-- Core: 10.18.0.203
+- Core: 10.18.0.215
 - UI: 10.18.0.135
 {{< /c8y-admon-info >}}
 
@@ -50,10 +50,26 @@ Build version</th>
 </tr>
 
 <tr>
+<td>Java SDK</td>
+<td>Resolved an issue where multiple realtime API subscriptions made in quick succession could cause an invalid subscription state, leading to subscriptions receiving duplicate notifications.</td>
+<td>MTM-55422</td>
+<td>10.18.0.215</td>
+<td>Core</td>
+</tr>
+
+<tr>
 <td>Web SDK</td>
-<td>An issue was fixed where the asset widget was not rendering if deeply nested custom properties were selected.</td>
+<td>An issue has been fixed where the asset widget was not rendering if deeply nested custom properties were selected.</td>
 <td>MTM-55306</td>
 <td>10.18.0.129</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Custom Web SDK implementations using the <code>ContextDashboardComponent</code> are now shown with the correct title instead of an empty one.</td>
+<td>MTM-55251</td>
+<td>10.18.0.125</td>
 <td>UI</td>
 </tr>
 

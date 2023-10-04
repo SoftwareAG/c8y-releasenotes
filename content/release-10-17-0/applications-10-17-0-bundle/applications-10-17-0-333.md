@@ -56,7 +56,7 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Blueprints are no longer shown in the app switcher in case they have not been deployed.</td>
+<td>Blueprints are no longer shown in the application switcher in case they have not been deployed.</td>
 <td>MTM-55619</td>
 <td>10.17.0.329</td>
 <td>UI</td>
@@ -64,7 +64,7 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>An issue was fixed where the asset widget was not rendering if deeply nested custom properties were selected.</td>
+<td>An issue has been fixed where the asset widget was not rendering if deeply nested custom properties were selected.</td>
 <td>MTM-55306</td>
 <td>10.17.0.308</td>
 <td>UI</td>
@@ -72,7 +72,7 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Custom WebSDK implementations using the <code>ContextDashboardComponent</code> are now shown with the correct title instead of an empty one.</td>
+<td>Custom Web SDK implementations using the <code>ContextDashboardComponent</code> are now shown with the correct title instead of an empty one.</td>
 <td>MTM-55251</td>
 <td>10.17.0.294</td>
 <td>UI</td>

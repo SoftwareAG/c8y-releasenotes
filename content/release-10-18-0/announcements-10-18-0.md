@@ -122,6 +122,10 @@ In versions after 10.18 it will be necessary for all microservices to be compati
 When using the Cumulocity IoT Microservice SDK for developing microservices, ensure to configure a Java version which is cgroup v2 aware when building your microservice. When using Java 8, ensure to use openjdk8u372 or higher. When using Java 11, use Java 11.0.16 or higher, or use Java 15 or higher.
 When using a server runtime other than OpenJDK Java as microservice application runtime, refer to the documentation of the provider.
 
+##### Alarms when using Microservice API version 1
+
+With [release 10.15](/release-10-15-0/announcements-10-15-0), we announced the availability of the Microservice API version 2 and the deprecation of Microservice API version 1 to comply with new security requirements.
+By default, microservices using API version 1 still work in release 10.18. However, in Cumulocity IoT versions after 10.18 a warning might show up indicating that attempts to deploy such a microservice might fail in the future.
 
 ### SDK changes
 

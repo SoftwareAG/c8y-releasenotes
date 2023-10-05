@@ -118,8 +118,8 @@ When using a server runtime other than OpenJDK Java as microservice application 
 
 ##### Alarms when using Microservice API version 1
 
-With the [release 10.15](/release-10-15-0/announcements-10-15-0), Software AG announced the availability of the Microservice API version 2 and the deprecation of Microservice API version 1 to comply with new security requirements.
-By default, microservices using API version 1 still work in version 10.18. However in Cumulocity IoT versions after 10.18 it may happen that an alarm will be created to indicate that there exists the particular danger that attempts to deploy such a microservice might fail in the future because of this.
+With [release 10.15](/release-10-15-0/announcements-10-15-0), we announced the availability of the Microservice API version 2 and the deprecation of Microservice API version 1 to comply with new security requirements.
+By default, microservices using API version 1 still work in release 10.18. However, in Cumulocity IoT versions after 10.18 a warning might show up indicating that attempts to deploy such a microservice might fail in the future.
 
 ### SDK changes
 

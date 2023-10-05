@@ -67,7 +67,8 @@ Build version</th>
 
 <tr>
 <td>Java SDK</td>
-<td>Resolved an issue where multiple realtime API subscriptions made in quick succession could cause an invalid subscription state, leading to subscriptions receiving duplicate notifications.</td>
+<td>Resolved an issue where multiple realtime API subscriptions in quick succession could cause an invalid subscription state, leading to subscriptions receiving duplicate notifications.</td>
+
 <td>MTM-55422</td>
 <td>10.18.0.215</td>
 <td>Core</td>

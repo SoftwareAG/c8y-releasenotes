@@ -33,9 +33,10 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+
 <tr>
 <td>Device management</td>
-<td>If the last version of a software is deleted, the software is entirely removed from the repository.</td>
+<td>If a pending device in the registration list has been accepted, the device is now removed from the list instead of the list showing the "accepted" status for the device.</td>
 <td>DM-1723</td>
 <td>10.18.458.0</td>
 <td>UI</td>
@@ -43,11 +44,12 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
-<td>If a pending device in the registration list has been accepted, the device is now removed from the list instead of the list showing the "accepted" status for the device.</td>
-<td>DM-1723</td>
+<td>If the last version of a software is deleted, the software is entirely removed from the repository.</td>
+<td>DM-2266</td>
 <td>10.18.442.0</td>
 <td>UI</td>
 </tr>
+
 
 <tr>
 <td>Device management</td>

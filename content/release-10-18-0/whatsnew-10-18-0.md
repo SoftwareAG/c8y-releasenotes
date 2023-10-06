@@ -7,6 +7,7 @@ layout: bundle
 Release 10.18.0 includes the following new features or major feature enhancements.
 
 ### Application enablement
+
 #### Global time selector for dashboards
 
 It is now possible to specify a global time context, which allows users to align all data on a dashboard to the same time range, for example, the last hour or last month. Widget developers can set the global time for the entire dashboard or particular widgets. Users can also share dashboards with a specific time context by including the time context parameters in a URL.
@@ -23,7 +24,7 @@ The map feature has been migrated from AngularJS to Angular, bringing along seve
 
 Breaking change:
 * Real-time tracking has been limited to a single device at a time.
-  
+
 New functionalities:
 
 * A device can now be followed in real-time.
@@ -58,7 +59,14 @@ Moreover, when deploying a blueprint or installing a plugin, users are now infor
 
 #### Authentication with OAuth2 access tokens from authorization servers
 
-On top of standard SSO, Cumulocity IoT now also allows you to access the platform resources using access tokens from third-party authorization server directly as a Bearer token. The SSO configuration has been extended accordingly. For details refer to [Configuring single sign-on > Configuring authentication with OAuth2 access tokens from authorization servers](https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-authentication-with-oauth2-access-tokens-from-authorization-servers) in the *User guide*.
+On top of standard SSO, Cumulocity IoT now also allows you to access the platform resources using access tokens from third-party authorization server directly as a Bearer token. The SSO configuration has been extended accordingly. For details refer to [Administration > Configuring single sign-on > Configuring authentication with OAuth2 access tokens from authorization servers](https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-authentication-with-oauth2-access-tokens-from-authorization-servers) in the *User guide*.
+
+#### Single sign-on integration enhancements
+
+SSO users are now able to have inventory roles assigned. Dynamic access mapping has been extended with the ability to map inventory roles based on token claims. The configuration defined for standard access mapping is also applied when mapping inventory roles.
+
+For details refer to [Administration > Configuring single sign-on](https://cumulocity.com/guides/10.18.0/users-guide/administration/##configuring-single-sign-on) in the *User guide*.
+
 
 ### Device Management
 
@@ -69,7 +77,7 @@ The forwarding of device data to LWM2M decoder microservices (LWM2M device proto
 #### Device deletion improvement for the LWM2M devices
 
 Starting from version 10.18.0, a LWM2M device can be completely deleted from the [All devices](https://cumulocity.com/guides/10.18.0/users-guide/device-management/#viewing-devices) list. The additional execution of the LWM2M connector device operation called `cleanupClusterTenantObjectsForEndpoint` is no longer required in order to re-register the same device.
-Deletion of the LWM2M device is done in the same way as any other device deletion, that is, via the delete icon in the respective row. 
+Deletion of the LWM2M device is done in the same way as any other device deletion, that is, via the delete icon in the respective row.
 
 #### OPC UA thin-edge.io integration
 

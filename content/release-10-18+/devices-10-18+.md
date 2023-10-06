@@ -98,7 +98,7 @@ For custom column implementations, the WebSDK allows developers to provide their
 <br>- LWM2M device settings such as awake time registration parameter, request timeout, serialization format, binary delivery encoding, use timestamp resources, keeping old values
 <br>- Device security modes selection including the new X.509 certificate mode and selection for LWM2M bootstrap and server individually
 <br>- Firmware update configurations
-<br>- Set of LWM2M Server configurations that can be written to the device during bootstrap
+<br>- A set of LWM2M Server configurations that can be written to the device during bootstrap
 <br>For details, refer to <a href="https://cumulocity.com/docs/protocol-integration/lwm2m/" class="no-ajaxy"LWM2M</a> in the user documentation.
 <br>If the new <b>LWM2M configuration</b> tab is not displayed and the <b>LWM2M bootstrap parameters</b> tab is displayed instead, the LWM2M agent is installed in an older version that does not yet support the new tab.</td>
 <td>DM-342</td>

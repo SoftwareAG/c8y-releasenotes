@@ -35,7 +35,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>The grid used in dashboards for placing widgets now supports 24 instead of 12 columns. This allows finer grained positioning of widgets on dashboards. In case you share the same dashboards between different application versions, we strongly recommend you to upgrade to a version that includes the fix <b>MTM-55923</b>.</td>
+<td>The grid used in dashboards for placing widgets now supports 24 instead of 12 columns. This allows finer-grained positioning of widgets on dashboards. In case you share the same dashboards between different application versions, we strongly recommend you to upgrade to a version that includes the fix <b>MTM-55923</b>.</td>
+
 <td>MTM-52888</td>
 <td>10.18.487.0</td>
 <td>UI</td>
@@ -51,7 +52,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>If a complex location property is set in the Digital twin manager application, the map is now visible  in the asset view and users can select a location on the map.</td>
+<td>If a complex location property is set in the Digital twin manager application, the map is now visible in the asset view and users can select a location on the map.</td>
+
 <td>MTM-54045</td>
 <td>10.18.443.0</td>
 <td>UI</td>
@@ -75,7 +77,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Scaffolding an application that uses the <code>remotes</code> application option via the c8ycli will now also update the context path used in the <code>remotes</code> application option.</td>
+<td>Scaffolding an application that uses the <code>remotes</code> application option via the c8ycli now also updates the context path used in the <code>remotes</code> application option.</td>
+
 <td>MTM-54357</td>
 <td>10.18.404.0</td>
 <td>UI</td>

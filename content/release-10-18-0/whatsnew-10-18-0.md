@@ -59,14 +59,13 @@ Moreover, when deploying a blueprint or installing a plugin, users are now infor
 
 #### Authentication with OAuth2 access tokens from authorization servers
 
-On top of standard SSO, Cumulocity IoT now also allows you to access the platform resources using access tokens from third-party authorization server directly as a Bearer token. The SSO configuration has been extended accordingly. For details refer to [Configuring single sign-on > Configuring authentication with OAuth2 access tokens from authorization servers](https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-authentication-with-oauth2-access-tokens-from-authorization-servers) in the *User guide*.
+On top of standard SSO, Cumulocity IoT now also allows you to access the platform resources using access tokens from third-party authorization server directly as a Bearer token. The SSO configuration has been extended accordingly. For details refer to [Administration > Configuring single sign-on > Configuring authentication with OAuth2 access tokens from authorization servers](https://cumulocity.com/guides/10.18.0/users-guide/administration/#configuring-authentication-with-oauth2-access-tokens-from-authorization-servers) in the *User guide*.
 
 #### Single sign-on integration enhancements
 
-The single sign-on integration has been enhanced with the following functionalities:
+SSO users are now able to have inventory roles assigned. Dynamic access mapping has been extended with the ability to map inventory roles based on token claims. The configuration defined for standard access mapping is also applied when mapping inventory roles.
 
-- SSO users are now able to have inventory roles assigned. Dynamic access mapping has been extended with the ability to map inventory roles based on token claims. The configuration defined for standard access mapping is also applied when mapping inventory roles.
-- The Cumulocity IoT REST API can now be used with an IAM token, reducing the effort for developers.
+For details refer to [Administration > Configuring single sign-on](https://cumulocity.com/guides/10.18.0/users-guide/administration/##configuring-single-sign-on) in the *User guide*.
 
 
 ### Device Management

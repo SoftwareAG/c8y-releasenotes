@@ -5,9 +5,9 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build versions
-- Core 10.18.308.0
-- UI 10.18.463.0
+These release notes refer to the build versions
+- Core 10.18.432.0
+- UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -35,9 +35,17 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
-<td>If a pending device in the registration list has been accepted, the device is now removed from the list instead of the list showing the "accepted" status for the device.</td>
+<td>If the last version of a software is deleted, the software is entirely removed from the repository.</td>
 <td>DM-1723</td>
 <td>10.18.458.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>If a pending device in the registration list has been accepted, the device is now removed from the list instead of the list showing the "accepted" status for the device.</td>
+<td>DM-1723</td>
+<td>10.18.442.0</td>
 <td>UI</td>
 </tr>
 
@@ -80,6 +88,20 @@ For custom column implementations, the WebSDK allows developers to provide their
 <td>DM-2221</td>
 <td>10.18.23.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>The details of a LWM2M device now show a <b>LWM2M configuration</b> tab which replaces the <b>LWM2M bootstrap parameters</b> tab. The new tab is better structured and allows detailed configuration. It contains all configuration options of the former <b>LWM2M bootstrap parameters</b> tab as well as additional setting options:
+<br>- LWM2M device settings such as awake time registration parameter, request timeout, serialization format, binary delivery encoding, use timestamp resources, keeping old values
+<br>- Device security modes selection including the new X.509 certificate mode and selection for LWM2M bootstrap and server individually
+<br>- Firmware update configurations
+<br>- Set of LWM2M Server configurations that can be written to the device during bootstrap
+<br>For details, refer to <a href="https://cumulocity.com/docs/protocol-integration/lwm2m/" class="no-ajaxy"LWM2M</a> in the user documentation.
+<br>If the new <b>LWM2M configuration</b> tab is not displayed and the <b>LWM2M bootstrap parameters</b> tab is displayed instead, the LWM2M agent is installed in an older version that does not yet support the new tab.</td>
+<td>DM-342</td>
+<td>10.18.483.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -165,6 +187,24 @@ Build version</th>
 <td>10.18.417.0</td>
 <td>UI</td>
 </tr>
+
+<tr>
+<td>Device management</td>
+<td>The alarms column has been removed from top-level groups because groups do not contain alarms themselves and the column only shows direct alarms.</td>
+<td>DM-2106</td>
+<td>10.18.405.0</td>
+<td>UI</td>
+</tr>
+
+
+<tr>
+<td>Device management</td>
+<td>Fixed an issue with incorrect loading of certificates to the trust store during core startup/restart, which caused errors in authenticating MQTT devices using certificates.</td>
+<td>MTM-55328</td>
+<td>10.18.335.0</td>
+<td>Core</td>
+</tr>
+
 
 <tr>
 <td>Device management</td>

@@ -5,9 +5,9 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build versions
-- Core 10.18.308.0
-- UI 10.18.463.0
+These release notes refer to the build versions
+- Core 10.18.432.0
+- UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -33,6 +33,14 @@ Build version</th>
 </tr>
 </thead><tbody>
 
+<tr>
+<td>Web SDK</td>
+<td>The grid used in dashboards for placing widgets now supports 24 instead of 12 columns. This allows finer-grained positioning of widgets on dashboards. In case you share the same dashboards between different application versions, we strongly recommend you to upgrade to a version that includes the fix <b>MTM-55923</b>.</td>
+
+<td>MTM-52888</td>
+<td>10.18.487.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Web SDK</td>
@@ -44,12 +52,37 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
+<td>If a complex location property is set in the Digital twin manager application, the map is now visible in the asset view and users can select a location on the map.</td>
+
+<td>MTM-54045</td>
+<td>10.18.443.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
 <td>The Impact connectivity feature has been removed from @c8y/ngx-components and @c8y/ng1-modules packages.</td>
 <td>DM-2548</td>
 <td>10.18.431.0</td>
 <td>UI</td>
 </tr>
 
+<tr>
+<td>Web SDK</td>
+<td>If a DTM asset custom property is declared as required and complex, all of its subproperties are required too.</td>
+<td>MTM-50101</td>
+<td>10.18.408.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Scaffolding an application that uses the <code>remotes</code> application option via the c8ycli now also updates the context path used in the <code>remotes</code> application option.</td>
+
+<td>MTM-54357</td>
+<td>10.18.404.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Web SDK</td>
@@ -195,6 +228,14 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>Fixed an issue where measurements created at the same time were not displayed in dashboards in the same row, and when using the option to create multiple measurements at once, only the first one from the list was displayed.</td>
+<td>MTM-54107</td>
+<td>10.18.370.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>The time format (12/24 hours) used for device availability and measurements is now consistent.</td>
 <td>MTM-48837</td>
 <td>10.18.366.0</td>
@@ -307,6 +348,15 @@ Build version</th>
 
 <tr>
 <td>Java SDK</td>
+<td>Resolved an issue where multiple realtime API subscriptions in quick succession could cause an invalid subscription state, leading to subscriptions receiving duplicate notifications.</td>
+<td>MTM-55422</td>
+<td>10.18.0.395</td>
+<td>Core</td>
+</tr>
+
+
+<tr>
+<td>Java SDK</td>
 <td>The dependency on <code>com.jayway.jsonpath:json-path</code> has been removed from Java SDK.</td>
 <td>MTM-53341</td>
 <td>10.18.84.0</td>
@@ -342,6 +392,14 @@ Build version</th>
 <td>The action buttons in the windows <b>Usage statistics filters</b>, <b>Add bulk operation</b> and <b>Add device protocol</b> are now properly aligned when using mobile screens.</td>
 <td>DM-2274</td>
 <td>10.18.72.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Custom Web SDK implementations using the <b>ContextDashboardComponent</b> are now shown with the correct title instead of an empty one.</td>
+<td>MTM-55251</td>
+<td>10.18.469.0</td>
 <td>UI</td>
 </tr>
 

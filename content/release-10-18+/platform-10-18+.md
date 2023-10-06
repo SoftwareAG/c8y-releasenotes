@@ -5,9 +5,9 @@ layout: bundle
 ---
 
 {{< c8y-admon-info >}}
-These release notes contain all changes until build versions
-- Core 10.18.308.0
-- UI 10.18.463.0
+These release notes refer to the build versions
+- Core 10.18.432.0
+- UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -32,6 +32,23 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>It is now possible to select the availability (shared or private) during package upload.</td>
+<td>MTM-51454</td>
+<td>10.18.470.0</td>
+<td>UI</td>
+</tr>
+
+
+<tr>
+<td>Administration</td>
+<td>It is now possible to filter items on Applications, Features, Microservices and Extensions lists.</td>
+<td>MTM-51331</td>
+<td>10.18.400.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -140,6 +157,15 @@ For applications with versions, by default the application with the "latest" tag
 
 <tr>
 <td>MongoDB</td>
+<td>A new text index has been introduced for the GET <code>/inventory/managedObjects</code> endpoint. By default it only includes the following fields: <code>_id</code>, <code>type</code>, <code>name</code>, <code>owner</code>, <code>externalIds</code></td>
+<td>
+MTM-54562</td>
+<td>10.18.344.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>MongoDB</td>
 <td>Inventory API queries that use the <code>text</code> parameter are now sorted by relevance.</td>
 <td>MTM-54563</td>
 <td>10.18.291.0</td>
@@ -236,6 +262,14 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>In the <b>Usage statistics</b> page, in the tooltip for the CPU column "milliseconds" has been changed to "millicores".</td>
+<td>MTM-53818</td>
+<td>10.18.475.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>
@@ -351,6 +385,14 @@ Build version</th>
 
 <tr>
 <td>Authentication</td>
+<td>When a user logs in using OAI-Secure and a password change is required, a <code>PasswordResetToken</code> is returned in the response header, enabling the password reset.</td>
+<td>MTM-55200</td>
+<td>10.18.0.376</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
 <td>Clicking on the popup for the signed verification code no longer closes the tooltip, so that users can now copy the SSL command. The tooltip can be closed by clicking outside of it.</td>
 <td>MTM-53811</td>
 <td>10.18.369.0</td>
@@ -365,13 +407,20 @@ Build version</th>
 <td>UI</td>
 </tr>
 
-
 <tr>
 <td>Authentication</td>
 <td>Issues with the redirection from the login page to the SSO server have been fixed.</td>
 <td>MTM-53723</td>
 <td>10.18.211.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The default value for the MQTT SSL handshake timeout has been increased from 10 seconds to 50 seconds to increase the time for the handshake to be successful. The value of this property can be configured by a platform administrator.</td>
+<td>MTM-54184</td>
+<td>10.17.219.0</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -440,8 +489,15 @@ Build version</th>
 
 <tr>
 <td>Notifications 2.0</td>
-<td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent. Previously, these notifications were not reliably sent in all cases.</td>
+<td>Users of Notifications 2.0 will no longer encounter unequal distribution of notifications from tenant-context subscriptions amongst a set of shared consumers.</td>
+<td>MTM-54859</td>
+<td>10.18.340.0</td>
+<td>Messaging Service</td>
+</tr>
 
+<tr>
+<td>Notifications 2.0</td>
+<td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent. Previously, these notifications were not reliably sent in all cases.</td>
 <td>MTM-54097</td>
 <td>10.18.230.0</td>
 <td>Messaging Service</td>
@@ -453,6 +509,14 @@ Build version</th>
 <td>MTM-53848</td>
 <td>10.18.151.0</td>
 <td>Messaging Service</td>
+</tr>
+
+<tr>
+<td>REST API</td>
+<td>The <code>data</code> field has been removed from realtime API handshake responses where it was not required and always had a "null" value.</td>
+<td>MTM-55522</td>
+<td>10.18.0.371</td>
+<td>Core</td>
 </tr>
 
 <tr>

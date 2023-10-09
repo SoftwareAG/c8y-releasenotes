@@ -180,6 +180,15 @@ The HOOK_SEARCH can be used by developers to extend the web integration of the s
 
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the "Map" widget has been migrated and support for real-time updates on all devices has been replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget no longer supports the "show track" option.
 
+##### Deprecation of the Microservice SDK for C#
+
+With the introduction of auto-generated SDKs, we provide an always up-to-date developer library with the purpose to facilitate the development of Cumulocity IoT microservices in different programming languages including C#.
+
+The new auto-generated SDKs make our existing Microservice SDK for C# obsolete. For this reason, the Microservice SDK for C# has been removed from our public product documentation.
+
+To learn more about using the auto-generated SDKs, refer to our respective [GitHub repository](https://github.com/SoftwareAG/cumulocity-clients-dotnet).
+
+
 ### Streaming Analytics
 
 {{< c8y-admon-important >}}

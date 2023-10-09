@@ -96,7 +96,7 @@ As announced earlier, see [release 10.17](/release-10-17-0/announcements-10-17-0
 
 ##### User administrator can no longer set password for other users
 
-As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), to improve security, in versions higher than 10.18, user administrators will no longer be able to explicitly set passwords for other users in the tenant.
+As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), to improve security, in versions higher than 10.18, user administrators will no longer be able to explicitly set passwords or email for other users in the tenant.
 This change prevents that an attacker could have access to all users, in case the administrator account was compromised.
 Note that the administrator will still have the option to force the user to reset the password on the next login or disable the user.
 

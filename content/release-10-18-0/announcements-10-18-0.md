@@ -331,3 +331,12 @@ In a future version of Cumulocity IoT DataHub the use of HDFS as data lake will 
 ##### Deprecation of support for mixed types
 
 As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), Cumulocity IoT DataHub removes support for mixed data types. Cumulocity IoT DataHub will not be able to read data lake tables containing mixed data types, so corresponding data needs to be converted.
+
+
+### Device Management
+
+#### Planned
+
+##### Deprecation of LWM2M device audit configuration
+
+The [LWM2M device audit configuration](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#audit-configuration) feature is deprecated. The feature is usable as is in release 10.18. However, it will be disabled by default in a future version.

@@ -188,3 +188,12 @@ This change only affects you, if you or your development team use the Web SDK to
 ##### Cumulocity IoT transport in Apama 10.15.4 - breaking change in REST APIs
 
 Due to a change in Cumulocity IoT announced with [release 10.17](/release-10-17-0/announcements-10-17-0), Apama 10.15.4 now explicitly sets `withTotalPages` to `true` for applicable requests.
+
+
+### Device Management
+
+#### Planned
+
+##### Deprecation of LWM2M device audit configuration
+
+As announced in [release 10.18](/release-10-18-0/announcements-10-18-0), the [LWM2M device audit configuration](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#audit-configuration) feature is deprecated. This feature will be disabled by default in a future version.

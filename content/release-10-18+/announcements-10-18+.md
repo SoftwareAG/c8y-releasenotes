@@ -187,4 +187,4 @@ Due to a change in Cumulocity IoT announced with [release 10.17](/release-10-17-
 
 ##### Deprecation of LWM2M device audit configuration
 
-As announced in [release 10.18](/release-10-18-0/announcements-10-18-0), [LWM2M device audit configuration](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#audit-configuration) feature is deprecated. This feature will be disabled by default in a future release.
+As announced in [release 10.18](/release-10-18-0/announcements-10-18-0), the [LWM2M device audit configuration](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#audit-configuration) feature is deprecated. This feature will be disabled by default in a future version.

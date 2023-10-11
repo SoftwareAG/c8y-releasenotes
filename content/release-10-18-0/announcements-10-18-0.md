@@ -320,4 +320,4 @@ As announced with [release 10.15](/release-10-15-0/announcements-10-15-0), Cumul
 
 ##### Deprecation of LWM2M device audit configuration
 
-[LWM2M device audit configuration](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#audit-configuration) feature is deprecated. The feature is usable as is in release 10.18. However, it will be disabled by default in a future release.
+The [LWM2M device audit configuration](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#audit-configuration) feature is deprecated. The feature is usable as is in release 10.18. However, it will be disabled by default in a future version.

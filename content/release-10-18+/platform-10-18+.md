@@ -6,7 +6,7 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
-- Core 10.18.432.0
+- Core 10.18.453.0
 - UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
@@ -269,6 +269,14 @@ Build version</th>
 <td>MTM-53818</td>
 <td>10.18.475.0</td>
 <td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Resolved the issue that versioned applications might not be unpacked upon core startup, which resulted in a 404 error for some requests.</td>
+<td>MTM-53724</td>
+<td>10.18.439.0</td>
+<td>Core</td>
 </tr>
 
 <tr>

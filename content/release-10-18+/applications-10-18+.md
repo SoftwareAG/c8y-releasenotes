@@ -6,7 +6,7 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
-- Core 10.18.432.0
+- Core 10.18.453.0
 - UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
@@ -36,9 +36,16 @@ Build version</th>
 <tr>
 <td>Web SDK</td>
 <td>The grid used in dashboards for placing widgets now supports 24 instead of 12 columns. This allows finer-grained positioning of widgets on dashboards. In case you share the same dashboards between different application versions, we strongly recommend you to upgrade to a version that includes the fix <b>MTM-55923</b>.</td>
-
 <td>MTM-52888</td>
 <td>10.18.487.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>If a widget supports realtime, it can now be linked to the dashboard real-time context to disable/enable realtime on dashboard level. The following widgets support the real-time dashboard context: Data point graph, Data point table, Event list, Map.</td>
+<td>MTM-53779</td>
+<td>10.18.481.0</td>
 <td>UI</td>
 </tr>
 
@@ -53,7 +60,6 @@ Build version</th>
 <tr>
 <td>Web SDK</td>
 <td>If a complex location property is set in the Digital twin manager application, the map is now visible in the asset view and users can select a location on the map.</td>
-
 <td>MTM-54045</td>
 <td>10.18.443.0</td>
 <td>UI</td>

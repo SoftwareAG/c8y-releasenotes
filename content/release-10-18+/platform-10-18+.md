@@ -500,7 +500,7 @@ Build version</th>
 <td>Users of Notifications 2.0 will no longer encounter unequal distribution of notifications from tenant-context subscriptions amongst a set of shared consumers.</td>
 <td>MTM-54859</td>
 <td>10.18.340.0</td>
-<td>Messaging Service</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -508,7 +508,7 @@ Build version</th>
 <td>DELETE notifications for Notifications 2.0 subscriptions to specific managed objects - that is, subscriptions to the <code>managedObjects</code> API in the <code>mo</code> context - are now always sent. Previously, these notifications were not reliably sent in all cases.</td>
 <td>MTM-54097</td>
 <td>10.18.230.0</td>
-<td>Messaging Service</td>
+<td>Core</td>
 </tr>
 
 <tr>
@@ -516,7 +516,7 @@ Build version</th>
 <td>Fixed a regression where a simple type name was not accepted as a type filter when creating a Notifications 2.0 subscription. For backwards compatibility with older releases, if the type filter value cannot be parsed as an OData expression, it is now assumed to be a simple type name.</td>
 <td>MTM-53848</td>
 <td>10.18.151.0</td>
-<td>Messaging Service</td>
+<td>Core</td>
 </tr>
 
 <tr>

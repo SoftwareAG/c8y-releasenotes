@@ -1,5 +1,5 @@
 ---
-title: Cloud deployment
+title: 2024
 bundle: release-10-18+
 icon: "c8y-icon c8y-icon-notification"
 type: root

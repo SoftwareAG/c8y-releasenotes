@@ -70,7 +70,7 @@ For details refer to [Administration > Configuring single sign-on](https://cumul
 
 ### Device Management
 
-#### Fully customizable Home Page
+#### Fully customizable Home page
 
 The Home Page of Device Management is now fully customizable, allowing users to adapt it to their needs and to accommodate any KPI or metric. Being based on the same underlying module as the Cockpit Home Page allows users to experience the same functionality including all available widgets as well as the same look and feel now also in Device Management.
 

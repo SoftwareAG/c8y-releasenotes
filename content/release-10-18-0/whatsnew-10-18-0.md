@@ -70,6 +70,12 @@ For details refer to [Administration > Configuring single sign-on](https://cumul
 
 ### Device Management
 
+#### Fully customizable Home Page
+
+The Home Page of Device Management is now fully customizable, allowing users to adapt it to their needs and to accommodate any KPI or metric. Being based on the same underlying module as the Cockpit Home Page allows users to experience the same functionality including all available widgets as well as the same look and feel now also in Device Management.
+
+![Customizable Home Page](/images/release-10-18/devmgmt-home-custom.png)
+
 #### LWM2M external decoder event execution improvements
 
 The forwarding of device data to LWM2M decoder microservices (LWM2M device protocol [custom actions](https://cumulocity.com/guides/10.18.0/protocol-integration/lwm2m/#custom-actions)) has been significantly improved. By using a different internal mechanism to parallelize decoder invocations, the received data is now passed to the microservices at a faster rate, which reduces the decoding delay.

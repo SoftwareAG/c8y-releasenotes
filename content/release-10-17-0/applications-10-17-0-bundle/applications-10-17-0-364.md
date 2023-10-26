@@ -48,7 +48,8 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>An issue with module federation has been fixed. If the shell application was built on a windows machine the modules have not been shared properly between shell and plugin.</td>
+<td>An issue with module federation has been fixed. If the shell application was built on a Windows machine the modules have not been shared properly between shell and plugin.</td>
+
 <td>MTM-56213</td>
 <td>10.17.0.360</td>
 <td>UI</td>

@@ -32,7 +32,7 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>In rare cases, when the real-time connection was interrupted, the UI did not resubscribe to the previously subscribed channels once the connection was re-established. This behavior has been fixed.</td>
+<td>In rare cases, when a real-time connection was interrupted, certain widgets, for example, did not update again once the connection was re-established. This behavior has been fixed.</td>
 <td>MTM-55843</td>
 <td>10.17.0.347</td>
 <td>UI</td>

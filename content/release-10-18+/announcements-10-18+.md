@@ -189,6 +189,33 @@ This change only affects you, if you or your development team use the Web SDK to
 
 Due to a change in Cumulocity IoT announced with [release 10.17](/release-10-17-0/announcements-10-17-0), Apama 10.15.4 now explicitly sets `withTotalPages` to `true` for applicable requests.
 
+##### Updated events in com.apama.cumulocity in Apama 10.15.4
+
+To avoid confusion as to whether events were being sent towards Cumulocity IoT or being received back as updates from Cumulocity IoT, the Cumulocity event definitions API was changed in a previous release (10.5.2.0) so that the existing `CHANNEL` constant was deprecated and replaced by either `SEND_CHANNEL` or `SUBSCRIBE_CHANNEL` constants as appropriate. Some events were omitted from these changes and this has now been rectified. Therefore, the `CHANNEL` constant is deprecated on the following events:
+
+* `SubscribeMeasurements`
+* `UnsubscribeMeasurements`
+* `FindManagedObjectResponseAck`
+* `FindMeasurementResponseAck`
+* `GenericResponseComplete`
+* `Subscribe`
+* `Unsubscribe`
+
+In addition, a new `SUBSCRIBE_CHANNEL` or `SEND_CHANNEL` has been added to the following events instead:
+
+* `SubscribeMeasurements`
+* `UnsubscribeMeasurements`
+* `Subscribe`
+* `Unsubscribe`
+
+The constants on the following events are instead replaced with `SUBSCRIBE_CHANNEL` constants on their corresponding `Response` types:
+
+* `FindManagedObjectResponseAck`
+* `FindMeasurementResponseAck`
+* `GenericResponseComplete`
+
+The [API Reference for EPL (ApamaDoc)](https://documentation.softwareag.com/pam/10.15.4/en/webhelp/related/ApamaDoc/index.html) has been amended to make it clear that acknowledgement events are always received on the same channel as the corresponding response events, and to avoid confusion the `CHANNEL` constant has been deprecated on those acknowledgement events where it had been defined.
+
 ##### Handling uncaught exceptions in Apama 10.15.4
 
 EPL monitors are no longer terminated by default when an uncaught exception is thrown in some cases.

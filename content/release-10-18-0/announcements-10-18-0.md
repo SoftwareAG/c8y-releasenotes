@@ -177,7 +177,7 @@ The HOOK_SEARCH can be used by developers to extend the web integration of the s
 
 The Russian localization of the Cumulocity IoT platform UI is no longer maintained, and will be removed from the product starting in October 2024.
 
-If you have a continued need for a Russian localization of the Cumulocity IoT UI, please contact our support team.
+If you have a continued need for a Russian localization of the Cumulocity IoT UI, please contact our Support team.
 
 
 #### Implemented

@@ -173,6 +173,12 @@ All of the impacted injection tokens have been marked as deprecated with 10.18, 
 
 The HOOK_SEARCH can be used by developers to extend the web integration of the search in a custom web application. As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), as of a future version, we will refactor the HOOK_SEARCH interface. If you use this interface in a custom-developed UI application, you must migrate to the new version. Details on how to use the new interface will be provided in the Web SDK documentation of the respective release.
 
+##### Deprecation of Russian localization
+
+The Russian localization of the Cumulocity IoT platform UI is no longer maintained, and will be removed from the product starting in October 2024.
+
+If you have a continued need for a Russian localization of the Cumulocity IoT UI, please contact our support team.
+
 
 #### Implemented
 

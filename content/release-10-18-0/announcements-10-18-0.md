@@ -125,6 +125,9 @@ By default, microservices using API version 1 still work in release 10.18. Howev
 
 #### Planned
 
+##### Deprecating @c8y/cli in favor of @angular/cli
+To improve our tooling and align more to the Angular standard, we will deprecate @c8y/cli and the `c8ycli` command in one of the next versions. Customers need to install the standard CLI from Angular (@angular/cli) and start the application via `ng` command. The Web SDK can then simply be added to the Angular CLI by running the command `ng add @c8y/websdk`. We will release a detailed description on how you can update your existing application in the Web SDK documentation.
+
 ##### Breaking change in the Web SDK - deprecation of HOOK_ prefixed injection tokens
 
 `HOOK_` prefixed injection tokens, like for example `HOOK_COMPONENTS`, `HOOK_ROUTE` or `HOOK_NAVIGATOR_NODES`, are deprecated. In version 10.17 an alternative to these hooks has been introduced, which allows typed usage. This is a significant benefit for Web SDK users since they no longer have to guess the types and attributes offered by these hooks. The deprecated functionality will be removed in a future version of Cumulocity IoT.

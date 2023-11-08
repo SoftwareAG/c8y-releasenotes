@@ -41,7 +41,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Fixed an issue with <code>c8ycli locale-extract</code> on Windows where the extracted <i>locales.pot</i> file didn´t contain any entries.</td>
+<td>Fixed an issue with <code>c8ycli locale-extract</code> on Windows where the extracted <i>locales.pot</i> file didn't contain any entries.</td>
+
 <td>MTM-56234</td>
 <td>10.17.0.364</td>
 <td>UI</td>

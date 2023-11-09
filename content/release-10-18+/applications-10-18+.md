@@ -7,7 +7,7 @@ layout: bundle
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
 - Core 10.18.497.0
-- UI 10.18.487.0
+- UI 10.18.497.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -35,6 +35,22 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>The following time range options have been added to the export configuration: "Last 24 hours", "Last 7 days", "Last 30 days".</td>
+<td>MTM-55237</td>
+<td>10.18.492.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The <code>mapWidgetPageSize</code> parameter is now also considered if a group is selected for the "Map" widget.</td>
+<td>MTM-55558</td>
+<td>10.18.488.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>If a widget supports realtime, it can now be linked to the dashboard real-time context to disable/enable realtime on dashboard level. The following widgets support the real-time dashboard context: Data point graph, Data point table, Event list, Map.</td>
 <td>MTM-53779</td>
 <td>10.18.481.0</td>
@@ -54,6 +70,31 @@ Build version</th>
 <td>If If an asset custom property in the Digital twin manager application is declared as required and complex, all of its subproperties are required too.</td>
 <td>MTM-50101</td>
 <td>10.18.408.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>To be able to provide more information in input fields on the expected input, dynamic form fields now support HTML markup in their description.</td>
+<td>DM-2606</td>
+<td>10.18.495.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>The dashboard time context has a new aggregation select feature. The following widgets support the dashboard context aggregation: Data points graph, Data points graph 2.0, Data points table.</td>
+<td>MTM-55298</td>
+<td>10.18.490.0</td>
+<td>None</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>If a user with minimal permission tries to delete a device an error message showed up stating "Could not delete device."
+Now, together with the failure message, the reason of failure is displayed.</td>
+<td>MTM-55536</td>
+<td>10.18.490.0</td>
 <td>UI</td>
 </tr>
 
@@ -100,7 +141,6 @@ Build version</th>
 <tr>
 <td>Web SDK</td>
 <td>Scaffolding an application that uses the <code>remotes</code> application option via the c8ycli now also updates the context path used in the <code>remotes</code> application option.</td>
-
 <td>MTM-54357</td>
 <td>10.18.404.0</td>
 <td>UI</td>
@@ -223,6 +263,30 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>If the Cockpit application was configured to remove all common tabs on group or device level, the button to add dashboards was also unintentionally removed. This has been addressed.</td>
+<td>MTM-56025</td>
+<td>10.18.496.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The data export feature in the data explorer has been improved. Now only active data points are included. Moreover, the name of the exported file includes the name of the series. This file contains all measurements in which this series is found.</td>
+<td>MTM-50586</td>
+<td>10.18.491.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>In rare cases, when a real-time connection was interrupted, certain widgets did not update again once the connection was re-established. This behavior has been fixed.</td>
+<td>MTM-55843</td>
+<td>10.18.490.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>

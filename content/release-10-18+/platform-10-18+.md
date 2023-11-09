@@ -7,7 +7,7 @@ layout: bundle
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
 - Core 10.18.497.0
-- UI 10.18.487.0
+- UI 10.18.497.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -34,13 +34,20 @@ Build version</th>
 </thead><tbody>
 
 <tr>
+<td>Adminstration</td>
+<td>The platform configuration form has been migrated to Angular with Schema-form removed.</td>
+<td>MTM-54308</td>
+<td>10.18.488.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
 <td>Administration</td>
 <td>It is now possible to select the availability (shared or private) during package upload.</td>
 <td>MTM-51454</td>
 <td>10.18.470.0</td>
 <td>UI</td>
 </tr>
-
 
 <tr>
 <td>Administration</td>
@@ -263,6 +270,53 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Administration</td>
+<td>The password strength indicator gets updated correctly now, and the <b>Save</b> button is available when the password meets the strength conditions.</td>
+<td>MTM-50179</td>
+<td>10.18.496.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Fixed an issue with the email template for scheduled exports not being propagated from an Enterprise tenant's setting to its subtenants.</td>
+<td>MTM-52692</td>
+<td>10.18.495.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>When setting the password for the admin user on creating a subtenant, the password validation is based on the selected tenant policy. An exception to this case is if strong password usage is enforced on system level. When setting a password for the admin user on an existing subtenant, the password validation is based on the security settings for the current tenant.</td>
+<td>MTM-41226</td>
+<td>10.18.495.0</td>
+<td>UI</td>
+
+<tr>
+<td>Administration</td>
+<td>If data has been changed in the access mapping section, such as default global roles or default applications, the <b>Save</b> button is now activated.</td>
+<td>MTM-52802</td>
+<td>10.18.492.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Microservices which have been created via API without providing a binary for it can again be subscribed without getting an error message.</td>
+<td>MTM-56037</td>
+<td>10.18.491.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Administration</td>
+<td>Blueprint applications shared from a parent tenant can now be updated properly.</td>
+<td>MTM-55332</td>
+<td>10.18.488.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Administration</td>

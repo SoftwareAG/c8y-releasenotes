@@ -6,7 +6,7 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
-- Core 10.18.453.0
+- Core 10.18.497.0
 - UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
@@ -175,11 +175,51 @@ Build version</th>
 </thead><tbody>
 
 <tr>
+<td>Cloud Fieldbus</td>
+<td>Previously, the CAN bus protocol limited the representation of numeric values in the maximum value field, which posed limitations when dealing with exceptionally large numbers. To address this limitation, we have implemented a transformation mechanism that allows numeric fields to be defined using textual representations.</td>
+<td>DM-2691</td>
+<td>10.18.483.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
 <td>Connectivity</td>
 <td>The performance of MQTT connections has been improved.  MQTT devices can now connect or reconnect faster, especially if the platform already has a large number of MQTT devices connected.</td>
 <td>MTM-53819</td>
 <td>10.18.157.0</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>After editing a device protocol details page and leaving the page, a confirmation pop-up is now always properly shown.</td>
+<td>DM-2700</td>
+<td>10.18.487.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>Fixed an issue in the data grid and device grid components where specific string, Boolean, and numeric cell values were wrongly formatted as dates.</td>
+<td>DM-2746</td>
+<td>10.18.487.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>In bulk operations, restrictions on the <code>creationRamp</code> property have been introduced. This allows better control over bulk operation creation and ensures adherence to specified limits. They are determined and can be modified by the system options <code>device-control.bulkoperation.maxcreationramp</code> and <code>device-control.bulkoperation.mincreationramp</code>.</td>
+<td>DM-2661</td>
+<td>10.18.483.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>The device grid now displays an alert if an issue occurs while retrieving the device data. This includes among others errors caused by custom columns configured with an invalid fragment path.</td>
+<td>DM-2479</td>
+<td>10.18.483.0</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -287,6 +327,14 @@ Build version</th>
 <td>DM-2427</td>
 <td>10.18.112.0</td>
 <td>Core</td>
+</tr>
+
+<tr>
+<td>LWM2M</td>
+<td>Fixed an issue with the LWM2M bulk device registration not accepting CSV-typed files when using the Firefox browser on Windows environments.</td>
+<td>DM-2623</td>
+<td>10.18.483.0</td>
+<td>UI</td>
 </tr>
 
 <tr>

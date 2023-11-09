@@ -6,7 +6,7 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
-- Core 10.18.453.0
+- Core 10.18.497.0
 - UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
@@ -111,6 +111,7 @@ For applications with versions, by default the application with the "latest" tag
 <td>10.18.31.0</td>
 <td>Core</td>
 </tr>
+
 
 <tr>
 <td>Authentication</td>
@@ -393,6 +394,22 @@ Build version</th>
 
 <tr>
 <td>Authentication</td>
+<td>The unsecured login option endpoint no longer reveals information about session configuration and authentication restrictions.</td>
+<td>MTM-51604</td>
+<td>10.18.489.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>The authorization performance has been improved when multiple users or devices are connecting concurrently for the first time to the restarted or upgraded platform.</td>
+<td>MTM-52061</td>
+<td>10.18.466.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
 <td>When a user logs in using OAI-Secure and a password change is required, a <code>PasswordResetToken</code> is returned in the response header, enabling the password reset.</td>
 <td>MTM-55200</td>
 <td>10.18.0.376</td>
@@ -521,6 +538,14 @@ Build version</th>
 
 <tr>
 <td>REST API</td>
+<td>The Measurement API now accepts leading zeros provided for measurement values.</td>
+<td>MTM-55156</td>
+<td>10.18.481.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>REST API</td>
 <td>The <code>data</code> field has been removed from realtime API handshake responses where it was not required and always had a "null" value.</td>
 <td>MTM-55522</td>
 <td>10.18.0.371</td>
@@ -572,6 +597,14 @@ Build version</th>
 <td>When the DELETE <code>/inventory/managedObject/{id}</code> endpoint did not finish immediately but continued in the background, the platform returned a 202 HTTP code instead of 204. This has been fixed.</td>
 <td>MTM-51095</td>
 <td>10.18.1.0</td>
+<td>Core</td>
+</tr>
+
+<tr>
+<td>SMS microservice</td>
+<td>The sender name and address were missing when sending a request to the SMS gateway with the TFA code. This issue has been resolved. The sender name and address are now retrieved from the tenant option configuration.</td>
+<td>MTM-56027</td>
+<td>10.18.479.0</td>
 <td>Core</td>
 </tr>
 

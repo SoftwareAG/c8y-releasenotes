@@ -6,7 +6,7 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
-- Core 10.18.453.0
+- Core 10.18.497.0
 - UI 10.18.487.0
 {{< /c8y-admon-info >}}
 
@@ -34,6 +34,30 @@ Build version</th>
 </thead><tbody>
 
 <tr>
+<td>Cockpit</td>
+<td>If a widget supports realtime, it can now be linked to the dashboard real-time context to disable/enable realtime on dashboard level. The following widgets support the real-time dashboard context: Data point graph, Data point table, Event list, Map.</td>
+<td>MTM-53779</td>
+<td>10.18.481.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>If a complex location property is set in the Digital twin manager application, the map is now visible in the asset view and users can select a location on the map.</td>
+<td>MTM-54045</td>
+<td>10.18.443.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>If If an asset custom property in the Digital twin manager application is declared as required and complex, all of its subproperties are required too.</td>
+<td>MTM-50101</td>
+<td>10.18.408.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
 <td>Web SDK</td>
 <td>The grid used in dashboards for placing widgets now supports 24 instead of 12 columns. This allows finer-grained positioning of widgets on dashboards. In case you share the same dashboards between different application versions, we strongly recommend you to upgrade to a version that includes the fix <b>MTM-55923</b>.</td>
 <td>MTM-52888</td>
@@ -43,9 +67,17 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>If a widget supports realtime, it can now be linked to the dashboard real-time context to disable/enable realtime on dashboard level. The following widgets support the real-time dashboard context: Data point graph, Data point table, Event list, Map.</td>
-<td>MTM-53779</td>
-<td>10.18.481.0</td>
+<td>It is now possible to change the application icon and title in various pages such as the application details page, when duplicating an application and from the application configuration page.</td>
+<td>MTM-52043</td>
+<td>10.18.485.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Added an ellipse to the version number in case the version shown in the right drawer (platform information) is too long.</td>
+<td>MTM-55203</td>
+<td>10.18.478.0</td>
 <td>UI</td>
 </tr>
 
@@ -59,25 +91,9 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>If a complex location property is set in the Digital twin manager application, the map is now visible in the asset view and users can select a location on the map.</td>
-<td>MTM-54045</td>
-<td>10.18.443.0</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Web SDK</td>
 <td>The Impact connectivity feature has been removed from @c8y/ngx-components and @c8y/ng1-modules packages.</td>
 <td>DM-2548</td>
 <td>10.18.431.0</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Web SDK</td>
-<td>If a DTM asset custom property is declared as required and complex, all of its subproperties are required too.</td>
-<td>MTM-50101</td>
-<td>10.18.408.0</td>
 <td>UI</td>
 </tr>
 
@@ -207,6 +223,62 @@ Build version</th>
 <th>Build comp.</th>
 </tr>
 </thead><tbody>
+
+<tr>
+<td>Cockpit</td>
+<td>The width for the timestamp in the "Event list" widget has been slightly increased.</td>
+<td>MTM-55803</td>
+<td>10.18.487.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The <b>Copy dashboard</b> button is now disabled when the user does not have the respective permissions.</td>
+<td>MTM-55195</td>
+<td>10.18.486.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The <b>Add report</b> button is now disabled when the user does not have the respective permissions.</td>
+<td>MTM-53334</td>
+<td>10.18.483.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>When opening a map widget configuration, the refresh interval was accidentally reset to 5s. This has been fixed and the refresh interval keeps the value previously configured.</td>
+<td>MTM-55280</td>
+<td>10.18.483.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The tooltip in the "Linear gauge" widget no longer overflows the widget card. Moreover, the tooltip color changes according to the type of the declared range (default, red or yellow).</td>
+<td>MTM-55005</td>
+<td>10.18.483.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>In the "Data points graph" widget, when realtime is enabled and users double-click on a chart, the time range expands now and the data for the current range is shown.</td>
+<td>MTM-55199</td>
+<td>10.18.483.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Editing smart rules did not work properly in case of missing (removed) devices. Now missing devices are removed automatically, and smart rules can be edited properly.</td>
+<td>MTM-49364</td>
+<td>10.18.467.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Cockpit</td>
@@ -398,6 +470,38 @@ Build version</th>
 <td>The action buttons in the windows <b>Usage statistics filters</b>, <b>Add bulk operation</b> and <b>Add device protocol</b> are now properly aligned when using mobile screens.</td>
 <td>DM-2274</td>
 <td>10.18.72.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>An issue was fixed where the asset widget was not rendering if deeply nested custom properties were selected.</td>
+<td>MTM-55306</td>
+<td>10.18.483.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>Blueprints are no longer shown in the application switcher if they have not been deployed.</td>
+<td>MTM-55619</td>
+<td>10.18.486.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>On branded applications, the main branding colors are now also used to brand SVG images and dashboards by automatically generating shades of the primary brand color.</td>
+<td>MTM-55585</td>
+<td>10.18.486.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>If a filter was set in the extensions, applications or microservices lists, reloading the page on item removal or addition did not work. This issue has been fixed.</td>
+<td>MTM-55349</td>
+<td>10.18.487.0</td>
 <td>UI</td>
 </tr>
 

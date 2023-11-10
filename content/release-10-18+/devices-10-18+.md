@@ -33,27 +33,13 @@ Build version</th>
 </tr>
 </thead><tbody>
 
-<tr>
-<td>Device management</td>
-<td>In device protocols, users can now longer create measurement fragments (<b>Measurement type</b> and <b>Measurement series</b> fields) which contain characters that are not allowed by the Measurements API.</td>
-<td>DM-2782</td>
-<td>10.18.494.0</td>
-<td>UI</td>
-</tr>
+
 
 <tr>
 <td>Device management</td>
 <td>In subasset views, smart group filters are now represented by a filter chips dropdown instead of displaying the raw text filter.</td>
 <td>DM-1615</td>
 <td>10.18.491.0</td>
-<td>UI</td>
-</tr>
-
-<tr>
-<td>Device management</td>
-<td>The availability calculations in the "Availability" overview and for individual devices were not correct. Percentages were calculated for the respective time (24 hours, last 7 days and last 30 days) plus an additional 24 hours. The time interval has now been corrected.</td>
-<td>DM-2737</td>
-<td>10.18.490.0</td>
 <td>UI</td>
 </tr>
 
@@ -213,6 +199,23 @@ Build version</th>
 <td>10.18.157.0</td>
 <td>Core</td>
 </tr>
+
+<tr>
+<td>Device management</td>
+<td>In device protocols, users can now longer create measurement fragments (<b>Measurement type</b> and <b>Measurement series</b> fields) which contain characters that are not allowed by the Measurements API.</td>
+<td>DM-2782</td>
+<td>10.18.494.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>The availability calculations in the "Availability" overview and for individual devices were not correct. Percentages were calculated for the respective time (24 hours, last 7 days and last 30 days) plus an additional 24 hours. The time interval has now been corrected.</td>
+<td>DM-2737</td>
+<td>10.18.490.0</td>
+<td>UI</td>
+</tr>
+
 
 <tr>
 <td>Device management</td>

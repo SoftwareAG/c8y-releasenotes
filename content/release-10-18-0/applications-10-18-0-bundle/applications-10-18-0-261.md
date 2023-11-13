@@ -36,7 +36,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>The export of the <code>@c8y/client</code> package has been adjusted to also export the types. This was causing issues in certain setups.</td>
+<td>The export of the <code>@c8y/client</code> package was missing the required types which caused issues in certain setups. This has been adjusted.</td>
+
 <td>MTM-56385</td>
 <td>10.18.0.167</td>
 <td>UI</td>

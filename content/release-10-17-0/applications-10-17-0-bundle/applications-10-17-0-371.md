@@ -33,12 +33,11 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>The data export feature in the data explorer has been improved. Now only active data points are included. Moreover, the name of the exported file includes the name of the series. This file contains all measurements in which this series is found.</td>
-<td>MTM-50586</td>
-<td>10.17.0.366</td>
+<td>Editing smart rules could be impossible due to missing (removed) devices. Now missing devices are removed automatically, and smart rules can be edited properly.</td>
+<td>MTM-49364</td>
+<td>10.17.0.365</td>
 <td>UI</td>
 </tr>
-
 
 <tr>
 <td>Cockpit</td>
@@ -49,9 +48,16 @@ Build version</th>
 </tr>
 
 <tr>
+<td>Cockpit</td>
+<td>The data export feature in the data explorer has been improved. Now only active data points are included. Moreover, the name of the exported file includes the name of the series. This file contains all measurements in which this series is found.</td>
+<td>MTM-50586</td>
+<td>10.17.0.366</td>
+<td>UI</td>
+</tr>
+
+<tr>
 <td>Web SDK</td>
 <td>Fixed an issue with <code>c8ycli locale-extract</code> on Windows where the extracted <i>locales.pot</i> file didn't contain any entries.</td>
-
 <td>MTM-56234</td>
 <td>10.17.0.364</td>
 <td>UI</td>

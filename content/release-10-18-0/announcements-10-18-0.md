@@ -126,7 +126,7 @@ By default, microservices using API version 1 still work in release 10.18. Howev
 #### Planned
 
 ##### Deprecating @c8y/cli in favor of @angular/cli
-To improve our tooling and align closer to the Angular standard, we will deprecate @c8y/cli and the `c8ycli` command in a future version. Instead, users must install the standard CLI from Angular (@angular/cli) and start the application via `ng` command. The Web SDK can then simply be added to the Angular CLI by running the command `ng add @c8y/websdk`.  A detailed description on how you can update your existing application will be added to  the Web SDK documentation.
+To improve our tooling and align closer to the Angular standard, we will deprecate @c8y/cli and the `c8ycli` command in a future version. Instead, users must install the standard CLI from Angular (@angular/cli) and start the application via `ng` command. The Web SDK can then simply be added to the Angular CLI by running the command `ng add @c8y/websdk`. A detailed description on how you can update your existing application will be added to  the Web SDK documentation.
 
 ##### Breaking change in the Web SDK - deprecation of HOOK_ prefixed injection tokens
 
@@ -190,7 +190,7 @@ If you have a continued need for a Russian localization of the Cumulocity IoT UI
 
 In efforts to get more insights from our users, we enable tracking for every user that has agreed or rejected the cookie and policy banner. In case of rejection, the user will be tracked without any personal identifiable information (pii) like e-mail, name or IP address. Not tracked are still users that haven't been shown a cookie/policy banner or users that are using dedicated instances without any Gainsight API key set.
 
-Gainsight additionally brings so called in app engagements. This are pop-ups or similar that try to interact with the end-user and collect feedback. If a custom branding is applied, this engagements are never shown to the end-user even if he is tracked.
+Gainsight additionally brings so called "in app engagements". This are pop-ups or similar that try to interact with the end-user and collect feedback. If a custom branding is applied, this engagements are disabled by default and a user can enable them if wanted.
 
 ##### Breaking change in the Map widget
 

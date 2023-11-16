@@ -186,7 +186,7 @@ If you have a continued need for a Russian localization of the Cumulocity IoT UI
 #### Implemented
 
 
-##### Change in the Gainsight tracking
+##### Changes in Gainsight tracking
 
 In efforts to get more insights from our users, we enable tracking for every user that has agreed or rejected the cookie and policy banner. In case of rejection, the user will be tracked without any personal identifiable information (pii) like e-mail, name or IP address. Not tracked are still users that haven't been shown a cookie/policy banner or users that are using dedicated instances without any Gainsight API key set.
 

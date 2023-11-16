@@ -185,6 +185,13 @@ If you have a continued need for a Russian localization of the Cumulocity IoT UI
 
 #### Implemented
 
+
+##### Change in the Gainsight tracking
+
+In efforts to get more insights from our users, we enable tracking for every user that has agreed or rejected the cookie and policy banner. In case of rejection, the user will be tracked without any personal identifiable information (pii) like e-mail, name or IP address. Not tracked are still users that haven't been shown a cookie/policy banner or users that are using dedicated instances without any Gainsight API key set.
+
+Gainsight additionally brings so called in app engagements. This are pop-ups or similar that try to interact with the end-user and collect feedback. If a custom branding is applied, this engagements are never shown to the end-user even if he is tracked.
+
 ##### Breaking change in the Map widget
 
 As announced with [release 10.17](/release-10-17-0/announcements-10-17-0), the "Map" widget has been migrated and support for real-time updates on all devices has been replaced by a configurable refresh interval. This change allows us to display more then 100 devices on the map by default. Additionally, the "Map" widget no longer supports the "show track" option.

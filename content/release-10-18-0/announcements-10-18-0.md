@@ -126,7 +126,7 @@ By default, microservices using API version 1 still work in release 10.18. Howev
 #### Planned
 
 ##### Deprecating @c8y/cli in favor of @angular/cli
-To improve our tooling and align closer to the Angular standard, we will deprecate @c8y/cli and the `c8ycli` command in a future version. Instead, users must install the standard CLI from Angular (@angular/cli) and start the application via `ng` command. The Web SDK can then simply be added to the Angular CLI by running the command `ng add @c8y/websdk`. A detailed description on how you can update your existing application will be added to  the Web SDK documentation.
+To improve our tooling and align closer to the Angular standard, we will deprecate @c8y/cli and the `c8ycli` command in a future version. Instead, users must install the standard CLI from Angular (@angular/cli) and start the application via `ng` command. The Web SDK can then simply be added to the Angular CLI by running the command `ng add @c8y/websdk`. A detailed description on how you can update your existing application will be added to the Web SDK documentation.
 
 ##### Breaking change in the Web SDK - deprecation of HOOK_ prefixed injection tokens
 

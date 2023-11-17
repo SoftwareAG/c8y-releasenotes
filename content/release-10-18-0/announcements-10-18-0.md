@@ -188,9 +188,9 @@ If you have a continued need for a Russian localization of the Cumulocity IoT UI
 
 ##### Changes in Gainsight tracking
 
-In efforts to get more insights from our users, we enable tracking for every user that has agreed or rejected the cookie and policy banner. In case of rejection, the user will be tracked without any personal identifiable information (pii) like e-mail, name or IP address. Not tracked are still users that haven't been shown a cookie/policy banner or users that are using dedicated instances without any Gainsight API key set.
+In efforts to get more insights into the user behavior, we enable tracking for every user that has agreed or rejected the cookie policy. In case of rejection, the user will be tracked without any personal identifiable information (pii) like email address, name or IP address. We still do not track users that haven't been shown a cookie/policy banner or users that are using dedicated instances without any Gainsight API key set.
 
-Gainsight additionally brings so called "in app engagements". This are pop-ups or similar that try to interact with the end-user and collect feedback. If a custom branding is applied, this engagements are disabled by default and a user can enable them if wanted.
+In addition, Gainsight adds "in app engagements". These are pop-ups or similar that try to interact with the user and collect feedback. If a custom branding is applied, this engagements are disabled by default and a user can enable them.
 
 ##### Breaking change in the Map widget
 

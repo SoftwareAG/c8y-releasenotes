@@ -7,7 +7,7 @@ layout: bundle
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
 - Core 10.18.497.0
-- UI 10.18.497.0
+- UI 10.18.499.0 
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -202,9 +202,33 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
+<td>Previously, simulators did not use inventory POST/PUT templates properly as they did not specify any ID fields for the object they created/updated. This has now been resolved by adding the corresponding fields ID, External ID and External ID type depending on the SmartRest template used as instruction.</td>
+<td>DM-2853</td>
+<td>10.18.497.5</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>Previously, when ID collisions occurred, unrelated audit log entries could appear incorrectly in the "History of changes" view for bulk operations. This has now been resolved. In <code>c8y/ngx-components</code> the <code>c8y-audit-log</code> component now accepts a <code>type</code> input.</td>
+<td>DM-2852</td>
+<td>10.18.497.1</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
 <td>In device protocols, users can now longer create measurement fragments (<b>Measurement type</b> and <b>Measurement series</b> fields) which contain characters that are not allowed by the Measurements API.</td>
 <td>DM-2782</td>
 <td>10.18.494.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Device management</td>
+<td>Previously, when loading measurement charts data, there was a performance issue if the measurement series had no units defined, depending on the total number of measurement records. This issue has now been addressed and measurements series load efficiently now regardless of units being defined or not. </td>
+<td>DM-2785</td>
+<td>10.18.493.6</td>
 <td>UI</td>
 </tr>
 

@@ -7,7 +7,7 @@ layout: bundle
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
 - Core 10.18.497.0
-- UI 10.18.497.0
+- UI 10.18.499.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -83,10 +83,18 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
+<td>Previously, users without the required permission could delete a file and upload a new one in the sub-assets view, even if an error message was displayed. This issue has been resolved, and now only the error message is displayed.</td>
+<td>MTM-55537</td>
+<td>10.18.491.2</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
 <td>The dashboard time context has a new aggregation select feature. The following widgets support the dashboard context aggregation: Data points graph, Data points graph 2.0, Data points table.</td>
 <td>MTM-55298</td>
 <td>10.18.490.0</td>
-<td>None</td>
+<td>UI</td>
 </tr>
 
 <tr>
@@ -266,6 +274,22 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
+<td>In the "Data point graph" widget configuration, you could only select a chart type if the datapoint was not linked to a template from the data point library. Now you can always select a chart type.</td>
+<td>MTM-54007</td>
+<td>10.18.497.13</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>If a user drags the X axis in a "Data point graph" widget with realtime enabled, realtime is turned off. It can be enabled again by clicking the real-time indicator.</td>
+<td>MTM-56149</td>
+<td>10.18.497.6</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
 <td>If the Cockpit application was configured to remove all common tabs on group or device level, the button to add dashboards was also unintentionally removed. This has been addressed.</td>
 <td>MTM-56025</td>
 <td>10.18.496.0</td>
@@ -277,6 +301,14 @@ Build version</th>
 <td>The data export feature in the data explorer has been improved. Now only active data points are included. Moreover, the name of the exported file includes the name of the series. This file contains all measurements in which this series is found.</td>
 <td>MTM-50586</td>
 <td>10.18.491.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>Fixed an issue with SVG files in the SCADA widget, where <code>animate</code> or <code>animateTransform</code> tags worked properly in the configuration preview, but did not work in a dashboard.</td>
+<td>MTM-55990</td>
+<td>10.18.490.10</td>
 <td>UI</td>
 </tr>
 
@@ -539,9 +571,34 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>An issue was fixed where the asset widget was not rendering if deeply nested custom properties were selected.</td>
-<td>MTM-55306</td>
-<td>10.18.483.0</td>
+<td>The export of the <code>@c8y/client</code> package was missing the required types which caused issues in certain setups. This has been adjusted.</td>
+<td>MTM-56385</td>
+<td>10.18.496.6</td>
+<td>UI</td>
+</tr>
+
+
+<tr>
+<td>Web SDK</td>
+<td>Fixed an issue with <code>c8ycli locale-extract</code> on Windows where the extracted <i>locales.pot</i> file didn´t contain any entries.</td>
+<td>MTM-56234</td>
+<td>10.18.496.1</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>After creating an asset with the Location property, where the default values for longitude and latitude are set, a map displaying a marker is displayed. If one or both of these values is deleted, the map will be hidden from the sub-assets view. When editing the Location property and these values are missing, the marker for selecting a location is not shown.</td>
+<td>MTM-55865</td>
+<td>10.18.495</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Web SDK</td>
+<td>If a filter was set in the extensions, applications or microservices lists, reloading the page on item removal or addition did not work. This issue has been fixed.</td>
+<td>MTM-55349</td>
+<td>10.18.487.0</td>
 <td>UI</td>
 </tr>
 
@@ -563,11 +620,12 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>If a filter was set in the extensions, applications or microservices lists, reloading the page on item removal or addition did not work. This issue has been fixed.</td>
-<td>MTM-55349</td>
-<td>10.18.487.0</td>
+<td>An issue was fixed where the asset widget was not rendering if deeply nested custom properties were selected.</td>
+<td>MTM-55306</td>
+<td>10.18.483.0</td>
 <td>UI</td>
 </tr>
+
 
 <tr>
 <td>Web SDK</td>

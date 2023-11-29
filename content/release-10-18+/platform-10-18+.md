@@ -7,7 +7,7 @@ layout: bundle
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
 - Core 10.18.497.0
-- UI 10.18.497.0
+- UI 10.18.499.0
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -443,6 +443,14 @@ Build version</th>
 <td>In the files repository, an issue has been fixed where the counter of the total files number displayed an incorrect value or was not displayed at all.</td>
 <td>MTM-52710</td>
 <td>10.18.17.0</td>
+<td>UI</td>
+</tr>
+
+<tr>
+<td>Authentication</td>
+<td>On logging into the platform as a support user, the redirection to the Management tenant has been removed. The platform, despite authentication in the context of the Management tenant, sets a cookie for the domain of the logged-in tenant.</td>
+<td>MTM-54617</td>
+<td>10.18.497.8</td>
 <td>UI</td>
 </tr>
 

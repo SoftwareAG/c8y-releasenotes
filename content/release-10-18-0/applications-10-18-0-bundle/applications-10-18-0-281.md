@@ -36,7 +36,8 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>In the "Data point graph" widget configuration, you could only select a chart type if the datapoint was not linked to a template from the data point library. Now you can always select a chart type.</td>
+<td>In the "Data point graph" widget configuration, you could only select a chart type if the data point was not linked to a template from the data point library. Now you can always select a chart type.</td>
+
 <td>MTM-54007</td>
 <td>10.18.0.178</td>
 <td>UI</td>

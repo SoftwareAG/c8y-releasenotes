@@ -33,7 +33,8 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>If a user drags the X axis in a "Data point graph" widget with realtime enabled, realtime is turned off. It can be enabled again by clicking the real-time indicator.</td>
+<td>If a user drags the X-axis in a "Data point graph" widget with realtime enabled, realtime is turned off. It can be enabled again by clicking the real-time indicator.</td>
+
 <td>MTM-56149</td>
 <td>10.17.0.380</td>
 <td>UI</td>

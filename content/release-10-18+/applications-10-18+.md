@@ -274,7 +274,8 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>In the "Data point graph" widget configuration, you could only select a chart type if the datapoint was not linked to a template from the data point library. Now you can always select a chart type.</td>
+<td>In the "Data point graph" widget configuration, you could only select a chart type if the data point was not linked to a template from the data point library. Now you can always select a chart type.</td>
+
 <td>MTM-54007</td>
 <td>10.18.497.13</td>
 <td>UI</td>
@@ -282,7 +283,8 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>If a user drags the X axis in a "Data point graph" widget with realtime enabled, realtime is turned off. It can be enabled again by clicking the real-time indicator.</td>
+<td>If a user drags the X-axis in a "Data point graph" widget with realtime enabled, realtime is turned off. It can be enabled again by clicking the real-time indicator.</td>
+
 <td>MTM-56149</td>
 <td>10.18.497.6</td>
 <td>UI</td>
@@ -580,7 +582,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Fixed an issue with <code>c8ycli locale-extract</code> on Windows where the extracted <i>locales.pot</i> file didn´t contain any entries.</td>
+<td>Fixed an issue with <code>c8ycli locale-extract</code> on Windows where the extracted <i>locales.pot</i> file didn't contain any entries.</td>
+
 <td>MTM-56234</td>
 <td>10.18.496.1</td>
 <td>UI</td>
@@ -588,7 +591,8 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>After creating an asset with the Location property, where the default values for longitude and latitude are set, a map displaying a marker is displayed. If one or both of these values is deleted, the map will be hidden from the sub-assets view. When editing the Location property and these values are missing, the marker for selecting a location is not shown.</td>
+<td>After creating an asset with the Location property where the default values for longitude and latitude are set, a map showing a marker is displayed. If one or both of these values is deleted, the map is hidden from the sub-assets view. When editing the Location property and these values are missing, the marker for selecting a location is not shown.</td>
+
 <td>MTM-55865</td>
 <td>10.18.495</td>
 <td>UI</td>

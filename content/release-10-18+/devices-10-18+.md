@@ -202,7 +202,7 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
-<td>Previously, simulators did not use inventory POST/PUT templates properly as they did not specify any ID fields for the object they created/updated. This has now been resolved by adding the corresponding fields ID, External ID and External ID type depending on the SmartRest template used as instruction.</td>
+<td>Previously, simulators did not use inventory POST/PUT templates properly as they did not specify any ID fields for the object they created/updated. This has now been resolved by adding the corresponding fields ID, External ID and External ID type depending on the SmartREST template used as instruction.</td>
 <td>DM-2853</td>
 <td>10.18.497.5</td>
 <td>UI</td>
@@ -226,7 +226,7 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
-<td>Previously, when loading measurement charts data, there was a performance issue if the measurement series had no units defined, depending on the total number of measurement records. This issue has now been addressed and measurements series load efficiently now regardless of units being defined or not. </td>
+<td>Previously, when loading measurement charts data, there was a performance issue if the measurement series had no units defined, depending on the total number of measurement records. This issue has been addressed and measurements series now load efficiently regardless of units being defined or not. </td>
 <td>DM-2785</td>
 <td>10.18.493.6</td>
 <td>UI</td>

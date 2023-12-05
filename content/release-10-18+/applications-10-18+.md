@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
-- Core 10.18.497.0
-- UI 10.18.499.0
+- Core 10.18.540.0
+- UI 10.18.499.5
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -275,7 +275,6 @@ Build version</th>
 <tr>
 <td>Cockpit</td>
 <td>In the "Data point graph" widget configuration, you could only select a chart type if the data point was not linked to a template from the data point library. Now you can always select a chart type.</td>
-
 <td>MTM-54007</td>
 <td>10.18.497.13</td>
 <td>UI</td>
@@ -284,7 +283,6 @@ Build version</th>
 <tr>
 <td>Cockpit</td>
 <td>If a user drags the X-axis in a "Data point graph" widget with realtime enabled, realtime is turned off. It can be enabled again by clicking the real-time indicator.</td>
-
 <td>MTM-56149</td>
 <td>10.18.497.6</td>
 <td>UI</td>

@@ -6,8 +6,8 @@ layout: bundle
 
 {{< c8y-admon-info >}}
 These release notes refer to the build versions
-- Core 10.18.497.0
-- UI 10.18.499.0 
+- Core 10.18.540.0
+- UI 10.18.499.5
 {{< /c8y-admon-info >}}
 
 ### Improvements
@@ -34,6 +34,13 @@ Build version</th>
 </thead><tbody>
 
 
+<tr>
+<td>Device management</td>
+<td>In the <b>Software</b> tab in the device details, currently the <b>Filter by software type</b> dropdown in the <b>Installed software</b> list and the <b>Install software</b> modal shows types based on existing types in the software repository. This has been changed to show only the supported software types announced by the device in its <code>c8y_SupportedSoftwareTypes</code> fragment. If a device has not announced supported software types, then again all available existing software types are listed.</td>
+<td>DM-2809</td>
+<td>10.18.497.0</td>
+<td>UI</td>
+</tr>
 
 <tr>
 <td>Device management</td>
@@ -202,7 +209,7 @@ Build version</th>
 
 <tr>
 <td>Device management</td>
-<td>Previously, simulators did not use inventory POST/PUT templates properly as they did not specify any ID fields for the object they created/updated. This has now been resolved by adding the corresponding fields ID, External ID and External ID type depending on the SmartREST template used as instruction.</td>
+<td>Simulators did not use inventory POST/PUT templates properly as they did not specify any ID fields for the object they created/updated. This has now been resolved by adding the corresponding fields ID, External ID and External ID type depending on the SmartREST template used as instruction.</td>
 <td>DM-2853</td>
 <td>10.18.497.5</td>
 <td>UI</td>

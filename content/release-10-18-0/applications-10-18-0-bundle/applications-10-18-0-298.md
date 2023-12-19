@@ -5,7 +5,7 @@ layout: redirect
 ---
 
 {{< c8y-admon-info >}}
-These release notes refer to build versions
+These release notes refer to build versions:
 - Core: 10.18.0.298
 - UI: 10.18.0.191
 {{< /c8y-admon-info >}}

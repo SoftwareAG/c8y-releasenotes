@@ -36,7 +36,7 @@ Build version</th>
 <td>Editing smart rules could be impossible due to missing (removed) devices. Now missing devices are removed automatically, and smart rules can be edited properly.</td>
 <td>MTM-49364</td>
 <td>10.17.0.365</td>
-<td>UI</td>
+<td>Core</td>
 </tr>
 
 <tr>

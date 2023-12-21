@@ -188,9 +188,13 @@ If you have a continued need for a Russian localization of the Cumulocity IoT UI
 
 ##### Changes in Gainsight tracking
 
-In efforts to get more insights into the user behavior, we enable tracking for every user that has agreed or rejected the cookie policy. In case of rejection, the user will be tracked without any personal identifiable information (pii) like email address, name or IP address. We still do not track users that haven't been shown a cookie/policy banner or users that are using dedicated instances without any Gainsight API key set.
+A banner informing users about our cookie and privacy policy (Privacy Notice) is enabled for all users on our Public cloud instances.
 
-In addition, Gainsight adds "in app engagements". These are pop-ups or similar that try to interact with the user and collect feedback. If a custom branding is applied, this engagements are disabled by default and a user can enable them.
+As part of our efforts to continuously improve the overall user experience, anonymous statistical data collection is now activated for all users accepting only our required cookies. This helps us gather valuable insights and improve our services without compromising your privacy. Anonymous tracking doesn't collect any Personal Identifiable Information (PII) such as email addresses or names. Users can change their cookie and tracking preferences at any time from their personal profiles. Our Privacy Notice can be found here: [https://www.softwareag.com/en_corporate/privacy.html](https://www.softwareag.com/en_corporate/privacy.html)
+
+As part of our data collection policy, we only collect data from users who have been informed about our cookies and privacy policies (Privacy Notice) through the cookies banner.
+
+For customers accessing our public cloud products, we might use in-product communication for improved user experience (popups, guides, tours and surveys). Users can disable or enable in-product engagements at any time from their user profile settings. However, if you use our custom branding functionalities, these in-product communication features will be disabled by default.
 
 ##### Breaking change in the Map widget
 

@@ -1,13 +1,13 @@
 ---
-weight: 42
-title: 10.18.0.329
+weight: 41
+title: 10.18.0.341
 layout: redirect
 ---
 
 {{< c8y-admon-info >}}
 These release notes refer to build versions:
-- cumulocity: 1018.0.329
-- ui-c8y: 1018.0.213
+- cumulocity: 1018.0.341
+- ui-c8y: 1018.0.215
 {{< /c8y-admon-info >}}
 
 ### Fixes
@@ -35,9 +35,17 @@ Build version</th>
 
 <tr>
 <td>Cockpit</td>
-<td>The color used for alarms in the "Map" widget now again correctly represents the color of the alarm with the highest severity raised by a device.</td>
+<td>In the navigator, the group name is now correctly displayed instead of a fallback value ('--').</td>
 <td>MTM-57083</td>
 <td>10.18.0.206</td>
+<td>ui-c8y</td>
+</tr>
+
+<tr>
+<td>Cockpit</td>
+<td>The Center map button on the "Map" widget is now enabled only if the specified center point of the map is shifted from the current view center.</td>
+<td>MTM-57329</td>
+<td>10.18.0.214</td>
 <td>ui-c8y</td>
 </tr>
 

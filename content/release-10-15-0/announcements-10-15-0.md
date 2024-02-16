@@ -23,7 +23,7 @@ As announced with [release 10.14](/release-10-14-0/announcements-10-14-0), as of
 The following APIs will be removed without any replacement:
 
 * `GET /measurement/measurements/{id}`
-* `DEL /measurements/measurement/{id}`
+* `DEL /measurement/measurements/{id}`
 
 The following API is partially supported:
 

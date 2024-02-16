@@ -23,7 +23,7 @@ As of release 10.16+, new tenants can utilize a new enhanced time-series support
 The following APIs will be removed without any replacement:
 
 * `GET /measurement/measurements/{id}`
-* `DEL /measurements/measurement/{id}`
+* `DEL /measurement/measurements/{id}`
 
 The following API is partially supported:
 

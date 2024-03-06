@@ -51,7 +51,7 @@ Build version</th>
 
 <tr>
 <td>Web SDK</td>
-<td>Previously, when a dashboard was created along with registering a mobile phone with the Cloud Sensor app, the device was not assigned to the "Map" widget in the dashboard but instead it was showing all devices available for the tenant. Now the "Map"widget has the device properly assigned.</td>
+<td>Previously, when a dashboard was created along with registering a mobile phone with the Cloud Sensor app, the device was not assigned to the "Map" widget in the dashboard but instead it was showing all devices available for the tenant. Now the "Map" widget has the device properly assigned.</td>
 <td>MTM-57689</td>
 <td>10.18.0.231</td>
 <td>ui-c8y</td>

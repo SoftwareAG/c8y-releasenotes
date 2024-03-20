@@ -1,13 +1,13 @@
 ---
-weight: 38
-title: 10.18.0.366
+weight: 37
+title: 10.18.0.372
 layout: redirect
 ---
 
 {{< c8y-admon-info >}}
 These release notes refer to build versions:
-- cumulocity: 1018.0.366
-- ui-c8y: 1018.0.240
+- cumulocity: 1018.0.372
+- ui-c8y: 1018.0.244
 {{< /c8y-admon-info >}}
 
 ### Fixes
@@ -34,10 +34,10 @@ Build version</th>
 </thead><tbody>
 
 <tr>
-<td>Cockpit</td>
-<td>The availability setting has been disabled for the Home dashboard. This change prevents issues with an incorrect availability status being shown on the Home dashboard.</td>
-<td>MTM-57098</td>
-<td>10.18.0.238</td>
+<td>Web SDK</td>
+<td>The term "Availability" in the UI now offers different translations for Japanese depending on the context. This improvement better tailors the localization for the Japanese market.</td>
+<td>MTM-57688</td>
+<td>10.18.0.240</td>
 <td>ui-c8y</td>
 </tr>
 

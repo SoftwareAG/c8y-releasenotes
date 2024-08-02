@@ -17,25 +17,25 @@ Moreover, you can find the following major changes in the area of documentation.
 
 A new guide has been added, fully describing the background and usage of the newly added OEE application, which allows to create OEE (Overall Equipment Effectiveness) calculation configurations for machines and machine lines.
 
-See the [OEE guide](https://cumulocity.com/guides{{< 10-11-0 >}}/oee/overview/).
+See the [OEE guide](https://cumulocity.com/guides/10.11.0/oee/overview/).
 
 #### Thin Edge guide
 
 A new guide has been added, which describes thin-edge.io, a new open-source framework to develop lightweight, smart, and secure connected devices.
 
-See the [Thin Edge guide](https://cumulocity.com/guides{{< 10-11-0 >}}/thin-edge/overview/).
+See the [Thin Edge guide](https://cumulocity.com/guides/10.11.0/thin-edge/overview/).
 
 #### Concepts guide
 
 A glossary has been added to the *Concepts guide* which lists a variety of technical terms and concepts used in the Cumulocity IoT products and documentation and provides explanations for its usage in the context of Cumulocity IoT.
 
-See [Glossary](https://cumulocity.com/guides{{< 10-11-0 >}}/concepts/glossary) in the *Concepts guide*.
+See [Glossary](https://cumulocity.com/guides/10.11.0/concepts/glossary) in the *Concepts guide*.
 
 #### Reference guide
 
 The device management library, which defines the data structures (expressed as fragments) that are used in Cumulocity IoT for device management activities, has been updated and enhanced. It now describes in detail the most important functionalities of a device, its managed objects and all its corresponding fragments to them.
 
-See [Device management library](https://cumulocity.com/guides{{< 10-11-0 >}}/reference/device-management-library) in the *Reference guide*.
+See [Device management library](https://cumulocity.com/guides/10.11.0/reference/device-management-library) in the *Reference guide*.
 
 {{< c8y-admon-info >}}
 Note that the device management library has been moved from the Cumulocity IoT OpenAPI Specification to the product documentation website.

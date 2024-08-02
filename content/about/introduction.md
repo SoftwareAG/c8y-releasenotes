@@ -17,7 +17,7 @@ Select a GA release version from the dropdown on the top left:
 ![Versions](/images/release-notes/releasenotes-version-dropdown.png)
 
 {{< c8y-admon-info >}}
-The release notes reach back to GA release 10.4.0. For release notes on older GA releases, please [contact support](/about/contacting-support/).
+The release notes reach back to GA release 10.4.0. For release notes on older GA releases, please [contact support](https://cumulocity.com/docs/additional-resources/contacting-support/).
 {{< /c8y-admon-info >}}
 
 ### <a name="component"></a> Product components

@@ -7,6 +7,12 @@ layout: bundle
 
 These release notes for **Cumulocity IoT release 10.5.0**, include all relevant changes (migration notes, improvements and fixes) that have been implemented in Cumulocity IoT Core, Cumulocity IoT Edge, Cumulocity IoT Streaming Analytics, Cumulocity IoT Predictive Analytics, and Cumulocity IoT DataHub since the previous GA release.
 
+{{< c8y-admon-important>}}
+The user & developer documentation for this release has been moved to the GitHub documentation repository. For details how to access it, see [Previous release versions](https://cumulocity.com/docs/previous-versions/documentation-repository/).
+
+As a consequence, all links to the user documentation are now redirected to the [new documentation website](https://cumulocity.com/docs), in general to the introduction page.
+{{< /c8y-admon-important>}}
+
 {{< c8y-admon-info >}}
 The *Operations release notes* for the Cumulocity IoT platform are not publicly available. They are provided on the [Software AG Empower Portal](https://empower.softwareag.com/) (credentials required).
 {{< /c8y-admon-info >}}

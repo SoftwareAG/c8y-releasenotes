@@ -38,7 +38,7 @@ With the 10.5 release a new token-based mechanism for browser-based authenticati
 
 With the 10.13 release, the O-Auth Internal authentication will be enabled by default for all tenants. With the 10.13 release the Basic Authentication option will be removed for browser-based applications and all applications will be forced to use the token-based authentication mechanism O-Auth Internal. Note, that Basic Authentication will still be available for devices connecting to the Cumulocity IoT platform.
 
-If not done already, we recommend you not to wait for the 10.13 release but enable O-Auth Internal as soon as possible. Documentation how to enforce O-Auth Internal can be found in [Administration > Changing settings](https://cumulocity.com/guides/{{< 10-11-0 >}}/users-guide/administration/#changing-settings) in the *User guide*.
+If not done already, we recommend you not to wait for the 10.13 release but enable O-Auth Internal as soon as possible. Documentation how to enforce O-Auth Internal can be found in [Administration > Changing settings](https://cumulocity.com/guides/10.11.0/users-guide/administration/#changing-settings) in the *User guide*.
 
 In case you have developed your own web applications or microservices, please make sure that they do support the O-Auth Internal Authentication mechanism. This will be the case if your web applications are based on the Web SDK 10.5 or higher as well as the Microservice SDK 10.5 or higher.
 
@@ -98,7 +98,7 @@ With GA release 10.13.0 we plan to upgrade Angular from version 11 to version 12
 
 This change will only affect you, if you or your development team use the Web SDK to extend Cumulocity IoT UI applications or to build your own web applications.
 
-For instructions on the upgrade process refer to [Upgrade > Updating the Web SDK](https://cumulocity.com/guides{{< 10-11-0 >}}/web/upgrade/#update-to-an-newer-version) in the *Web SDK guide*.
+For instructions on the upgrade process refer to [Upgrade > Updating the Web SDK](https://cumulocity.com/guides/10.11.0/web/upgrade/#update-to-an-newer-version) in the *Web SDK guide*.
 
 Additionally, you can use the following resources for more details on the changes in Ivy and Angular 12:
 
@@ -146,5 +146,5 @@ Automated parsers of export files must be adjusted to handle the indicator row.
 
 * With GA release 10.11.0, Cumulocity IoT Machine Learning introduces "Role Based Access Control" which is a breaking change for its existing users. Refer to the "Role Based Access Control" section in the [Machine Learning release notes](/release-10-11-0/machine-learning-10-11-0/#10_11_0) to learn more about this change.
 * The two flavors of MLW microservice (MLW and MLW-CDH) are consolidated into a single offering.
-* The [data pull from Cumulocity IoT DataHub](https://cumulocity.com/guides{{< 10-11-0 >}}/machine-learning/web-app-mlw/#datahub) feature in Cumulocity IoT Machine Learning Workbench is supported on Cumulocity IoT Edge from 10.11.0 release onwards.
+* The [data pull from Cumulocity IoT DataHub](https://cumulocity.com/guides/10.11.0/machine-learning/web-app-mlw/#datahub) feature in Cumulocity IoT Machine Learning Workbench is supported on Cumulocity IoT Edge from 10.11.0 release onwards.
 * The deprecations mentioned in the [announcements section for release 10.10.0](/release-10-10-0/announcements-10-10-0/#machine-learning) are now removed entirely.

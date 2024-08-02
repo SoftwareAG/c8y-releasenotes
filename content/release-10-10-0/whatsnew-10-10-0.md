@@ -12,9 +12,9 @@ Release 10.10.0 Core includes the following new features or major feature enhanc
 
 A new microservice-based implementation of the data broker has been added. The new data broker is functionally equivalent to the existing data broker, but powered by the new Cumulocity IoT Messaging Service that enables reliable, scalable and high-performance flow of IoT data within the platform. The original data broker will continue to operate alongside the microservice-based data broker for the time being. Users can choose which data broker to use on a per-tenant basis.
 
-At this time the microservice-based data broker is only available in the eu-latest.cumulocity.com public cloud environment. It can also be made available by request in private cloud environments. Contact [product support](/about/contacting-support/) to inquire about using the new data broker in your Cumulocity IoT environment.
+At this time the microservice-based data broker is only available in the eu-latest.cumulocity.com public cloud environment. It can also be made available by request in private cloud environments. Contact [product support](https://cumulocity.com/docs/additional-resources/contacting-support/) to inquire about using the new data broker in your Cumulocity IoT environment.
 
-For details, see [Enterprise tenant > Microservice-based data broker](https://cumulocity.com/guides{{< 10-10-0 >}}/users-guide/enterprise-edition/#mas-based-data-broker) in the *User guide*.
+For details, see [Enterprise tenant > Microservice-based data broker](https://cumulocity.com/guides/10.10.0/users-guide/enterprise-edition/#mas-based-data-broker) in the *User guide*.
 
 ### Cockpit & Device Management - Improved subasset view for groups
 
@@ -28,7 +28,7 @@ The <b>Subassets</b> tab is displayed directly after the dashboards. Smart rules
 
 In the Device Management application, the new <b>Subassets</b> tab is now displayed initially when clicking a group in the navigator.
 
-For details, see [Cockpit > Managing assets](https://cumulocity.com/guides{{< 10-10-0 >}}/users-guide/cockpit/#managing-assets) and [Device management > Grouping devices](https://cumulocity.com/guides{{< 10-10-0 >}}/users-guide/device-management/#grouping-devices) in the *User guide*.
+For details, see [Cockpit > Managing assets](https://cumulocity.com/guides/10.10.0/users-guide/cockpit/#managing-assets) and [Device management > Grouping devices](https://cumulocity.com/guides/10.10.0/users-guide/device-management/#grouping-devices) in the *User guide*.
 
 ### UI - Improved search functionality
 
@@ -36,14 +36,14 @@ The search functionality, which can be accessed via the **Search** button in the
 
 ![Search](/images/release-notes/getting-started-ui-search.png)
 
-For details, see [Getting started > UI functionalities and features](https://cumulocity.com/guides{{< 10-10-0 >}}/users-guide/getting-started/#gui-features) in the *User guide*.
+For details, see [Getting started > UI functionalities and features](https://cumulocity.com/guides/10.10.0/users-guide/getting-started/#gui-features) in the *User guide*.
 
 
 ### New Telefonica Kite platform connectivity
 
 The connectivity functionality has been integrated with the Telefonica Kite platform. This allows monitoring and management of Telefonica SIMs used to connect devices. The new Kite provider can be selected and configured in the **SIM provider settings** tab under **Administration** > **Settings** > **Connectivity**.
 
-See also [Administration > Connectivity](https://cumulocity.com/guides{{< 10-10-0 >}}/users-guide/administration/#connectivity) in the *User guide*.
+See also [Administration > Connectivity](https://cumulocity.com/guides/10.10.0/users-guide/administration/#connectivity) in the *User guide*.
 
 
 ### Audit logs enhancements

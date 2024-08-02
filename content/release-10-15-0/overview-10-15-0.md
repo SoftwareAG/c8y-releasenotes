@@ -6,7 +6,9 @@ layout: bundle
 ---
 
 {{< c8y-admon-important>}}
-The user & developer documentation for the 10.16.0 release has been moved to the GitHub documentation repository. For details how to access it, see [Previous release versions](https://cumulocity.com/docs/previous-versions/documentation-repository/).
+The user & developer documentation for this release has been moved to the GitHub documentation repository. For details how to access it, see [Previous release versions](https://cumulocity.com/docs/previous-versions/documentation-repository/).
+
+As a consequence, all links to the user documentation are now redirected to the [new documentation website](https://cumulocity.com/docs), in general to the introduction page.
 {{< /c8y-admon-important>}}
 
 These release notes for **Cumulocity IoT release 10.15.0** include information on all relevant changes (new features, improvements, and fixes) that have been implemented in Cumulocity IoT Core, Cumulocity IoT Streaming Analytics, Cumulocity IoT Egde, Cumulocity IoT DataHub, and Cumulocity IoT Machine Learning since the previous GA release.

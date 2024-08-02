@@ -5,15 +5,15 @@ var main = (function ($) {
 
     // add banner
     if (true) {
-          offset = 45;
+          offset = 64;
           $('<div/>', {
             id: 'cd-banner',
-            style: 'position: fixed; top: 0; left: 0; width: 100%; background-color: #ff9301; height: ' + offset + 'px; padding: 10px 5px 5px 5px; z-index: 50;'
+            style: 'position: sticky; top: 0; left: 0; width: 100%; background-color: #ffbc60; padding: 10px 5px; z-index: 50;'
           }).prependTo('body');
 
           cdURL = "https://cumulocity.com/docs/change-logs/";
 
-          $('<p style="text-align: center; vertical-align: center;">This website holds the release notes for Cumulocity IoT releases 10.18 and earlier. For all later changes, click <a href="' + cdURL + '">here</a>. The release notes for Release 2024 can be found <a href="https://cumulocity.com/docs/2024/change-logs/">here</a>. </p>').appendTo('#cd-banner');
+          $('<p style="text-align: center; vertical-align: center; margin-bottom:0;">This website holds the release notes for Cumulocity IoT releases 10.18 and earlier.<br>For all later changes, click <a href="' + cdURL + '">here</a>. The release notes for Release 2024 can be found <a href="https://cumulocity.com/docs/2024/change-logs/">here</a>. </p>').appendTo('#cd-banner');
 
           $('.main-top-bar').css('top', offset);
           $('.main-nav.navbar').css('top', offset);

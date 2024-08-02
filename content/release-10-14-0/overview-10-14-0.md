@@ -11,7 +11,11 @@ Note that for Cumulocity IoT Edge, Cumulocity IoT DataHub, and Cumulocity IoT Ma
 
 Moreover it includes [announcements](/release-10-14-0/announcements-10-14-0/) for planned and implemented deprecations that might require action on your side at some time.
 
-You can find the corresponding product documentation for release 10.14.0 at [https://cumulocity.com/guides/10.14.0/welcome/intro-documentation](https://cumulocity.com/guides/10.14.0/welcome/intro-documentation/).
+{{< c8y-admon-important>}}
+The user & developer documentation for this release has been moved to the GitHub documentation repository. For details how to access it, see [Previous release versions](https://cumulocity.com/docs/previous-versions/documentation-repository/).
+
+As a consequence, all links to the user documentation are now redirected to the [new documentation website](https://cumulocity.com/docs), in general to the introduction page.
+{{< /c8y-admon-important>}}
 
 {{< c8y-admon-info >}}
  The *Operations release notes* for the Cumulocity IoT platform are not publicly available. They are provided on the [Software AG Empower Portal](https://documentation.softwareag.com/) (credentials required).
